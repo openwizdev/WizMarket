@@ -44,5 +44,6 @@ Each is refused for exactly one reason.
 | `broken/receipt-names-another-listing/` | The receipt's `# listing:` is `another-driver` | receipt rule |
 | `broken/receipt-lines-out-of-order/` | The receipt's `pass stop:` comes before `pass wake:` | receipt rule |
 | `broken/receipt-token-line-other-text/` | The receipt's line 13 is `pass token: example-opaque-value`, not the kit's passing sentence | receipt rule |
+| `broken/receipt-raw-note-id/` | The receipt's `pass start:` line keeps the raw note id instead of `<note>` | receipt rule |
 
 Every broken folder's other content is valid, so the reason above is the only one.

@@ -95,7 +95,8 @@ Result: 5 of 5 pass
 - The `# driver:` and `# kit:` commits are full 40-character lowercase hex.
 - `# run by:` is the GitHub login whose `gh` the kit read with.
 - Each header value is one line, after exactly one space.
-- Lines 9 to 13 are kit.py's standard output, copied verbatim: its five `pass` lines, in that order. A `fail` line, a missing line or another order is refused.
+- Lines 9 to 13 are kit.py's standard output: its five `pass` lines, in that order, verbatim but for one change. A `fail` line, a missing line or another order is refused.
+- **The one change:** kit.py's `pass start:` and `pass wake:` lines end with the status note's comment id. In the receipt, that number is replaced by the fixed text `<note>`, and every other character stays as kit.py printed it. Line 10 is exactly `pass start: the run posted builder status note <note>` and line 11 is exactly `pass wake: the run edited builder status note <note>`. A digit run in place of `<note>` is refused. The raw output, with the number, stays in the run's own local record.
 - Line 13 is exactly `pass token: no login or token passed through the driver`, the kit's only passing token line. Any other text there is refused.
 - Line 14, `Result: 5 of 5 pass`, is written by whoever writes the receipt, after kit.py exits 0. kit.py does not print it.
 
