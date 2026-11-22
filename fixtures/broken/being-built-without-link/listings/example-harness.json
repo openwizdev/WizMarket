@@ -1,0 +1,12 @@
+{
+  "name": "Example harness",
+  "summary": "A synthetic harness being built, with no pull request or ticket link.",
+  "tags": [
+    "harness"
+  ],
+  "url": "https://example.com/example-harness",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "being-built",
+  "status": "listed"
+}

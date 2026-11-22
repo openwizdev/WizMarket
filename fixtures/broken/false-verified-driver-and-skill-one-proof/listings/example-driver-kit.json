@@ -1,0 +1,16 @@
+{
+  "name": "Example driver kit",
+  "summary": "A synthetic driver and skill with only the receipt.",
+  "tags": [
+    "driver",
+    "skill"
+  ],
+  "url": "https://example.com/example-driver-kit",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "proof": {
+    "receipt": "receipts/example-driver-kit/2026-11-01-aaaaaaaaaaaa.txt"
+  }
+}

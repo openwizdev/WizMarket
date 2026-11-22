@@ -1,0 +1,15 @@
+{
+  "name": "Example harness",
+  "summary": "A synthetic harness that names a receipt that is not there.",
+  "tags": [
+    "harness"
+  ],
+  "url": "https://example.com/example-harness",
+  "plugs_into": "The local driver",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "proof": {
+    "receipt": "receipts/example-harness/2026-11-01-aaaaaaaaaaaa.txt"
+  }
+}

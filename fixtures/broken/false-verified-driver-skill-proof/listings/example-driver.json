@@ -1,0 +1,17 @@
+{
+  "name": "Example driver",
+  "summary": "A synthetic driver that runs OpenWiz agents on an example host.",
+  "tags": [
+    "driver",
+    "example-host"
+  ],
+  "url": "https://example.com/example-driver",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "proof": {
+    "source": "example-owner/example-skills@cccccccccccccccccccccccccccccccccccccccc",
+    "check": "python3 check/run.py --shard example-skill"
+  }
+}
