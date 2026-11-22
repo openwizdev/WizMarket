@@ -104,6 +104,29 @@
         "mcp-server"
       ],
       "url": "https://example.com/example-tool"
+    },
+    {
+      "id": "example-tracker-harness",
+      "links": [
+        {
+          "label": "Ticket",
+          "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2"
+        },
+        {
+          "label": "Discussion",
+          "url": "https://github.com/example-owner/example-harness/issues/1#issuecomment-2"
+        }
+      ],
+      "name": "Example tracker harness",
+      "plugs_into": "The local driver",
+      "publisher": "example-publisher",
+      "stage": "being-built",
+      "status": "listed",
+      "summary": "A synthetic harness being built, tracked outside GitHub.",
+      "tags": [
+        "harness"
+      ],
+      "url": "https://example.com/example-tracker-harness"
     }
   ]
 }

@@ -18,16 +18,26 @@ One listing is one file, `listings/<id>.json`.
 | `name` | yes | The listing's name. One line. |
 | `summary` | yes | What it is, in one line of at most 140 characters. |
 | `tags` | yes | 1 to 8 tags you choose, each made of lowercase letters, digits and hyphens, none twice. Tags say what the listing is: `driver`, `harness`, `skill`, `mcp-server`, anything. |
-| `url` | yes | Where to get it: an `https://` URL. |
+| `url` | yes | Where to get it: an `https://` URL (see URLs, below). |
 | `plugs_into` | yes | What in OpenWiz it plugs into. One line. |
 | `publisher` | yes | Your GitHub login. |
-| `stage` | yes | `available`, or `being-built`. A `being-built` listing needs a `links` entry to its public pull request or ticket on GitHub (`https://github.com/<owner>/<repo>/pull/<n>` or `.../issues/<n>`). |
+| `stage` | yes | `available`, or `being-built`. A `being-built` listing needs `links`, and its **first** entry is the work link: the public pull request or ticket where it is being built, on any tracker. |
 | `login` | no | Where the login lives, as the Drivers page says it, for example "your own `claude` login on your computer". One line. |
 | `links` | no | A list of at least one `{"label": "<one line>", "url": "https://..."}`. |
 | `status` | yes | `listed` or `verified`. `listed` is a link, not proven. `verified` means it passed its kind's test (below). |
 | `proof` | when verified | What proves it. Required when `status` is `verified`, and absent when it is `listed`. |
 
-"One line" means at least one character and no line break or other control character.
+"One line" means at least one character and no line break or other control character. Every rule here is about the whole value: a value with a newline anywhere, a final one included, is refused.
+
+The work link of a `being-built` listing is checked only as a URL. The reviewer of the pull request that adds or changes it confirms that it is public and points to the work; the market page shows it as the "being built" link.
+
+**URLs.** Every `url` (the listing's and each link's) is `https://`, then a host, then an optional port, then an optional path, query or fragment:
+
+- The host is a DNS name of two or more labels joined by dots, at most 253 characters. Each label is 1 to 63 ASCII letters, digits or hyphens, and doesn't start or end with a hyphen; the last label has a letter. No IP address, no user name (`user@`), no trailing dot. Write a non-ASCII name in its `xn--` form.
+- The port, if any, is `:` and a number from 1 to 65535, without leading zeros.
+- The rest starts with `/`, `?` or `#` and holds only printable ASCII, no space. Percent-encode anything else (`%C3%BC` for `ü`).
+
+WizMarket doesn't rewrite URLs: the check and the market page use them exactly as written.
 
 A minimal listing, `listings/my-tool.json`:
 
@@ -48,7 +58,7 @@ A minimal listing, `listings/my-tool.json`:
 
 Your tags decide what proves a `verified` listing.
 
-- **Tag `driver` or `harness`:** a kit receipt from the real host. `proof` is `{"receipt": "receipts/<id>/<date>-<commit>.txt"}`, where `<id>` is this listing's id, `<date>` is the receipt's `# date:` and `<commit>` is the first 12 characters of its `# driver:` commit. The receipt's format is below.
+- **Tag `driver` or `harness`:** a kit receipt from the real host. `proof` is `{"receipt": "receipts/<id>/<date>-<commit>.txt"}`, where `<id>` is this listing's id, `<date>` is the receipt's `# date:` and `<commit>` is the first 12 characters of its `# driver:` commit. The receipt's format is below. There is at most one receipt per listing, date and driver commit, and the first one written is kept: a writer that finds a file already at its path refuses, writes nothing and replaces nothing, even for a run with another harness or model. A merged receipt never changes: a pull request that edits or deletes one is refused.
 - **Tag `skill`:** the skill's own check, passing at a pinned commit. `proof` is `{"source": "<owner>/<repo>@<commit>", "check": "<command>"}`: a public GitHub repository, a full 40-character lowercase hex commit, and one command line. WizMarket's CI clones that repository, checks out that exact commit and runs the command from its root, in a job with no secrets, read-only permissions and a time limit. Exit 0 is a pass.
 - **Tagged both** (`driver` or `harness`, and `skill`): `proof` holds all three keys, and both proofs must pass.
 - **Any other tags:** `verified` is refused. The listing is `listed` until its kind gets its own test, in a later version of this contract.
@@ -86,6 +96,7 @@ Result: 5 of 5 pass
 - `# run by:` is the GitHub login whose `gh` the kit read with.
 - Each header value is one line, after exactly one space.
 - Lines 9 to 13 are kit.py's standard output, copied verbatim: its five `pass` lines, in that order. A `fail` line, a missing line or another order is refused.
+- Line 13 is exactly `pass token: no login or token passed through the driver`, the kit's only passing token line. Any other text there is refused.
 - Line 14, `Result: 5 of 5 pass`, is written by whoever writes the receipt, after kit.py exits 0. kit.py does not print it.
 
 The pull request that adds the receipt is its public record. The throwaway repository and ticket the kit used never appear in it.
@@ -98,11 +109,17 @@ Listings and receipts are public. They never hold:
 - a private id (a thread, session or machine id, or a private repository's records);
 - a machine path (for example `/home/…`, `/Users/…`, `C:\…`).
 
-Hosts, logins, commits and public GitHub links are fine. The receipt's `pass token:` line is part of the format, not a credential: a privacy scan must not refuse it for the word `token:` alone.
+Hosts, logins, commits and public GitHub links are fine. The privacy scan reads every line of a listing and a receipt, with one exception: it lets through line 13 of a receipt only when it is exactly `pass token: no login or token passed through the driver`. That line is format, not a credential.
 
 ## The index
 
-`python3 -I check/check.py index` prints the registry index: the one shape consumers read, such as openwiz.dev's market page, from a saved copy. It prints only when the whole registry passes `check`; otherwise it exits 1 like `check`.
+`python3 -I check/check.py index` prints the registry index: the one shape consumers read, such as openwiz.dev's market page, from a saved copy.
+
+- It reads the registry as committed at the checkout's `HEAD`, never the working tree, and exits 1 if the checkout has any uncommitted or untracked change.
+- It exits 1 unless `HEAD` is the checkout's `origin/main` or an ancestor of it. A listing reaches `main` only through a pull request whose checks passed, including each skill check it added or changed, so a `verified` skill in the index is one whose check passed at its pinned commit in WizMarket's CI.
+- It prints only when that tree passes `check`; otherwise it exits 1 like `check`.
+
+Take a saved copy only from a WizMarket `main` commit.
 
 The index is one JSON object, in UTF-8, keys sorted, indented by two spaces, ending in a newline:
 
@@ -114,4 +131,4 @@ The index is one JSON object, in UTF-8, keys sorted, indented by two spaces, end
 
 A `listed` listing has no `proof`.
 
-[`fixtures/index.json`](../fixtures/index.json) is the synthetic index of the five valid fixtures' listings and receipts, made at the synthetic commit `dddddddddddddddddddddddddddddddddddddddd`.
+[`fixtures/index.json`](../fixtures/index.json) is the synthetic index of the six valid fixtures' listings and receipts, made at the synthetic commit `dddddddddddddddddddddddddddddddddddddddd`.

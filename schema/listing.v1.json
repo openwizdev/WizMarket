@@ -2,39 +2,81 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/openwizdev/WizMarket/blob/main/schema/listing.v1.json",
   "title": "WizMarket listing v1: one listings/<id>.json file",
-  "description": "contracts/listing.v1.md is the format. The id and file name rule, no repeated keys, the kind rules and the receipt are checked by check/check.py, not here.",
+  "description": "contracts/listing.v1.md is the format. The id and file name rule, no repeated keys, the kind rules and the receipt are checked by check/check.py, not here. Every pattern matches the whole string: the (?![\\s\\S]*\\n) prefix refuses a newline anywhere, including a final one before $.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["name", "summary", "tags", "url", "plugs_into", "publisher", "stage", "status"],
+  "required": [
+    "name",
+    "summary",
+    "tags",
+    "url",
+    "plugs_into",
+    "publisher",
+    "stage",
+    "status"
+  ],
   "properties": {
-    "name": { "$ref": "#/$defs/line" },
-    "summary": { "$ref": "#/$defs/line", "maxLength": 140 },
+    "name": {
+      "$ref": "#/$defs/line"
+    },
+    "summary": {
+      "$ref": "#/$defs/line",
+      "maxLength": 140
+    },
     "tags": {
       "type": "array",
       "minItems": 1,
       "maxItems": 8,
       "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }
+      "items": {
+        "type": "string",
+        "pattern": "^(?![\\s\\S]*\\n)[a-z0-9-]+$"
+      }
     },
-    "url": { "$ref": "#/$defs/https" },
-    "plugs_into": { "$ref": "#/$defs/line" },
-    "publisher": { "$ref": "#/$defs/login" },
-    "stage": { "enum": ["available", "being-built"] },
-    "login": { "$ref": "#/$defs/line" },
+    "url": {
+      "$ref": "#/$defs/https"
+    },
+    "plugs_into": {
+      "$ref": "#/$defs/line"
+    },
+    "publisher": {
+      "$ref": "#/$defs/login"
+    },
+    "stage": {
+      "enum": [
+        "available",
+        "being-built"
+      ]
+    },
+    "login": {
+      "$ref": "#/$defs/line"
+    },
     "links": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["label", "url"],
+        "required": [
+          "label",
+          "url"
+        ],
         "properties": {
-          "label": { "$ref": "#/$defs/line" },
-          "url": { "$ref": "#/$defs/https" }
+          "label": {
+            "$ref": "#/$defs/line"
+          },
+          "url": {
+            "$ref": "#/$defs/https"
+          }
         }
       }
     },
-    "status": { "enum": ["listed", "verified"] },
+    "status": {
+      "enum": [
+        "listed",
+        "verified"
+      ]
+    },
     "proof": {
       "type": "object",
       "additionalProperties": false,
@@ -42,42 +84,81 @@
       "properties": {
         "receipt": {
           "type": "string",
-          "pattern": "^receipts/[a-z0-9-]{2,40}/[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{12}\\.txt$"
+          "pattern": "^(?![\\s\\S]*\\n)receipts/[a-z0-9-]{2,40}/[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{12}\\.txt$"
         },
         "source": {
           "type": "string",
-          "pattern": "^[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}@[0-9a-f]{40}$"
+          "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}@[0-9a-f]{40}$"
         },
-        "check": { "$ref": "#/$defs/line" }
+        "check": {
+          "$ref": "#/$defs/line"
+        }
       },
-      "dependentRequired": { "source": ["check"], "check": ["source"] }
+      "dependentRequired": {
+        "source": [
+          "check"
+        ],
+        "check": [
+          "source"
+        ]
+      }
     }
   },
   "allOf": [
     {
-      "if": { "required": ["status"], "properties": { "status": { "const": "verified" } } },
-      "then": { "required": ["proof"] },
-      "else": { "not": { "required": ["proof"] } }
-    },
-    {
-      "if": { "required": ["stage"], "properties": { "stage": { "const": "being-built" } } },
-      "then": {
-        "required": ["links"],
+      "if": {
+        "required": [
+          "status"
+        ],
         "properties": {
-          "links": {
-            "contains": {
-              "properties": {
-                "url": { "pattern": "^https://github\\.com/[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}/(?:pull|issues)/[1-9][0-9]*$" }
-              }
-            }
+          "status": {
+            "const": "verified"
           }
         }
+      },
+      "then": {
+        "required": [
+          "proof"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "proof"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "stage"
+        ],
+        "properties": {
+          "stage": {
+            "const": "being-built"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "links"
+        ]
       }
     }
   ],
   "$defs": {
-    "line": { "type": "string", "pattern": "^[^\\u0000-\\u001F\\u007F-\\u009F\\u2028\\u2029]+$" },
-    "https": { "type": "string", "pattern": "^https://[A-Za-z0-9.-]+(?::[0-9]+)?(?:[/?#][^\\u0000-\\u0020\\u007F]*)?$" },
-    "login": { "type": "string", "pattern": "^[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}$" }
+    "line": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)[^\\u0000-\\u001F\\u007F-\\u009F\\u2028\\u2029]+$"
+    },
+    "https": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)https://(?=[A-Za-z0-9.-]{1,253}(?:[:/?#]|$))(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+(?=[A-Za-z0-9-]*[A-Za-z])[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?::(?:6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[1-9][0-9]{0,3}))?(?:[/?#][!-~]*)?$"
+    },
+    "login": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}$"
+    }
   }
 }
