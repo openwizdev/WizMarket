@@ -141,7 +141,8 @@ class Rules(Temp):
     def test_receipt_edit_or_delete_against_a_base_is_refused(self):
         reg = self.registry("valid/verified-driver")
         receipt = reg / "receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt"
-        self.write(reg / "receipts/example-driver/2026-11-02-aaaaaaaaaaaa.txt", receipt.read_text())
+        self.write(reg / "receipts/example-driver/2026-11-02-aaaaaaaaaaaa.txt",
+                   receipt.read_text().replace("# date: 2026-11-01", "# date: 2026-11-02"))
         self.assertEqual(run("check", "--base", "HEAD", cwd=reg).returncode, 0)
         receipt.write_text(receipt.read_text().replace("Harness 1.0", "Harness 1.1"))
         edited = failures(run("check", "--base", "HEAD", cwd=reg))

@@ -1,5 +1,11 @@
 name: check
 
+# The gate: every required job takes check/, schema/ and the tests from the base revision (main, as the pull
+# request's base or the push's before), never from the change it checks, and reads the change's tree as data.
+# The one exception is the explicit bootstrap: a base with no check/check.py, the first installation.
+# A change to check/, schema/, contracts/, fixtures/ or this file also runs its own versions, in candidate-check,
+# but the base revision's verdict is the one that gates.
+
 on:
   pull_request:
   push:
@@ -12,54 +18,200 @@ concurrency:
   group: check-${{ github.event.pull_request.number || github.sha }}
   cancel-in-progress: true
 
+env:
+  EVENT: ${{ github.event_name }}
+  BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+
 jobs:
   check:
     name: check
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+    outputs:
+      skills: ${{ steps.skills.outputs.skills }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          path: candidate
           fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
         with:
           python-version: "3.11"
-      - name: Tests
-        run: python3 -I check/test_check.py -v
-      - name: Check the registry
-        env:
-          BASE: ${{ github.event_name == 'pull_request' && 'HEAD^1' || github.event.before }}
+      - name: Take the gate from the base revision
+        shell: bash
         run: |
-          if git rev-parse --verify --quiet "$BASE^{commit}" >/dev/null; then
-            python3 -I check/check.py check --base "$BASE"
+          zero=0000000000000000000000000000000000000000
+          empty=$(git -C candidate hash-object -t tree /dev/null)
+          if [ "$EVENT" = push ] && [ "$BASE_SHA" = "$zero" ]; then
+            base=
+            echo "gate: the first push of main, so there is no receipt history before it"
+          elif [ "$EVENT" = pull_request ] || [ "$EVENT" = push ]; then
+            if [ "$BASE_SHA" = "$zero" ] || ! base=$(git -C candidate rev-parse --verify --quiet "$BASE_SHA^{commit}"); then
+              echo "gate: refused, the base revision '$BASE_SHA' cannot be read, so receipt history cannot be checked"
+              exit 1
+            fi
           else
-            python3 -I check/check.py check
+            echo "gate: refused, $EVENT is not a pull request or a push"
+            exit 1
           fi
+          mkdir trusted
+          if [ -n "$base" ] && git -C candidate cat-file -e "$base:check/check.py" 2>/dev/null; then
+            if ! git -C candidate cat-file -e HEAD:check/check.py 2>/dev/null; then
+              echo "gate: refused, this change removes check/check.py, the gate itself"
+              exit 1
+            fi
+            git -C candidate archive "$base" | tar -x -C trusted
+            gate=base
+            echo "gate: check, tests and schema from the base revision $base"
+          else
+            git -C candidate archive HEAD | tar -x -C trusted
+            gate=bootstrap
+            echo "gate: bootstrap, the base revision has no check/check.py, so this first installation runs its own"
+            echo "check; maintainer review of check/ and .github/ is its gate"
+          fi
+          echo "GATE=$gate" >> "$GITHUB_ENV"
+          echo "RECEIPT_BASE=${base:-$empty}" >> "$GITHUB_ENV"
+      - name: Tests (base revision)
+        env:
+          WIZMARKET_REQUIRE_ISOLATION: "1"
+        run: |
+          python3 -I trusted/check/test_check.py -v
+      - name: Added or changed skill listings
+        id: skills
+        working-directory: candidate
+        run: |
+          python3 -I ../trusted/check/check.py changed-skills "$RECEIPT_BASE" > ../skills.txt
+          echo "skills=$(python3 -I -c 'import json, sys; print(json.dumps(sys.stdin.read().split()))' < ../skills.txt)" >> "$GITHUB_OUTPUT"
+          echo "skill listings added or changed: $(wc -w < ../skills.txt)"
+      - name: Check the registry (base revision's check)
+        working-directory: candidate
+        run: |
+          python3 -I ../trusted/check/check.py check --base "$RECEIPT_BASE"
+
+  candidate-check:
+    name: candidate-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: candidate
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.11"
+      - name: Run the change's own check, tests and schema when it changes them
+        working-directory: candidate
+        env:
+          WIZMARKET_REQUIRE_ISOLATION: "1"
+        run: |
+          if [ "$EVENT" = push ] && [ "$BASE_SHA" = 0000000000000000000000000000000000000000 ]; then
+            echo "candidate: the first push of main; the check job ran this revision's own check"
+            exit 0
+          fi
+          base=$(git rev-parse --verify --quiet "$BASE_SHA^{commit}") || { echo "candidate: refused, no base revision"; exit 1; }
+          if ! git cat-file -e "$base:check/check.py" 2>/dev/null; then
+            echo "candidate: bootstrap; the check job already ran this change's own check"
+            exit 0
+          fi
+          if git diff --quiet "$base" HEAD -- check schema contracts fixtures .github/workflows/check.yml; then
+            echo "candidate: the gate is unchanged"
+            exit 0
+          fi
+          python3 -I check/test_check.py -v
+          python3 -I check/check.py check --base "$base"
+
+  skill:
+    name: skill (${{ matrix.id }})
+    needs: check
+    if: needs.check.outputs.skills != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        id: ${{ fromJSON(needs.check.outputs.skills) }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: candidate
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.11"
+      - name: Take the gate from the base revision
+        shell: bash
+        run: |
+          zero=0000000000000000000000000000000000000000
+          empty=$(git -C candidate hash-object -t tree /dev/null)
+          if [ "$EVENT" = push ] && [ "$BASE_SHA" = "$zero" ]; then
+            base=
+            echo "gate: the first push of main, so there is no receipt history before it"
+          elif [ "$EVENT" = pull_request ] || [ "$EVENT" = push ]; then
+            if [ "$BASE_SHA" = "$zero" ] || ! base=$(git -C candidate rev-parse --verify --quiet "$BASE_SHA^{commit}"); then
+              echo "gate: refused, the base revision '$BASE_SHA' cannot be read, so receipt history cannot be checked"
+              exit 1
+            fi
+          else
+            echo "gate: refused, $EVENT is not a pull request or a push"
+            exit 1
+          fi
+          mkdir trusted
+          if [ -n "$base" ] && git -C candidate cat-file -e "$base:check/check.py" 2>/dev/null; then
+            if ! git -C candidate cat-file -e HEAD:check/check.py 2>/dev/null; then
+              echo "gate: refused, this change removes check/check.py, the gate itself"
+              exit 1
+            fi
+            git -C candidate archive "$base" | tar -x -C trusted
+            gate=base
+            echo "gate: check, tests and schema from the base revision $base"
+          else
+            git -C candidate archive HEAD | tar -x -C trusted
+            gate=bootstrap
+            echo "gate: bootstrap, the base revision has no check/check.py, so this first installation runs its own"
+            echo "check; maintainer review of check/ and .github/ is its gate"
+          fi
+          echo "GATE=$gate" >> "$GITHUB_ENV"
+          echo "RECEIPT_BASE=${base:-$empty}" >> "$GITHUB_ENV"
+      - name: Make the skill's own user
+        run: |
+          sudo useradd --system --user-group --no-create-home --shell /usr/sbin/nologin wizskill
+      - name: Run the skill's check at its pinned commit, isolated (base revision's check reports)
+        working-directory: candidate
+        env:
+          ID: ${{ matrix.id }}
+        run: |
+          sudo -n env -i PATH="$PATH" "$(command -v python3)" -I ../trusted/check/check.py skill --isolate wizskill -- "$ID"
+      - name: Tear down the skill's user
+        if: always()
+        run: |
+          sudo pkill -KILL -u wizskill || true
+          sudo userdel wizskill || true
 
   skill-check:
     name: skill-check
+    needs: [check, skill]
+    if: always()
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
-        with:
-          python-version: "3.11"
-      - name: Run each added or changed skill's check at its pinned commit
+      - name: Every added or changed skill passed its check
         env:
-          BASE: ${{ github.event_name == 'pull_request' && 'HEAD^1' || github.event.before }}
+          CHECK: ${{ needs.check.result }}
+          SKILL: ${{ needs.skill.result }}
+          SKILLS: ${{ needs.check.outputs.skills }}
         run: |
-          if ! git rev-parse --verify --quiet "$BASE^{commit}" >/dev/null; then
-            BASE=$(git hash-object -t tree /dev/null)
+          echo "skills: ${SKILLS:-unknown}; check: $CHECK; skill jobs: $SKILL"
+          if [ "$CHECK" != success ]; then
+            echo "skill-check: refused, the check job did not pass, so the skill list is not known"
+            exit 1
           fi
-          ids=$(python3 -I check/check.py changed-skills "$BASE")
-          failed=0
-          for id in $ids; do
-            python3 -I check/check.py skill -- "$id" || failed=1
-          done
-          echo "skill checks run: $(echo $ids | wc -w)"
-          exit "$failed"
+          if [ "$SKILL" = success ] || { [ "$SKILL" = skipped ] && [ "$SKILLS" = "[]" ]; }; then
+            echo "skill-check: pass"
+          else
+            echo "skill-check: refused, a skill's check did not pass"
+            exit 1
+          fi

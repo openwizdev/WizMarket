@@ -2,6 +2,7 @@ import argparse
 import datetime
 import json
 import os
+import pwd
 import re
 import signal
 import subprocess
@@ -30,13 +31,16 @@ RECEIPT_KEYS = {"receipt"}
 SKILL_KEYS = {"source", "check"}
 TOKEN_LINE = "pass token: no login or token passed through the driver"
 HEADER = ["listing", "host", "driver", "kit", "harness", "model", "date", "run by"]
+VERSION_LINE = "pass version: openwiz:records v<N>, and the schema is driver v1"
 PASS_LINES = [
-    ("pass version: ", None),
-    ("pass start: ", "pass start: the run posted builder status note <note>"),
-    ("pass wake: ", "pass wake: the run edited builder status note <note>"),
-    ("pass stop: ", None),
-    ("pass token: ", TOKEN_LINE),
-    ("Result: ", "Result: 5 of 5 pass"),
+    (VERSION_LINE, re.compile(r"pass version: openwiz:records v[1-9][0-9]{0,8}, and the schema is driver v1")),
+    *((line, re.compile(re.escape(line))) for line in (
+        "pass start: the run posted builder status note <note>",
+        "pass wake: the run edited builder status note <note>",
+        "pass stop: the run ended, and a wake after it is refused",
+        TOKEN_LINE,
+        "Result: 5 of 5 pass",
+    )),
 ]
 PRIVATE = [
     ("a token", re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|glpat-[A-Za-z0-9_-]{20,}"
@@ -45,16 +49,34 @@ PRIVATE = [
     ("a token", re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----|[A-Za-z][A-Za-z0-9+.-]*://[^/\s:@]+:[^/\s@]+@")),
     ("a token", re.compile(r"(?i)\b(?:password|passwd|secret|api[_-]?key|access[_-]?key|private[_-]?key|client[_-]?secret"
                            r"|auth[_-]?token|access[_-]?token)\b\s*[:=]\s*\S|\bbearer\s+[A-Za-z0-9._~+/-]{16,}")),
-    ("a private id", re.compile(r"\b(?:thr|prj|sess?|sbx)_[A-Za-z0-9]{6,}\b"
+    ("a private id", re.compile(r"\bthr_[A-Za-z0-9]|\b(?:proj|prj|mch|usr|acct|auto|sess?|sbx)_[A-Za-z0-9]"
+                                r"|\bcr_[0-9a-fA-F]{8}-[0-9a-fA-F]{4}"
                                 r"|\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b")),
     ("a machine path", re.compile(r"(?<![\w.~%/-])/(?:home|Users|root|tmp|var/folders|private/var)/"
                                   r"|(?<![A-Za-z0-9])[A-Za-z]:\\")),
 ]
 
 
+SHOWN = re.compile(r"[A-Za-z0-9._-]{1,100}")
+UNREFERENCED_FIX = "fix it to the contract's receipt, or remove it"
+
+
+def private(text):
+    return next((label for label, pattern in PRIVATE if pattern.search(text)), None)
+
+
+def shown(text, what="name"):
+    """A path part or key as a diagnostic may print it: plain characters and nothing private-looking, else hidden."""
+    return text if isinstance(text, str) and SHOWN.fullmatch(text) and not private(text) else f"<hidden {what}>"
+
+
+def shown_path(path):
+    return "/".join(shown(part) for part in path.split("/"))
+
+
 class Failures(list):
     def add(self, path, problem, fix):
-        self.append(f"{path}: {problem}; fix: {fix}")
+        self.append(f"{shown_path(path)}: {problem}; fix: {fix}")
 
 
 def worktree_files(root):
@@ -105,6 +127,11 @@ def parse_json(data):
         raise ValueError(f"{name} is not standard JSON")
 
     value = json.loads(data.decode("utf-8"), object_pairs_hook=pairs, parse_constant=constant)
+    for text in [*strings(value), *repeated]:
+        try:
+            text.encode("utf-8")
+        except UnicodeEncodeError:
+            raise ValueError("an escaped unpaired surrogate, \\ud800 to \\udfff, is not UTF-8 text") from None
     return value, repeated
 
 
@@ -120,7 +147,7 @@ def check_https(failures, path, name, value):
 
 def check_fields(failures, path, data):
     for key in sorted(set(data) - FIELDS):
-        failures.add(path, f'unknown field "{key}"', f"remove it: listing.v1 has only {', '.join(sorted(FIELDS))}")
+        failures.add(path, f'unknown field "{shown(key, "key")}"', f"remove it: listing.v1 has only {', '.join(sorted(FIELDS))}")
     for key in REQUIRED:
         if key not in data:
             failures.add(path, f'missing field "{key}"', "add it")
@@ -131,10 +158,12 @@ def check_fields(failures, path, data):
     if "summary" in data and not (is_line(data["summary"]) and len(data["summary"]) <= PROPS["summary"]["maxLength"]):
         failures.add(path, '"summary" must be one line of at most 140 characters', "shorten it to one line")
     tags = data.get("tags")
-    if "tags" in data and not (isinstance(tags, list) and PROPS["tags"]["minItems"] <= len(tags) <= PROPS["tags"]["maxItems"]
-                               and all(isinstance(t, str) and TAG.fullmatch(t) for t in tags) and len(set(tags)) == len(tags)):
-        failures.add(path, '"tags" must be 1 to 8 tags, each lowercase letters, digits and hyphens, none twice',
-                     "fix the tags")
+    if not (isinstance(tags, list) and PROPS["tags"]["minItems"] <= len(tags) <= PROPS["tags"]["maxItems"]
+            and all(isinstance(t, str) and TAG.fullmatch(t) for t in tags) and len(set(tags)) == len(tags)):
+        tags = None
+        if "tags" in data:
+            failures.add(path, '"tags" must be 1 to 8 tags, each lowercase letters, digits and hyphens, none twice',
+                         "fix the tags")
     if "url" in data:
         check_https(failures, path, "url", data["url"])
     if "publisher" in data and not (isinstance(data["publisher"], str) and LOGIN.fullmatch(data["publisher"])):
@@ -157,9 +186,10 @@ def check_fields(failures, path, data):
     if data.get("stage") == "being-built" and "links" not in data:
         failures.add(path, '"being-built" needs links, the first one its public pull request or ticket',
                      "add links with the work link first")
+    return tags
 
 
-def check_proof(failures, path, listing_id, data):
+def check_proof(failures, path, listing_id, data, tags):
     status, proof = data.get("status"), data.get("proof")
     if status == "listed" and "proof" in data:
         failures.add(path, '"listed" has no proof', "remove proof, or set status to verified")
@@ -181,7 +211,9 @@ def check_proof(failures, path, listing_id, data):
     if "check" in proof and not is_line(proof["check"]):
         failures.add(path, '"proof.check" must be one command line', FALSE_VERIFIED_FIX)
         return None
-    tags = set(data.get("tags") or [])
+    if tags is None:
+        return None
+    tags = set(tags)
     needed = (RECEIPT_KEYS if tags & {"driver", "harness"} else set()) | (SKILL_KEYS if "skill" in tags else set())
     if not needed:
         failures.add(path, '"verified" has no tag with a test (driver, harness or skill), so it cannot be verified',
@@ -192,23 +224,23 @@ def check_proof(failures, path, listing_id, data):
                      f"not {', '.join(sorted(proof))}", FALSE_VERIFIED_FIX)
         return None
     if "receipt" in proof and PurePosixPath(proof["receipt"]).parts[1] != listing_id:
-        failures.add(path, f'"proof.receipt" must be under receipts/{listing_id}/', FALSE_VERIFIED_FIX)
+        failures.add(path, f'"proof.receipt" must be under receipts/{shown(listing_id)}/', FALSE_VERIFIED_FIX)
         return None
     return proof
 
 
-def check_receipt(failures, path, listing_id, data):
+def check_receipt(failures, path, listing_id, data, fix):
     try:
         text = data.decode("utf-8")
     except UnicodeDecodeError:
-        failures.add(path, "is not UTF-8 text", FALSE_VERIFIED_FIX)
+        failures.add(path, "is not UTF-8 text", fix)
         return None
     lines = text.split("\n")
     if "\r" in text:
-        failures.add(path, "must end its lines in \\n alone, not \\r\\n", FALSE_VERIFIED_FIX)
+        failures.add(path, "must end its lines in \\n alone, not \\r\\n", fix)
         return None
     if not text.endswith("\n") or len(lines) != 15:
-        failures.add(path, "must be exactly 14 lines, each ending in a newline", FALSE_VERIFIED_FIX)
+        failures.add(path, "must be exactly 14 lines, each ending in a newline", fix)
         return None
     header = {}
     for n, key in enumerate(HEADER, 1):
@@ -222,20 +254,18 @@ def check_receipt(failures, path, listing_id, data):
             "run by": lambda v: LOGIN.fullmatch(v),
         }.get(key, bool)(value)
         if not valid:
-            shape = f'"# listing: {listing_id}"' if key == "listing" else f'"{prefix}<{key}>" as the contract says'
-            failures.add(path, f"line {n} must be {shape}", FALSE_VERIFIED_FIX)
+            shape = f'"# listing: {shown(listing_id)}"' if key == "listing" else f'"{prefix}<{key}>" as the contract says'
+            failures.add(path, f"line {n} must be {shape}", fix)
         else:
             header[key] = value
-    for n, (prefix, exact) in enumerate(PASS_LINES, 9):
-        line = lines[n - 1]
-        if line != exact if exact else not (line.startswith(prefix) and is_line(line[len(prefix):])):
-            shape = f'exactly "{exact}"' if exact else f'"{prefix}..." as kit.py printed it'
-            failures.add(path, f"line {n} must be {shape}: only a 5 of 5 kit run verifies", FALSE_VERIFIED_FIX)
+    for n, (shape, pattern) in enumerate(PASS_LINES, 9):
+        if not pattern.fullmatch(lines[n - 1]):
+            failures.add(path, f'line {n} must be exactly "{shape}": only a 5 of 5 kit run verifies', fix)
             break
     if "date" in header and "driver" in header:
         name = f"{header['date']}-{header['driver'].rsplit('@', 1)[1][:12]}.txt"
         if PurePosixPath(path).name != name:
-            failures.add(path, f"file name must be {name}, from its # date: and # driver: lines", FALSE_VERIFIED_FIX)
+            failures.add(path, f"file name must be {name}, from its # date: and # driver: lines", fix)
     return header.get("date")
 
 
@@ -246,7 +276,12 @@ def valid_date(value):
         return False
 
 
-def scan_private(failures, path, data):
+def scan_private(failures, path, data, referenced):
+    public = "remove it: listings and receipts are public"
+    where_fix = (lambda label: (f"{label} ({public})", FALSE_VERIFIED_FIX)) if referenced else (lambda label: (label, public))
+    label = private(path)
+    if label:
+        failures.add(path, f"the file's path holds what looks like {label}", "rename it: file names are public")
     try:
         text = data.decode("utf-8")
     except UnicodeDecodeError:
@@ -264,8 +299,7 @@ def scan_private(failures, path, data):
         for label, pattern in PRIVATE:
             if label not in found and pattern.search(value):
                 found.add(label)
-                failures.add(path, f"{where} holds what looks like {label}",
-                             "remove it: listings and receipts are public")
+                failures.add(path, *where_fix(f"{where} holds what looks like {label}"))
 
 
 def strings(value):
@@ -281,7 +315,7 @@ def strings(value):
 
 
 def check_tree(files):
-    failures, entries = Failures(), []
+    failures, listings, referenced = Failures(), [], set()
     for path, data in files.items():
         if data is None:
             failures.add(path, "must be a regular file or folder, not a link", "replace it with the file itself")
@@ -294,32 +328,40 @@ def check_tree(files):
             continue
         listing_id = name.stem
         if not ID.fullmatch(listing_id):
-            failures.add(path, f'the file name "{listing_id}" is not a valid id', "rename it to 2 to 40 lowercase "
-                         "letters, digits and hyphens")
+            failures.add(path, f'the file name "{shown(listing_id)}" is not a valid id', "rename it to 2 to 40 "
+                         "lowercase letters, digits and hyphens")
         try:
             data, repeated = parse_json(files[path])
         except (UnicodeDecodeError, ValueError) as error:
-            failures.add(path, f"is not standard JSON in UTF-8 ({error})", "fix the JSON")
+            failures.add(path, f"is not standard JSON in UTF-8 ({str(error).splitlines()[0]})", "fix the JSON")
             continue
         if repeated:
             for key in repeated:
-                failures.add(path, f'key "{key}" appears twice', "keep one")
+                failures.add(path, f'key "{shown(key, "key")}" appears twice', "keep one")
             continue
         if not isinstance(data, dict):
             failures.add(path, "must be one JSON object", "fix the JSON")
             continue
-        check_fields(failures, path, data)
-        proof = check_proof(failures, path, listing_id, data)
+        tags = check_fields(failures, path, data)
+        proof = check_proof(failures, path, listing_id, data, tags)
+        if proof is not None and "receipt" in proof:
+            if files.get(proof["receipt"]) is None:
+                failures.add(path, f'"proof.receipt" names {shown_path(proof["receipt"])}, which is not there',
+                             FALSE_VERIFIED_FIX)
+            else:
+                referenced.add(proof["receipt"])
+        listings.append((listing_id, data, proof))
+    dates = {}
+    for path in sorted(p for p, d in files.items() if RECEIPT_PATH.fullmatch(p) and d is not None):
+        fix = FALSE_VERIFIED_FIX if path in referenced else UNREFERENCED_FIX
+        dates[path] = check_receipt(failures, path, PurePosixPath(path).parts[1], files[path], fix)
+    entries = []
+    for listing_id, data, proof in listings:
         entry = {**data, "id": listing_id}
         if proof is not None:
             entry["proof"] = {}
-            if "receipt" in proof:
-                receipt = proof["receipt"]
-                if files.get(receipt) is None:
-                    failures.add(path, f'"proof.receipt" names {receipt}, which is not there', FALSE_VERIFIED_FIX)
-                else:
-                    date = check_receipt(failures, receipt, listing_id, files[receipt])
-                    entry["proof"]["receipt"] = {"path": receipt, "date": date}
+            if "receipt" in proof and proof["receipt"] in referenced:
+                entry["proof"]["receipt"] = {"path": proof["receipt"], "date": dates[proof["receipt"]]}
             if "source" in proof:
                 repo, commit = proof["source"].split("@")
                 entry["proof"]["skill"] = {"source": proof["source"], "check": proof["check"],
@@ -327,7 +369,7 @@ def check_tree(files):
         entries.append(entry)
     for path, data in files.items():
         if data is not None:
-            scan_private(failures, path, data)
+            scan_private(failures, path, data, path in referenced)
     return failures, entries
 
 
@@ -369,12 +411,13 @@ def cmd_index(args):
     root = Path.cwd()
     if git(root, "rev-parse", "--show-prefix").strip():
         return refuse("run it from the checkout's root")
-    if git(root, "status", "--porcelain", "--untracked-files=all", "--ignore-submodules=none"):
-        return refuse("the checkout has uncommitted or untracked changes; commit or remove them")
+    if git(root, "status", "--porcelain", "--untracked-files=all", "--ignored=matching", "--ignore-submodules=none"):
+        return refuse("the checkout has uncommitted, untracked or ignored files; commit or remove them")
     if subprocess.run(["git", "-C", str(root), "rev-parse", "--verify", "--quiet", "refs/remotes/origin/main"],
                       capture_output=True).returncode:
         return refuse("the checkout has no origin/main; fetch it")
-    if subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", "HEAD", "origin/main"]).returncode:
+    if subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", "HEAD", "refs/remotes/origin/main"],
+                      capture_output=True).returncode:
         return refuse("HEAD is not origin/main or an ancestor of it; take the index only from WizMarket main")
     commit = git(root, "rev-parse", "HEAD").strip()
     files = commit_files(root, commit)
@@ -391,18 +434,43 @@ def cmd_index(args):
     return 0
 
 
-def run_limited(command, cwd, env, timeout):
-    process = subprocess.Popen(command, cwd=cwd, env=env, stdin=subprocess.DEVNULL, start_new_session=True)
+OUTPUT_LINES = 40
+SANDBOX = ["unshare", "--pid", "--fork", "--kill-child", "--mount-proc", "--net", "--ipc", "--uts", "--"]
+
+
+def run_limited(command, cwd, env, timeout, output):
+    """Run with a deadline, output to a file, and end the whole process group on every exit."""
+    with open(output, "ab") as out:
+        process = subprocess.Popen(command, cwd=cwd, env=env, stdin=subprocess.DEVNULL, stdout=out, stderr=out,
+                                   start_new_session=True)
     try:
         return process.wait(timeout=timeout)
     except subprocess.TimeoutExpired:
-        os.killpg(process.pid, signal.SIGKILL)
-        process.wait()
         return None
+    finally:
+        try:
+            os.killpg(process.pid, signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            pass
+        process.wait()
+
+
+def show_output(listing_id, output):
+    """The tail of what the check printed, each line inert: no line can start a workflow command."""
+    with open(output, "rb") as f:
+        f.seek(max(0, os.path.getsize(output) - 65536))
+        lines = f.read().decode("utf-8", "replace").splitlines()[-OUTPUT_LINES:]
+    if lines:
+        print(f"skill {listing_id}: the last {len(lines)} lines it printed:")
+    for line in lines:
+        print("  | " + "".join(c if c.isprintable() else f"\\x{ord(c):02x}" for c in line))
 
 
 def cmd_skill(args):
     root, listing_id = Path.cwd(), args.id
+    if not ID.fullmatch(listing_id):
+        print(f"skill {shown(listing_id)}: refused, not a listing id")
+        return 1
     path = f"listings/{listing_id}.json"
     files = {p: d for p, d in worktree_files(root).items() if p == path or p.startswith(f"receipts/{listing_id}/")}
     if path not in files:
@@ -416,20 +484,40 @@ def cmd_skill(args):
     if not skill:
         print(f"skill {listing_id}: refused, it is not a verified skill with a source and a check")
         return 1
+    as_user, sandbox = [], []
+    if args.isolate:
+        if os.geteuid() != 0:
+            print(f"skill {listing_id}: refused, --isolate runs as root and drops to {args.isolate}")
+            return 1
+        user = pwd.getpwnam(args.isolate)
+        as_user = ["setpriv", f"--reuid={user.pw_uid}", f"--regid={user.pw_gid}", "--clear-groups",
+                   "--no-new-privs", "--"]
+        sandbox = SANDBOX
     repo, commit = skill["source"].split("@")
+    path_env = os.environ.get("PATH", os.defpath)
     with tempfile.TemporaryDirectory() as tmp:
-        home, src = Path(tmp) / "home", Path(tmp) / "src"
+        home, src, output = Path(tmp) / "home", Path(tmp) / "src", Path(tmp) / "output"
         home.mkdir()
-        git_env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
-        clone = run_limited(["git", "clone", "--quiet", "--no-checkout", "--", f"https://github.com/{repo}", str(src)],
-                            tmp, git_env, CLONE_TIMEOUT)
-        checkout = clone == 0 and run_limited(["git", "-c", "advice.detachedHead=false", "checkout", "--quiet",
-                                               "--detach", commit, "--"], src, git_env, CLONE_TIMEOUT) == 0
-        if not (checkout and git(src, "rev-parse", "HEAD").strip() == commit):
+        src.mkdir()
+        if args.isolate:
+            os.chmod(tmp, 0o711)
+            for folder in (home, src):
+                os.chown(folder, user.pw_uid, user.pw_gid)
+        env = {"PATH": path_env, "HOME": str(home)}
+        git_env = {**env, "GIT_CONFIG_NOSYSTEM": "1", "GIT_CONFIG_GLOBAL": os.devnull, "GIT_TERMINAL_PROMPT": "0"}
+        git_cmd = [*as_user, "git", "-c", "credential.helper=", "-c", "core.hooksPath=" + os.devnull,
+                   "-c", "advice.detachedHead=false"]
+        steps = [[*git_cmd, "clone", "--quiet", "--no-checkout", "--", f"{args.source_base}/{repo}", str(src)],
+                 [*git_cmd, "-C", str(src), "checkout", "--quiet", "--detach", commit, "--"]]
+        acquired = all(run_limited(step, tmp, git_env, CLONE_TIMEOUT, output) == 0 for step in steps)
+        head = subprocess.run([*git_cmd, "-C", str(src), "rev-parse", "HEAD"], env=git_env, capture_output=True,
+                              text=True, timeout=CLONE_TIMEOUT).stdout.strip() if acquired else ""
+        if head != commit:
             print(f"skill {listing_id}: refused, commit {commit} is not in https://github.com/{repo}")
             return 1
-        env = {"PATH": os.environ.get("PATH", os.defpath), "HOME": str(home)}
-        code = run_limited(["/bin/sh", "-c", skill["check"]], src, env, args.timeout)
+        output.write_bytes(b"")
+        code = run_limited([*sandbox, *as_user, "/bin/sh", "-c", skill["check"]], src, env, args.timeout, output)
+        show_output(listing_id, output)
     if code is None:
         print(f"skill {listing_id}: refused, the check did not finish in {args.timeout} seconds")
         return 1
@@ -445,7 +533,7 @@ def cmd_changed_skills(args):
     diff = git(root, "diff", "--name-only", "--no-renames", "--diff-filter=AMT", args.base, "HEAD", "--", "listings")
     for path in diff.splitlines():
         name = PurePosixPath(path)
-        if len(name.parts) != 2 or name.suffix != ".json":
+        if len(name.parts) != 2 or name.suffix != ".json" or not ID.fullmatch(name.stem):
             continue
         try:
             proof = parse_json((root / path).read_bytes())[0].get("proof")
@@ -467,6 +555,9 @@ def main(argv):
     skill = commands.add_parser("skill", help="run a skill listing's check at its pinned commit")
     skill.add_argument("id")
     skill.add_argument("--timeout", type=int, default=600, help="seconds the check may run (default 600)")
+    skill.add_argument("--isolate", metavar="USER", help="run as root: acquire the source and run the check as USER, "
+                       "the check in new process, network, IPC and host-name namespaces")
+    skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
     skill.set_defaults(run=cmd_skill)
     changed = commands.add_parser("changed-skills", help="print skill listings added or changed since a commit")
     changed.add_argument("base")
