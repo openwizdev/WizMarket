@@ -106,7 +106,7 @@ def commit_files(root, rev):
     files = {}
     listing = git(root, "ls-tree", "-r", "-z", "--full-tree", rev, "--", "listings", "receipts", binary=True)
     for entry in filter(None, listing.split(b"\0")):
-        meta, path = entry.decode().split("\t", 1)
+        meta, path = entry.decode("utf-8", "surrogateescape").split("\t", 1)
         mode, kind, sha = meta.split()
         files[path] = git(root, "cat-file", "blob", sha, binary=True) if mode in ("100644", "100755") else None
     return files
@@ -318,7 +318,8 @@ def check_tree(files):
     failures, listings, referenced = Failures(), [], set()
     for path, data in files.items():
         if data is None:
-            failures.add(path, "must be a regular file or folder, not a link", "replace it with the file itself")
+            failures.add(path, "must be a regular file or folder, not a link or submodule",
+                         "replace it with the file itself")
         elif path.startswith("receipts/") and not RECEIPT_PATH.fullmatch(path):
             failures.add(path, "is not at receipts/<id>/<date>-<commit>.txt", "move it, or remove it")
     for path in sorted(p for p, d in files.items() if p.startswith("listings/") and d is not None):
@@ -382,9 +383,9 @@ def report(failures, entries, files):
     return 0
 
 
-def changed_receipts(root, base):
+def changed_receipts(root, base, rev):
     failures = Failures()
-    diff = git(root, "diff", "--name-status", "--no-renames", base, "--", "receipts")
+    diff = git(root, "diff", "--name-status", "--no-renames", base, *([rev] if rev else []), "--", "receipts")
     for line in diff.splitlines():
         status, path = line.split("\t", 1)
         if status != "A":
@@ -395,10 +396,10 @@ def changed_receipts(root, base):
 
 def cmd_check(args):
     root = Path.cwd()
-    files = worktree_files(root)
+    files = commit_files(root, args.rev) if args.rev else worktree_files(root)
     failures, entries = check_tree(files)
     if args.base:
-        failures += changed_receipts(root, args.base)
+        failures += changed_receipts(root, args.base, args.rev)
     return report(failures, entries, files)
 
 
@@ -455,15 +456,22 @@ def run_limited(command, cwd, env, timeout, output):
         process.wait()
 
 
+INERT = re.compile(r"(?<=:):|(?<=#)#(?=\[)")
+
+
+def inert(line):
+    line = "".join(c if c.isprintable() and c != "\\" else f"\\x{ord(c):02x}" for c in line)
+    return INERT.sub(lambda m: f"\\x{ord(m[0]):02x}", line)
+
+
 def show_output(listing_id, output):
-    """The tail of what the check printed, each line inert: no line can start a workflow command."""
     with open(output, "rb") as f:
         f.seek(max(0, os.path.getsize(output) - 65536))
         lines = f.read().decode("utf-8", "replace").splitlines()[-OUTPUT_LINES:]
     if lines:
         print(f"skill {listing_id}: the last {len(lines)} lines it printed:")
     for line in lines:
-        print("  | " + "".join(c if c.isprintable() else f"\\x{ord(c):02x}" for c in line))
+        print("  | " + inert(line))
 
 
 def cmd_skill(args):
@@ -550,6 +558,7 @@ def main(argv):
     commands = parser.add_subparsers(dest="command", required=True)
     check = commands.add_parser("check", help="check every listing and receipt")
     check.add_argument("--base", help="also refuse a receipt edited or deleted since this commit")
+    check.add_argument("--rev", help="check this commit's tree, every git entry included, not the working tree")
     check.set_defaults(run=cmd_check)
     commands.add_parser("index", help="print the registry index at HEAD").set_defaults(run=cmd_index)
     skill = commands.add_parser("skill", help="run a skill listing's check at its pinned commit")
