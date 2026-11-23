@@ -9,7 +9,7 @@
   "plugs_into": "OpenWiz local driver",
   "publisher": "jparker2006",
   "stage": "being-built",
-  "login": "Run opencode auth login. OpenCode saves it in its opencode.db file in your local share directory.",
+  "login": "Run opencode auth login. OpenCode saves it in opencode.db in the opencode folder under your home directory's local share directory.",
   "links": [
     {
       "label": "OpenWiz harness row",

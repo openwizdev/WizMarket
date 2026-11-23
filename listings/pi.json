@@ -9,7 +9,7 @@
   "plugs_into": "OpenWiz local driver",
   "publisher": "jparker2006",
   "stage": "being-built",
-  "login": "Run pi auth login. Pi saves it in auth.json in the .pi agent directory under your home directory. Pi can also use a provider variable you set.",
+  "login": "Run pi auth login. Pi saves it in auth.json in the agent folder inside .pi under your home directory. Pi can also use a provider variable you set.",
   "links": [
     {
       "label": "OpenWiz harness row",

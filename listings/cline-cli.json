@@ -9,7 +9,7 @@
   "plugs_into": "OpenWiz local driver",
   "publisher": "jparker2006",
   "stage": "being-built",
-  "login": "Run cline auth. Cline saves it in the settings folder within the .cline data directory under your home directory.",
+  "login": "Run cline auth. Cline saves it in the settings folder inside data in .cline under your home directory.",
   "links": [
     {
       "label": "OpenWiz harness row",
