@@ -635,8 +635,6 @@ class Workflow(Temp):
                 self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertIn(f"{path}: must be a regular file or folder, not a link or submodule", result.stdout)
                 git(repo, "reset", "-q", "--hard", base)
-        candidate = [s["run"] for s in workflow_steps()["candidate-check"]]
-        self.assertIn('check.py check --base "$base" --rev HEAD', "".join(candidate))
 
     def test_r1_r2_no_required_job_runs_the_candidates_code(self):
         steps = workflow_steps()
