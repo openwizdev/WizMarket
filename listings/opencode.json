@@ -1,0 +1,20 @@
+{
+  "name": "OpenCode",
+  "summary": "The OpenCode harness row for OpenWiz's local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://github.com/anomalyco/opencode",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Run opencode auth login. OpenCode saves it in its opencode.db file in your local share directory.",
+  "links": [
+    {
+      "label": "OpenWiz harness row",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2462"
+    }
+  ],
+  "status": "listed"
+}

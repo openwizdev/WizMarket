@@ -1,0 +1,20 @@
+{
+  "name": "Cursor CLI",
+  "summary": "The Cursor CLI harness row for OpenWiz's local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://cursor.com/docs/cli/reference/authentication",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Run agent login to sign in locally, or set CURSOR_API_KEY for the CLI yourself. The driver never reads or passes it.",
+  "links": [
+    {
+      "label": "OpenWiz harness row",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2473"
+    }
+  ],
+  "status": "listed"
+}

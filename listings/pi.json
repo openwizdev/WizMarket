@@ -1,0 +1,20 @@
+{
+  "name": "Pi",
+  "summary": "The Pi harness row for OpenWiz's local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://github.com/earendil-works/pi",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Run pi auth login. Pi saves it in auth.json in the .pi agent directory under your home directory. Pi can also use a provider variable you set.",
+  "links": [
+    {
+      "label": "OpenWiz harness row",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2449"
+    }
+  ],
+  "status": "listed"
+}
