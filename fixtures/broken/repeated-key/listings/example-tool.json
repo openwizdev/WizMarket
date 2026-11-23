@@ -1,0 +1,13 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool whose file repeats a key.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://example.com/example-tool",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed",
+  "status": "listed"
+}

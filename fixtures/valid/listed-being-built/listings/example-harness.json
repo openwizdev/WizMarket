@@ -1,0 +1,20 @@
+{
+  "name": "Example harness",
+  "summary": "A synthetic harness still being built.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://example.com/example-harness",
+  "plugs_into": "The local driver",
+  "publisher": "example-publisher",
+  "stage": "being-built",
+  "login": "Your own example-harness login on your computer",
+  "links": [
+    {
+      "label": "Pull request",
+      "url": "https://github.com/example-owner/example-harness/pull/1"
+    }
+  ],
+  "status": "listed"
+}

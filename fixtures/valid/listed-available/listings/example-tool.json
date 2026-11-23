@@ -1,0 +1,12 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool, listed: a link, not proven.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://example.com/example-tool",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed"
+}

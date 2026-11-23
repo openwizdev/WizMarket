@@ -1,0 +1,12 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool with a malformed URL.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://exa_mple.com/example-tool",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed"
+}

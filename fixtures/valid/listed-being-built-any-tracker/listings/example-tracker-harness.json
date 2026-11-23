@@ -1,0 +1,22 @@
+{
+  "name": "Example tracker harness",
+  "summary": "A synthetic harness being built, tracked outside GitHub.",
+  "tags": [
+    "harness"
+  ],
+  "url": "https://example.com/example-tracker-harness",
+  "plugs_into": "The local driver",
+  "publisher": "example-publisher",
+  "stage": "being-built",
+  "links": [
+    {
+      "label": "Ticket",
+      "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2"
+    },
+    {
+      "label": "Discussion",
+      "url": "https://github.com/example-owner/example-harness/issues/1#issuecomment-2"
+    }
+  ],
+  "status": "listed"
+}

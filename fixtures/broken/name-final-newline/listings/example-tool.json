@@ -1,0 +1,12 @@
+{
+  "name": "Example tool\n",
+  "summary": "A synthetic tool whose name ends in a newline.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://example.com/example-tool\n",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed"
+}

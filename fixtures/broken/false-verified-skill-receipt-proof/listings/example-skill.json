@@ -1,0 +1,16 @@
+{
+  "name": "Example skill",
+  "summary": "A synthetic skill with its own check.",
+  "tags": [
+    "skill",
+    "example"
+  ],
+  "url": "https://example.com/example-skill",
+  "plugs_into": "The skills a fleet agent runs",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "proof": {
+    "receipt": "receipts/example-skill/2026-11-01-aaaaaaaaaaaa.txt"
+  }
+}
