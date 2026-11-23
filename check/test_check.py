@@ -420,13 +420,16 @@ class SkillSandbox(Skill):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertFalse(marker.exists(), "the verifier's git config ran a hook during source acquisition")
 
-    def test_skill_output_cannot_issue_workflow_commands(self):
-        reg = self.skill_registry(self.commits["passes"], check="echo '::error::planted'; echo '  ::warning::x'")
-        result = self.skill(reg)
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        for line in (result.stdout + result.stderr).splitlines():
-            self.assertFalse(line.lstrip().startswith("::"), line)
-        self.assertIn("::error::planted", result.stdout)
+    def test_mk13_r2_replayed_output_holds_neither_workflow_command_format(self):
+        cases = (("::", "echo '::error::planted'; echo '  ::set-output name=x::y'", r":\x3aerror:\x3aplanted"),
+                 ("##[", "echo 'text ##[error]planted'; echo '###[set-output name=x;]y'", r"text #\x23[error]planted"))
+        for form, check, shown in cases:
+            with self.subTest(form):
+                shutil.rmtree(self.tmp / "registry", ignore_errors=True)
+                result = self.skill(self.skill_registry(self.commits["passes"], check=check))
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertNotIn(form, result.stdout + result.stderr)
+                self.assertIn("  | " + shown + "\n", result.stdout)
 
     def test_processes_the_check_started_end_with_it(self):
         marker = "wizmarket-marker-" + os.urandom(4).hex()
@@ -613,6 +616,27 @@ class Workflow(Temp):
         empty = git(repo, "hash-object", "-t", "tree", "/dev/null")
         self.assertEqual(values, {"GATE": "bootstrap", "RECEIPT_BASE": empty})
         self.assertEqual(head, git(repo, "rev-parse", "HEAD"))
+
+    def test_mk13_r1_the_gate_refuses_a_submodule_in_the_candidates_commit(self):
+        step = [s["run"] for s in workflow_steps()["check"] if s["name"] == "Check the registry (base revision's check)"]
+        self.assertEqual(len(step), 1)
+        for folder in ("check", "schema"):
+            shutil.copytree(ROOT / folder, self.tmp / "work/trusted" / folder)
+        repo = self.repo()
+        shutil.copytree(FIXTURES / "valid/verified-driver", repo, dirs_exist_ok=True)
+        base = self.commit(repo, {}, "main")
+        for path in ("listings/example-module", "receipts/example-driver/2026-11-02-aaaaaaaaaaaa.txt"):
+            with self.subTest(path):
+                git(repo, "update-index", "--add", "--cacheinfo", f"160000,{'e' * 40},{path}")
+                git(repo, "commit", "-q", "-m", "a submodule")
+                env = {"PATH": os.environ["PATH"], "HOME": str(self.tmp), "RECEIPT_BASE": base}
+                result = subprocess.run(["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c", step[0]], cwd=repo,
+                                        env=env, capture_output=True, text=True, timeout=60)
+                self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn(f"{path}: must be a regular file or folder, not a link or submodule", result.stdout)
+                git(repo, "reset", "-q", "--hard", base)
+        candidate = [s["run"] for s in workflow_steps()["candidate-check"]]
+        self.assertIn('check.py check --base "$base" --rev HEAD', "".join(candidate))
 
     def test_r1_r2_no_required_job_runs_the_candidates_code(self):
         steps = workflow_steps()
