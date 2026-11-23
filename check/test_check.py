@@ -38,7 +38,7 @@ BROKEN = {
     "receipt-raw-note-id": ("receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "line 10 must be"),
 }
 FALSE_VERIFIED = {name for name in BROKEN if name.startswith(("false-verified", "receipt-", "verified-"))}
-EXTRA_FAILURES = {"name-final-newline": 2}  # its url also ends in a newline: openwizdev/OpenWiz#2654
+NAME_AND_URL_BOTH_END_IN_A_NEWLINE = {"name-final-newline": 2}
 
 DRIVER_RECEIPT = FIXTURES / "valid/verified-driver/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt"
 
@@ -96,7 +96,7 @@ class Fixtures(unittest.TestCase):
                 result = run("check", cwd=FIXTURES / "broken" / name)
                 lines = failures(result)
                 self.assertEqual(result.returncode, 1, result.stdout)
-                self.assertEqual(len(lines), EXTRA_FAILURES.get(name, 1), result.stdout)
+                self.assertEqual(len(lines), NAME_AND_URL_BOTH_END_IN_A_NEWLINE.get(name, 1), result.stdout)
                 self.assertTrue(lines[0].startswith(path + ": "), lines)
                 self.assertIn(reason, lines[0])
                 self.assertTrue(all("; fix: " in line for line in lines), lines)

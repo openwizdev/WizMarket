@@ -1,0 +1,65 @@
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.11"
+      - name: Tests
+        run: python3 -I check/test_check.py -v
+      - name: Check the registry
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && 'HEAD^1' || github.event.before }}
+        run: |
+          if git rev-parse --verify --quiet "$BASE^{commit}" >/dev/null; then
+            python3 -I check/check.py check --base "$BASE"
+          else
+            python3 -I check/check.py check
+          fi
+
+  skill-check:
+    name: skill-check
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.11"
+      - name: Run each added or changed skill's check at its pinned commit
+        env:
+          BASE: ${{ github.event_name == 'pull_request' && 'HEAD^1' || github.event.before }}
+        run: |
+          if ! git rev-parse --verify --quiet "$BASE^{commit}" >/dev/null; then
+            BASE=$(git hash-object -t tree /dev/null)
+          fi
+          ids=$(python3 -I check/check.py changed-skills "$BASE")
+          failed=0
+          for id in $ids; do
+            python3 -I check/check.py skill -- "$id" || failed=1
+          done
+          echo "skill checks run: $(echo $ids | wc -w)"
+          exit "$failed"
