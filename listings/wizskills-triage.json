@@ -10,5 +10,9 @@
   "plugs_into": "The skills an OpenWiz agent runs",
   "publisher": "openwizdev",
   "stage": "available",
-  "status": "listed"
+  "status": "verified",
+  "proof": {
+    "source": "openwizdev/WizSkills@a040e40f2b28462c47ee0c2845966d27acd06de5",
+    "check": "python3 -I skills/triage/test/test_find_work.py && python3 -I skills/triage/test/test_public_records.py"
+  }
 }

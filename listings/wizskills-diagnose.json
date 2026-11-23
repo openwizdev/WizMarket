@@ -10,5 +10,9 @@
   "plugs_into": "The skills an OpenWiz agent runs",
   "publisher": "openwizdev",
   "stage": "available",
-  "status": "listed"
+  "status": "verified",
+  "proof": {
+    "source": "openwizdev/WizSkills@a040e40f2b28462c47ee0c2845966d27acd06de5",
+    "check": "node --test skills/diagnose/tests/hitl-loop.test.mjs && python3 -I skills/diagnose/scripts/test_loop.py"
+  }
 }
