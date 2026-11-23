@@ -470,12 +470,14 @@ class IsolatedSkill(SkillSandbox):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_isolated_check_cannot_touch_the_registry_or_see_the_verifier(self):
-        reg = self.skill_registry(self.commits["passes"])
+        reg = self.tmp / "registry"
         listing = reg / "listings/example-skill.json"
-        before = listing.read_bytes()
-        check = (f"echo planted >> '{listing}'; touch '{reg}/listings/planted.json'; "
-                 f"test ! -e /proc/{os.getpid()} && kill -0 1 && ! kill -0 {os.getpid()}")
-        edit_json(listing, lambda d: d["proof"].update({"check": check}))
+        source = self.tmp / "remote/example-owner/example-skills"
+        self.write(source / "attack.sh", f"echo planted >> '{listing}'; touch '{reg}/listings/planted.json'\n"
+                   f"test ! -e /proc/{os.getpid()} && kill -0 1 && ! kill -0 {os.getpid()}\n")
+        git(source, "add", "-A")
+        git(source, "commit", "-q", "-m", "attack")
+        self.skill_registry(git(source, "rev-parse", "HEAD"), check="sh attack.sh")
         before = listing.read_bytes()
         result = self.skill(reg)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

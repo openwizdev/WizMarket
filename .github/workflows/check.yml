@@ -8,6 +8,8 @@ name: check
 
 on:
   pull_request:
+    # edited: a retargeted base takes its gate from the new base
+    types: [opened, synchronize, reopened, edited]
   push:
     branches: [main]
 
