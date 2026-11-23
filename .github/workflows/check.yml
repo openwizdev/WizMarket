@@ -192,7 +192,13 @@ jobs:
         env:
           ID: ${{ matrix.id }}
         run: |
-          sudo -n env -i PATH="$PATH" "$(command -v python3)" -I ../trusted/check/check.py skill --isolate wizskill -- "$ID"
+          rev=(--rev HEAD)
+          usage=$(python3 -I ../trusted/check/check.py skill --help)
+          if [[ "$usage" != *--rev* ]]; then
+            rev=()
+            echo "skill: the base revision's check has no --rev, so it reads the working tree"
+          fi
+          sudo -n env -i PATH="$PATH" "$(command -v python3)" -I ../trusted/check/check.py skill --isolate wizskill "${rev[@]}" -- "$ID"
       - name: Tear down the skill's user
         if: always()
         run: |
