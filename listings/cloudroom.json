@@ -5,12 +5,16 @@
     "driver",
     "cloud"
   ],
-  "url": "https://github.com/openwizdev/OpenWiz/tree/main/adapters/cloudroom",
+  "url": "https://cloudroom.dev",
   "plugs_into": "OpenWiz's driver v1: it starts, wakes and stops builders",
   "publisher": "openwizdev",
   "stage": "available",
   "login": "held by Cloudroom",
   "links": [
+    {
+      "label": "OpenWiz PR #1458",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/1458"
+    },
     {
       "label": "Kit run, 5 of 5",
       "url": "https://github.com/openwizdev/OpenWiz/pull/1458#issuecomment-7034556153"

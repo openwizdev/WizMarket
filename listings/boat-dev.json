@@ -6,12 +6,16 @@
     "sandbox",
     "cloud"
   ],
-  "url": "https://github.com/openwizdev/OpenWiz/tree/main/adapters/boat",
+  "url": "https://boat.dev",
   "plugs_into": "OpenWiz's driver v1: it starts, wakes and stops builders",
   "publisher": "openwizdev",
   "stage": "available",
   "login": "held by boat.dev",
   "links": [
+    {
+      "label": "OpenWiz PR #1444",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/1444"
+    },
     {
       "label": "Kit run, 5 of 5",
       "url": "https://github.com/openwizdev/OpenWiz/pull/1444#issuecomment-7031553819"
