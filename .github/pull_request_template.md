@@ -13,5 +13,5 @@ The format is [`contracts/listing.v1.md`](https://github.com/openwizdev/WizMarke
 - [ ] Its `status` is `listed`, with no `proof`, unless I add my kind's proof (tagged both, I add both):
   - [ ] `driver` or `harness`: the kit receipt from the real host, added at `receipts/<id>/<date>-<commit>.txt` in the contract's receipt format, and named in `proof.receipt`.
   - [ ] `skill`: `proof.source` pins a public GitHub repository at a full 40-character commit, and `proof.check` is the command that passes there (exit 0).
-- [ ] Nothing private: no token, key or password, no private id (a thread, session or machine id), no machine path such as `/home/...`, in the listing or the receipt.
+- [ ] Nothing private: no token, key or password, no private id (a thread, session or machine id), no path on your own machine (such as one in your home folder), in the listing or the receipt.
 - [ ] I ran `python3 -I check/check.py check` from the repository's root and it printed `check: ok`.

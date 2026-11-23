@@ -31,7 +31,7 @@ The format is [`contracts/listing.v1.md`](contracts/listing.v1.md), merged on `m
    - `stage` is `available`, or `being-built`. A `being-built` listing needs `links`, and its first link is the public pull request or ticket where it is being built.
    - Optional: `login` (one line, where its login lives) and `links` (a list of `{"label": "...", "url": "https://..."}`). No other field is allowed.
    - Leave `status` as `listed` unless you add your kind's proof (below).
-4. Keep it public: no token, key or password, no private id (a thread, session or machine id) and no machine path such as `/home/...`. Hosts, logins, commits and public GitHub links are fine.
+4. Keep it public: no token, key or password, no private id (a thread, session or machine id) and no path on your own machine, such as one in your home folder. Hosts, logins, commits and public GitHub links are fine.
 5. Run the check locally (below), then open a pull request. The template lists what the reviewer looks for.
 
 ## What `verified` means
