@@ -1,0 +1,20 @@
+{
+  "name": "Devin",
+  "summary": "Runs OpenWiz builders in Devin sessions through the OpenWiz key helper.",
+  "tags": [
+    "driver",
+    "cloud"
+  ],
+  "url": "https://devin.ai",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by Devin",
+  "links": [
+    {
+      "label": "OpenWiz PR #2490",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2490"
+    }
+  ],
+  "status": "listed"
+}

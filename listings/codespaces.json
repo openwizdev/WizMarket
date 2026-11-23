@@ -1,0 +1,20 @@
+{
+  "name": "GitHub Codespaces",
+  "summary": "Runs each OpenWiz builder in its own GitHub Codespace through the user's gh login.",
+  "tags": [
+    "driver",
+    "cloud"
+  ],
+  "url": "https://github.com/features/codespaces",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by GitHub",
+  "links": [
+    {
+      "label": "OpenWiz PR #2559",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2559"
+    }
+  ],
+  "status": "listed"
+}

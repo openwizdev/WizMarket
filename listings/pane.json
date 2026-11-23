@@ -1,0 +1,20 @@
+{
+  "name": "Pane",
+  "summary": "Runs each OpenWiz builder in its own Pane worktree and agent tab through the runpane CLI.",
+  "tags": [
+    "driver",
+    "local"
+  ],
+  "url": "https://runpane.com/",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Stays on your machine",
+  "links": [
+    {
+      "label": "OpenWiz PR #2029",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2029"
+    }
+  ],
+  "status": "listed"
+}

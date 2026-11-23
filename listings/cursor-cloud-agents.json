@@ -1,0 +1,20 @@
+{
+  "name": "Cursor Cloud Agents",
+  "summary": "Starts, follows up with, and stops Cursor cloud agents from OpenWiz.",
+  "tags": [
+    "driver",
+    "cloud"
+  ],
+  "url": "https://cursor.com/docs/cloud-agent",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by Cursor",
+  "links": [
+    {
+      "label": "OpenWiz PR #2021",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2021"
+    }
+  ],
+  "status": "listed"
+}
