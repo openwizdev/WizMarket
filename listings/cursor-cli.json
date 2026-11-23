@@ -5,7 +5,7 @@
     "harness",
     "cli"
   ],
-  "url": "https://cursor.com/docs/cli/reference/authentication",
+  "url": "https://cursor.com/cli",
   "plugs_into": "OpenWiz local driver",
   "publisher": "jparker2006",
   "stage": "being-built",
