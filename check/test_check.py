@@ -256,6 +256,47 @@ class Skill(Temp):
         git(reg, "commit", "-q", "-m", "change")
         self.assertEqual(run("changed-skills", base, cwd=reg).stdout, "example-driver-kit\n")
 
+    def ident_registry(self, check):
+        reg = self.skill_registry(self.commits["passes"], check=check)
+        self.write(reg / ".gitattributes", "listings/*.json ident\n")
+        git(reg, "init", "-q", "-b", "main")
+        git(reg, "add", "-A")
+        git(reg, "commit", "-q", "-m", "registry")
+        listing = reg / "listings/example-skill.json"
+        listing.unlink()
+        git(reg, "checkout", "--", "listings/example-skill.json")
+        self.assertIn("$Id: ", listing.read_text(), "the checkout attribute did not rewrite the command")
+        return reg
+
+    def test_mk13_r2_skill_runs_the_commits_command_not_the_checkouts(self):
+        reg = self.ident_registry("test '$Id$' = '$'Id'$'")
+        self.assertEqual(run("check", "--rev", "HEAD", cwd=reg).returncode, 0)
+        result = self.skill(reg, "--rev", "HEAD")
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("skill example-skill: pass", result.stdout)
+
+    def test_mk13_r2_the_skill_job_discovers_and_runs_the_commits_listing(self):
+        reg = self.ident_registry("test '$Id$' = '$'Id'$'")
+        for folder in ("check", "schema"):
+            shutil.copytree(ROOT / folder, self.tmp / "trusted" / folder)
+        shim = self.tmp / "shim/sudo"
+        self.write(shim, '#!/bin/bash\n[ "$1" = -n ] && shift\nargs=()\nwhile [ $# -gt 0 ]; do\n'
+                   '  if [ "$1" = --isolate ]; then shift 2; args+=(--source-base "$SOURCE_BASE")\n'
+                   '  else args+=("$1"); shift; fi\ndone\nexec "${args[@]}"\n')
+        shim.chmod(0o755)
+        steps = workflow_steps()["skill"]
+        step = [s["run"] for s in steps if s["name"].startswith("Run the skill's check at its pinned commit")]
+        self.assertEqual(len(step), 1)
+        empty = git(reg, "hash-object", "-t", "tree", "/dev/null")
+        found = run("changed-skills", empty, cwd=reg)
+        self.assertEqual(found.stdout, "example-skill\n", found.stdout + found.stderr)
+        env = {"PATH": f"{shim.parent}:{os.environ['PATH']}", "HOME": str(self.home), "ID": "example-skill",
+               "SOURCE_BASE": self.source_base}
+        result = subprocess.run(["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c", step[0]], cwd=reg, env=env,
+                                capture_output=True, text=True, timeout=120)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("skill example-skill: pass", result.stdout)
+
 RECEIPT = "receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt"
 WORKFLOW = ROOT / ".github/workflows/check.yml"
 REQUIRE_ISOLATION = os.environ.get("WIZMARKET_REQUIRE_ISOLATION") == "1"
@@ -634,6 +675,28 @@ class Workflow(Temp):
                                         env=env, capture_output=True, text=True, timeout=60)
                 self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
                 self.assertIn(f"{path}: must be a regular file or folder, not a link or submodule", result.stdout)
+                git(repo, "reset", "-q", "--hard", base)
+
+    def test_mk13_r1_the_gate_refuses_a_file_where_listings_or_receipts_must_be_a_folder(self):
+        step = [s["run"] for s in workflow_steps()["check"] if s["name"] == "Check the registry (base revision's check)"]
+        self.assertEqual(len(step), 1)
+        for folder in ("check", "schema"):
+            shutil.copytree(ROOT / folder, self.tmp / "work/trusted" / folder)
+        repo = self.repo()
+        base = self.commit(repo, {"README.md": "registry\n"}, "main")
+        env = {"PATH": os.environ["PATH"], "HOME": str(self.tmp), "RECEIPT_BASE": base}
+
+        def gate():
+            return subprocess.run(["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c", step[0]], cwd=repo,
+                                  env=env, capture_output=True, text=True, timeout=60)
+        absent = gate()
+        self.assertEqual(absent.returncode, 0, absent.stdout + absent.stderr)
+        for path in ("listings", "receipts"):
+            with self.subTest(path):
+                self.commit(repo, {path: "{}\n"}, "a file in place of the folder")
+                result = gate()
+                self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn(f"{path}: must be a folder", result.stdout)
                 git(repo, "reset", "-q", "--hard", base)
 
     def test_r1_r2_no_required_job_runs_the_candidates_code(self):
