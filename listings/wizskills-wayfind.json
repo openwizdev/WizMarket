@@ -1,0 +1,14 @@
+{
+  "name": "Wayfind",
+  "summary": "Chart a big, unclear effort before planning it.",
+  "tags": [
+    "skill",
+    "wizskills",
+    "planning"
+  ],
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/wayfind",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "status": "listed"
+}

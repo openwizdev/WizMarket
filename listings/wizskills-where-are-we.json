@@ -1,0 +1,14 @@
+{
+  "name": "Where Are We",
+  "summary": "Read factory status and recommend one next move.",
+  "tags": [
+    "skill",
+    "wizskills",
+    "status"
+  ],
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/where-are-we",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "status": "listed"
+}

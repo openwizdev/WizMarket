@@ -1,0 +1,14 @@
+{
+  "name": "Image",
+  "summary": "Generate pictures and capture phone and desktop UI.",
+  "tags": [
+    "skill",
+    "wizskills",
+    "design"
+  ],
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/image",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "status": "listed"
+}
