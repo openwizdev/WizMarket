@@ -1,0 +1,18 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool whose URL host ends in a hex number with an upper-case prefix.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://example.0X7F/",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Mirror",
+      "url": "https://0x7f.example.com/"
+    }
+  ],
+  "status": "listed"
+}

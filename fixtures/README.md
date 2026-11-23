@@ -31,6 +31,10 @@ Each is refused for exactly one reason.
 | `broken/source-final-newline/` | A skill's `source` ends in a newline | schema |
 | `broken/url-port-out-of-range/` | The `url` port is 99999 | schema |
 | `broken/url-bad-host/` | The `url` host has an underscore | schema |
+| `broken/url-last-label-hex/` | The `url` host's last label, `0x7f`, is a hex number, which a web URL parser reads as an IP address | schema |
+| `broken/url-last-label-hex-upper/` | The `url` host's last label, `0X7F`, is a hex number with an upper-case prefix | schema |
+| `broken/url-last-label-hex-empty/` | The `url` host's last label, `0x`, is the hex number zero | schema |
+| `broken/link-url-last-label-hex/` | A link's `url` host's last label, `0xdead`, is a hex number | schema |
 | `broken/verified-without-proof/` | `verified` with no `proof` | schema |
 | `broken/listed-with-proof/` | `listed` with a `proof` | schema |
 | `broken/bad-id/` | The file name `Example_Tool` is not a valid id | id rule |
@@ -47,3 +51,5 @@ Each is refused for exactly one reason.
 | `broken/receipt-raw-note-id/` | The receipt's `pass start:` line keeps the raw note id instead of `<note>` | receipt rule |
 
 Every broken folder's other content is valid, so the reason above is the only one.
+
+The four `*-last-label-hex*` folders also carry a valid boundary URL, `https://0x7f.example.com/`: a number form is refused only as the last label.
