@@ -5,9 +5,11 @@ import os
 import pwd
 import re
 import signal
+import stringprep
 import subprocess
 import sys
 import tempfile
+import unicodedata
 from pathlib import Path, PurePosixPath
 
 SCHEMA = json.loads((Path(__file__).resolve().parent.parent / "schema" / "listing.v1.json").read_text())
@@ -22,6 +24,12 @@ TAG = re.compile(PROPS["tags"]["items"]["pattern"])
 RECEIPT_PATH = re.compile(PROPS["proof"]["properties"]["receipt"]["pattern"])
 SOURCE = re.compile(PROPS["proof"]["properties"]["source"]["pattern"])
 ID = re.compile(r"[a-z0-9-]{2,40}")
+HOST = re.compile(r"https://([^:/?#]*)")
+IDN_REFUSED = (stringprep.in_table_a1, stringprep.in_table_b1, stringprep.in_table_c12, stringprep.in_table_c22,
+               stringprep.in_table_c3, stringprep.in_table_c4, stringprep.in_table_c5, stringprep.in_table_c6,
+               stringprep.in_table_c7, stringprep.in_table_c8, stringprep.in_table_c9)
+BIDI_RTL = {"R", "AL", "AN", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
+BIDI_LTR = {"L", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
 KIT = re.compile(r"openwizdev/OpenWiz@[0-9a-f]{40}")
 DATE = re.compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2}")
 CLONE_TIMEOUT = 300
@@ -140,8 +148,56 @@ def is_line(value):
     return isinstance(value, str) and LINE.fullmatch(value) is not None
 
 
+def idn_label(label):
+    code = label[4:]
+    try:
+        text = code.encode("ascii").decode("punycode")
+        if text.encode("punycode").decode("ascii") != code:
+            return None
+    except (ValueError, IndexError, OverflowError):
+        return None
+    old = unicodedata.ucd_3_2_0
+    if text.isascii() or old.category(text[0])[0] == "M" or unicodedata.category(text[0])[0] == "M":
+        return None
+    if old.normalize("NFC", text) != text or unicodedata.normalize("NFC", text) != text:
+        return None
+    for c in text:
+        if c.isascii():
+            continue
+        if any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c:
+            return None
+        if c not in "\u00df\u03c2" and stringprep.map_table_b2(c) != c:
+            return None
+    return text
+
+
+def bidi_label(text, classes):
+    kinds = [classes(c) for c in text]
+    rtl = kinds[0] in ("R", "AL")
+    if not rtl and kinds[0] != "L":
+        return False
+    allowed = BIDI_RTL if rtl else BIDI_LTR
+    if not all(kind in allowed for kind in kinds) or (rtl and "EN" in kinds and "AN" in kinds):
+        return False
+    while kinds[-1] == "NSM":
+        kinds.pop()
+    return kinds[-1] in (("R", "AL", "EN", "AN") if rtl else ("L", "EN"))
+
+
+def idn_host(host):
+    labels = host.lower().split(".")
+    texts = [idn_label(label) if label.startswith("xn--") else label for label in labels]
+    if None in texts:
+        return False
+    for classes in (unicodedata.ucd_3_2_0.bidirectional, unicodedata.bidirectional):
+        if any(classes(c) in ("R", "AL", "AN") for text in texts for c in text):
+            if not all(bidi_label(text, classes) for text in texts):
+                return False
+    return True
+
+
 def check_https(failures, path, name, value):
-    if not (isinstance(value, str) and HTTPS.fullmatch(value)):
+    if not (isinstance(value, str) and HTTPS.fullmatch(value) and idn_host(HOST.match(value).group(1))):
         failures.add(path, f'"{name}" must be an https:// URL as the contract\'s URLs section says',
                      "write https://, a DNS host, an optional port, then a path, query or fragment of printable ASCII")
 
