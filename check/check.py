@@ -28,6 +28,7 @@ HOST = re.compile(r"https://([^:/?#]*)")
 IDN_REFUSED = (stringprep.in_table_a1, stringprep.in_table_b1, stringprep.in_table_c12, stringprep.in_table_c22,
                stringprep.in_table_c3, stringprep.in_table_c4, stringprep.in_table_c5, stringprep.in_table_c6,
                stringprep.in_table_c7, stringprep.in_table_c8, stringprep.in_table_c9)
+IDN_INVISIBLE = "\u115f\u1160\u17b4\u17b5\u3002"
 BIDI_RTL = {"R", "AL", "AN", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
 BIDI_LTR = {"L", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
 KIT = re.compile(r"openwizdev/OpenWiz@[0-9a-f]{40}")
@@ -157,16 +158,18 @@ def idn_label(label):
     except (ValueError, IndexError, OverflowError):
         return None
     old = unicodedata.ucd_3_2_0
-    if text.isascii() or old.category(text[0])[0] == "M" or unicodedata.category(text[0])[0] == "M":
+    if text.isascii() or text.startswith("-") or text.endswith("-") or text[2:4] == "--":
+        return None
+    if old.category(text[0])[0] == "M" or unicodedata.category(text[0])[0] == "M":
         return None
     if old.normalize("NFC", text) != text or unicodedata.normalize("NFC", text) != text:
         return None
     for c in text:
         if c.isascii():
             continue
-        if any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c:
+        if any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c or c in IDN_INVISIBLE:
             return None
-        if c not in "\u00df\u03c2" and stringprep.map_table_b2(c) != c:
+        if c not in "\u00df\u03c2" and (stringprep.map_table_b2(c) != c or unicodedata.normalize("NFKC", c.casefold()) != c):
             return None
     return text
 
