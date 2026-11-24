@@ -1,0 +1,20 @@
+{
+  "name": "Gemini CLI",
+  "summary": "The Gemini CLI harness row for OpenWiz's local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://github.com/google-gemini/gemini-cli",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Gemini CLI uses the cached Google sign-in or GEMINI_API_KEY you set. The driver never reads or passes it.",
+  "links": [
+    {
+      "label": "OpenWiz harness row",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2506"
+    }
+  ],
+  "status": "listed"
+}
