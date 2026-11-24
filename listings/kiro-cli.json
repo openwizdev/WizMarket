@@ -1,0 +1,20 @@
+{
+  "name": "Kiro CLI (local)",
+  "summary": "Kiro CLI (local) as a harness for the OpenWiz local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://kiro.dev/docs/cli/",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Set KIRO_API_KEY in your own environment (paid tiers), or use browser sign-in if headless runs accept it.",
+  "links": [
+    {
+      "label": "OpenWiz integration ticket",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2440"
+    }
+  ],
+  "status": "listed"
+}

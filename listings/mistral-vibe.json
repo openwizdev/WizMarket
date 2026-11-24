@@ -1,0 +1,20 @@
+{
+  "name": "Mistral Vibe",
+  "summary": "Mistral Vibe as a harness for the OpenWiz local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://github.com/mistralai/mistral-vibe",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Sign in with a Mistral account, or keep your key in the OS keyring or your environment.",
+  "links": [
+    {
+      "label": "OpenWiz integration ticket",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2438"
+    }
+  ],
+  "status": "listed"
+}

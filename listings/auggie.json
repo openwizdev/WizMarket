@@ -1,0 +1,20 @@
+{
+  "name": "Augment Auggie CLI",
+  "summary": "Augment Auggie CLI as a harness for the OpenWiz local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://docs.augmentcode.com/cli/reference",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Run auggie auth login. Auggie stores the login in its local session.json file.",
+  "links": [
+    {
+      "label": "OpenWiz integration ticket",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2439"
+    }
+  ],
+  "status": "listed"
+}

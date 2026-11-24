@@ -1,0 +1,20 @@
+{
+  "name": "Crush",
+  "summary": "Crush as a harness for the OpenWiz local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://github.com/charmbracelet/crush",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Run crush login.",
+  "links": [
+    {
+      "label": "OpenWiz integration ticket",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2436"
+    }
+  ],
+  "status": "listed"
+}
