@@ -1,0 +1,18 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool whose link's URL host has an xn-- label that decodes to a control character.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://XN--BCHER-KVA.example.com/example-tool",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Mirror",
+      "url": "https://example.xn--a.com/"
+    }
+  ],
+  "status": "listed"
+}

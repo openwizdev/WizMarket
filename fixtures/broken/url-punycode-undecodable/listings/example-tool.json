@@ -1,0 +1,18 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool whose URL host has an xn-- label that is not Punycode at all.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://xn--99999999999.example.com/",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Mirror",
+      "url": "https://xn--bcher-kva.example.com/"
+    }
+  ],
+  "status": "listed"
+}
