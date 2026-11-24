@@ -1,0 +1,20 @@
+{
+  "name": "Conductor",
+  "summary": "Runs OpenWiz builders in Conductor cloud workspaces through its REST API.",
+  "tags": [
+    "driver",
+    "cloud"
+  ],
+  "url": "https://www.conductor.build/",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by Conductor",
+  "links": [
+    {
+      "label": "OpenWiz PR #2020",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2020"
+    }
+  ],
+  "status": "listed"
+}

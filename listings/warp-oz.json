@@ -1,0 +1,20 @@
+{
+  "name": "Warp Oz",
+  "summary": "Runs OpenWiz builders as Claude Code or Codex cloud agents on Warp Oz.",
+  "tags": [
+    "driver",
+    "cloud"
+  ],
+  "url": "https://www.warp.dev/oz",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by Warp Oz",
+  "links": [
+    {
+      "label": "OpenWiz PR #2555",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2555"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Hermes",
+  "summary": "Runs OpenWiz builders through the Hermes CLI and resumes the saved Hermes session on wake.",
+  "tags": [
+    "driver",
+    "local"
+  ],
+  "url": "https://hermes-agent.nousresearch.com/docs",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Stays on your machine",
+  "links": [
+    {
+      "label": "OpenWiz PR #2017",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2017"
+    }
+  ],
+  "status": "listed"
+}

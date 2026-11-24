@@ -1,0 +1,20 @@
+{
+  "name": "Factory",
+  "summary": "Runs OpenWiz builders locally through the Factory Droid CLI.",
+  "tags": [
+    "driver",
+    "local"
+  ],
+  "url": "https://docs.factory.com/droid-cli/overview",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by Factory",
+  "links": [
+    {
+      "label": "OpenWiz PR #2022",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2022"
+    }
+  ],
+  "status": "listed"
+}

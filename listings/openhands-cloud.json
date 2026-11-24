@@ -1,0 +1,20 @@
+{
+  "name": "OpenHands Cloud",
+  "summary": "Runs OpenWiz builders in OpenHands Cloud using their configured Claude Code or Codex agent profiles.",
+  "tags": [
+    "driver",
+    "cloud"
+  ],
+  "url": "https://openhands.dev/",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Held by OpenHands Cloud",
+  "links": [
+    {
+      "label": "OpenWiz PR #2567",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2567"
+    }
+  ],
+  "status": "listed"
+}

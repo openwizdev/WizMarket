@@ -1,0 +1,23 @@
+{
+  "name": "OpenClaw",
+  "summary": "Runs OpenWiz builders locally through OpenClaw's acpx client. Merged for 0.1.2 and not in a release yet.",
+  "tags": [
+    "driver",
+    "local"
+  ],
+  "url": "https://github.com/openclaw/acpx",
+  "plugs_into": "OpenWiz driver v1",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Stays on your machine",
+  "links": [
+    {
+      "label": "OpenWiz PR #2018",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2018"
+    }
+  ],
+  "status": "verified",
+  "proof": {
+    "receipt": "receipts/openclaw/2026-11-22-9cc752319196.txt"
+  }
+}

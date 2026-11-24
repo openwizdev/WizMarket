@@ -1,0 +1,14 @@
+# listing: openclaw
+# host: local
+# driver: openwizdev/OpenWiz@9cc7523191965f519d05d7ce79928e0c6be6cce3
+# kit: openwizdev/OpenWiz@9cc7523191965f519d05d7ce79928e0c6be6cce3
+# harness: claude
+# model: haiku
+# date: 2026-11-22
+# run by: jparker2006
+pass version: openwiz:records v1, and the schema is driver v1
+pass start: the run posted builder status note <note>
+pass wake: the run edited builder status note <note>
+pass stop: the run ended, and a wake after it is refused
+pass token: no login or token passed through the driver
+Result: 5 of 5 pass
