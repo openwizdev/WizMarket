@@ -1,0 +1,23 @@
+{
+  "name": "Hourly status",
+  "summary": "Posts an hourly status line for a spec, only when something changed.",
+  "tags": [
+    "loop",
+    "wizloops"
+  ],
+  "url": "https://github.com/openwizdev/WizLoops/blob/main/catalog/hourly-status.md",
+  "plugs_into": "OpenWiz loop commands for loop.v1 files on Cloudroom",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Check script",
+      "url": "https://github.com/openwizdev/WizLoops/tree/main/catalog/hourly-status"
+    },
+    {
+      "label": "Loop format",
+      "url": "https://github.com/openwizdev/WizLoops/blob/main/format/loop.v1.md"
+    }
+  ],
+  "status": "listed"
+}

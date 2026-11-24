@@ -1,0 +1,23 @@
+{
+  "name": "Workflow kick",
+  "summary": "Starts a CI workflow on time from its check alone; no agent ever starts.",
+  "tags": [
+    "loop",
+    "wizloops"
+  ],
+  "url": "https://github.com/openwizdev/WizLoops/blob/main/catalog/workflow-kick.md",
+  "plugs_into": "OpenWiz loop commands for loop.v1 files on Cloudroom",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Check script",
+      "url": "https://github.com/openwizdev/WizLoops/tree/main/catalog/workflow-kick"
+    },
+    {
+      "label": "Loop format",
+      "url": "https://github.com/openwizdev/WizLoops/blob/main/format/loop.v1.md"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Stall sweep",
+  "summary": "Finds open pull requests with no progress, and says why each looks stalled.",
+  "tags": [
+    "loop",
+    "wizloops"
+  ],
+  "url": "https://github.com/openwizdev/WizLoops/blob/main/catalog/stall-sweep.md",
+  "plugs_into": "OpenWiz loop commands for loop.v1 files on Cloudroom",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Check script",
+      "url": "https://github.com/openwizdev/WizLoops/tree/main/catalog/stall-sweep"
+    },
+    {
+      "label": "Loop format",
+      "url": "https://github.com/openwizdev/WizLoops/blob/main/format/loop.v1.md"
+    }
+  ],
+  "status": "listed"
+}
