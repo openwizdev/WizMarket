@@ -1,6 +1,6 @@
 {
   "name": "Launch Fleet",
-  "summary": "Start every ready ticket at once and keep a fleet moving.",
+  "summary": "Start eligible tickets and keep the fleet moving through build, review and merge.",
   "tags": [
     "skill",
     "wizskills",
