@@ -1,0 +1,14 @@
+# listing: boat-dev
+# host: boat.dev
+# driver: openwizdev/OpenWiz@e22d6dd9da0da70eb8974a90f2802bebc10c198d
+# kit: openwizdev/OpenWiz@e22d6dd9da0da70eb8974a90f2802bebc10c198d
+# harness: Claude Code
+# model: opus-5-5
+# date: 2026-11-20
+# run by: jparker2006
+pass version: openwiz:records v1, and the schema is driver v1
+pass start: the run posted builder status note <note>
+pass wake: the run edited builder status note <note>
+pass stop: the run ended, and a wake after it is refused
+pass token: no login or token passed through the driver
+Result: 5 of 5 pass

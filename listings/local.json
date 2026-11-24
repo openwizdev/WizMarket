@@ -1,0 +1,28 @@
+{
+  "name": "Your own computer or VPS",
+  "summary": "Runs OpenWiz builders with your own signed-in claude or codex harness on your own computer or VPS.",
+  "tags": [
+    "driver",
+    "local",
+    "vps"
+  ],
+  "url": "https://github.com/openwizdev/OpenWiz",
+  "plugs_into": "OpenWiz's driver v1: it starts, wakes and stops builders",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "login": "stays on your machine",
+  "links": [
+    {
+      "label": "OpenWiz PR #1455",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/1455"
+    },
+    {
+      "label": "Kit run, 5 of 5",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/1455#issuecomment-7034588211"
+    }
+  ],
+  "status": "verified",
+  "proof": {
+    "receipt": "receipts/local/2026-11-20-857d107ecdc5.txt"
+  }
+}
