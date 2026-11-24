@@ -1,0 +1,18 @@
+{
+  "name": "Example tool",
+  "summary": "A synthetic tool whose URL host has an xn-- label that decodes to an upper-case letter.",
+  "tags": [
+    "mcp-server"
+  ],
+  "url": "https://example.xn--bcher-2pa/",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Mirror",
+      "url": "https://example.xn--bcher-kva/"
+    }
+  ],
+  "status": "listed"
+}

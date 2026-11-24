@@ -33,11 +33,14 @@ The work link of a `being-built` listing is checked only as a URL. The reviewer 
 
 **URLs.** Every `url` (the listing's and each link's) is `https://`, then a host, then an optional port, then an optional path, query or fragment:
 
-- The host is a DNS name of two or more labels joined by dots, at most 253 characters. Each label is 1 to 63 ASCII letters, digits or hyphens, and doesn't start or end with a hyphen; the last label has a letter. No IP address, no user name (`user@`), no trailing dot. Write a non-ASCII name in its `xn--` form.
+- The host is a DNS name of two or more labels joined by dots, at most 253 characters. Each label is 1 to 63 ASCII letters, digits or hyphens, and doesn't start or end with a hyphen. The last label starts with a letter, so it is never a number form such as `127`, `0x7f`, `0X7F` or `0x`: a last label like that makes a web URL parser try to read the whole host as an IPv4 address, so it refuses `example.0x7f` and reads `0.0.0X7F` as `0.0.0.127`. No IP address, no user name (`user@`), no trailing dot.
+- Write a non-ASCII name in its `xn--` form. Every `xn--` label (in any case) must be valid Punycode of a valid internationalized label: it decodes, encoding the result gives the same label back, and the decoded label has a non-ASCII character, doesn't start or end with a hyphen or have `--` as its third and fourth characters, is in NFC, doesn't start with a combining mark, and holds only characters assigned in Unicode 3.2 that IDNA keeps unchanged (lower case and not mapped, and no control, space, private-use, invisible or other refused character; `ß` and `ς` are kept). If any label of the host has a right-to-left character, every label follows the RFC 5893 Bidi rule. So `xn--bcher-kva` (`bücher`) passes, and `xn--a` (it decodes to a control character) does not. This is the strict side of today's URL parsers, which differ by version: some names a current browser accepts, such as ones with most emoji or newer scripts, are refused.
 - The port, if any, is `:` and a number from 1 to 65535, without leading zeros.
 - The rest starts with `/`, `?` or `#` and holds only printable ASCII, no space. Percent-encode anything else (`%C3%BC` for `ü`).
 
 WizMarket doesn't rewrite URLs: the check and the market page use them exactly as written.
+
+This URL rule was tightened on 2026-11-23, before any listing merged. It first said only that the last label has a letter, which let through hosts such as `example.0x7f` that a web URL parser, like the one the market page uses, refuses or reads as an IPv4 address, and it didn't check `xn--` labels, which let through hosts such as `xn--a.example.com` that some parsers refuse.
 
 A minimal listing, `listings/my-tool.json`:
 
