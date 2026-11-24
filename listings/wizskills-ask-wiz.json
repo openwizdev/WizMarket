@@ -1,0 +1,18 @@
+{
+  "name": "Ask Wiz",
+  "summary": "Choose the skill or flow for your question.",
+  "tags": [
+    "skill",
+    "wizskills",
+    "help"
+  ],
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/ask-wiz",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "status": "verified",
+  "proof": {
+    "source": "openwizdev/WizSkills@a040e40f2b28462c47ee0c2845966d27acd06de5",
+    "check": "python3 -I skills/ask-wiz/test/test_routes.py"
+  }
+}

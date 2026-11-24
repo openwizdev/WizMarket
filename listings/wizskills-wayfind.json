@@ -1,0 +1,18 @@
+{
+  "name": "Wayfind",
+  "summary": "Chart a big, unclear effort before planning it.",
+  "tags": [
+    "skill",
+    "wizskills",
+    "planning"
+  ],
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/wayfind",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "status": "verified",
+  "proof": {
+    "source": "openwizdev/WizSkills@a040e40f2b28462c47ee0c2845966d27acd06de5",
+    "check": "python3 -I skills/wayfind/test/test_frontier.py"
+  }
+}
