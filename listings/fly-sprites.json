@@ -1,0 +1,21 @@
+{
+  "name": "Fly Sprites",
+  "summary": "Runs each OpenWiz builder in its own Fly Sprite through your own signed-in sprite CLI.",
+  "tags": [
+    "driver",
+    "sandbox",
+    "cloud"
+  ],
+  "url": "https://docs.fly.io/sprites",
+  "plugs_into": "OpenWiz's driver v1: it starts, wakes and stops builders",
+  "publisher": "openwizdev",
+  "stage": "being-built",
+  "login": "held by Fly.io",
+  "links": [
+    {
+      "label": "OpenWiz driver ticket",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2543"
+    }
+  ],
+  "status": "listed"
+}
