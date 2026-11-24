@@ -1,6 +1,6 @@
 {
   "name": "Devin",
-  "summary": "Runs OpenWiz builders in Devin sessions through the OpenWiz key helper.",
+  "summary": "Runs OpenWiz builders in Devin sessions through the OpenWiz key helper. Merged, waiting on its live check, not in a release yet.",
   "tags": [
     "driver",
     "cloud"
