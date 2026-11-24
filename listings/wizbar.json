@@ -1,0 +1,26 @@
+{
+  "name": "WizBar",
+  "summary": "A Cloudroom sidebar for agent fleets: Pinned, Specs and Unread sections, spec progress dots, and a wizbar CLI with JSON.",
+  "tags": [
+    "plugin",
+    "cloudroom",
+    "sidebar",
+    "wizplugins"
+  ],
+  "url": "https://getbb.app/marketplace/wizbar",
+  "plugs_into": "Cloudroom's sidebar, watching an OpenWiz factory's specs and threads",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "login": "Your own gh login on your computer, read by its specs producer",
+  "links": [
+    {
+      "label": "Source, WizBar v0.6.0",
+      "url": "https://github.com/openwizdev/WizPlugins/releases/tag/wizbar/v0.6.0"
+    },
+    {
+      "label": "README",
+      "url": "https://github.com/openwizdev/WizPlugins/tree/main/wizbar"
+    }
+  ],
+  "status": "listed"
+}

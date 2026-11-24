@@ -1,0 +1,23 @@
+{
+  "name": "Morning digest",
+  "summary": "Sends the owner a daily digest of merged, failing and waiting work at a fixed local time.",
+  "tags": [
+    "loop",
+    "wizloops"
+  ],
+  "url": "https://github.com/openwizdev/WizLoops/blob/main/catalog/morning-digest.md",
+  "plugs_into": "OpenWiz loops (loop.v1 files; the openwiz loop commands ship in OpenWiz's next release)",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Check script",
+      "url": "https://github.com/openwizdev/WizLoops/tree/main/catalog/morning-digest"
+    },
+    {
+      "label": "Loop format",
+      "url": "https://github.com/openwizdev/WizLoops/blob/main/format/loop.v1.md"
+    }
+  ],
+  "status": "listed"
+}
