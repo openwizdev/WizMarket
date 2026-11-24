@@ -6,7 +6,7 @@
     "wizloops"
   ],
   "url": "https://github.com/openwizdev/WizLoops/blob/main/catalog/hourly-status.md",
-  "plugs_into": "OpenWiz loops (loop.v1 files; the openwiz loop commands ship in OpenWiz's next release)",
+  "plugs_into": "OpenWiz loop commands for loop.v1 files on Cloudroom",
   "publisher": "jparker2006",
   "stage": "available",
   "links": [

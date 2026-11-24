@@ -1,12 +1,12 @@
 {
   "name": "Fleet check",
-  "summary": "Wakes a fleet's manager only when its spec has something due.",
+  "summary": "Wakes a fleet's manager when its spec has something due, or to report a failed check.",
   "tags": [
     "loop",
     "wizloops"
   ],
   "url": "https://github.com/openwizdev/WizLoops/blob/main/catalog/fleet-check.md",
-  "plugs_into": "OpenWiz loops (loop.v1 files; the openwiz loop commands ship in OpenWiz's next release)",
+  "plugs_into": "OpenWiz loop commands for loop.v1 files on Cloudroom",
   "publisher": "jparker2006",
   "stage": "available",
   "links": [
