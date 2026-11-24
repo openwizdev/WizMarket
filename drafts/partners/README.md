@@ -14,13 +14,13 @@ All three pass `python3 -I check/check.py check` on this branch. Each is `listed
 
 ## Joggernaut and Jog
 
-**What it is.** [Joggernaut](https://github.com/usejog/joggernaut) (MIT) is seven agent skills for GitHub Actions CI: `ci-diagnose` (read-only, through your own `gh`), `ci-cache`, `ci-workflow`, `ci-slow-tests`, `ci-flaky-tests`, `ci-measure` and `ci-guard`. Its rules: measure CI's own runs before and after, keep every test running, one fix per pull request. It works on any GitHub Actions repository and does not need a Jog account. Jog itself is drop-in runners for private repositories (`runs-on: jog`), with a separate [right-size skill](https://usejog.com/skills/jog/SKILL.md) that reads Jog's own measurements (a Jog account and a browser-approved token are needed).
+**What it is.** [Joggernaut](https://github.com/usejog/joggernaut) (MIT) is seven agent skills for GitHub Actions CI: `ci-diagnose` (read-only, through your own `gh`), `ci-cache`, `ci-workflow`, `ci-slow-tests`, `ci-flaky-tests`, `ci-measure` and `ci-guard`. Its rules: measure CI's own runs before and after, keep every test running, one fix per pull request, the full suite before every merge. It works on any GitHub Actions repository and does not need a Jog account. Jog itself is drop-in runners for private repositories (`runs-on: jog`), with a separate [right-size skill](https://usejog.com/skills/jog/SKILL.md) that reads Jog's own measurements (a Jog account and a browser-approved token are needed).
 
 **What we tried.** Joggernaut at `010072c49018bfb5e9dbe01e4fdf4530c8ef7ff4`, copied into a scratch repository. We ran `ci-diagnose`'s read-only `fetch` and `split`, then `ci-flaky-tests`, against the last 150 `pull_request` runs of OpenWiz's `ci.yml`. We changed nothing in OpenWiz and opened nothing there. The fetch took 5m 09s and 232 GET requests. We checked three runs by hand against `gh run view`, and all 21 job timings matched.
 
 **What it found.**
-- The median PR wait was 20m 10s. On every passing run the slowest path was the same: one long release test leg, then the two gate jobs. Waiting for a runner was 6s. Nearly all the time was tests running.
-- Its top lead is one serial test block of about 11 minutes inside that leg. Moving it to its own parallel job models about 8 minutes off the median. That is a ceiling, not a measured result; `ci-measure` would measure it after a change.
+- The median PR wait on the 60 passing runs was 20m 10s. On every passing run the slowest path was the same: one long release test leg, then the two gate jobs. Waiting for a runner was 6s. Nearly all the time was tests running.
+- Our ranking of its timings put one serial test block of about 11 minutes inside that leg first. A replay of the 60 passing runs with that block moved to its own parallel job models about 8 minutes off the median. That is a model, not a measured result; `ci-measure` would measure it after a change.
 - 31% of runner-minutes (967 of 3,102) went to failed or cancelled runs. Most cancellations were older runs replaced by a newer push, so the cancelling already works as intended.
 - No rerun-based flakes, because every sampled run was a first attempt. One test failed on two different commits, which is a lead to look at, not a proven flake.
 
@@ -30,7 +30,7 @@ All three pass `python3 -I check/check.py check` on this branch. Each is `listed
 - `python3 -I tools/selftest.py` stops with `No module named 'selftest_hook'`, because isolated mode leaves the script's folder off the import path. Without `-I` it passes.
 - The fetch used 232 requests against the README's estimate of about 155 (extra pull-request base lookups).
 
-**Verdict: helps partly.** It found the real bottleneck fast and suggested a sensible next experiment. Accurate numbers still needed a person to read the workflow.
+**Verdict: helps partly.** Its read-only timing found the real bottleneck fast and pointed to a sensible next experiment. Accurate numbers still needed a person to read the workflow and rank the causes.
 
 **Verified, if the maker agrees.** With this proof, WizMarket's own `python3 -I check/check.py skill joggernaut` cloned the pinned commit and passed (exit 0):
 
@@ -54,11 +54,11 @@ All three pass `python3 -I check/check.py check` on this branch. Each is `listed
 | Gate before a start | `check()` (preview) and `held()`; `reserve()` at the real start | A fleet or loop check that defers a wake, plus the wrapper at dispatch |
 | Meter merged pull requests | `allow(id, entitlement, 1, event, undefined, true)` for a merge that already happened; `addHandler()` for `meter-overage` | An outside reader of confirmed merges, with its own dedupe record |
 | Per-repository deals | `ensureCustomer()`, `createCustomerOverride()`, `setCustomerRules()` | One Limitr customer per repository |
-| Live policy change | Limitr Cloud publish; local `setPlan()` | Policy, not code |
+| Live policy change | Limitr Cloud publish; local `setPlan()` | Policy, not code (Cloud publish needs a paid plan; locally, the budget service must call `setPlan()` or restart) |
 
-**What we tried.** A wrapper driver from a community build night caps builder starts through `reserve`/`settle`/`release` around OpenWiz's template driver. It is not public yet. We ran OpenWiz's five-check driver kit on it locally (OpenWiz at `f45763747a8cd9fddd9e3067690bdb1b3a8f4f89`, `@formata/limitr` 0.8.9), with a local tracker and the kit's synthetic harness, so nothing was written to GitHub.
+**What we tried.** A wrapper driver we built at Limitr's build night caps builder starts through `reserve`/`settle`/`release` around OpenWiz's template driver. It is not public yet. We ran OpenWiz's five-check driver kit on it locally (OpenWiz at `f45763747a8cd9fddd9e3067690bdb1b3a8f4f89`, `@formata/limitr` 0.8.9), with a local tracker and the kit's synthetic harness, so nothing was written to GitHub.
 - As shipped: 2 of 5. `version` and `token` pass. `start` fails because the wrapper forwards the template's `effort` capability but its README has no `Effort:` line. `wake` and `stop` don't run.
-- A copy with only that README fix: 5 of 5.
+- A copy with only that README fix (the template's Login and Effort lines): 5 of 5.
 - With the budget used up, `start` refuses in driver v1's error shape: `{"error":"Limitr refused: reason \"limit\", ...","next":"raise the start_builder limit ..."}`.
 - The build-night demo still runs: 3 of 4 sequential starts and exactly 3 of 10 parallel starts are allowed at a limit of 3.
 
