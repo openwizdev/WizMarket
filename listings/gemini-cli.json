@@ -5,7 +5,7 @@
     "harness",
     "cli"
   ],
-  "url": "https://github.com/google-gemini/gemini-cli/blob/main/README.md",
+  "url": "https://github.com/google-gemini/gemini-cli",
   "plugs_into": "OpenWiz local driver",
   "publisher": "jparker2006",
   "stage": "being-built",
