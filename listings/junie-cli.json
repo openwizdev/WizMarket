@@ -5,8 +5,8 @@
     "harness",
     "cli"
   ],
-  "url": "https://github.com/openwizdev/OpenWiz/issues/2442",
-  "plugs_into": "The local driver",
+  "url": "https://junie.jetbrains.com/docs/junie-cli.html",
+  "plugs_into": "OpenWiz local driver",
   "publisher": "jparker2006",
   "stage": "being-built",
   "login": "Sign in with JetBrains, or set JUNIE_API_KEY yourself.",
