@@ -1,0 +1,25 @@
+{
+  "name": "Jog",
+  "summary": "Drop-in GitHub Actions runners for private repositories, billed by the second. A job moves by changing its runs-on line.",
+  "tags": [
+    "ci",
+    "runner",
+    "github-actions"
+  ],
+  "url": "https://usejog.com",
+  "plugs_into": "The GitHub Actions CI that checks a fleet's pull requests, in private repositories",
+  "publisher": "usejog",
+  "stage": "available",
+  "login": "Jog's GitHub App on your account or organization, added at usejog.com/account",
+  "links": [
+    {
+      "label": "Set up Jog with a coding agent",
+      "url": "https://usejog.com/docs/agents/"
+    },
+    {
+      "label": "Right-size runners skill",
+      "url": "https://usejog.com/skills/jog/SKILL.md"
+    }
+  ],
+  "status": "listed"
+}

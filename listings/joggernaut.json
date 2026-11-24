@@ -1,0 +1,20 @@
+{
+  "name": "Joggernaut",
+  "summary": "Agent skills that find why pull requests wait on GitHub Actions CI, make the fix you pick and measure it, keeping every test.",
+  "tags": [
+    "skill",
+    "ci",
+    "github-actions"
+  ],
+  "url": "https://github.com/usejog/joggernaut",
+  "plugs_into": "The agent's skills: diagnose and fix the CI a fleet's pull requests wait on",
+  "publisher": "usejog",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Jog",
+      "url": "https://usejog.com"
+    }
+  ],
+  "status": "listed"
+}
