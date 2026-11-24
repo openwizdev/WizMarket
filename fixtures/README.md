@@ -31,6 +31,14 @@ Each is refused for exactly one reason.
 | `broken/source-final-newline/` | A skill's `source` ends in a newline | schema |
 | `broken/url-port-out-of-range/` | The `url` port is 99999 | schema |
 | `broken/url-bad-host/` | The `url` host has an underscore | schema |
+| `broken/url-last-label-hex/` | The `url` host's last label, `0x7f`, is a hex number, which makes a web URL parser try to read the host as an IPv4 address | schema |
+| `broken/url-last-label-hex-upper/` | The `url` host's last label, `0X7F`, is a hex number with an upper-case prefix | schema |
+| `broken/url-last-label-hex-empty/` | The `url` host's last label, `0x`, is the hex number zero | schema |
+| `broken/link-url-last-label-hex/` | A link's `url` host's last label, `0xdead`, is a hex number | schema |
+| `broken/url-punycode-malformed/` | The `url` host's label `xn--a` decodes to a control character, not a valid label | URL rule |
+| `broken/url-punycode-undecodable/` | The `url` host's label `xn--99999999999` is not decodable Punycode | URL rule |
+| `broken/url-punycode-mapped/` | The `url` host's last label `xn--bcher-2pa` decodes to `bÜcher`, with an upper-case letter IDNA maps | URL rule |
+| `broken/link-url-punycode-malformed/` | A link's `url` host has the label `xn--a` | URL rule |
 | `broken/verified-without-proof/` | `verified` with no `proof` | schema |
 | `broken/listed-with-proof/` | `listed` with a `proof` | schema |
 | `broken/bad-id/` | The file name `Example_Tool` is not a valid id | id rule |
@@ -47,3 +55,7 @@ Each is refused for exactly one reason.
 | `broken/receipt-raw-note-id/` | The receipt's `pass start:` line keeps the raw note id instead of `<note>` | receipt rule |
 
 Every broken folder's other content is valid, so the reason above is the only one.
+
+The four `*-last-label-hex*` folders also carry a valid boundary URL on the host `0x7f.example.com` (at `/example-tool` in `link-url-last-label-hex`, at `/` in the others): a numeric last label is refused, a numeric interior label is not.
+
+The four `*-punycode-*` folders also carry a valid URL with the `xn--` label `xn--bcher-kva` (`bücher`): `https://xn--bcher-kva.example.com/` in `url-punycode-malformed` and `url-punycode-undecodable`, `https://example.xn--bcher-kva/` in `url-punycode-mapped`, and `https://XN--BCHER-KVA.example.com/example-tool`, upper case, in `link-url-punycode-malformed`. Valid Punycode passes in either field and either case.
