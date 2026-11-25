@@ -1,0 +1,14 @@
+{
+  "name": "PAL MCP Server",
+  "summary": "MCP server that lets a coding agent consult multiple external AI models for code review, debugging, and planning.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "dev-tools"
+  ],
+  "url": "https://github.com/BeehiveInnovations/pal-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

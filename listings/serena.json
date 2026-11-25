@@ -1,0 +1,14 @@
+{
+  "name": "Serena",
+  "summary": "MCP coding toolkit that gives agents IDE-like semantic code retrieval and symbol-level editing.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "lsp"
+  ],
+  "url": "https://github.com/oraios/serena",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

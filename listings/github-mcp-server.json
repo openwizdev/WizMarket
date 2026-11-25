@@ -1,0 +1,14 @@
+{
+  "name": "GitHub MCP Server",
+  "summary": "GitHub's official MCP server for reading repositories, managing issues and pull requests, and automating GitHub workflows.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "github"
+  ],
+  "url": "https://github.com/github/github-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Codebase Memory MCP",
+  "summary": "Local MCP server that indexes code, docs, and infrastructure into a persistent knowledge graph for coding agents.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "code-intelligence"
+  ],
+  "url": "https://github.com/DeusData/codebase-memory-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
