@@ -1,0 +1,20 @@
+{
+  "name": "Amp",
+  "summary": "Amp as a harness for the OpenWiz local driver.",
+  "tags": [
+    "harness",
+    "cli"
+  ],
+  "url": "https://ampcode.com",
+  "plugs_into": "OpenWiz local driver",
+  "publisher": "jparker2006",
+  "stage": "being-built",
+  "login": "Run amp login once; Amp keeps the login on this machine.",
+  "links": [
+    {
+      "label": "OpenWiz live check",
+      "url": "https://github.com/openwizdev/OpenWiz/issues/2550"
+    }
+  ],
+  "status": "listed"
+}

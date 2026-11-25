@@ -1,0 +1,24 @@
+{
+  "name": "Skills For Real Engineers (Matt Pocock)",
+  "summary": "Small, composable engineering skills (grill-me, tdd and more) for any agent and model. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "community"
+  ],
+  "url": "https://github.com/mattpocock/skills",
+  "plugs_into": "The skills an OpenWiz agent runs; WizSkills adapts several of them",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Install guide",
+      "url": "https://skills.sh/mattpocock/skills"
+    },
+    {
+      "label": "WizSkills notice crediting it",
+      "url": "https://github.com/openwizdev/WizSkills/blob/main/NOTICE"
+    }
+  ],
+  "status": "listed"
+}
