@@ -1,0 +1,14 @@
+{
+  "name": "Chrome MCP Server",
+  "summary": "Chrome extension-based MCP server exposing your existing Chrome browser for automation, content analysis, and search. MIT.",
+  "tags": [
+    "mcp-server",
+    "browser",
+    "automation"
+  ],
+  "url": "https://github.com/hangwin/mcp-chrome",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

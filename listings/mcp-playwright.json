@@ -1,0 +1,14 @@
+{
+  "name": "Playwright MCP Server (ExecuteAutomation)",
+  "summary": "Playwright MCP server enabling AI agents to automate browsers, take screenshots, and test web APIs. MIT.",
+  "tags": [
+    "mcp-server",
+    "browser",
+    "automation"
+  ],
+  "url": "https://github.com/executeautomation/mcp-playwright",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

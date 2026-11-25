@@ -1,0 +1,14 @@
+{
+  "name": "Exa MCP Server",
+  "summary": "Official Exa MCP server providing real-time neural web search and web crawling for AI agents. MIT.",
+  "tags": [
+    "mcp-server",
+    "search",
+    "scraping"
+  ],
+  "url": "https://github.com/exa-labs/exa-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
