@@ -1,0 +1,14 @@
+{
+  "name": "Awesome Claude Skills (Composio)",
+  "summary": "Curated collection of Claude Skills, resources and workflow tools for customizing AI agent tasks. Apache-2.0.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "community"
+  ],
+  "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
