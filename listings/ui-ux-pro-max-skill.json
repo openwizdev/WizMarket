@@ -1,0 +1,14 @@
+{
+  "name": "UI UX Pro Max",
+  "summary": "Design intelligence skill with searchable UI styles and reasoning rules for building interfaces across web and mobile platforms. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "design"
+  ],
+  "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

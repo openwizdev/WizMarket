@@ -1,0 +1,14 @@
+{
+  "name": "MobileBuildMCP",
+  "summary": "MCP server and CLI giving coding agents tools to build, test, and inspect iOS and macOS projects.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "mobile"
+  ],
+  "url": "https://github.com/getsentry/MobileBuildMCP",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

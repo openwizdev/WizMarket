@@ -1,0 +1,14 @@
+{
+  "name": "Chrome DevTools MCP",
+  "summary": "Official Chrome DevTools MCP server letting coding agents inspect, debug, and automate a live Chrome browser. Apache-2.0.",
+  "tags": [
+    "mcp-server",
+    "browser",
+    "automation"
+  ],
+  "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

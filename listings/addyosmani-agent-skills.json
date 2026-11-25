@@ -1,0 +1,20 @@
+{
+  "name": "Agent Skills (Addy Osmani)",
+  "summary": "Production engineering skills and lifecycle slash commands covering spec, plan, build, test, review, webperf, and accessibility. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "community"
+  ],
+  "url": "https://github.com/addyosmani/agent-skills",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Website",
+      "url": "https://skills.addy.ie"
+    }
+  ],
+  "status": "listed"
+}

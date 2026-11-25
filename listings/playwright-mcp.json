@@ -1,0 +1,14 @@
+{
+  "name": "Playwright MCP",
+  "summary": "Microsoft's Playwright MCP server for fast, structured browser automation using accessibility snapshots. Apache-2.0.",
+  "tags": [
+    "mcp-server",
+    "browser",
+    "automation"
+  ],
+  "url": "https://github.com/microsoft/playwright-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

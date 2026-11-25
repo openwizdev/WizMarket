@@ -1,0 +1,14 @@
+{
+  "name": "Semble",
+  "summary": "Fast local CPU code search MCP server that returns exact code snippets for agents with minimal token overhead.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "code-search"
+  ],
+  "url": "https://github.com/MinishLab/semble",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

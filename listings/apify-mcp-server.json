@@ -1,0 +1,14 @@
+{
+  "name": "Apify MCP Server",
+  "summary": "MCP server connecting AI agents to Apify's web scrapers, crawlers, and browser automation Actors. MIT.",
+  "tags": [
+    "mcp-server",
+    "scraping",
+    "automation"
+  ],
+  "url": "https://github.com/apify/apify-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

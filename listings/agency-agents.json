@@ -1,0 +1,14 @@
+{
+  "name": "The Agency (agency-agents)",
+  "summary": "Collection of specialized AI agent personalities with domain workflows and deliverables across engineering, design, and ops. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "community"
+  ],
+  "url": "https://github.com/msitarzewski/agency-agents",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

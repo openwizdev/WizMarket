@@ -1,0 +1,14 @@
+{
+  "name": "Code Review Graph",
+  "summary": "Local-first MCP server that builds a persistent codebase graph so coding agents read only the context needed for reviews.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "code-review"
+  ],
+  "url": "https://github.com/tirth8205/code-review-graph",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

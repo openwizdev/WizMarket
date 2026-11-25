@@ -1,0 +1,13 @@
+{
+  "name": "Superpowers",
+  "summary": "Composable agentic skills and software development methodology for coding agents. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack"
+  ],
+  "url": "https://github.com/obra/superpowers",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

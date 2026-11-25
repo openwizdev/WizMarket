@@ -1,0 +1,14 @@
+{
+  "name": "shadcn/ui MCP Server",
+  "summary": "MCP server giving coding agents context on shadcn/ui component structure, usage, and installation across web and native frameworks.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "ui"
+  ],
+  "url": "https://github.com/Jpisnice/shadcn-ui-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

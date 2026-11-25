@@ -1,0 +1,14 @@
+{
+  "name": "Context7",
+  "summary": "MCP server that fetches up-to-date, version-specific library documentation and code examples for coding agents.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "docs"
+  ],
+  "url": "https://github.com/upstash/context7",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
