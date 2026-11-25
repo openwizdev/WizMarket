@@ -1,0 +1,14 @@
+{
+  "name": "Spec Workflow MCP",
+  "summary": "MCP server providing structured spec-driven development workflow tools and a live progress dashboard for coding agents.",
+  "tags": [
+    "mcp-server",
+    "coding",
+    "workflow"
+  ],
+  "url": "https://github.com/Pimzino/spec-workflow-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
