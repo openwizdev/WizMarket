@@ -1,0 +1,15 @@
+{
+  "name": "MySQL MCP Server",
+  "summary": "MCP server for MySQL that lets agents inspect database schemas and run read-only SQL queries safely.",
+  "tags": [
+    "mcp-server",
+    "mysql",
+    "database",
+    "sql"
+  ],
+  "url": "https://github.com/benborla/mcp-server-mysql",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
