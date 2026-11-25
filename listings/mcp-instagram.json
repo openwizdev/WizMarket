@@ -1,0 +1,25 @@
+{
+  "name": "instagram-mcp",
+  "summary": "Exposes 23 Instagram Graph API tools for posts, stories, reels, DMs, and analytics.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "analytics"
+  ],
+  "url": "https://github.com/mcpware/instagram-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mcpware%2Finstagram-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mcpware/instagram-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

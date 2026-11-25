@@ -1,0 +1,25 @@
+{
+  "name": "Zotero MCP",
+  "summary": "Searches a Zotero bibliography, fetches citation metadata, and reads stored full text.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/kujenga/zotero-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kujenga%2Fzotero-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/kujenga/zotero-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

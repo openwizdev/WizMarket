@@ -1,0 +1,24 @@
+{
+  "name": "2Captcha MCP",
+  "summary": "Wraps the 2Captcha Python SDK with 43 tools covering solvers, account management, and webhooks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/0-SOFT/2Captcha-MCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aruxojuyu665%2Ftwocaptcha-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/0-SOFT/2Captcha-MCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

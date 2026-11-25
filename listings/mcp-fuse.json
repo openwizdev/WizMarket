@@ -1,0 +1,25 @@
+{
+  "name": "Fuse",
+  "summary": "Runs local .NET compiler checks, change-impact analysis, and typed wiring for coding agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "developer-tools"
+  ],
+  "url": "https://github.com/Litenova-Solutions/Fuse",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Litenova-Solutions%2Ffuse"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Litenova-Solutions/Fuse/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "second-brain MCP",
+  "summary": "Self-maintaining DuckDB knowledge vault with figure search, automatic wikilinks, and compression.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/ddmanyes/second-brain-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ddmanyes%2Fmcp-second-brain"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ddmanyes/second-brain-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

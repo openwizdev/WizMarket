@@ -1,0 +1,23 @@
+{
+  "name": "Appllama",
+  "summary": "Inspects iOS app layouts, onboarding flows, and paywall designs to guide mobile UI implementation.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Appllama/appllama-skills",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.appllama%2Fappllama"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Appllama/appllama-skills/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

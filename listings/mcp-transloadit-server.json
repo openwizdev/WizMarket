@@ -1,0 +1,25 @@
+{
+  "name": "Transloadit Media Processing",
+  "summary": "Processes audio, video, images, and documents through Transloadit Robots over OAuth.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/transloadit/node-sdk",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.transloadit%2Fmcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/transloadit/node-sdk/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

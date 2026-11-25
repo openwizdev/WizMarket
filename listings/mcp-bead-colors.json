@@ -1,0 +1,25 @@
+{
+  "name": "Meltbead Craft Colors",
+  "summary": "Looks up craft bead color charts and matches shades using CIEDE2000 color distance.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/jsspace/bead-colors-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jsspace%2Fbead-colors-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jsspace/bead-colors-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

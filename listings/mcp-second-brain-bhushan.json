@@ -1,0 +1,25 @@
+{
+  "name": "Second Brain",
+  "summary": "Stores linked Markdown notes as shared memory across Claude, ChatGPT, Cursor, and MCP apps.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/bhushan/getsecondbrain.io",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.getsecondbrain%2Fsecond-brain"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/bhushan/getsecondbrain.io/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

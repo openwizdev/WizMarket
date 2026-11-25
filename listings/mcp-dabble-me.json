@@ -1,0 +1,25 @@
+{
+  "name": "Dabble Me Journal",
+  "summary": "Searches, analyzes, and creates private Dabble Me journal entries over OAuth.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/parterburn/dabble.me",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.parterburn%2Fdabble-me"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/parterburn/dabble.me/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

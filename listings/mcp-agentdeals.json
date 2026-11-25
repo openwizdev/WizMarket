@@ -1,0 +1,24 @@
+{
+  "name": "AgentDeals",
+  "summary": "Queries a catalog of developer infrastructure free tiers, startup credits, and vendor pricing.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/robhunter/agentdeals",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.robhunter%2Fagentdeals"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/robhunter/agentdeals/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

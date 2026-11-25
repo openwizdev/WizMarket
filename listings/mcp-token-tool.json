@@ -1,0 +1,24 @@
+{
+  "name": "token-tool",
+  "summary": "Deploys and manages ERC-20 tokens across 10 EVM networks through 17 Bitbond Token Tool endpoints.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/bitbond/token-tool-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bitbond%2Ftoken-tool"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bitbond/token-tool-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

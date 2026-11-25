@@ -1,0 +1,24 @@
+{
+  "name": "meshtastic-mcp",
+  "summary": "Discovers, monitors, and controls Meshtastic mesh-radio hardware and apps over TCP or serial.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/meshtastic/meshtastic-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.meshtastic%2Fmeshtastic-mcp"
+    },
+    {
+      "label": "Licence: GPL-3.0",
+      "url": "https://github.com/meshtastic/meshtastic-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

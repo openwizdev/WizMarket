@@ -1,0 +1,25 @@
+{
+  "name": "Toon Memory",
+  "summary": "Provides offline persistent coding-agent memory over 35 tools without requiring an LLM.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/LuiggiVal08/toon-memory",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.LuiggiVal08%2Ftoon-memory"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/LuiggiVal08/toon-memory/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

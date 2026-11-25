@@ -1,0 +1,24 @@
+{
+  "name": "amazon_ads_mcp",
+  "summary": "Connects MCP clients to the Amazon Advertising API for campaign management and reporting.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/KuudoAI/amazon-ads-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KuudoAI%2Famazon_ads_mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/KuudoAI/amazon-ads-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

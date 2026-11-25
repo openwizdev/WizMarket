@@ -1,0 +1,24 @@
+{
+  "name": "p4mcp-server",
+  "summary": "Connects MCP clients to Perforce P4 version control depots, workspaces, and changelists.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/perforce/p4mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hjain-perforce%2Fp4mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/perforce/p4mcp-server"
+    }
+  ],
+  "status": "listed"
+}

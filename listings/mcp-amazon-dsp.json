@@ -1,0 +1,25 @@
+{
+  "name": "Amazon DSP MCP Server",
+  "summary": "Manages Amazon DSP campaigns, asynchronous reports, video uploads, commitments, and forecasts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/cesteral/mcp-open-advertising",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cesteral%2Famazon-dsp-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/cesteral/mcp-open-advertising/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

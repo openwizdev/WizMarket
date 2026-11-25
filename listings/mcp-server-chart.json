@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-chart",
+  "summary": "Generates more than 25 data visualizations and charts through AntV for analysis workflows.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/antvis/mcp-server-chart",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.antvis%2Fmcp-server-chart"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/antvis/mcp-server-chart/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

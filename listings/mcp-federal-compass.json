@@ -1,0 +1,25 @@
+{
+  "name": "Federal Compass MCP",
+  "summary": "Searches USAJobs listings, federal salary bands, and KSA guidance for career transitions.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/skivuha/federal-compass-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.skivuha%2Ffederal-compass-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/skivuha/federal-compass-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Pomerado",
+  "summary": "Turns web sites into callable API integrations as an alternative to driving a full browser.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/Pomerado/pomerado",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.pomerado%2Fpomerado"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Pomerado/pomerado/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "vk",
+  "summary": "Reads VKontakte communities, walls, profiles, and stats and publishes or edits posts and comments.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/bulatko/vk-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bulatko%2Fvk"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bulatko/vk-mcp-server/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

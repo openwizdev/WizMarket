@@ -1,0 +1,25 @@
+{
+  "name": "Doc Bridge",
+  "summary": "Identifies documentation owners, edit boundaries, checks, and human handoffs prior to code edits.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/AgentsKit-io/doc-bridge",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AgentsKit-io%2Fdoc-bridge"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AgentsKit-io/doc-bridge/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

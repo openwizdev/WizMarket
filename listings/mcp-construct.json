@@ -1,0 +1,24 @@
+{
+  "name": "Construct",
+  "summary": "Validates part-by-part 3D object specs and exports meshes in STL, 3MF, OBJ, or glTF.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/rtmandreyev/construct",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rtmandreyev%2Fconstruct"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/rtmandreyev/construct/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

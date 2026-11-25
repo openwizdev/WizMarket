@@ -1,0 +1,24 @@
+{
+  "name": "JAIPilot",
+  "summary": "Generates high-coverage Java unit tests with multi-class workflows for coding agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/JAIPilot/jaipilot",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JAIPilot%2Fjaipilot"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/JAIPilot/jaipilot/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

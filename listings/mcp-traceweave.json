@@ -1,0 +1,25 @@
+{
+  "name": "TraceWeave",
+  "summary": "Debugs RTL hardware simulations by correlating Verilog/VCD waveforms with simulator logs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "observability"
+  ],
+  "url": "https://github.com/gokeshenzhen/TraceWeave",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gokeshenzhen%2Ftraceweave"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/gokeshenzhen/TraceWeave/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

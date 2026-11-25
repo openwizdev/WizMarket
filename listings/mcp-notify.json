@@ -1,0 +1,25 @@
+{
+  "name": "MCP Registry Monitor",
+  "summary": "Watches the MCP Registry for newly published, updated, or removed servers with Slack/Discord alerts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/nirholas/mcp-notify",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nirholas%2Fmcp-notify"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/nirholas/mcp-notify/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

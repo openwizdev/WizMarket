@@ -1,0 +1,25 @@
+{
+  "name": "oraclemcp",
+  "summary": "Pure-Rust unofficial Oracle Database server featuring a fail-closed SQL safety guard.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/MuhDur/oraclemcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MuhDur%2Foraclemcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/MuhDur/oraclemcp"
+    }
+  ],
+  "status": "listed"
+}

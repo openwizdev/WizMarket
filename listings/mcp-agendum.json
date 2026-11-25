@@ -1,0 +1,25 @@
+{
+  "name": "Agendum",
+  "summary": "Tracks scoped work packages, tasks, and engineering decisions in a Git-native board for agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "productivity"
+  ],
+  "url": "https://github.com/sralli/agendum",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sralli%2Fagendum"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/sralli/agendum/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

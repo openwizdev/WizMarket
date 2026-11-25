@@ -1,0 +1,25 @@
+{
+  "name": "Crawlberg",
+  "summary": "Crawls web pages and maps sites into Markdown or JSON using a local CLI.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/xberg-io/crawlberg",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xberg-io%2Fcrawlberg"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/xberg-io/crawlberg/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

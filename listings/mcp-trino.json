@@ -1,0 +1,25 @@
+{
+  "name": "mcp-trino",
+  "summary": "Runs distributed SQL queries against Trino clusters from MCP-compatible clients.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/tuannvm/mcp-trino",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tuannvm%2Fmcp-trino"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/tuannvm/mcp-trino/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

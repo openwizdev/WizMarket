@@ -1,0 +1,25 @@
+{
+  "name": "Proxmox AIops",
+  "summary": "Operates Proxmox VE virtual machines and containers with audit logs, budgets, undo, and risk guards.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/AIops-tools/Proxmox-AIops",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AIops-tools%2Fproxmox-aiops"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AIops-tools/Proxmox-AIops/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

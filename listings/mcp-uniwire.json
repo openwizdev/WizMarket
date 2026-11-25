@@ -1,0 +1,25 @@
+{
+  "name": "uniwire",
+  "summary": "Builds, checks against NF C 15-100 and IEC 60364, and draws electrical wiring diagrams as PDF.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/uniwire-dev/uniwire",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.uniwire-dev%2Funiwire"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/uniwire-dev/uniwire/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

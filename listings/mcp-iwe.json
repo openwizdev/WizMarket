@@ -1,0 +1,25 @@
+{
+  "name": "IWE (iwe.md)",
+  "summary": "Turns a local Markdown notes directory into a graph-structured memory store over MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/iwe-org/iwe",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.iwe-org%2Fiwe"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/iwe-org/iwe"
+    }
+  ],
+  "status": "listed"
+}

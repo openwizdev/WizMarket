@@ -1,0 +1,24 @@
+{
+  "name": "Anode background Windows desktop",
+  "summary": "Runs a separate background Windows desktop session for native GUI automation and app testing.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/skulitom/Anode",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.skulitom%2Fanode"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/skulitom/Anode/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

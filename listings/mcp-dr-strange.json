@@ -1,0 +1,25 @@
+{
+  "name": "Dr Strange",
+  "summary": "Queries a Rust-embedded code graph to trace callers and change impact in a single lookup.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/wangyingsm/dr-strange",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wangyingsm%2Fdr-strange"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/wangyingsm/dr-strange"
+    }
+  ],
+  "status": "listed"
+}

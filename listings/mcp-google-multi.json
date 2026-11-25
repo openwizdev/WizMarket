@@ -1,0 +1,25 @@
+{
+  "name": "Google Workspace (multi-account)",
+  "summary": "Bridges multiple Google Workspace accounts with OAuth across Gmail, Drive, Docs, Sheets, and more.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/bakissation/mcp-google-multi",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bakissation%2Fmcp-google-multi"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bakissation/mcp-google-multi/blob/dev/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

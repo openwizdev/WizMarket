@@ -1,0 +1,25 @@
+{
+  "name": "NVIDIA Elements",
+  "summary": "Provides NVIDIA design system UI components and developer tools for AI factories and robotics.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/NVIDIA/elements",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.NVIDIA%2Felements"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/NVIDIA/elements/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "PostFast",
+  "summary": "Schedules social posts, replies to comments, and reads analytics across 11 networks via PostFast.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "analytics"
+  ],
+  "url": "https://github.com/peturgeorgievv-factory/postfast-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=st.postfa%2Fpostfast"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/peturgeorgievv-factory/postfast-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

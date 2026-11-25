@@ -1,0 +1,25 @@
+{
+  "name": "mu",
+  "summary": "Bundles 67 personal-assistant tools covering email, calendar, files, weather, news, and search.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "communication"
+  ],
+  "url": "https://github.com/micro/mu",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=mu.micro%2Fmu"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/micro/mu/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

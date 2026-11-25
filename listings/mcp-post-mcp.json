@@ -1,0 +1,23 @@
+{
+  "name": "Upload-Post",
+  "summary": "Publishes, schedules, and analyzes social posts on TikTok, YouTube, Instagram, LinkedIn, and X.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Upload-Post/upload-post-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.upload-post%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Upload-Post/upload-post-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "starlog",
+  "summary": "Checks software packages for CVEs, licences, and maintenance signals before installation.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/starloghq/index",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.starloghq%2Fstarlog"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/starloghq/index/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

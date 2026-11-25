@@ -1,0 +1,24 @@
+{
+  "name": "naja-scope",
+  "summary": "Explores Verilog, SystemVerilog, and VHDL hardware hierarchy, connectivity, and RTL source.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/keplertech/naja-scope",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.keplertech%2Fnaja-scope"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/keplertech/naja-scope/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

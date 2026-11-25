@@ -1,0 +1,25 @@
+{
+  "name": "Vouch",
+  "summary": "Maintains a Git-backed knowledge base where agents propose edits for human review.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/vouchdev/vouch",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.vouchdev%2Fvouch"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/vouchdev/vouch/blob/test/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

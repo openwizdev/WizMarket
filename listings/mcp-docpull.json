@@ -1,0 +1,25 @@
+{
+  "name": "DocPull",
+  "summary": "Syncs public web pages and documents into versioned, cited context packs for RAG and MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/raintree-technology/docpull",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.raintree-technology%2Fdocpull"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/raintree-technology/docpull/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

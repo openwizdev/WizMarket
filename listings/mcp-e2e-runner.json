@@ -1,0 +1,24 @@
+{
+  "name": "e2e-runner",
+  "summary": "Executes JSON-defined end-to-end tests across a parallel Chrome browser pool via 16 tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/fastslack/mtw-e2e-runner",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fastslack%2Fe2e-runner"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/fastslack/mtw-e2e-runner/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

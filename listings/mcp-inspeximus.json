@@ -1,0 +1,25 @@
+{
+  "name": "inspeximus: agent memory with provenance, GDPR erasure and a tamper-evident audit trail",
+  "summary": "Zero-dependency Python agent memory supporting deterministic supersede, revert, GDPR erasure, and receipts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/DanceNitra/inspeximus",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.DanceNitra%2Finspeximus"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/DanceNitra/inspeximus/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mcp",
+  "summary": "Connects agents to Infobip messaging channels including SMS, WhatsApp, RCS, and Viber.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "communication"
+  ],
+  "url": "https://github.com/infobip/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.infobip%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/infobip/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

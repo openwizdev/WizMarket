@@ -1,0 +1,25 @@
+{
+  "name": "homotope",
+  "summary": "Converts raster graphics into DXF, EPS, PDF, or SVG vectors and validates DXF paths before cutting.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design",
+    "developer-tools"
+  ],
+  "url": "https://github.com/stevenroman91/homotope-engine",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=app.homotope%2Fhomotope"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/stevenroman91/homotope-engine/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

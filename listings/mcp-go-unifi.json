@@ -1,0 +1,25 @@
+{
+  "name": "go-unifi-mcp",
+  "summary": "Go server for managing UniFi Network Controller sites, devices, clients, DNS, and firewall rules.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/claytono/go-unifi-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.claytono%2Fgo-unifi-mcp"
+    },
+    {
+      "label": "Licence: MPL-2.0",
+      "url": "https://github.com/claytono/go-unifi-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "AEORank — SEO, AEO & GEO Audit Engine",
+  "summary": "Runs 62-rule SEO, AEO, and GEO site audits alongside RFC 9727 api-catalog and llms.txt checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security",
+    "analytics"
+  ],
+  "url": "https://github.com/aizaloapp/aeorank",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=app.aeorank%2Faeorank-geo-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aizaloapp/aeorank/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

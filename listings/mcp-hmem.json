@@ -1,0 +1,25 @@
+{
+  "name": "hmem — Humanlike Memory for AI Agents",
+  "summary": "Stores lazy-loaded five-tier SQLite memory hierarchies for persistent AI agent context.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/Bumblebiber/hmem",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Bumblebiber%2Fhmem-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Bumblebiber/hmem/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

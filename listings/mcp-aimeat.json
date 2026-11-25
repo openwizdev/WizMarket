@@ -1,0 +1,23 @@
+{
+  "name": "AIMEAT",
+  "summary": "Connects existing AI assistants to apps, agents, and knowledge hosted on a self-owned node.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/miikkij/aimeat-protocol",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.aimeat%2Faimeat"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/miikkij/aimeat-protocol/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

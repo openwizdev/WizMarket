@@ -1,0 +1,25 @@
+{
+  "name": "rendercheck",
+  "summary": "Verifies with local offline OCR that expected text renders visibly inside a screenshot.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/ParthibanRajasekaran/text-from-image",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ParthibanRajasekaran%2Frendercheck"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/ParthibanRajasekaran/text-from-image/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

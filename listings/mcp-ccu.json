@@ -1,0 +1,24 @@
+{
+  "name": "ccu-mcp",
+  "summary": "Controls HomeMatic smart-home devices through the local CCU JSON-RPC interface.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/claymore666/ccu-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.claymore666%2Fccu-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/claymore666/ccu-mcp/blob/dev/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

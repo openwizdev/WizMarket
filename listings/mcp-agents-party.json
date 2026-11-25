@@ -1,0 +1,24 @@
+{
+  "name": "agents-party",
+  "summary": "Provides an encrypted channel so Codex, Cursor, Claude Code, and other agents can coordinate.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/1gr14/agents-party",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.1gr14%2Fagents-party"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/1gr14/agents-party/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

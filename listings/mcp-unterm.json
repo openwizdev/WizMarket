@@ -1,0 +1,24 @@
+{
+  "name": "Unterm",
+  "summary": "Lets agents spawn terminal panes, execute commands, inspect screen output, and take screenshots.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/zhitongblog/unterm",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zhitongblog%2Funterm"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/zhitongblog/unterm/blob/master/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

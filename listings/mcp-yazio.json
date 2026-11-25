@@ -1,0 +1,24 @@
+{
+  "name": "yazio-mcp",
+  "summary": "Unofficial client for reading Yazio user profile and nutrition tracking data.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/fliptheweb/yazio-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fliptheweb%2Fyazio-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/fliptheweb/yazio-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

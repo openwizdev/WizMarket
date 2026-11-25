@@ -1,0 +1,25 @@
+{
+  "name": "SwarmMemo",
+  "summary": "Provides shared rooms, direct messages, and paid task boards for coordinating agent swarms.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "memory"
+  ],
+  "url": "https://github.com/Hugo0/swarmmemo",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.swarmmemo%2Fbulletin"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Hugo0/swarmmemo/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

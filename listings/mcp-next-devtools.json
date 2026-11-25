@@ -1,0 +1,25 @@
+{
+  "name": "next-devtools-mcp",
+  "summary": "Exposes Next.js developer diagnostics and tooling to coding agents over stdio.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "git"
+  ],
+  "url": "https://github.com/vercel/next-devtools-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.vercel%2Fnext-devtools-mcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/vercel/next-devtools-mcp"
+    }
+  ],
+  "status": "listed"
+}

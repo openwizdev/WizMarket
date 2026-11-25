@@ -1,0 +1,25 @@
+{
+  "name": "RisingWave",
+  "summary": "Queries, inspects, and administers RisingWave streaming SQL databases from MCP clients.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/risingwavelabs/risingwave-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.risingwavelabs%2Frisingwave-mcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/risingwavelabs/risingwave-mcp"
+    }
+  ],
+  "status": "listed"
+}

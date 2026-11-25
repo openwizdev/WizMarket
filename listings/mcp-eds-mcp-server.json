@@ -1,0 +1,25 @@
+{
+  "name": "eds-mcp-server",
+  "summary": "Exposes 41 reversible tools to audit, monitor, edit, publish, and undo Adobe Edge Delivery Services pages.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/Focus-GTS/eds-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.focusgts%2Feds-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Focus-GTS/eds-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

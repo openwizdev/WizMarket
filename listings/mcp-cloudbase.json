@@ -1,0 +1,25 @@
+{
+  "name": "CloudBase",
+  "summary": "Connects agents to Tencent CloudBase databases, serverless functions, storage, and hosting.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.TencentCloudBase%2Fcloudbase-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

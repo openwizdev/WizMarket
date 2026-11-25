@@ -1,0 +1,24 @@
+{
+  "name": "recovery-probe",
+  "summary": "Injects read failures into web and Electron apps to test error recovery and compare evidence.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/BojanKovachki/recovery-probe",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BojanKovachki%2Frecovery-probe"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/BojanKovachki/recovery-probe/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

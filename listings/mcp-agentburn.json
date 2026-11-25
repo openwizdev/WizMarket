@@ -1,0 +1,24 @@
+{
+  "name": "agentburn",
+  "summary": "Profiles local coding-agent token spend and usage windows to spot loops and idle burn.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/Socialpranker/agentburn",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Socialpranker%2Fagentburn"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Socialpranker/agentburn/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

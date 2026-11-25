@@ -1,0 +1,25 @@
+{
+  "name": "SSH MCP Server",
+  "summary": "Runs remote OpenSSH commands, log searches, and file transfers while blocking destructive actions.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/hypnosis/ssh-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hypnosis%2Fssh-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/hypnosis/ssh-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

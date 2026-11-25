@@ -1,0 +1,24 @@
+{
+  "name": "dekko",
+  "summary": "Generates static tree-sitter code maps (MAP.md and map.json) with call graphs and impacted tests.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/aahlijia/dekko",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aahlijia%2Fdekko"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aahlijia/dekko/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

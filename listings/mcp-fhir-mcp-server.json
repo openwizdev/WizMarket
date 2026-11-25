@@ -1,0 +1,24 @@
+{
+  "name": "FHIR MCP Server",
+  "summary": "Exposes healthcare FHIR APIs and servers as structured tools for AI clients.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/wso2/fhir-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wso2%2Ffhir-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/wso2/fhir-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

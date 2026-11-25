@@ -1,0 +1,24 @@
+{
+  "name": "rhumb-mcp",
+  "summary": "Agent gateway combining Rhumb Index capability scoring with governed external tool execution.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/supertrained/rhumb",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.supertrained%2Frhumb-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/supertrained/rhumb/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "zn-gate",
+  "summary": "Local security proxy for coding agents that guards secrets and data with no external account.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/usezn/zn",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.usezn%2Fzn-gate"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/usezn/zn/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "debuganything",
+  "summary": "Observes live processes and containers with perf, lsof, tcpdump, py-spy, and strace.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/shreyassaw5394/debuganything",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shreyassaw5394%2Fdebuganything"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/shreyassaw5394/debuganything/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

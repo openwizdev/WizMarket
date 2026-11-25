@@ -1,0 +1,25 @@
+{
+  "name": "Longhand",
+  "summary": "Records local Claude Code sessions verbatim and serves 13 tools for recall and file replay.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/Wynelson94/longhand",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Wynelson94%2Flonghand"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Wynelson94/longhand/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

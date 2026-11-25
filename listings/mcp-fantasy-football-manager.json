@@ -1,0 +1,25 @@
+{
+  "name": "Fantasy Football Manager",
+  "summary": "Analyzes ESPN fantasy football drafts and lineups using the ESPN companion bridge.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/krmisystems/fantasy-football-manager",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.krmisystems%2Ffantasy-football-manager"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/krmisystems/fantasy-football-manager/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

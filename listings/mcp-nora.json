@@ -1,0 +1,25 @@
+{
+  "name": "Nora",
+  "summary": "Manages Hermes and OpenClaw agent fleets running self-hosted on Kubernetes or Docker.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "git"
+  ],
+  "url": "https://github.com/solomon2773/nora",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.solomon2773%2Fnora"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/solomon2773/nora/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

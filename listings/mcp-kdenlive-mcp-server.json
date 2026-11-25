@@ -1,0 +1,25 @@
+{
+  "name": "Kdenlive MCP Server",
+  "summary": "Exposes 36 Kdenlive video-editing tools for projects, timelines, filters, and melt rendering.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/Va1bhav512/kdenlive-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Va1bhav512%2Fkdenlive-mcp-server"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Va1bhav512/kdenlive-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

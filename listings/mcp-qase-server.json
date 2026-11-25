@@ -1,0 +1,23 @@
+{
+  "name": "Qase Test Management",
+  "summary": "Official Qase integration for managing test cases, suites, test runs, and defects.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/qase-tms/qase-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.qase%2Fmcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/qase-tms/qase-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

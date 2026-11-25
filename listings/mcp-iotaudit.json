@@ -1,0 +1,25 @@
+{
+  "name": "iotaudit",
+  "summary": "Audits local smart-home devices for outbound connections, TLS usage, open ports, and grades.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/emirmrkaljevic/iotaudit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.emirmrkaljevic%2Fiotaudit"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/emirmrkaljevic/iotaudit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Geonode MCP Server",
+  "summary": "Extracts page content, crawls sites, discovers URLs, and searches the web via Geonode.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/geonodecom/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.geonode%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/geonodecom/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

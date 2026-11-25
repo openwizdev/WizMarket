@@ -1,0 +1,25 @@
+{
+  "name": "MakeMyClip Editor",
+  "summary": "Edits videos locally over FFmpeg: cuts silence, edits by transcript, adds captions, and exports.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/MakeMyClip/editor",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MakeMyClip%2Feditor"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/MakeMyClip/editor/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

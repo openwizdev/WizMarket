@@ -1,0 +1,25 @@
+{
+  "name": "Boson Video",
+  "summary": "Extracts timed transcripts, full-resolution video frames, on-screen text, and claim checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/linboxin/Boson-Video",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.linboxin%2Fboson-video"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/linboxin/Boson-Video/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

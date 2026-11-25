@@ -1,0 +1,25 @@
+{
+  "name": "LabWired",
+  "summary": "Simulates circuits and embedded MCU firmware alongside PCB design workflows.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/w1ne/labwired-core",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.w1ne%2Flabwired"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/w1ne/labwired-core/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

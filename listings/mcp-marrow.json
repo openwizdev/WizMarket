@@ -1,0 +1,25 @@
+{
+  "name": "Marrow",
+  "summary": "Local Markdown-backed shared memory providing file claims and collaboration rooms for parallel agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/aryawidjaja/marrow",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aryawidjaja%2Fmarrow"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/aryawidjaja/marrow/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

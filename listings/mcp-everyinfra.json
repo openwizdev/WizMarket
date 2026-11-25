@@ -1,0 +1,25 @@
+{
+  "name": "EveryInfra",
+  "summary": "Fetches structured web data across social and commerce platforms alongside web search tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/everyinfra/everyinfra-agent-plugins",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xiaoxihexiaoyu%2Feveryinfra"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

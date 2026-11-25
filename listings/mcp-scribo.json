@@ -1,0 +1,25 @@
+{
+  "name": "scribo",
+  "summary": "Generates EN 16931 electronic invoices in ZUGFeRD, XRechnung, Peppol BIS, Factur-X, and US PDF.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/causa-prima-ai/scribo-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.causa-prima-ai%2Fscribo"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/causa-prima-ai/scribo-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

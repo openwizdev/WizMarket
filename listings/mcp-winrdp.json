@@ -1,0 +1,24 @@
+{
+  "name": "winrdp-mcp",
+  "summary": "Provisions and administers Windows RDP hosts over WinRM, SSH, and SMB with 144 tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/emog33k/winrdp-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.emog33k%2Fwinrdp-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/emog33k/winrdp-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

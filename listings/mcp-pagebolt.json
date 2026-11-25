@@ -1,0 +1,25 @@
+{
+  "name": "pagebolt",
+  "summary": "Captures web screenshots, PDFs, Open Graph images, page metadata, and narrated videos via PageBolt.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/Custodia-Admin/pagebolt-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Custodia-Admin%2Fpagebolt"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Custodia-Admin/pagebolt-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

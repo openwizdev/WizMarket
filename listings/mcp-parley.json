@@ -1,0 +1,24 @@
+{
+  "name": "Parley",
+  "summary": "Bridges WhatsApp messaging from the user's own number to MCP agents under Elastic License 2.0.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/Verbiflow/parley",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.itsparley%2Fparley"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Verbiflow/parley/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

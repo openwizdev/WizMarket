@@ -1,0 +1,25 @@
+{
+  "name": "MCP Bench Router",
+  "summary": "Routes design prompts via OpenRouter to top-ranked models from designarena.ai across 14 categories.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/K1ta141k/mcp-bench-router",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.K1ta141k%2Fmcp-bench-router"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/K1ta141k/mcp-bench-router/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

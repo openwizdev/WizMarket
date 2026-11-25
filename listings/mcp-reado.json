@@ -1,0 +1,25 @@
+{
+  "name": "Reado",
+  "summary": "Exposes inline code-review comments from the Reado IDE as actionable context for coding agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "developer-tools"
+  ],
+  "url": "https://github.com/WatermelonBros/reado",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.WatermelonBros%2Freado"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/WatermelonBros/reado/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

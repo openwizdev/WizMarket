@@ -1,0 +1,25 @@
+{
+  "name": "chron",
+  "summary": "Writes timestamped audit logs of AI assistant conversations into a local user-owned SQLite database.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/SirinivasK/chron",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SirinivasK%2Fchron"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/SirinivasK/chron/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

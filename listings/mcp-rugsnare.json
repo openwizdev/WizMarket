@@ -1,0 +1,25 @@
+{
+  "name": "RugSnare",
+  "summary": "Pins MCP tool schemas by SHA-256 hash in CI to catch silent definition drift or rug pulls.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "developer-tools"
+  ],
+  "url": "https://github.com/Paraphern/rugsnare",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Paraphern%2Frugsnare"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Paraphern/rugsnare/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

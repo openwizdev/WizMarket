@@ -1,0 +1,24 @@
+{
+  "name": "MNE-MCP",
+  "summary": "Runs MNE-Python neurophysiology analysis for EEG, MEG, sEEG, ECoG, and fNIRS data.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/Exekiel179/MNE-MCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Exekiel179%2Fmne-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Exekiel179/MNE-MCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

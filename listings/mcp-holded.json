@@ -1,0 +1,25 @@
+{
+  "name": "mcp-holded",
+  "summary": "Integrates the Holded Invoice API with 72 tools covering invoices, contacts, and products.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/nubiia-dev/mcp-holded",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nubiia-dev%2Fmcp-holded"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nubiia-dev/mcp-holded/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

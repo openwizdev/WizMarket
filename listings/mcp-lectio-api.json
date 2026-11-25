@@ -1,0 +1,25 @@
+{
+  "name": "Lectio API",
+  "summary": "Serves liturgical calendars plus Catholic, BCP Daily Office, and Revised Common Lectionary readings.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/asachs01/lectio-api",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.asachs01%2Flectio-api"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/asachs01/lectio-api"
+    }
+  ],
+  "status": "listed"
+}

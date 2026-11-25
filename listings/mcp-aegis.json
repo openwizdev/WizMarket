@@ -1,0 +1,25 @@
+{
+  "name": "aegis-mcp",
+  "summary": "Validates agent actions against in-memory governance policies at runtime without prompt token overhead.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/cleburn/aegis-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cleburn%2Faegis-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cleburn/aegis-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

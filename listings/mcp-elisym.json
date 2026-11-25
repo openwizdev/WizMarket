@@ -1,0 +1,25 @@
+{
+  "name": "elisym",
+  "summary": "Enables agent discovery, messaging, and payments over Nostr without a central platform.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/elisymlabs/elisym",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.elisymlabs%2Felisym"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/elisymlabs/elisym/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

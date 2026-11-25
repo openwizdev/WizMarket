@@ -1,0 +1,25 @@
+{
+  "name": "Substack MCP Server",
+  "summary": "Manages Substack Notes, analytics, subscribers, and draft-only long-form newsletter posts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "analytics"
+  ],
+  "url": "https://github.com/conorbronsdon/substack-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.conorbronsdon%2Fsubstack-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/conorbronsdon/substack-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

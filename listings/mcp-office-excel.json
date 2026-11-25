@@ -1,0 +1,25 @@
+{
+  "name": "MCP Office Excel",
+  "summary": "Windows-first Excel server with 65 tools for formatting, reading, updating, and exporting .xlsx files.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/dosev-ai/mcp-office",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dosev-ai%2Fmcp-office-excel"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/dosev-ai/mcp-office/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

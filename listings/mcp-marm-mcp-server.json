@@ -1,0 +1,25 @@
+{
+  "name": "marm-mcp-server",
+  "summary": "Stores local SQLite memory combining session logs, code indexes, and semantic recall.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/Lyellr88/marm-memory",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lyellr88%2Fmarm-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Lyellr88/marm-memory/blob/MARM-main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

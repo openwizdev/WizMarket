@@ -1,0 +1,25 @@
+{
+  "name": "agentic-browser",
+  "summary": "Drives a real Chrome browser using compact text perception and a visible cursor.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/davarion-tech/agentic-browser",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.davarion-tech%2Fagentic-browser"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/davarion-tech/agentic-browser/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

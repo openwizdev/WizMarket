@@ -1,0 +1,25 @@
+{
+  "name": "claude-ops-telegram-server",
+  "summary": "Connects to a personal Telegram account via MTProto to read, search, and send messages.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "search"
+  ],
+  "url": "https://github.com/Lifecycle-Innovations-Limited/claude-ops",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.auroracapital%2Fclaude-ops-telegram-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Lifecycle-Innovations-Limited/claude-ops/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

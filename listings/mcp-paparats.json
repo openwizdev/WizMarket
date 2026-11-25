@@ -1,0 +1,25 @@
+{
+  "name": "Paparats MCP: Self-Hosted Semantic Code Search",
+  "summary": "Runs local multi-repo AST-aware semantic code search using tree-sitter and Qdrant.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/IBazylchuk/paparats-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.IBazylchuk%2Fpaparats-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/IBazylchuk/paparats-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

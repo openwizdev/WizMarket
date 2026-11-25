@@ -1,0 +1,25 @@
+{
+  "name": "Etsy Search & Shop Sales MCP",
+  "summary": "Fetches live Etsy search listings and shop sales counters through an Apify MCP endpoint.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/GeminiGeorge22/etsy-sales-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GeminiGeorge22%2Fetsy-sales-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/GeminiGeorge22/etsy-sales-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

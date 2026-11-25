@@ -1,0 +1,24 @@
+{
+  "name": "KitchenSink4Word",
+  "summary": "Edits Microsoft Word .docx documents with live updates, tracked changes, and citations.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/KitchenSink4AI/KitchenSink4Word",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KitchenSink4AI%2Fkitchensink4word"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/KitchenSink4AI/KitchenSink4Word/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

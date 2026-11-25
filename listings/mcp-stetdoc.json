@@ -1,0 +1,24 @@
+{
+  "name": "stetdoc",
+  "summary": "Reads, compares, and redlines Microsoft Word .docx documents using native tracked changes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/clauseo-ai/stetdoc",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.clauseo-ai%2Fstetdoc"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/clauseo-ai/stetdoc"
+    }
+  ],
+  "status": "listed"
+}

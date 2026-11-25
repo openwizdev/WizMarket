@@ -1,0 +1,25 @@
+{
+  "name": "3DAssets.dev",
+  "summary": "Searches and downloads CC0 3D GLB models and game asset packs from 3DAssets.dev.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "design"
+  ],
+  "url": "https://github.com/3dassets-dev/3dassets",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.3dassets%2Fcatalogue"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/3dassets-dev/3dassets/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

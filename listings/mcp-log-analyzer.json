@@ -1,0 +1,25 @@
+{
+  "name": "log-analyzer-mcp",
+  "summary": "Parses, searches, and extracts errors from log files across nine or more log formats.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/Fato07/log-analyzer-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Fato07%2Flog-analyzer-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Fato07/log-analyzer-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

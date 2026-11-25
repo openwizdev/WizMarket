@@ -1,0 +1,25 @@
+{
+  "name": "Agent Mail Gateway",
+  "summary": "Self-hosted IMAP/SMTP email gateway giving each agent its own mailbox, allow lists, and invites.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "git"
+  ],
+  "url": "https://github.com/dominikamann/agent-mail-gateway",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dominikamann%2Fagent-mail-gateway"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/dominikamann/agent-mail-gateway/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

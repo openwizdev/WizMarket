@@ -1,0 +1,25 @@
+{
+  "name": "IMAP mailbox",
+  "summary": "Searches, reads, and organizes IMAP mailboxes with write and send actions disabled by default.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/ni-c/imap-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ni-c%2Fimap-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ni-c/imap-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

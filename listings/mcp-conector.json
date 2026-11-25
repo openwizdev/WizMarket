@@ -1,0 +1,24 @@
+{
+  "name": "Conector",
+  "summary": "Self-hosted MCP gateway connecting over 1,100 third-party apps once for any AI client.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/Secra-Solutions/Conector",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Secra-Solutions%2Fconector"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Secra-Solutions/Conector/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "workflowy",
+  "summary": "Creates, edits, completes, and regex-searches WorkFlowy outline nodes with dry-run support.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/mholzen/workflowy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mholzen%2Fworkflowy"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mholzen/workflowy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

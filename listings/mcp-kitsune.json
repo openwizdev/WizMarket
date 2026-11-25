@@ -1,0 +1,25 @@
+{
+  "name": "Kitsune",
+  "summary": "Lets coding agents drive an already-open LibreWolf, Zen, or Firefox browser session.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/junyeong-nero/kitsune",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.junyeong-nero%2Fkitsune"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/junyeong-nero/kitsune/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

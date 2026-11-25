@@ -1,0 +1,3202 @@
+{
+  "mcp-a202": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.a202-protocol%2Fa202-mcp",
+    "url": "https://github.com/a202-protocol/a202",
+    "source_description": "Verifiable agreements for agent-led commerce: mandates, obligations, evidence, transaction records.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/a202-protocol/a202/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-abi-to": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nirholas%2Fabi-to-mcp",
+    "url": "https://github.com/nirholas/UCAI",
+    "source_description": "UCAI — The ABI-to-MCP Server Generator. Convert any smart contract ABI into an AI-ready MCP server.",
+    "licence": "other",
+    "licence_url": "https://github.com/nirholas/UCAI/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-adb": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.iksnerd%2Fadb-mcp",
+    "url": "https://github.com/iksnerd/adb-mcp",
+    "source_description": "Drive an Android emulator or device over adb: screenshot, inspect UI, tap, type, build and test.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/iksnerd/adb-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-adguard-home": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Samik081%2Fmcp-adguard-home",
+    "url": "https://github.com/Samik081/mcp-adguard-home",
+    "source_description": "Manage AdGuard Home through AI assistants",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Samik081/mcp-adguard-home/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-adif": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.qso-graph%2Fadif-mcp",
+    "url": "https://github.com/qso-graph/adif-mcp",
+    "source_description": "ADIF 3.1.8 spec engine for amateur radio logs: validation, parsing, enumerations, geospatial.",
+    "licence": "GPL-3.0",
+    "licence_url": "https://github.com/qso-graph/adif-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-aegis": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cleburn%2Faegis-mcp",
+    "url": "https://github.com/cleburn/aegis-mcp",
+    "source_description": "Runtime governance enforcement for AI agents. Zero token overhead.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/cleburn/aegis-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-aegis-skills": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.drupadsachania%2Faegis-skills",
+    "url": "https://github.com/drupadsachania/aegis-skills",
+    "source_description": "Read-only library of 24 defensive cybersecurity skills: ATT&CK, ATLAS, DFIR, CTEM and more.",
+    "licence": "other",
+    "licence_url": "https://github.com/drupadsachania/aegis-skills/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-aeorank-geo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=app.aeorank%2Faeorank-geo-mcp",
+    "url": "https://github.com/aizaloapp/aeorank",
+    "source_description": "Live 62-rule SEO, AEO & GEO audit, RFC 9727 api-catalog, llms.txt & AI citation tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/aizaloapp/aeorank/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agendum": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sralli%2Fagendum",
+    "url": "https://github.com/sralli/agendum",
+    "source_description": "AI agent memory: task tracking, scoped work packages, decisions, and cross-session continuity",
+    "licence": "MIT",
+    "licence_url": "https://github.com/sralli/agendum/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agent-mail-gateway": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dominikamann%2Fagent-mail-gateway",
+    "url": "https://github.com/dominikamann/agent-mail-gateway",
+    "source_description": "Self-hosted email for AI agents: own IMAP/SMTP mailbox per key, allow lists, calendar invites.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/dominikamann/agent-mail-gateway/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agent-reliability-skills": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.trustabl%2Fagent-reliability-skills",
+    "url": "https://github.com/trustabl/agent-reliability-skills",
+    "source_description": "Generates a pre-coding reliability skill (SKILL.md) for your agent repo from Trustabl's rules.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/trustabl/agent-reliability-skills/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agentburn": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Socialpranker%2Fagentburn",
+    "url": "https://github.com/Socialpranker/agentburn",
+    "source_description": "Local profiler: which usage window took you out, and where your agent's money goes",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Socialpranker/agentburn/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agentdeals": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.robhunter%2Fagentdeals",
+    "url": "https://github.com/robhunter/agentdeals",
+    "source_description": "MCP server aggregating developer infrastructure deals, free tiers, and startup programs",
+    "licence": "MIT",
+    "licence_url": "https://github.com/robhunter/agentdeals/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agentfx": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.agentfxhq%2Fagentfx",
+    "url": "https://github.com/agentfxhq/agentfx",
+    "source_description": "Motion graphics and video effects your AI agent can script, lint, preview and render.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/agentfxhq/agentfx/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agentic-browser": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.davarion-tech%2Fagentic-browser",
+    "url": "https://github.com/davarion-tech/agentic-browser",
+    "source_description": "Give any AI agent your real Chrome: text perception, visible cursor, ~4x fewer tokens.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/davarion-tech/agentic-browser/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agents-party": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.1gr14%2Fagents-party",
+    "url": "https://github.com/1gr14/agents-party",
+    "source_description": "One encrypted channel where Claude Code, Cursor, Codex and any other agent talk to each other.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/1gr14/agents-party/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agentseal": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JoeyBrar%2Fagentseal",
+    "url": "https://github.com/JoeyBrar/agentseal-mcp",
+    "source_description": "Verifiable action logs for AI agents. Every action is recorded in a SHA-256 hash chain.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/JoeyBrar/agentseal-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agentshield": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.RitualDev-Lab%2Fagentshield",
+    "url": "https://github.com/RitualDev-Lab/AgentShield",
+    "source_description": "Enterprise Zero-Leak Secret Defense & Kernel Sandbox for Autonomous AI Agents",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/RitualDev-Lab/AgentShield/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ai-architect-mcp-codebase": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cdeust%2Fai-architect-mcp-codebase",
+    "url": "https://github.com/cdeust/ai-architect-mcp-codebase",
+    "source_description": "Codebase intelligence MCP — index any repo into a property graph; 27 tools for agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/cdeust/ai-architect-mcp-codebase/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ai-readiness": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.silverbackmarketing%2Fai-readiness",
+    "url": "https://github.com/silverbackmarketing/ai-readiness",
+    "source_description": "Generate 18 AI readiness files (llms.txt, ai.txt, RAG indexes, schema) for any website.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/silverbackmarketing/ai-readiness",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ai-resources": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Drix10%2Fai-resources",
+    "url": "https://github.com/Drix10/ai-resources",
+    "source_description": "Search and read daily AI news briefings: models, companies, funding, tools. CC BY 4.0.",
+    "licence": "CC-BY-4.0",
+    "licence_url": "https://github.com/Drix10/ai-resources/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ai-visibility": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sharozdawa%2Fai-visibility",
+    "url": "https://github.com/sharozdawa/ai-visibility",
+    "source_description": "Track brand visibility across ChatGPT, Perplexity, Claude, and Gemini.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/sharozdawa/ai-visibility/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-aifp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wjabanjj%2Faifp-mcp",
+    "url": "https://github.com/wjabanjj/aifp-mcp",
+    "source_description": "Persistent memory MCP server for AI coding assistants. Chinese-first and fully local.",
+    "licence": "other",
+    "licence_url": "https://github.com/wjabanjj/aifp-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-aimeat": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.aimeat%2Faimeat",
+    "url": "https://github.com/miikkij/aimeat-protocol",
+    "source_description": "Your knowledge, agents and apps on a node you own, reached from the AI you already use.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/miikkij/aimeat-protocol/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-airbnb": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.hasdata%2Fairbnb",
+    "url": "https://github.com/HasData/airbnb-mcp",
+    "source_description": "Airbnb stays by location and dates, and full listing details, as structured JSON.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/HasData/airbnb-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-aletheia-mem": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mohamed-ashraf-elsaed%2Faletheia-mem",
+    "url": "https://github.com/mohamed-ashraf-elsaed/aletheia-mem",
+    "source_description": "A free, local memory and rules hub for Claude Code and other AI coding tools, served over MCP.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/mohamed-ashraf-elsaed/aletheia-mem/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-amazon-ads": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KuudoAI%2Famazon_ads_mcp",
+    "url": "https://github.com/KuudoAI/amazon-ads-mcp",
+    "source_description": "Amazon Ads API MCP server for Amazon Advertising API",
+    "licence": "MIT",
+    "licence_url": "https://github.com/KuudoAI/amazon-ads-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-amazon-dsp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cesteral%2Famazon-dsp-mcp",
+    "url": "https://github.com/cesteral/mcp-open-advertising",
+    "source_description": "Amazon DSP management — CRUD, async reports, video upload, and Ads API v1 commitments and forecasts",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/cesteral/mcp-open-advertising/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "mcp-anode": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.skulitom%2Fanode",
+    "url": "https://github.com/skulitom/Anode",
+    "source_description": "Background Windows desktop for AI agents: native GUI automation, screenshots and app testing.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/skulitom/Anode/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-anomalia": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.andreabuttarelli%2Fanomalia",
+    "url": "https://github.com/andreabuttarelli/anomalia-cli",
+    "source_description": "AI social autopilot: plan, write, design and publish posts, blog/SEO, news radar and leads.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/andreabuttarelli/anomalia-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-anythink": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=cloud.anythink%2Fanythink",
+    "url": "https://github.com/anythink-cloud/anythink-cli",
+    "source_description": "Sick of stitched-together services? Anythink is the all-in-one backend, configured with AI.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/anythink-cloud/anythink-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-apache-flink-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Ashfaqbs%2Fapache-flink-mcp-server",
+    "url": "https://github.com/Ashfaqbs/apache-flink-mcp-server",
+    "source_description": "MCP server for monitoring Apache Flink clusters via natural language, multi-cluster support.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Ashfaqbs/apache-flink-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-api-anything": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.goodnight000%2Fapi-anything",
+    "url": "https://github.com/goodnight000/api-anything",
+    "source_description": "Call websites as APIs: a shared catalog of operations learned from each site's own requests.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/goodnight000/api-anything/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-apollo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.apolloio%2Fapollo-mcp",
+    "url": "https://github.com/apolloio/apollo-mcp-plugin",
+    "source_description": "Prospect, enrich leads, and manage outreach sequences with Apollo.io.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/apolloio/apollo-mcp-plugin/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-apple-ads": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zelentsov-dev%2Fapple-ads-mcp",
+    "url": "https://github.com/zelentsov-dev/apple-ads-mcp",
+    "source_description": "Local Apple Ads research, optimization, and receipt-gated App Store campaign management.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/zelentsov-dev/apple-ads-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-apple-health": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.neiltron%2Fapple-health-mcp",
+    "url": "https://github.com/neiltron/apple-health-mcp",
+    "source_description": "Local-first Apple Health MCP server for questions about your sleep, workouts and heart data.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/neiltron/apple-health-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-appllama": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.appllama%2Fappllama",
+    "url": "https://github.com/Appllama/appllama-skills",
+    "source_description": "Study screens, flows and paywalls from top-earning iOS apps, then build from what wins.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Appllama/appllama-skills/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-appstore": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.forgeopslabs%2Fappstore-mcp",
+    "url": "https://github.com/forgeopslabs/appstore-mcp",
+    "source_description": "MCP server for the Apple App Store Connect API - 114 annotated tools, optional read-only mode.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/forgeopslabs/appstore-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-appstore-connect": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SardorbekR%2Fappstore-connect",
+    "url": "https://github.com/SardorbekR/appstore-connect-mcp",
+    "source_description": "MCP server for Apple's App Store Connect API. Manage apps, TestFlight, and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/SardorbekR/appstore-connect-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-arabicfmt": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cc1a2b%2Farabicfmt-mcp",
+    "url": "https://github.com/cc1a2b/arabicfmt",
+    "source_description": "Arabic formatting: 22 Arab currencies (Saudi riyal U+20C1), Hijri dates, تفقيط, RTL/bidi fixes.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/cc1a2b/arabicfmt/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-argot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.get-tmonier%2Fargot",
+    "url": "https://github.com/get-tmonier/argot",
+    "source_description": "Read-only context and complete checks against patterns learned from git history. Local; no LLM.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/get-tmonier/argot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ask-llm": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lykhoyda%2Fask-llm",
+    "url": "https://github.com/Lykhoyda/ask-llm",
+    "source_description": "Second opinions for coding agents. Ask LLM tells you when a review didn't really happen.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Lykhoyda/ask-llm/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-atlassian-confluence": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.magurelabs%2Fatlassian-confluence",
+    "url": "https://github.com/magurelabs/magoneai-mcp",
+    "source_description": "Read and write Confluence pages, blog posts, comments, labels and attachments.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/magurelabs/magoneai-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-atxp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.atxp-dev%2Fatxp",
+    "url": "https://github.com/atxp-dev/atxp",
+    "source_description": "Agent wallet, email, phone, and 41 paid tools: search, image/video/music gen, SMS, calls.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/atxp-dev/atxp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bead-colors": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jsspace%2Fbead-colors-mcp",
+    "url": "https://github.com/jsspace/bead-colors-mcp",
+    "source_description": "Search craft color palettes and match shades by CIEDE2000 with Meltbead.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/jsspace/bead-colors-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-belgium": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.lacausecrypto%2Fmcp-belgium",
+    "url": "https://github.com/lacausecrypto/mcp-belgium",
+    "source_description": "Single MCP server for Belgian public transport, statistics, open data, and geospatial services.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/lacausecrypto/mcp-belgium/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bench-router": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.K1ta141k%2Fmcp-bench-router",
+    "url": "https://github.com/K1ta141k/mcp-bench-router",
+    "source_description": "Routes design tasks to designarena.ai's top-ranked model via OpenRouter across 14 categories.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/K1ta141k/mcp-bench-router/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bestprice-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=gr.bestprice%2Fmcp",
+    "url": "https://github.com/TheBestCo/bestprice-mcp",
+    "source_description": "Read-only shopping decisions, product search, offers, and price history for Greece.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/TheBestCo/bestprice-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bexio-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PromptPartner%2Fbexio-mcp-server",
+    "url": "https://github.com/PromptPartner/bexio-mcp-server",
+    "source_description": "Swiss accounting integration for Bexio. 315 tools: invoices, contacts, projects, account balances",
+    "licence": "MIT",
+    "licence_url": "https://github.com/PromptPartner/bexio-mcp-server/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bhoonidhi": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.geovicco-dev%2Fbhoonidhi-mcp",
+    "url": "https://github.com/geovicco-dev/bhoonidhi-mcp",
+    "source_description": "Search, save, and download satellite scenes from ISRO's Bhoonidhi portal in natural language.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/geovicco-dev/bhoonidhi-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bisibility-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.bisibility%2Fmcp",
+    "url": "https://github.com/CorgiCorner/bisibility-mcp",
+    "source_description": "Track keyword rankings, research SEO opportunities, and manage bisibility projects with AI agents.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/CorgiCorner/bisibility-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-blogs": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.webz%2Fblogs",
+    "url": "https://github.com/Webhose/webz-news-search",
+    "source_description": "Blog posts. Use it when the question is about blogs rather than news sites.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/Webhose/webz-news-search",
+    "fetched": "2026-11-25"
+  },
+  "mcp-boson-video": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.linboxin%2Fboson-video",
+    "url": "https://github.com/linboxin/Boson-Video",
+    "source_description": "Let your AI read any video: timed transcript, full-resolution frames, screen text, claim checks.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/linboxin/Boson-Video/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bpmnkit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bpmnkit%2Fbpmnkit",
+    "url": "https://github.com/bpmnkit/bpmnkit",
+    "source_description": "Create, validate, simulate and deploy Camunda 8 BPMN processes, forms and DMN from an agent.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bpmnkit/bpmnkit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-brandrail": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=au.com.brandrail%2Fbrandrail",
+    "url": "https://github.com/brandrail-app/brandrail",
+    "source_description": "Design system guardrails for AI coding tools: tokens, components and a brand checker. Runs locally.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/brandrail-app/brandrail/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-browserbash": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PramodDutta%2Fbrowserbash",
+    "url": "https://github.com/PramodDutta/browserbash",
+    "source_description": "Plain-English browser tests for AI agents: real Chrome, deterministic verdicts. Free, no API keys.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/PramodDutta/browserbash",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bruno-mcp-studio": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Ostico%2Fbruno-mcp-studio",
+    "url": "https://github.com/Ostico/bruno-mcp-studio",
+    "source_description": "Author, edit and run Bruno collections as files: HTTP, WebSocket, gRPC, per-request pass/fail.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Ostico/bruno-mcp-studio/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-bulletin": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.swarmmemo%2Fbulletin",
+    "url": "https://github.com/Hugo0/swarmmemo",
+    "source_description": "Rooms, private messages and paid tasks for AI agents, where agent swarms talk",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Hugo0/swarmmemo/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-burnzombies": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.swordfish444%2Fburnzombies",
+    "url": "https://github.com/swordfish444/BurnZombies",
+    "source_description": "Harness-led cleanup of abandoned agent helpers on macOS.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/swordfish444/BurnZombies/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-business-entity": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.martc03%2Fbusiness-entity",
+    "url": "https://github.com/martc03/gov-mcp-servers",
+    "source_description": "SEC company search and SBA business resources. 4 MCP tools for business intelligence.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/martc03/gov-mcp-servers/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-caldav": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.langmail%2Fcaldav-mcp",
+    "url": "https://github.com/langmail/caldav-mcp",
+    "source_description": "CalDAV calendar operations (list, create, update, delete events) as MCP tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/langmail/caldav-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-calibre": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.caelum29%2Fcalibre-mcp",
+    "url": "https://github.com/caelum29/calibre-mcp",
+    "source_description": "Calibre ebook library server: search, read content, curate metadata, semantic search, gated writes.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/caelum29/calibre-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-carbone": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.carbone%2Fcarbone-mcp",
+    "url": "https://github.com/carboneio/carbone-mcp",
+    "source_description": "Automate enterprise-grade documents from templates, merge and 100+ conversions: PDF, Office, HTML.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/carboneio/carbone-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-catalog-cli-pro": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BWB03%2Fcatalog-cli-pro",
+    "url": "https://github.com/BWB03/amazon-catalog-cli",
+    "source_description": "Amazon catalog auditing tool. 13 quality checks for your listings.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/BWB03/amazon-catalog-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-catalogue": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.3dassets%2Fcatalogue",
+    "url": "https://github.com/3dassets-dev/3dassets",
+    "source_description": "Search and download free CC0 GLB models and game packs, and submit new ones on a user behalf.",
+    "licence": "other",
+    "licence_url": "https://github.com/3dassets-dev/3dassets/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ccu": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.claymore666%2Fccu-mcp",
+    "url": "https://github.com/claymore666/ccu-mcp",
+    "source_description": "MCP server for controlling HomeMatic smart home devices via the CCU JSON-RPC API",
+    "licence": "MIT",
+    "licence_url": "https://github.com/claymore666/ccu-mcp/blob/dev/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-charming": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tambo-ai%2Fcharming",
+    "url": "https://github.com/tambo-labs/charming-mcp",
+    "source_description": "Build personal interactive apps with real URLs and persistent storage, using any AI.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/tambo-labs/charming-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-chromium-bridge": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dashi96%2Fchromium-bridge",
+    "url": "https://github.com/dashi96/chromium-bridge",
+    "source_description": "MCP bridge between Chromium browsers (Arc, Vivaldi, Brave) and Claude Code: browser automation",
+    "licence": "MIT",
+    "licence_url": "https://github.com/dashi96/chromium-bridge/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-chron": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SirinivasK%2Fchron",
+    "url": "https://github.com/SirinivasK/chron",
+    "source_description": "Timestamped audit log for every AI conversation — stored locally in SQLite, owned by you.",
+    "licence": "other",
+    "licence_url": "https://github.com/SirinivasK/chron/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-classcad": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.awv-informatik%2Fclasscad",
+    "url": "https://github.com/awv-informatik/classcad-ai",
+    "source_description": "Build and verify CAD parts and assemblies with the ClassCAD engine, locally, no server needed.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/awv-informatik/classcad-ai",
+    "fetched": "2026-11-25"
+  },
+  "mcp-claude-ops-telegram-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.auroracapital%2Fclaude-ops-telegram-server",
+    "url": "https://github.com/Lifecycle-Innovations-Limited/claude-ops",
+    "source_description": "Telegram personal-account MCP (MTProto user-auth). Read DMs, send messages, search across chats.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Lifecycle-Innovations-Limited/claude-ops/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-clipkit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.clipkit%2Fclipkit",
+    "url": "https://github.com/clipkit-video/clipkit",
+    "source_description": "MCP server for Clipkit — gives AI agents a video toolbox via the Clipkit schema.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/clipkit-video/clipkit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-cloudbase": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.TencentCloudBase%2Fcloudbase-mcp",
+    "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
+    "source_description": "CloudBase MCP: DB, functions, storage, hosting via @cloudbase/cloudbase-mcp",
+    "licence": "MIT",
+    "licence_url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-cmdxray": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aurelio-nakamura%2Fcmdxray",
+    "url": "https://github.com/aurelio-nakamura/cmdxray",
+    "source_description": "Offline MCP server: explains shell commands token-by-token and flags destructive ones for AI agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/aurelio-nakamura/cmdxray/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-codemap": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bbajt%2Fcodemap-mcp",
+    "url": "https://github.com/bbajt/csharp-code-map",
+    "source_description": "Roslyn-powered MCP server for C#/VB.NET. Query symbols, call graphs, and facts. 90%+ token savings.",
+    "licence": "other",
+    "licence_url": "https://github.com/bbajt/csharp-code-map",
+    "fetched": "2026-11-25"
+  },
+  "mcp-codesys-mcp-toolkit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.johannesPettersson80%2Fcodesys-mcp-toolkit",
+    "url": "https://github.com/johannesPettersson80/codesys-mcp-toolkit",
+    "source_description": "Read, write, compile and simulate Structured Text in CODESYS V3.5 projects.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/johannesPettersson80/codesys-mcp-toolkit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-codeweave": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.semihkayan%2Fcodeweave",
+    "url": "https://github.com/semihkayan/codeweave-mcp",
+    "source_description": "Save tokens while coding — your AI agent gets structured code context, not file dumps.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/semihkayan/codeweave-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-codex-claude-council": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hamza-aziz-ai%2Fcodex-claude-council",
+    "url": "https://github.com/hamza-aziz-ai/codex-claude-council",
+    "source_description": "ChatGPT (Codex CLI) and Claude (Claude Code) discuss until they agree, on your own subscriptions.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/hamza-aziz-ai/codex-claude-council/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-codex-delegate": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.andreilungeanu%2Fcodex-delegate-mcp",
+    "url": "https://github.com/andreilungeanu/codex-delegate-mcp",
+    "source_description": "Bridge AI coding hosts to the OpenAI Codex CLI for delegated implementation.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/andreilungeanu/codex-delegate-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-comfyui": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.miller-joe%2Fcomfyui-mcp",
+    "url": "https://github.com/miller-joe/comfyui-mcp",
+    "source_description": "MCP server for ComfyUI: text-to-image, variations, img2img refine, upscale, image proxy.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/miller-joe/comfyui-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-comfyui-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MetaBrain-Labs%2Fcomfyui-mcp-server",
+    "url": "https://github.com/MetaBrain-Labs/ComfyUI-MCP-Server-TypeScript",
+    "source_description": "MCP Server that transforms ComfyUI workflows into AI-callable tools for MCP Host",
+    "licence": "MIT",
+    "licence_url": "https://github.com/MetaBrain-Labs/ComfyUI-MCP-Server-TypeScript/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-conector": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Secra-Solutions%2Fconector",
+    "url": "https://github.com/Secra-Solutions/Conector",
+    "source_description": "Self-hosted MCP gateway: connect 1,178 apps once and use them from any AI agent.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Secra-Solutions/Conector/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-connectwise-manage": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wyre-technology%2Fconnectwise-manage-mcp",
+    "url": "https://github.com/WYRE-AI/connectwise-manage-mcp",
+    "source_description": "MCP server for ConnectWise Manage PSA — companies, tickets, projects, time entries, and more.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/WYRE-AI/connectwise-manage-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-console-automation": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ooples%2Fmcp-console-automation",
+    "url": "https://github.com/ooples/mcp-console-automation",
+    "source_description": "MCP server for AI-driven console application automation and monitoring",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ooples/mcp-console-automation/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-construct": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rtmandreyev%2Fconstruct",
+    "url": "https://github.com/rtmandreyev/construct",
+    "source_description": "Checks an agent's part-by-part description of a thing and builds it as glTF, OBJ, 3MF or STL.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/rtmandreyev/construct/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-continuewith": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.continuewith-ai%2Fcontinuewith",
+    "url": "https://github.com/continuewith-ai/mcp",
+    "source_description": "Install the ContinueWith AI handoff widget from coding agents (Cursor, Claude Code, Codex).",
+    "licence": "not stated",
+    "licence_url": "https://github.com/continuewith-ai/mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-contractgate": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nightmoose%2Fcontractgate",
+    "url": "https://github.com/nightmoose/contractgate",
+    "source_description": "AISchemaGate validates and repairs structured LLM output against a contract, plus DataContractGate.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nightmoose/contractgate/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-controlplane-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.controlplane%2Fmcp",
+    "url": "https://github.com/controlplane-com/ai-plugin",
+    "source_description": "Control Plane (controlplane.com): deploy and operate workloads across AWS, GCP, Azure, and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/controlplane-com/ai-plugin/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-corvus": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Albasha0x0%2Fcorvus",
+    "url": "https://github.com/Albasha0x0/Corvus",
+    "source_description": "Reverse engineering and security analysis of .NET and native binaries: decompile, compare, patch.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Albasha0x0/Corvus/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-cowboy": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.februality%2Fcowboy-mcp",
+    "url": "https://github.com/februality/cowboy-mcp",
+    "source_description": "Self-hosted WordPress MCP server with 203 tools and per-change undo. OAuth sign-in or API key. Free.",
+    "licence": "GPL-2.0",
+    "licence_url": "https://github.com/februality/cowboy-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-crawlberg": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xberg-io%2Fcrawlberg",
+    "url": "https://github.com/xberg-io/crawlberg",
+    "source_description": "Scrape, crawl, and map websites to Markdown or JSON via local CLI.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/xberg-io/crawlberg/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-crawlio-browser": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=app.crawlio%2Fcrawlio-browser",
+    "url": "https://github.com/Crawlio-app/crawlio-browser",
+    "source_description": "Bridge a live Chrome browser to your agent: 150 tools for capture, extraction, and observation.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Crawlio-app/crawlio-browser/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-cv": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.francisco-perez-sorrosal%2Fcv",
+    "url": "https://github.com/francisco-perez-sorrosal/cv",
+    "source_description": "An MCP server that provides access to Francisco Perez-Sorrosal's CV",
+    "licence": "MIT",
+    "licence_url": "https://github.com/francisco-perez-sorrosal/cv/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dabble-me": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.parterburn%2Fdabble-me",
+    "url": "https://github.com/parterburn/dabble.me",
+    "source_description": "Private journal MCP server to search, analyze, and create Dabble Me entries securely via OAuth.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/parterburn/dabble.me/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dashclaw": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ucsandman%2Fdashclaw",
+    "url": "https://github.com/ucsandman/DashClaw",
+    "source_description": "Policy checks, approvals, records, and governed HTTP capabilities for unattended agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ucsandman/DashClaw/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dav": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PhilflowIO%2Fdav-mcp",
+    "url": "https://github.com/PhilflowIO/dav-mcp",
+    "source_description": "AI-orchestrated calendars, contacts & tasks across any DAV platform. 27 tools, field-agnostic.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/PhilflowIO/dav-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dbmcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.haymon%2Fdbmcp",
+    "url": "https://github.com/haymon-ai/dbmcp",
+    "source_description": "The privacy first MCP server for SQL databases.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/haymon-ai/dbmcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-debuganything": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shreyassaw5394%2Fdebuganything",
+    "url": "https://github.com/shreyassaw5394/debuganything",
+    "source_description": "Observe any running process from your agent. strace, py-spy, perf, lsof, tcpdump as evidence.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/shreyassaw5394/debuganything/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-decidealot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.psyb0t%2Fdecidealot",
+    "url": "https://github.com/psyb0t/decidealot",
+    "source_description": "Local Laya and Von typed decisions over TypeSafe-compatible MCP.",
+    "licence": "WTFPL",
+    "licence_url": "https://github.com/psyb0t/decidealot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-defluff": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ahmedak%2Fdefluff",
+    "url": "https://github.com/ahmedak/defluff",
+    "source_description": "Deterministic prose linter for LLM text — flags AI slop, filler, buzzwords, hedges, clichés.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ahmedak/defluff/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dekko": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aahlijia%2Fdekko",
+    "url": "https://github.com/aahlijia/dekko",
+    "source_description": "Static code map for any repo (MAP.md + map.json), plus Claude Code, Codex and Cursor plugins",
+    "licence": "MIT",
+    "licence_url": "https://github.com/aahlijia/dekko/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-devcoach": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.UltimaPhoenix%2Fdevcoach",
+    "url": "https://github.com/UltimaPhoenix/dev-coach",
+    "source_description": "Learn from the code your AI writes: one short, local lesson on what you don't know yet.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/UltimaPhoenix/dev-coach/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-devcontainer": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aniongithub%2Fdevcontainer-mcp",
+    "url": "https://github.com/aniongithub/devcontainer-mcp",
+    "source_description": "Manage dev container environments via MCP (Docker, DevPod, Codespaces).",
+    "licence": "MIT",
+    "licence_url": "https://github.com/aniongithub/devcontainer-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-devops-on-prem": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zwitbaum%2Fmcp-devops-on-prem",
+    "url": "https://github.com/zwitbaum/mcp-devops-on-prem",
+    "source_description": "MCP for Azure DevOps Server (formerly TFS), on-premises. Not for Azure DevOps Services.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/zwitbaum/mcp-devops-on-prem/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-diagrid-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.diagrid%2Fmcp",
+    "url": "https://github.com/diagridio/diagrid-ai",
+    "source_description": "Build and operate Dapr Workflows and Durable Agents on Diagrid. Sign-in required.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/diagridio/diagrid-ai/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dnd-oracle": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gregario%2Fdnd-oracle",
+    "url": "https://github.com/gregario/dnd-oracle",
+    "source_description": "D&D 5e SRD MCP server with monster, spell, equipment search and encounter building tools",
+    "licence": "MIT",
+    "licence_url": "https://github.com/gregario/dnd-oracle/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dns-aid": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.infobloxopen%2Fdns-aid",
+    "url": "https://github.com/dns-aid/dns-aid-core",
+    "source_description": "Discover and publish AI agents via DNS using SVCB records (RFC 9460)",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/dns-aid/dns-aid-core/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-doc-bridge": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AgentsKit-io%2Fdoc-bridge",
+    "url": "https://github.com/AgentsKit-io/doc-bridge",
+    "source_description": "Resolve documentation ownership, edit roots, checks, and human handoffs before an agent edits code.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/AgentsKit-io/doc-bridge/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-docpull": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.raintree-technology%2Fdocpull",
+    "url": "https://github.com/raintree-technology/docpull",
+    "source_description": "Sync public web sources into cited context packs for AI agents, RAG, and MCP clients.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/raintree-technology/docpull/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-documents-reader": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xt765%2Fmcp_documents_reader",
+    "url": "https://github.com/xt765/mcp_documents_reader",
+    "source_description": "An MCP enabled multi-format document reader supporting DOCX, PDF, TXT, and Excel files",
+    "licence": "MIT",
+    "licence_url": "https://github.com/xt765/mcp_documents_reader/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dr-strange": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wangyingsm%2Fdr-strange",
+    "url": "https://github.com/wangyingsm/dr-strange",
+    "source_description": "Code graph for coding agents: who calls this, what a change reaches, in one round trip.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/wangyingsm/dr-strange",
+    "fetched": "2026-11-25"
+  },
+  "mcp-drafto-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=eu.drafto%2Fmcp",
+    "url": "https://github.com/JakubAnderwald/drafto",
+    "source_description": "Create, read, search, and organize your Drafto notes and notebooks.",
+    "licence": "GPL-3.0",
+    "licence_url": "https://github.com/JakubAnderwald/drafto/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dreamd": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.botzrDev%2Fdreamd",
+    "url": "https://github.com/botzrDev/dreamd",
+    "source_description": "Shared memory for Claude Code, Cursor and Cline, in files you can audit. Lessons cite their sources.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/botzrDev/dreamd/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dropthehassle": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bosmdavid-gif%2Fdropthehassle",
+    "url": "https://github.com/bosmdavid-gif/dropthehassle-mcp",
+    "source_description": "Your AI publishes your site: free HTTPS link, or a .com for €19 that goes live with no DNS.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bosmdavid-gif/dropthehassle-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dryrun": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.boringSQL%2Fdryrun",
+    "url": "https://github.com/boringSQL/dryrun",
+    "source_description": "PostgreSQL schema intelligence from a committed snapshot. No connection, no credentials.",
+    "licence": "BSD-2-Clause",
+    "licence_url": "https://github.com/boringSQL/dryrun/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dsail": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.jaxon%2Fdsail",
+    "url": "https://github.com/JaxonAI/dsail",
+    "source_description": "Turn a written policy into rules a program can check, and get the same answer every time.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/JaxonAI/dsail/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-dwf-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KenosInc%2Fdwf-mcp-server",
+    "url": "https://github.com/KenosInc/dwf-mcp-server",
+    "source_description": "MCP server for Digilent WaveForms instruments (oscilloscope, AWG, logic analyzer).",
+    "licence": "MIT",
+    "licence_url": "https://github.com/KenosInc/dwf-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-e2e-runner": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fastslack%2Fe2e-runner",
+    "url": "https://github.com/fastslack/mtw-e2e-runner",
+    "source_description": "JSON-driven E2E test runner with parallel Chrome pool execution and 16 MCP tools.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/fastslack/mtw-e2e-runner/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-easyeda-copilot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.biosshot%2Feasyeda-copilot",
+    "url": "https://github.com/biosshot/easyeda-copilot",
+    "source_description": "AI tools for EasyEDA Pro schematics, PCB placement and routing, SPICE simulation, and DRC.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/biosshot/easyeda-copilot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ebb-ai": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Vitalini%2Febb-ai",
+    "url": "https://github.com/tidegap/tidegap",
+    "source_description": "Runs non-urgent LLM tasks at the cleanest grid hour before a deadline, via Batch APIs when allowed.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/tidegap/tidegap/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-editor": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MakeMyClip%2Feditor",
+    "url": "https://github.com/MakeMyClip/editor",
+    "source_description": "Local video editor: cut silence, edit by transcript, add captions, export to Final Cut or Premiere.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/MakeMyClip/editor/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-eds-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.focusgts%2Feds-mcp-server",
+    "url": "https://github.com/Focus-GTS/eds-mcp-server",
+    "source_description": "41 tools for Adobe Edge Delivery Services: read, audit, track, monitor, fix, publish, undo — safely.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Focus-GTS/eds-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-elementor-mcp-agent": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Mogacode-ma%2Felementor-mcp-agent",
+    "url": "https://github.com/Mogacode-ma/elementor-mcp-agent",
+    "source_description": "Agency-grade MCP for WordPress Elementor — multi-site, safe edits, templates, versions.",
+    "licence": "other",
+    "licence_url": "https://github.com/Mogacode-ma/elementor-mcp-agent/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-elements": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.NVIDIA%2Felements",
+    "url": "https://github.com/NVIDIA/elements",
+    "source_description": "NVIDIA Elements UI design system and agent tools for AI/ML, robotics, and autonomous vehicles.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/NVIDIA/elements/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-elisym": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.elisymlabs%2Felisym",
+    "url": "https://github.com/elisymlabs/elisym",
+    "source_description": "AI agent discovery, marketplace, messaging, and payments on Nostr - no platform, no middleman",
+    "licence": "MIT",
+    "licence_url": "https://github.com/elisymlabs/elisym/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-email-agent": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.UseJunior%2Femail-agent-mcp",
+    "url": "https://github.com/UseJunior/email-agent-mcp",
+    "source_description": "Local email connectivity for AI agents — read, draft, send, and organize Outlook mail via MCP",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/UseJunior/email-agent-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-encode-toolkit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ammawla%2Fencode-toolkit",
+    "url": "https://github.com/ammawla/encode-toolkit",
+    "source_description": "20 MCP tools + 48 skills for ENCODE Project genomics — search, download, pipelines",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/ammawla/encode-toolkit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-endnote": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gokmengokhan%2Fendnote-mcp",
+    "url": "https://github.com/gokmengokhan/endnote-mcp",
+    "source_description": "Search, cite, and read PDFs from your EndNote library in Claude Desktop",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/gokmengokhan/endnote-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-etsy-sales": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GeminiGeorge22%2Fetsy-sales-mcp",
+    "url": "https://github.com/GeminiGeorge22/etsy-sales-mcp",
+    "source_description": "Etsy search + Etsy shop sales: live listing rows and sales counters via Apify MCP.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/GeminiGeorge22/etsy-sales-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-everyinfra": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xiaoxihexiaoyu%2Feveryinfra",
+    "url": "https://github.com/everyinfra/everyinfra-agent-plugins",
+    "source_description": "Structured data from 106 platforms (RedNote, Douyin, TikTok, Amazon), web search, CAPTCHA solving.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/everyinfra/everyinfra-agent-plugins/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-excaliself": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.maciekzygmunt%2Fexcaliself",
+    "url": "https://github.com/maciekzygmunt/excaliself",
+    "source_description": "Find, read, create, edit, and organize Excalidraw drawings in your self-hosted Excaliself instance.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/maciekzygmunt/excaliself/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-expense-budget-tracker": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.expense-budget-tracker%2Fexpense-budget-tracker",
+    "url": "https://github.com/kirill-markin/expense-budget-tracker",
+    "source_description": "Track expenses, budgets, balances, transfers, and multi-currency reports with OAuth-secured tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/kirill-markin/expense-budget-tracker/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ezpzfile": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ezpzfile%2Fezpzfile",
+    "url": "https://github.com/ezpzfile/ezpzfile-mcp",
+    "source_description": "Local file tools for agents: documents, PDFs, images, QR codes. Nothing is uploaded.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ezpzfile/ezpzfile-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fantasy-football-manager": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.krmisystems%2Ffantasy-football-manager",
+    "url": "https://github.com/krmisystems/fantasy-football-manager",
+    "source_description": "ESPN draft and lineup analysis for Codex and MCP clients. Live actions use the ESPN companion.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/krmisystems/fantasy-football-manager/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-faucet": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.faucetdb%2Ffaucet",
+    "url": "https://github.com/faucetdb/faucet",
+    "source_description": "SQL database to MCP tools and REST API: PostgreSQL, MySQL, SQL Server, Oracle, SQLite, Snowflake.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/faucetdb/faucet/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-federal-compass": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.skivuha%2Ffederal-compass-mcp",
+    "url": "https://github.com/skivuha/federal-compass-mcp",
+    "source_description": "AI compass from private sector to federal career — USAJobs search, salary, KSA",
+    "licence": "MIT",
+    "licence_url": "https://github.com/skivuha/federal-compass-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fedlex-connector": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ch.fedlex-connector%2Ffedlex-connector",
+    "url": "https://github.com/JayTheSkier/fedlex-connector",
+    "source_description": "Search Swiss federal legislation: laws, articles, amendments via the Fedlex SPARQL endpoint.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/JayTheSkier/fedlex-connector/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fhir-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wso2%2Ffhir-mcp-server",
+    "url": "https://github.com/wso2/fhir-mcp-server",
+    "source_description": "MCP server providing seamless access to FHIR APIs for AI tools and healthcare applications",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/wso2/fhir-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-find-research-papers": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.surendranb%2Ffind-research-papers-mcp",
+    "url": "https://github.com/surendranb/find-research-papers-mcp",
+    "source_description": "Search open-source research papers across arXiv, OpenAlex, Crossref, PubMed, Semantic Scholar.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/surendranb/find-research-papers-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-florence2": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jkawamoto%2Fmcp-florence2",
+    "url": "https://github.com/jkawamoto/mcp-florence2",
+    "source_description": "An MCP server for processing images using Florence-2",
+    "licence": "MIT",
+    "licence_url": "https://github.com/jkawamoto/mcp-florence2/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-flow-nexus": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ruvnet%2Fflow-nexus",
+    "url": "https://github.com/ruvnet/flow-nexus",
+    "source_description": "Cloud-powered AI platform with multi-agent swarms, sandboxes, and workflow automation",
+    "licence": "not stated",
+    "licence_url": "https://github.com/ruvnet/flow-nexus",
+    "fetched": "2026-11-25"
+  },
+  "mcp-foremerge": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.naw103%2Fforemerge",
+    "url": "https://github.com/naw103/foremerge",
+    "source_description": "Coordinate parallel coding agents, above Git",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/naw103/foremerge/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-france-data": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cturkieh%2Ffrance-data-mcp",
+    "url": "https://github.com/cturkieh/france-data-mcp",
+    "source_description": "French public-data MCP: cross-ref health, demographics, business, geo & real-estate.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/cturkieh/france-data-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-froxel": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.theromis%2Ffroxel",
+    "url": "https://github.com/theromis/Froxel",
+    "source_description": "Voxel editor: sculpt, script, paint, rig, preview, and export .vox models to glTF",
+    "licence": "MIT",
+    "licence_url": "https://github.com/theromis/Froxel/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fs-mcp-rs": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nihmadev%2Ffs-mcp-rs",
+    "url": "https://github.com/nihmadev/fs-mcp-rs",
+    "source_description": "A fast, configurable filesystem server for the Model Context Protocol (MCP), written in Rust.",
+    "licence": "other",
+    "licence_url": "https://github.com/nihmadev/fs-mcp-rs/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fsopenxmldsl": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MarkNicholls%2Ffsopenxmldsl-mcp",
+    "url": "https://github.com/Kookerella-Ltd/Kookerella.FsOpenXmlDsl",
+    "source_description": "Excel tools for AI agents: read/write, decompile to F#/C#/XML/JSON, or build from XML/JSON.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Kookerella-Ltd/Kookerella.FsOpenXmlDsl/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fullenrich": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.FullEnrich%2Ffullenrich",
+    "url": "https://github.com/FullEnrich/fullenrich-skills",
+    "source_description": "Search B2B contacts, enrich verified emails and phone numbers, and export results.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/FullEnrich/fullenrich-skills/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-fuse": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Litenova-Solutions%2Ffuse",
+    "url": "https://github.com/Litenova-Solutions/Fuse",
+    "source_description": "Local .NET compiler verification, change impact, and typed wiring for AI agents.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Litenova-Solutions/Fuse/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-gcf-proxy": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.blackwell-systems%2Fgcf-proxy",
+    "url": "https://github.com/blackwell-systems/gcf-proxy",
+    "source_description": "Drop-in MCP proxy. 71% fewer tokens. Session dedup compounds to 92%. Zero code changes.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/blackwell-systems/gcf-proxy/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-gemot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.gemot%2Fgemot",
+    "url": "https://github.com/justinstimatze/gemot",
+    "source_description": "Deliberation primitive for multi-agent coordination: cruxes, vote clustering, consensus.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/justinstimatze/gemot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-geonode-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.geonode%2Fmcp",
+    "url": "https://github.com/geonodecom/mcp",
+    "source_description": "Web data for agents. Extract web pages, crawl websites, discover URLs, and search the web.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/geonodecom/mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-geospark": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Maz2580%2Fgeospark",
+    "url": "https://github.com/Maz2580/geospark",
+    "source_description": "Verifiable geospatial tools: distances, topology, isochrones, Overture Maps, with sources.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Maz2580/geospark/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-glade": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Glade-tool%2Fglade-mcp",
+    "url": "https://github.com/Glade-tool/glade-mcp",
+    "source_description": "Control the Unity and Godot editors from AI clients: scenes, scripts, physics, materials.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Glade-tool/glade-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-glassbox-framework": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.TheBarmaEffect%2Fglassbox-framework",
+    "url": "https://github.com/TheBarmaEffect/glassbox",
+    "source_description": "Runtime constitutional verification for AI answers — claim reasoning, ECS, red team, audits.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/TheBarmaEffect/glassbox/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-go-unifi": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.claytono%2Fgo-unifi-mcp",
+    "url": "https://github.com/claytono/go-unifi-mcp",
+    "source_description": "Manage UniFi sites, devices, clients, networks, port forwarding, DNS, and firewall",
+    "licence": "MPL-2.0",
+    "licence_url": "https://github.com/claytono/go-unifi-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-gograph": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ozgurcd%2Fgograph",
+    "url": "https://github.com/ozgurcd/gograph",
+    "source_description": "Local Go repository call graphs and structural analysis for coding agents over stdio.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ozgurcd/gograph/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-google-ai-search": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shariqriazz%2Fgoogle-ai-search-mcp",
+    "url": "https://github.com/shariqriazz/google-ai-search-mcp",
+    "source_description": "Google AI search and documentation tools for MCP clients using Vertex AI or the Gemini API.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/shariqriazz/google-ai-search-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-google-multi": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bakissation%2Fmcp-google-multi",
+    "url": "https://github.com/bakissation/mcp-google-multi",
+    "source_description": "Multi-account Google Workspace MCP server: 970 tools, 29 services, discover-first, BYO OAuth.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bakissation/mcp-google-multi/blob/dev/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-google-tasks": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.girmmy%2Fgoogle-tasks",
+    "url": "https://github.com/girmmy/google-tasks-mcp-server",
+    "source_description": "Read/write Google Tasks: create, update, complete, delete, move tasks and lists, with due dates.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/girmmy/google-tasks-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-grad-agent": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.i-ninte%2Fgrad-agent",
+    "url": "https://github.com/i-ninte/grad-agent",
+    "source_description": "Autonomous MCP agent for grad school applications: prof discovery, cold emails, SOP, tracking.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/i-ninte/grad-agent",
+    "fetched": "2026-11-25"
+  },
+  "mcp-gsc": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mikusnuz%2Fgsc",
+    "url": "https://github.com/mikusnuz/gsc-mcp",
+    "source_description": "MCP server for Google Search Console & Indexing API — search analytics, sitemaps, URL inspection",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mikusnuz/gsc-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-gsc-sonnivasquez": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sonnivasquez%2Fgsc-mcp",
+    "url": "https://github.com/sonnivasquez/gsc-mcp",
+    "source_description": "Local, read-only Google Search Console MCP server. Quick Connect needs no Cloud project.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/sonnivasquez/gsc-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-halfsize": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.YKLovePython%2Fhalfsize",
+    "url": "https://github.com/YKLovePython/halfsize",
+    "source_description": "Compress a video to an exact byte size locally with FFmpeg, then measure VMAF and SSIM.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/YKLovePython/halfsize/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-halopsa": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.WYRE-AI%2Fhalopsa-mcp",
+    "url": "https://github.com/WYRE-AI/halopsa-mcp",
+    "source_description": "MCP server for HaloPSA — clients, tickets, and PSA workflows via the HaloPSA REST API.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/WYRE-AI/halopsa-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-health-by-dr-brad": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.DrBradStanfield%2Fhealth-by-dr-brad",
+    "url": "https://github.com/DrBradStanfield/roadmap",
+    "source_description": "Read and add to your own health record, kept in your own cloud, and get a health plan from it.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/DrBradStanfield/roadmap/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-hivelore": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Doucs91%2Fhivelore",
+    "url": "https://github.com/Doucs91/hivelore",
+    "source_description": "Deterministic gate: blocks any commit whose diff reintroduces a documented team mistake.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Doucs91/hivelore/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-hivemind": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Leonhest%2Fhivemind",
+    "url": "https://github.com/Leonhest/hivemind",
+    "source_description": "A shared, live plan for teams of coding agents, synced through your git remote.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Leonhest/hivemind/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-hmem": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Bumblebiber%2Fhmem-mcp",
+    "url": "https://github.com/Bumblebiber/hmem",
+    "source_description": "Persistent 5-level hierarchical memory for AI agents. SQLite-backed, lazy-loaded.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Bumblebiber/hmem/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-holded": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nubiia-dev%2Fmcp-holded",
+    "url": "https://github.com/nubiia-dev/mcp-holded",
+    "source_description": "Complete Holded Invoice API integration with 72 MCP tools for invoices, contacts, products, and more",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nubiia-dev/mcp-holded/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-homotope": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=app.homotope%2Fhomotope",
+    "url": "https://github.com/stevenroman91/homotope-engine",
+    "source_description": "Vectorize images to SVG, PDF, EPS or DXF, and check a DXF before cutting.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/stevenroman91/homotope-engine/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-hotpath-cloud": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=rs.hotpath%2Fhotpath-cloud",
+    "url": "https://github.com/hotpath-rs/hotpath",
+    "source_description": "Read-only access to Rust profiling reports from CI: benchmark history, diffs and policies",
+    "licence": "MIT",
+    "licence_url": "https://github.com/hotpath-rs/hotpath",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ibge-br": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SidneyBissoli%2Fibge-br-mcp",
+    "url": "https://github.com/SidneyBissoli/ibge-br-mcp",
+    "source_description": "IBGE: geography, census, economy and health from the official APIs, with provenance. 23 tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/SidneyBissoli/ibge-br-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-icon-composer": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ethbak%2Ficon-composer-mcp",
+    "url": "https://github.com/ethbak/icon-composer-mcp",
+    "source_description": "CLI and MCP server for creating Apple .icon bundles with Liquid Glass effects (iOS 26+)",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ethbak/icon-composer-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ilyagusev-academia": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.smithery%2FIlyaGusev-academia_mcp",
+    "url": "https://github.com/IlyaGusev/academia_mcp",
+    "source_description": "Search arXiv and ACL Anthology, retrieve citations and references, and browse web sources to accel…",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/IlyaGusev/academia_mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-image-recongnition": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shalevshalit%2Fimage-recongnition-mcp",
+    "url": "https://github.com/mcp-s-ai/image-recognition-mcp",
+    "source_description": "MCP server for AI-powered image recognition and description using OpenAI vision models.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/mcp-s-ai/image-recognition-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-imap": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ni-c%2Fimap-mcp",
+    "url": "https://github.com/ni-c/imap-mcp",
+    "source_description": "Read, search and organise any IMAP mailbox, with writes off by default",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ni-c/imap-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-inbody-api": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rwestergren%2Finbody-api-mcp",
+    "url": "https://github.com/rwestergren/inbody-api-mcp",
+    "source_description": "MCP server for InBody body-composition data — scans, body fat, muscle mass, body water",
+    "licence": "MIT",
+    "licence_url": "https://github.com/rwestergren/inbody-api-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-infobip-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.infobip%2Fmcp",
+    "url": "https://github.com/infobip/mcp",
+    "source_description": "Infobip MCP server for omnichannel communication and messaging. SMS, RCS, WhatsApp, Viber and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/infobip/mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-inhalt": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kozmos-tech%2Finhalt",
+    "url": "https://github.com/kozmos-tech/inhalt",
+    "source_description": "An open-source headless CMS for managing content models and entries.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/kozmos-tech/inhalt/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-inite-brain-service": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.inite-ai%2Finite-brain-service",
+    "url": "https://github.com/inite-ai/inite-brain-service",
+    "source_description": "Long-term memory for AI agents: a bitemporal knowledge graph with cited answers.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/inite-ai/inite-brain-service/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-inspeximus": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.DanceNitra%2Finspeximus",
+    "url": "https://github.com/DanceNitra/inspeximus",
+    "source_description": "Self-correcting agent memory: recall, supersede, revert, forget, GDPR erasure, audit receipts.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/DanceNitra/inspeximus/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-instagram": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mcpware%2Finstagram-mcp",
+    "url": "https://github.com/mcpware/instagram-mcp",
+    "source_description": "Instagram MCP — 23 tools for Instagram Graph API: posts, DMs, stories, reels, analytics.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mcpware/instagram-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-iotaudit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.emirmrkaljevic%2Fiotaudit",
+    "url": "https://github.com/emirmrkaljevic/iotaudit",
+    "source_description": "Audit your own smart-home devices: destinations, encryption, open ports, A-F grade.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/emirmrkaljevic/iotaudit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-istanbul": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Batu1-1an%2Fistanbul-mcp",
+    "url": "https://github.com/Batu1-1an/istanbulmcp",
+    "source_description": "Read-only Istanbul open city data: transport, parking, water, nearby services and datasets.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Batu1-1an/istanbulmcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-iwe": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.iwe-org%2Fiwe",
+    "url": "https://github.com/iwe-org/iwe",
+    "source_description": "Markdown knowledge base as agent memory. Runs against the notes directory it is started in.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/iwe-org/iwe",
+    "fetched": "2026-11-25"
+  },
+  "mcp-jaipilot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JAIPilot%2Fjaipilot",
+    "url": "https://github.com/JAIPilot/jaipilot",
+    "source_description": "Ship better Java with your coding agent.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/JAIPilot/jaipilot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-janction-render": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JasmyLab-JANCTION%2Fjanction-render",
+    "url": "https://github.com/JasmyLab-JANCTION/janction-render",
+    "source_description": "Blender and GLB/FBX/USD/STL rendered on cloud GPUs for AI agents: product shots, turntables, MP4",
+    "licence": "MIT",
+    "licence_url": "https://github.com/JasmyLab-JANCTION/janction-render/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-jsonresume": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=org.jsonresume%2Fjsonresume",
+    "url": "https://github.com/jsonresume/jsonresume.org",
+    "source_description": "Read, write, validate and theme your resume.json; export PDF and Word; match it to HN jobs.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/jsonresume/jsonresume.org/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kagan": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kagan-sh%2Fkagan",
+    "url": "https://github.com/kagan-sh/kagan",
+    "source_description": "AI-powered Kanban TUI for autonomous development workflows with agent orchestration",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/kagan-sh/kagan/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kage": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.kage-core%2Fkage",
+    "url": "https://github.com/kage-core/Kage",
+    "source_description": "Verified memory for coding agents: claims cited against code, stale withheld, savings receipts.",
+    "licence": "GPL-3.0",
+    "licence_url": "https://github.com/kage-core/Kage/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kaiord": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pablo-albaladejo%2Fkaiord",
+    "url": "https://github.com/pablo-albaladejo/kaiord",
+    "source_description": "Convert, validate, and inspect workout files (FIT, TCX, ZWO, Garmin Connect) for AI agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/pablo-albaladejo/kaiord/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kci-openapi": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rubatoyd%2Fkci-openapi-mcp",
+    "url": "https://github.com/rubatoyd/KCI_openAPI",
+    "source_description": "KCI (Korea Citation Index) literature & citation search via REST Open API + OAI-PMH",
+    "licence": "MIT",
+    "licence_url": "https://github.com/rubatoyd/KCI_openAPI/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kdenlive-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Va1bhav512%2Fkdenlive-mcp-server",
+    "url": "https://github.com/Va1bhav512/kdenlive-mcp-server",
+    "source_description": "Kdenlive video editing MCP - 36 tools for project, timeline, filters and melt rendering",
+    "licence": "other",
+    "licence_url": "https://github.com/Va1bhav512/kdenlive-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-keenetic": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.salatmaster%2Fkeenetic-mcp",
+    "url": "https://github.com/salatmaster/keenetic-mcp",
+    "source_description": "Control a Keenetic or Netcraze router: devices, Wi-Fi, VPN routing, segments, verified writes.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/salatmaster/keenetic-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kg": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nnar1o%2Fkg-mcp",
+    "url": "https://github.com/nnar1o/kg",
+    "source_description": "Local knowledge graph memory MCP server for AI assistants.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/nnar1o/kg/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-killbottleneck": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.killbottleneck%2Fkillbottleneck",
+    "url": "https://github.com/tengolabs/killbottleneck",
+    "source_description": "Free-to-self-host goal and process maps for humans and AI agents, with REST API and MCP.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/tengolabs/killbottleneck/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kip": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ldclabs%2FKIP",
+    "url": "https://github.com/ldclabs/KIP",
+    "source_description": "Knowledge Graphs to enable memory persistence, knowledge evolution, explainable interaction.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ldclabs/KIP/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kira": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aibenyclaude-coder%2Fkira",
+    "url": "https://github.com/benyalgx/Kira",
+    "source_description": "Skills and Scars for AI agents - your agent records its failures and never repeats them.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/benyalgx/Kira/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kitchensink4word": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KitchenSink4AI%2Fkitchensink4word",
+    "url": "https://github.com/KitchenSink4AI/KitchenSink4Word",
+    "source_description": "Word (.docx) MCP server: 231 actions in 10 tools, live editing, tracked changes, citations.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/KitchenSink4AI/KitchenSink4Word/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kith": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.connorhriley%2Fkith",
+    "url": "https://github.com/connorhriley/kith",
+    "source_description": "Coordinate coding agents with work claims, Git worktrees, shared resources and verified integration.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/connorhriley/kith/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-kitsune": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.junyeong-nero%2Fkitsune",
+    "url": "https://github.com/junyeong-nero/kitsune",
+    "source_description": "Let your coding agent use the Firefox, Zen, or LibreWolf browser you already have open.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/junyeong-nero/kitsune/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-korean-elementary-learning-map": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.taehyeonglim%2Fkorean-elementary-learning-map-mcp",
+    "url": "https://github.com/taehyeonglim/korean-elementary-learning-map-mcp",
+    "source_description": "한국 초등 2022 개정 교육과정 학습 그래프 MCP 서버 (성취기준 620 · 원문 수록 · 주제 1,956 · 선수관계 1,894)",
+    "licence": "other",
+    "licence_url": "https://github.com/taehyeonglim/korean-elementary-learning-map-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-korean-secondary-learning-map": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.raphysicst-create%2Fkorean-secondary-learning-map-mcp",
+    "url": "https://github.com/raphysicst-create/korean-secondary-learning-map-mcp",
+    "source_description": "한국 중등 2022 개정 교육과정 학습 그래프 MCP 서버 (중학교 714 · 고교 3,124 성취기준 · 원문 수록 · 중→고 전이)",
+    "licence": "other",
+    "licence_url": "https://github.com/raphysicst-create/korean-secondary-learning-map-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-krate": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=tech.krate%2Fkrate",
+    "url": "https://github.com/incyashraj/krate",
+    "source_description": "Make an app by asking. Krate builds and checks it, and its link opens in any browser, phones too.",
+    "licence": "other",
+    "licence_url": "https://github.com/incyashraj/krate",
+    "fetched": "2026-11-25"
+  },
+  "mcp-krimto": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.krimto-labs%2Fkrimto",
+    "url": "https://github.com/krimto-labs/krimto",
+    "source_description": "Memory for AI coding agents — markdown in your own git, not a vendor database. Apache-2.0.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/krimto-labs/krimto/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-labby": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.dinglebear%2Flabby",
+    "url": "https://github.com/dinglebear-ai/labby",
+    "source_description": "Rust MCP gateway with Code Mode, authentication, setup, logs, CLI, HTTP API, and operator web UI.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/dinglebear-ai/labby/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-labwired": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.w1ne%2Flabwired",
+    "url": "https://github.com/w1ne/labwired-core",
+    "source_description": "Design circuits, simulate and verify embedded firmware, and lay out PCBs with AI agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/w1ne/labwired-core/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-lectio-api": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.asachs01%2Flectio-api",
+    "url": "https://github.com/asachs01/lectio-api",
+    "source_description": "Lectionary readings (RCL, BCP Daily Office, Catholic) and liturgical calendar tools.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/asachs01/lectio-api",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ledgr": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KenTaniguchi-R%2Fledgr",
+    "url": "https://github.com/KenTaniguchi-R/ledgr",
+    "source_description": "Self-hosted personal finance app with bank sync, budgets, net worth and investment tracking",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/KenTaniguchi-R/ledgr/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-lighthouse": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.priyankark%2Flighthouse-mcp",
+    "url": "https://github.com/priyankark/lighthouse-mcp",
+    "source_description": "MCP server for Google Lighthouse performance metrics",
+    "licence": "MIT",
+    "licence_url": "https://github.com/priyankark/lighthouse-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-listen": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.decibri%2Fmcp-listen",
+    "url": "https://github.com/decibri/mcp-listen",
+    "source_description": "Give your AI agents the ability to listen. Microphone capture and speech-to-text.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/decibri/mcp-listen/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-log-analyzer": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Fato07%2Flog-analyzer-mcp",
+    "url": "https://github.com/Fato07/log-analyzer-mcp",
+    "source_description": "AI-powered log analysis - parse, search, extract errors across 9+ formats",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Fato07/log-analyzer-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-longhand": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Wynelson94%2Flonghand",
+    "url": "https://github.com/Wynelson94/longhand",
+    "source_description": "Local memory for Claude Code: 13 MCP tools for semantic recall, file replay, and git history.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Wynelson94/longhand/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-lore": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jordanhindo%2Flore",
+    "url": "https://github.com/jordanhindo/lore",
+    "source_description": "Lightweight MCP for infinite agent memory. Any agent, any session, anytime.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/jordanhindo/lore/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-lunchmoney": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.akutishevsky%2Flunchmoney-mcp",
+    "url": "https://github.com/akutishevsky/lunchmoney-mcp",
+    "source_description": "MCP server for managing LunchMoney personal finances: transactions, budgets, categories, and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/akutishevsky/lunchmoney-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-lure": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SilentMesh-Systems%2FLure",
+    "url": "https://github.com/SilentMesh-Systems/Lure",
+    "source_description": "Plant fake credentials and get alerted when an attacker uses one. Stdlib-only, no passwords out.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/SilentMesh-Systems/Lure/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ly": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.narumiruna%2Fly-mcp",
+    "url": "https://github.com/narumiruna/ly-mcp",
+    "source_description": "Model Context Protocol server for Taiwan Legislative Yuan API v2.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/narumiruna/ly-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-macos-vision": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.woladi%2Fmacos-vision-mcp",
+    "url": "https://github.com/woladi/macos-vision-mcp",
+    "source_description": "Local OCR & screen understanding for agents: read any window, find what to click. No uploads.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/woladi/macos-vision-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-madar": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mohanagy%2Fmadar",
+    "url": "https://github.com/mohanagy/madar",
+    "source_description": "Authenticated local evidence paths for JavaScript and TypeScript coding agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mohanagy/madar/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-magic-hour": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.magichourhq%2Fmagic-hour",
+    "url": "https://github.com/magichourhq/magic-hour-mcp",
+    "source_description": "Create and edit images and video, generate music, and retrieve existing audio projects.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/magichourhq/magic-hour-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mail-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Atomic-Mail%2Fmcp",
+    "url": "https://github.com/Atomic-Mail/atomic-mail-agentic",
+    "source_description": "Programmable email inbox for AI agents — JMAP, PoW auth, stdio MCP server.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Atomic-Mail/atomic-mail-agentic/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mailbox": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jgalea%2Fmailbox-mcp",
+    "url": "https://github.com/jgalea/mailbox-mcp",
+    "source_description": "Multi-account email MCP server for Gmail, IMAP, and JMAP: search, send, drafts, labels.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/jgalea/mailbox-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-maproll": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.maproll%2Fmaproll",
+    "url": "https://github.com/maproll-io/mcp",
+    "source_description": "Make production-ready static maps. Every map is a URL you can embed anywhere.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/maproll-io/mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-market-search": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.efoltyn%2Fmarket-search",
+    "url": "https://github.com/efoltyn/market-search",
+    "source_description": "Kalshi and Polymarket odds, stocks, options, macro, SEC filings and central banks. Runs locally.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/efoltyn/market-search/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-marketplace-search": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.lulzasaur9192%2Fmarketplace-search",
+    "url": "https://github.com/lulzasaur9192/marketplace-search-mcp",
+    "source_description": "22 tools: search 15+ marketplaces, verify licenses, childcare costs, FCC, GSA auctions",
+    "licence": "not stated",
+    "licence_url": "https://github.com/lulzasaur9192/marketplace-search-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-markifact-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.markifact%2Fmcp",
+    "url": "https://github.com/markifact/markifact-mcp",
+    "source_description": "AI marketing agent for Google Ads, Meta, GA4, TikTok, LinkedIn, Shopify, HubSpot and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/markifact/markifact-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-marm-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lyellr88%2Fmarm-mcp-server",
+    "url": "https://github.com/Lyellr88/marm-memory",
+    "source_description": "Universal MCP Server with advanced AI memory capabilities and semantic search.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Lyellr88/marm-memory/blob/MARM-main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-marrow": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aryawidjaja%2Fmarrow",
+    "url": "https://github.com/aryawidjaja/marrow",
+    "source_description": "Shared memory for parallel AI coding agents. Local, free, with rooms and file claims.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/aryawidjaja/marrow/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-marzban": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Ilmar7786%2Fmarzban-mcp",
+    "url": "https://github.com/Ilmar7786/marzban-sdk",
+    "source_description": "Manage Marzban panels through the Model Context Protocol.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Ilmar7786/marzban-sdk/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-meltflex": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MeltFlexDevs%2Fmeltflex",
+    "url": "https://github.com/MeltFlexDevs/skills",
+    "source_description": "AI interior design — restyle rooms, place furniture, and virtually stage spaces from a photo.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/MeltFlexDevs/skills/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-memorykit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rapozoantonio%2Fmemorykit",
+    "url": "https://github.com/rapozoantonio/memorykit",
+    "source_description": "Cognitive memory for AI coding assistants — persistent memory across sessions",
+    "licence": "MIT",
+    "licence_url": "https://github.com/rapozoantonio/memorykit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-memtomem": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.memtomem%2Fmemtomem",
+    "url": "https://github.com/memtomem/memtomem",
+    "source_description": "Long-term memory for AI coding agents, kept as Markdown you own. Runs locally.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/memtomem/memtomem/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-meshtastic": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.meshtastic%2Fmeshtastic-mcp",
+    "url": "https://github.com/meshtastic/meshtastic-mcp",
+    "source_description": "Discover, drive, observe, and test Meshtastic devices and companion apps over serial and TCP.",
+    "licence": "GPL-3.0",
+    "licence_url": "https://github.com/meshtastic/meshtastic-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-meta": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mikusnuz%2Fmeta",
+    "url": "https://github.com/mikusnuz/meta-mcp",
+    "source_description": "MCP server for Instagram Graph API, Threads API & Meta platform management",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mikusnuz/meta-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-meta-data": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.derekslinz%2Fmeta-data-mcp",
+    "url": "https://github.com/derekslinz/meta-data-mcp",
+    "source_description": "Query 76 open data APIs — government, science, finance, environment, and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/derekslinz/meta-data-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-metroidvania-studio": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.LBarimi%2Fmetroidvania-studio",
+    "url": "https://github.com/LBarimi/metroidvania-studio",
+    "source_description": "Create and edit connected 2D maps with a local, workspace-scoped MCP server and Lua scripts.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/LBarimi/metroidvania-studio/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mftool": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.NayakwadiS%2Fmftool-mcp",
+    "url": "https://github.com/NayakwadiS/mftool-mcp",
+    "source_description": "MCP Server for publicly available Indian Mutual Funds data",
+    "licence": "MIT",
+    "licence_url": "https://github.com/NayakwadiS/mftool-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-microsoft-todo-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jordanburke%2Fmicrosoft-todo-mcp-server",
+    "url": "https://github.com/jordanburke/microsoft-todo-mcp-server",
+    "source_description": "Microsoft To Do via Graph — task lists, tasks, checklist items and reminders.",
+    "licence": "other",
+    "licence_url": "https://github.com/jordanburke/microsoft-todo-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mindmap-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ravi-labs%2Fmindmap-mcp-server",
+    "url": "https://github.com/ravi-labs/mindmap-mcp-server",
+    "source_description": "Local-first memory & context-handoff across AI tools — capture in one, resume in another. No cloud.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/ravi-labs/mindmap-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mne": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Exekiel179%2Fmne-mcp",
+    "url": "https://github.com/Exekiel179/MNE-MCP",
+    "source_description": "MNE-Python neurophysiology analysis (EEG, MEG, sEEG, ECoG, fNIRS) via the Model Context Protocol",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Exekiel179/MNE-MCP/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mnemon": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nikitacometa%2Fmnemon-mcp",
+    "url": "https://github.com/nikitacometa/mnemon-memory-mcp",
+    "source_description": "Persistent layered memory for AI agents. SQLite FTS5, fact versioning, zero-cloud.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nikitacometa/mnemon-memory-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-momentic": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.momentic%2Fmomentic",
+    "url": "https://github.com/momentic-ai/skills",
+    "source_description": "Bug bash apps and PRs with Mo, review findings, and list Momentic test runs and quarantines.",
+    "licence": "other",
+    "licence_url": "https://github.com/momentic-ai/skills/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mssql": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.alyiox%2Fmcp-mssql",
+    "url": "https://github.com/alyiox/mcp-mssql",
+    "source_description": "MCP server for SQL Server metadata, parameterized queries, plan analysis, and writes opt-in.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/alyiox/mcp-mssql/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mt5-mcp-by-leo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.TradeSystemsNique%2Fmt5-mcp-by-leo",
+    "url": "https://github.com/TradeSystemsNique/FullMt5McpByLeo",
+    "source_description": "Full MCP server for MT5: access trades, logs, compilation, etc..",
+    "licence": "other",
+    "licence_url": "https://github.com/TradeSystemsNique/FullMt5McpByLeo/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-mu": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=mu.micro%2Fmu",
+    "url": "https://github.com/micro/mu",
+    "source_description": "News, web search, mail, markets, weather, places, files, calendar, contacts. 67 tools, one endpoint.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/micro/mu/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-multi-account-gmail": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cunicopia-dev%2Fmulti-account-gmail-mcp",
+    "url": "https://github.com/cunicopia-dev/gmail-mcp",
+    "source_description": "Multi-account Gmail MCP server — read, search, draft, and label across every inbox.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/cunicopia-dev/gmail-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-naja-scope": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.keplertech%2Fnaja-scope",
+    "url": "https://github.com/keplertech/naja-scope",
+    "source_description": "Let AI agents explore SystemVerilog, Verilog and VHDL designs: connectivity, hierarchy, source.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/keplertech/naja-scope/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-neural-link": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.neomjs%2Fneural-link",
+    "url": "https://github.com/neomjs/neo-agent-brain",
+    "source_description": "Live runtime inspection, component tree, VDOM, state, and hot-patching bridge for Neo.mjs apps.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/neomjs/neo-agent-brain/blob/dev/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-next-devtools": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.vercel%2Fnext-devtools-mcp",
+    "url": "https://github.com/vercel/next-devtools-mcp",
+    "source_description": "Next.js development tools MCP server with stdio transport",
+    "licence": "not stated",
+    "licence_url": "https://github.com/vercel/next-devtools-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-nora": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.solomon2773%2Fnora",
+    "url": "https://github.com/solomon2773/nora",
+    "source_description": "Operate self-hosted OpenClaw and Hermes agent fleets on Docker or Kubernetes from MCP clients.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/solomon2773/nora/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-notify": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nirholas%2Fmcp-notify",
+    "url": "https://github.com/nirholas/mcp-notify",
+    "source_description": "Monitor MCP registry for new servers - Discord Slack notifications alerts",
+    "licence": "other",
+    "licence_url": "https://github.com/nirholas/mcp-notify/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ntscrt": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.finnmckenty%2Fntscrt",
+    "url": "https://github.com/finnmckenty/NTSCRT",
+    "source_description": "VHS, CRT and analog TV looks for images and video: preview, animate and render them.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/finnmckenty/NTSCRT/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-octen": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Octen-Team%2Focten-mcp",
+    "url": "https://github.com/Octen-Team/octen-mcp",
+    "source_description": "URL to LLM-ready markdown — plus per-page category, page_structure, and query-driven highlights.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Octen-Team/octen-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-office-excel": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dosev-ai%2Fmcp-office-excel",
+    "url": "https://github.com/dosev-ai/mcp-office",
+    "source_description": "65-tool Excel MCP server. Read, write, format, and export .xlsx files. Windows-first.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/dosev-ai/mcp-office/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-offload-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tailucanh%2Foffload-mcp-server",
+    "url": "https://github.com/tailucanh/offload-mcp-server",
+    "source_description": "Hand heavy read-only work to a background agent CLI (Antigravity) and read back a short report.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/tailucanh/offload-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-okf": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mfdaves%2Fokf-mcp",
+    "url": "https://github.com/mfdaves/okf-mcp",
+    "source_description": "Validate, search, graph, and safely author local Open Knowledge Format bundles.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mfdaves/okf-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-onde-cli": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ondeinference%2Fonde-cli",
+    "url": "https://github.com/ondeinference/onde-cli",
+    "source_description": "MCP server to fine-tune LoRA, export GGUF, and deploy local LLMs on Onde Inference.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/ondeinference/onde-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-onshape": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gpambrozio%2Fonshape",
+    "url": "https://github.com/gpambrozio/onshape-mcp",
+    "source_description": "Drive Onshape CAD from an assistant: documents, sketches, solid features, assemblies and exports.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/gpambrozio/onshape-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-openclaw-mcp-servers": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.yedanyagamiai-cmd%2Fopenclaw-mcp-servers",
+    "url": "https://github.com/yedanyagamiai-cmd/openclaw-mcp-servers",
+    "source_description": "9 remote MCP servers on Cloudflare Workers for AI agents. Free tier + Pro API keys.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/yedanyagamiai-cmd/openclaw-mcp-servers/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-openmymemo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MyMemoAI%2Fopenmymemo",
+    "url": "https://github.com/MyMemoAI/openmymemo",
+    "source_description": "Your AI memory as a local folder you own. Every app shares it; you see and can undo each change.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/MyMemoAI/openmymemo/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-openreadout": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.openreadout%2Fopenreadout",
+    "url": "https://github.com/openreadout/openreadout",
+    "source_description": "Read raw lab-instrument files offline: metadata, previews, integrity checks, open-format export.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/openreadout/openreadout",
+    "fetched": "2026-11-25"
+  },
+  "mcp-openresearch": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.olanokhin%2Fopenresearch-mcp",
+    "url": "https://github.com/olanokhin/openresearch-mcp",
+    "source_description": "Zero-auth research MCP: web, academic, finance, news, weather, macro, social, SEC. No keys.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/olanokhin/openresearch-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-optionsahoy": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AlvisoOculus%2Foptionsahoy-mcp",
+    "url": "https://github.com/AlvisoOculus/optionsahoy-mcp",
+    "source_description": "Equity comp tax/trade optimizer: ISO/AMT exercise, NSO, RSU, QSBS, concentration, hedging. 50-state.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/AlvisoOculus/optionsahoy-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-oraclemcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MuhDur%2Foraclemcp",
+    "url": "https://github.com/MuhDur/oraclemcp",
+    "source_description": "Engine-free, governed Oracle Database MCP server with a fail-closed SQL guard (unofficial).",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/MuhDur/oraclemcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-orbit": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.constellation-works%2Forbit",
+    "url": "https://github.com/constellation-works/orbit",
+    "source_description": "Orbit's local-first task and workflow registry for coding agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/constellation-works/orbit/blob/agent-main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "mcp-orchestrator": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rupinder2%2Fmcp-orchestrator",
+    "url": "https://github.com/rupinder2/mcp-orchestrator",
+    "source_description": "Aggregates tools from multiple MCP servers with unified BM25/regex search and deferred loading.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/rupinder2/mcp-orchestrator/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-outline": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Vortiago%2Fmcp-outline",
+    "url": "https://github.com/Vortiago/mcp-outline",
+    "source_description": "Connect AI assistants to Outline for document search, reading, and management",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Vortiago/mcp-outline/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-overleaf-web": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mhmdaskari%2Foverleaf-web-mcp",
+    "url": "https://github.com/mhmdaskari/overleaf-web-mcp",
+    "source_description": "Read, edit, compile, and review Overleaf projects through your own signed-in web session.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mhmdaskari/overleaf-web-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-p4mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hjain-perforce%2Fp4mcp-server",
+    "url": "https://github.com/perforce/p4mcp-server",
+    "source_description": "Perforce P4 MCP Server is a MCP server that integrates with the Perforce P4 version control system.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/perforce/p4mcp-server",
+    "fetched": "2026-11-25"
+  },
+  "mcp-packmind-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.packmind%2Fmcp-server",
+    "url": "https://github.com/PackmindHub/packmind",
+    "source_description": "Packmind captures, scales, and enforces your organization's technical decisions.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/PackmindHub/packmind/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pagebolt": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Custodia-Admin%2Fpagebolt",
+    "url": "https://github.com/Custodia-Admin/pagebolt-mcp",
+    "source_description": "Screenshots, PDFs, OG images, page inspection, and narrated video recording for Claude and Cursor.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Custodia-Admin/pagebolt-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-paparats": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.IBazylchuk%2Fpaparats-mcp",
+    "url": "https://github.com/IBazylchuk/paparats-mcp",
+    "source_description": "Self-hosted semantic code search MCP for Claude Code & Cursor. Multi-repo, AST-aware, stays local.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/IBazylchuk/paparats-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-papertrade-ai": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nirholas%2Fpapertrade-ai",
+    "url": "https://github.com/nirholas/papertrade-ai",
+    "source_description": "Trade Papertrade BTC and ETH perps from Claude, ChatGPT, Codex, Cursor and any MCP client.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nirholas/papertrade-ai/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-paprika3d": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.paprika3d%2Fpaprika3d",
+    "url": "https://github.com/Keeno-Corp/paprika3d",
+    "source_description": "Three.js MCP server: see, play, test and profile the three.js and WebGL pages your agent builds",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Keeno-Corp/paprika3d/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-parley": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.itsparley%2Fparley",
+    "url": "https://github.com/Verbiflow/parley",
+    "source_description": "WhatsApp for your AI agent, sent from your own number. Source-available (Elastic License 2.0).",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Verbiflow/parley/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-parse-dmarc": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.meysam81%2Fparse-dmarc",
+    "url": "https://github.com/dmarcguardhq/parse-dmarc",
+    "source_description": "Lightweight DMARC parser: auto-fetch email reports, visualize compliance in a single all-in-one app",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/dmarcguardhq/parse-dmarc/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-patch-tuesday": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jonnybottles%2Fpatch-tuesday",
+    "url": "https://github.com/jonnybottles/patch-tuesday-mcp",
+    "source_description": "Query Microsoft Patch Tuesday security updates (MSRC) with EPSS and CISA KEV enrichment",
+    "licence": "not stated",
+    "licence_url": "https://github.com/jonnybottles/patch-tuesday-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pathrule": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.pathrule%2Fpathrule",
+    "url": "https://github.com/pathrule/pathrule",
+    "source_description": "Path-scoped project memories, rules and skills for coding agents, on your machine or Pathrule Cloud.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/pathrule/pathrule/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-perenna": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.scarletkc%2Fperenna",
+    "url": "https://github.com/scarletkc/Perenna",
+    "source_description": "A lightweight, Git-backed permanent memory for AI agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/scarletkc/Perenna/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-perforce-agentic-gateway": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.perforce%2Fperforce-agentic-gateway",
+    "url": "https://github.com/perforce/perforce-agentic-gateway",
+    "source_description": "Local MCP gateway that proxies AI clients to many MCP servers with a token-efficient code mode",
+    "licence": "other",
+    "licence_url": "https://github.com/perforce/perforce-agentic-gateway/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pin": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GautamTalksDev%2Fmcp-pin",
+    "url": "https://github.com/GautamTalksDev/mcp-pin",
+    "source_description": "Check if an MCP server's tool definitions changed after approval, from a signed public log.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/GautamTalksDev/mcp-pin/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pindoc": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.var-gg%2Fpindoc",
+    "url": "https://github.com/var-gg/pindoc",
+    "source_description": "Code-pinned team memory for AI coding agents — typed artifacts, MCP-native, self-host.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/var-gg/pindoc/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pitot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.labstack%2Fpitot",
+    "url": "https://github.com/labstack/pitot",
+    "source_description": "Investigate OpenTelemetry traces, metrics, and logs, and manage personal dashboards.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/labstack/pitot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pituitary": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dusk-network%2Fpituitary",
+    "url": "https://github.com/nantobv/pituitary",
+    "source_description": "Catch spec drift before it catches you. Detect overlap, stale docs, and code drift.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nantobv/pituitary/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-placecall": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.voygr-tech%2Fplacecall",
+    "url": "https://github.com/voygr-tech/placecall",
+    "source_description": "Real phone calls to US businesses: book, ask, get quotes. Returns outcome and transcript.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/voygr-tech/placecall/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-platypus-db": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.platypus-labs%2Fplatypus-db",
+    "url": "https://github.com/platypus-labs/platypus-db",
+    "source_description": "Your PlatypusDB database connections for AI agents, with the access you give each one.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/platypus-labs/platypus-db/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-polymarket-agent": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.demwick%2Fpolymarket-agent-mcp",
+    "url": "https://github.com/demwick/polymarket-agent-mcp",
+    "source_description": "Polymarket trading, market discovery, copy trading and backtesting — 48 MCP tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/demwick/polymarket-agent-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pomerado": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.pomerado%2Fpomerado",
+    "url": "https://github.com/Pomerado/pomerado",
+    "source_description": "Connect your agents to any website. The cheaper, faster and more reliable alternative to browser use",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Pomerado/pomerado/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-posecode": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.posecode-dev%2Fposecode-mcp",
+    "url": "https://github.com/posecode-dev/posecode",
+    "source_description": "Author, ROM-validate, and render 3D human movement (.posecode) with a shareable playground link.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/posecode-dev/posecode/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-post-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.upload-post%2Fmcp",
+    "url": "https://github.com/Upload-Post/upload-post-mcp",
+    "source_description": "Social media MCP: publish, schedule & analyze posts on TikTok, Instagram, YouTube, LinkedIn & X",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Upload-Post/upload-post-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-postfast": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=st.postfa%2Fpostfast",
+    "url": "https://github.com/peturgeorgievv-factory/postfast-mcp",
+    "source_description": "Schedule posts on 11 social networks, answer comments and read analytics, hosted or local",
+    "licence": "MIT",
+    "licence_url": "https://github.com/peturgeorgievv-factory/postfast-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-printr": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PrintrFi%2Fprintr",
+    "url": "https://github.com/PrintrFi/printr-mcp",
+    "source_description": "Let AI agents create, discover, and track tokens across chains via Printr.",
+    "licence": "other",
+    "licence_url": "https://github.com/PrintrFi/printr-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-promptheus": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.abhichandra21%2Fpromptheus",
+    "url": "https://github.com/abhichandra21/Promptheus",
+    "source_description": "AI-powered prompt refinement with adaptive questioning and multi-provider support (6+ LLM backends)",
+    "licence": "MIT",
+    "licence_url": "https://github.com/abhichandra21/Promptheus/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-proton-mail": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sethbang%2Fproton-mail-mcp",
+    "url": "https://github.com/sethbang/proton-mail-mcp",
+    "source_description": "Unofficial Proton Mail MCP — send, read, search & organize email over SMTP and IMAP",
+    "licence": "MIT",
+    "licence_url": "https://github.com/sethbang/proton-mail-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-proxmox-aiops": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AIops-tools%2Fproxmox-aiops",
+    "url": "https://github.com/AIops-tools/Proxmox-AIops",
+    "source_description": "Governed Proxmox VE VM/container ops — 43 MCP tools with audit, budget, undo & risk-tier guards.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/AIops-tools/Proxmox-AIops/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-proxy4agents": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.NovadaLabs%2Fproxy4agents-mcp",
+    "url": "https://github.com/NovadaLabs/novada-proxy",
+    "source_description": "Residential proxy MCP for AI agents — geo-targeting, sticky sessions, anti-bot bypass.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/NovadaLabs/novada-proxy/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pumperly": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GeiserX%2Fpumperly-mcp",
+    "url": "https://github.com/GeiserX/pumperly-mcp",
+    "source_description": "Cheapest fuel and EV charging near a place or along a drive, in about 40 countries",
+    "licence": "GPL-3.0",
+    "licence_url": "https://github.com/GeiserX/pumperly-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-pumpfun-claims-bot": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nirholas%2Fpumpfun-claims-bot",
+    "url": "https://github.com/nirholas/pumpfun-claims-bot",
+    "source_description": "MCP server for PumpFun on-chain intelligence — tokens, claims, holders, and bundles.",
+    "licence": "other",
+    "licence_url": "https://github.com/nirholas/pumpfun-claims-bot/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-qase-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.qase%2Fmcp-server",
+    "url": "https://github.com/qase-tms/qase-mcp-server",
+    "source_description": "Official MCP server for Qase — manage test cases, runs, suites, defects via AI tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/qase-tms/qase-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-qiskit-code-assistant-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Qiskit%2Fqiskit-code-assistant-mcp-server",
+    "url": "https://github.com/Qiskit/mcp-servers",
+    "source_description": "MCP server for the Qiskit Code Assistant intelligent code completion",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Qiskit/mcp-servers/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-quantoracle": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fel123%2Fquantoracle",
+    "url": "https://github.com/QuantOracledev/quantoracle",
+    "source_description": "73 deterministic quant tools for AI agents. LLMs drift on Black-Scholes; these are exact math.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/QuantOracledev/quantoracle/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-quotemem": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.edsml-jz2321%2Fquotemem",
+    "url": "https://github.com/edsml-jz2321/QuoteMem",
+    "source_description": "Auditable long-term memory for agents: source quotes, versioned updates and confirmed forgetting.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/edsml-jz2321/QuoteMem/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-readanydoc": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.arpitpatel25%2Freadanydoc",
+    "url": "https://github.com/arpitpatel25/ReadAnyDoc",
+    "source_description": "Parse PDFs, scans and Office files to Markdown; extract typed fields with page citations.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/arpitpatel25/ReadAnyDoc/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-reado": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.WatermelonBros%2Freado",
+    "url": "https://github.com/WatermelonBros/reado",
+    "source_description": "Your code review comments from Reado, the read-first IDE, as context and tools for your agent.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/WatermelonBros/reado/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-rebar": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.navapbc%2Frebar",
+    "url": "https://github.com/navapbc/rebar",
+    "source_description": "Event-sourced ticket tracker + Jira reconciler, exposed as a Python library, CLI, and MCP server.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/navapbc/rebar/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-recovery-probe": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BojanKovachki%2Frecovery-probe",
+    "url": "https://github.com/BojanKovachki/recovery-probe",
+    "source_description": "Fail reads in web and Electron test apps, inspect recovery, and compare before/after evidence.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/BojanKovachki/recovery-probe/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-reelsaw": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.osbytes%2Freelsaw",
+    "url": "https://github.com/osbytes/reelsaw",
+    "source_description": "Drive a self-hosted Reelsaw: turn long videos into vertical clips, edit, re-render and export them.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/osbytes/reelsaw/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-reliquary-tc": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.The-40-Thieves%2Freliquary-tc",
+    "url": "https://github.com/The-40-Thieves/reliquary-tc",
+    "source_description": "Governed Obsidian vault access: hybrid retrieval, Markdown-native memory, HITL confirmations.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/The-40-Thieves/reliquary-tc/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-rendercheck": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ParthibanRajasekaran%2Frendercheck",
+    "url": "https://github.com/ParthibanRajasekaran/text-from-image",
+    "source_description": "Check from a screenshot that text is really visible to users. Local, offline OCR.",
+    "licence": "other",
+    "licence_url": "https://github.com/ParthibanRajasekaran/text-from-image/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-renor": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.patrickpassosb%2Frenor",
+    "url": "https://github.com/renorai/renor-engine",
+    "source_description": "Private memory for AI agents: save and recall facts across Claude Code, Codex, Cursor and ChatGPT.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/renorai/renor-engine/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-replicate-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sena-labs%2Freplicate-mcp-server",
+    "url": "https://github.com/sena-labs/replicate-mcp-server",
+    "source_description": "Replicate MCP server - image, video, audio, speech, LLM, vision, upscale, 3D, training. 36 tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/sena-labs/replicate-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-revit-model": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sharafutdinovdi%2Frevit-model-mcp",
+    "url": "https://github.com/sharafutdinovdi/revit-model-mcp",
+    "source_description": "Revit MCP server. Agent install: https://sharafutdinovdi.github.io/revit-model-mcp/agent-install/",
+    "licence": "MIT",
+    "licence_url": "https://github.com/sharafutdinovdi/revit-model-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-rhumb": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.supertrained%2Frhumb-mcp",
+    "url": "https://github.com/supertrained/rhumb",
+    "source_description": "Agent gateway for Index discovery, AN Score evaluation, and Resolve governed execution",
+    "licence": "MIT",
+    "licence_url": "https://github.com/supertrained/rhumb/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-risingwave": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.risingwavelabs%2Frisingwave-mcp",
+    "url": "https://github.com/risingwavelabs/risingwave-mcp",
+    "source_description": "Query, inspect and operate RisingWave, the PostgreSQL-compatible streaming database, from an agent.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/risingwavelabs/risingwave-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ros-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.robotmcp%2Fros-mcp-server",
+    "url": "https://github.com/robotmcp/ros-mcp-server",
+    "source_description": "Connect AI models like Claude & ChatGPT with ROS robots using MCP",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/robotmcp/ros-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-rubber-duck": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nesquikm%2Frubber-duck",
+    "url": "https://github.com/nesquikm/mcp-rubber-duck",
+    "source_description": "Bridge to multiple LLMs and CLI agents: councils, debates, voting, and more",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nesquikm/mcp-rubber-duck/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ruby-native": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ruby-native%2Fruby-native",
+    "url": "https://github.com/ruby-native/gem",
+    "source_description": "Ship a Rails app to the App Store and Google Play. Every ruby_native command as a tool.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ruby-native/gem/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-rugsnare": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Paraphern%2Frugsnare",
+    "url": "https://github.com/Paraphern/rugsnare",
+    "source_description": "Pin MCP tool contracts by sha-256; catch silent drift, rug pulls and bait-and-switch in CI.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Paraphern/rugsnare/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-safari": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.achiya-automation%2Fsafari-mcp",
+    "url": "https://github.com/achiya-automation/safari-mcp",
+    "source_description": "Native Safari browser automation for AI agents — 98 tools, zero Chrome overhead.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/achiya-automation/safari-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sapiom-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sapiom%2Fmcp",
+    "url": "https://github.com/sapiom/sapiom-js",
+    "source_description": "Local Sapiom developer MCP for authoring, testing, deploying, and inspecting agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/sapiom/sapiom-js/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sbis-mcp-ru": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ilyautov%2Fsbis-mcp-ru",
+    "url": "https://github.com/ilyautov/sbis-mcp-ru",
+    "source_description": "API СБИС (Saby) в ИИ-ассистенте: документы, этапы ЭДО, подпись, сертификаты",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ilyautov/sbis-mcp-ru/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-scavio": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.scavio-ai%2Fscavio-mcp",
+    "url": "https://github.com/scavio-ai/scavio-mcp",
+    "source_description": "Structured web data from 104 platforms: Google, ChatGPT, Gemini, YouTube, Amazon, Reddit, TikTok",
+    "licence": "MIT",
+    "licence_url": "https://github.com/scavio-ai/scavio-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-scholar-sidekick": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mlava%2Fscholar-sidekick-mcp",
+    "url": "https://github.com/mlava/scholar-sidekick-mcp",
+    "source_description": "Catch AI-fabricated citations (real DOI + fake title). Retraction, open-access, 10,000+ CSL styles.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mlava/scholar-sidekick-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-scout": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.klarlabs-studio%2Fscout",
+    "url": "https://github.com/klarlabs-studio/scout",
+    "source_description": "Go browser automation MCP server with verified actions, durable task recovery, and bounded outputs.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/klarlabs-studio/scout/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-scout-openscout-app": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.openscout-app%2Fscout",
+    "url": "https://github.com/openscout-app/scout",
+    "source_description": "Coordinate local coding agents and track handoffs.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/openscout-app/scout/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-screaming-frog": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bzsasson%2Fscreaming-frog-mcp",
+    "url": "https://github.com/bzsasson/screaming-frog-mcp",
+    "source_description": "Headless Screaming Frog SEO Spider via its CLI: run crawls, export and filter data, no GUI needed.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bzsasson/screaming-frog-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-scribo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.causa-prima-ai%2Fscribo",
+    "url": "https://github.com/causa-prima-ai/scribo-mcp",
+    "source_description": "EN 16931-compliant e-invoices: XRechnung, ZUGFeRD, Factur-X, Peppol BIS, Facturae or US PDF. Free.",
+    "licence": "other",
+    "licence_url": "https://github.com/causa-prima-ai/scribo-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-search-console": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.saurabhsharma2u%2Fsearch-console-mcp",
+    "url": "https://github.com/saurabhsharma2u/search-console-mcp",
+    "source_description": "Google Search Console + Bing + GA4 + AdSense — unified SEO intelligence for AI agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/saurabhsharma2u/search-console-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-searoute": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mayurrawte%2Fsearoute",
+    "url": "https://github.com/mayurrawte/searoute-ts",
+    "source_description": "Real shortest sea routes between ports: distance, canals/straits, GeoJSON. UN/LOCODE aware.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mayurrawte/searoute-ts/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-searxng-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bumbaRasch%2Fsearxng-mcp-server",
+    "url": "https://github.com/bumbaRasch/searxng-mcp-server",
+    "source_description": "Self-hosted SearXNG metasearch for MCP clients: 14 tools, citation refs, deep search and crawling.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bumbaRasch/searxng-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-second-brain": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ddmanyes%2Fmcp-second-brain",
+    "url": "https://github.com/ddmanyes/second-brain-mcp",
+    "source_description": "Self-maintaining knowledge vault: figure-level search, auto-wikilinks, and memory compression.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ddmanyes/second-brain-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-second-brain-bhushan": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.getsecondbrain%2Fsecond-brain",
+    "url": "https://github.com/bhushan/getsecondbrain.io",
+    "source_description": "Linked markdown notes as memory for AI apps: search, read, save and link notes over MCP.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/bhushan/getsecondbrain.io/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sequenzy-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Sequenzy%2Fmcp",
+    "url": "https://github.com/Sequenzy/mcp",
+    "source_description": "Sequenzy MCP server for AI-powered email marketing automation.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Sequenzy/mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-serpmaven": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nodemaven%2Fserpmaven",
+    "url": "https://github.com/nodemaven/serpmaven",
+    "source_description": "Live Google search for AI agents from a real Chrome browser; run `serpmaven install` once first",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nodemaven/serpmaven/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-server-chart": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.antvis%2Fmcp-server-chart",
+    "url": "https://github.com/antvis/mcp-server-chart",
+    "source_description": "A Model Context Protocol server for generating charts using AntV.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/antvis/mcp-server-chart/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-server-ros-2": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wise-vision%2Fmcp_server_ros_2",
+    "url": "https://github.com/wise-vision/ros2_mcp",
+    "source_description": "View ROS 2 nodes and topics, and call services and actions via MCP",
+    "licence": "MPL-2.0",
+    "licence_url": "https://github.com/wise-vision/ros2_mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sheetxl": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sheetxl%2Fsheetxl",
+    "url": "https://github.com/sheetxl/sheetxl",
+    "source_description": "Excel-grade spreadsheet built for agents: read, query, build and check .xlsx, .sxl and .csv files.",
+    "licence": "other",
+    "licence_url": "https://github.com/sheetxl/sheetxl/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "mcp-skill-hub": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.srprasanna%2Fmcp-skill-hub",
+    "url": "https://github.com/srprasanna/mcp-skill-hub",
+    "source_description": "MCP server that loads and serves skills from a mounted directory with hot reload.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/srprasanna/mcp-skill-hub/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sniff": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Aboudjem%2Fsniff",
+    "url": "https://github.com/Aboudjem/sniff",
+    "source_description": "Find broken pages in your running web app before users do. Each page bug comes with steps and a fix.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Aboudjem/sniff/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sniptide": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Dino-Kupinic%2Fsniptide",
+    "url": "https://github.com/Dino-Kupinic/sniptide",
+    "source_description": "Search and manage your Sniptide snippets.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/Dino-Kupinic/sniptide/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-social": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.postlake%2Fsocial",
+    "url": "https://github.com/PostLake/postlake-mcp",
+    "source_description": "Post, schedule, reply and measure across X, LinkedIn, Instagram, TikTok, YouTube, Threads, Bluesky",
+    "licence": "MIT",
+    "licence_url": "https://github.com/PostLake/postlake-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-solidinvoice-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=co.solidinvoice%2Fmcp",
+    "url": "https://github.com/SolidInvoice/SolidInvoice",
+    "source_description": "Create and send invoices and quotes, manage clients, and track payments in SolidInvoice.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/SolidInvoice/SolidInvoice/blob/3.2.x/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-solomd": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zhitongblog%2Fsolomd",
+    "url": "https://github.com/zhitongblog/solomd",
+    "source_description": "Read and search a folder of Markdown notes: search, backlinks, tags, tasks, outlines, git history.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/zhitongblog/solomd/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-spotify-soundtrack": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Chiru144%2Fspotify-soundtrack-mcp",
+    "url": "https://github.com/Chiru144/Spotify-MCP-Web-And-MCP-Server",
+    "source_description": "Spotify + TMDB tools: movie soundtrack playlists, playlist curation, taste stats and playback.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Chiru144/Spotify-MCP-Web-And-MCP-Server/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "mcp-sqlite": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ofershap%2Fsqlite",
+    "url": "https://github.com/ofershap/mcp-server-sqlite",
+    "source_description": "SQLite MCP — query databases, inspect schemas, explain queries, export data.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ofershap/mcp-server-sqlite/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-ssh-mcp-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hypnosis%2Fssh-mcp-server",
+    "url": "https://github.com/hypnosis/ssh-mcp-server",
+    "source_description": "Modern SSH for AI agents — cloud servers to BusyBox routers, with destructive commands blocked.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/hypnosis/ssh-mcp-server/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-starlog": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.starloghq%2Fstarlog",
+    "url": "https://github.com/starloghq/index",
+    "source_description": "Vet a package (CVEs, license, maintenance) before your AI agent uses it, plus capability discovery.",
+    "licence": "other",
+    "licence_url": "https://github.com/starloghq/index/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-stetdoc": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.clauseo-ai%2Fstetdoc",
+    "url": "https://github.com/clauseo-ai/stetdoc",
+    "source_description": "Read, redline and compare Word .docx files with real tracked changes",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/clauseo-ai/stetdoc",
+    "fetched": "2026-11-25"
+  },
+  "mcp-storyos": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.storyos%2Fstoryos",
+    "url": "https://github.com/StoryFunnels/storyOS",
+    "source_description": "Your StoryOS workspace (records, approvals and agents) for Claude, ChatGPT and any MCP client.",
+    "licence": "other",
+    "licence_url": "https://github.com/StoryFunnels/storyOS/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-substack": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.conorbronsdon%2Fsubstack-mcp",
+    "url": "https://github.com/conorbronsdon/substack-mcp",
+    "source_description": "Substack drafts, Notes, analytics and consented subscribers. Long-form posts stay draft-only.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/conorbronsdon/substack-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-synology": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cmeans%2Fmcp-synology",
+    "url": "https://github.com/cmeans/mcp-synology",
+    "source_description": "MCP server for Synology NAS — browse files, monitor health, and automate operations",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/cmeans/mcp-synology/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-tap": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.LeonTing1010%2Ftap",
+    "url": "https://github.com/LeonTing1010/tap",
+    "source_description": "Browser MCP for logged-in tasks. Uses your Chrome — credentials stay local. Zero-token replay.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/LeonTing1010/tap/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-tapo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mihai-dinculescu%2Ftapo-mcp",
+    "url": "https://github.com/mihai-dinculescu/tapo",
+    "source_description": "MCP server for discovering and controlling TP-Link Tapo smart home devices via AI Agents",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mihai-dinculescu/tapo/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-telegram": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mcp-telegram%2Fmcp-telegram",
+    "url": "https://github.com/mcp-telegram/mcp-telegram",
+    "source_description": "Unofficial Telegram MCP server — read, search, reply and react in your own Telegram account.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mcp-telegram/mcp-telegram/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-tex-mcp-web": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MiiKiyoshi%2Ftex-mcp-web",
+    "url": "https://github.com/MiiKiyoshi/tex-mcp-web",
+    "source_description": "Comment on a LaTeX paper's PDF and have Claude Code or Codex edit the source, with Overleaf sync.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/MiiKiyoshi/tex-mcp-web/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-tiacommander": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.a4webdev%2Ftiacommander-mcp",
+    "url": "https://github.com/a4webdev/tiacommander-mcp",
+    "source_description": "Siemens TIA Portal MCP server — AI-assisted PLC programming. 19 tools, 230 actions.",
+    "licence": "other",
+    "licence_url": "https://github.com/a4webdev/tiacommander-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-tierward": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.marcoguillermaz%2Ftierward",
+    "url": "https://github.com/marcoguillermaz/Tierward",
+    "source_description": "Read a Tierward project's governance state (doctor, team-settings, arch-audit, skills) over MCP.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/marcoguillermaz/Tierward/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-tirith": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.eabz%2Ftirith",
+    "url": "https://github.com/eabz/tirith",
+    "source_description": "Coordination server for parallel coding agents: claims, contracts, notices, and memory notes.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/eabz/tirith/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-token-savior": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Mibayy%2Ftoken-savior",
+    "url": "https://github.com/Mibayy/token-savior",
+    "source_description": "Structural codebase MCP server with persistent memory: navigate by symbol, recall across sessions.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Mibayy/token-savior/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-token-tool": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bitbond%2Ftoken-tool",
+    "url": "https://github.com/bitbond/token-tool-mcp",
+    "source_description": "Deploy compliant ERC-20 tokens from any AI agent. 17 tools, 10 networks, CertiK-audited.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bitbond/token-tool-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-toon-memory": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.LuiggiVal08%2Ftoon-memory",
+    "url": "https://github.com/LuiggiVal08/toon-memory",
+    "source_description": "Offline persistent memory for AI coding agents — 35 tools, 80% fewer calls, no LLM",
+    "licence": "MIT",
+    "licence_url": "https://github.com/LuiggiVal08/toon-memory/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-trace": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nikolai-vysotskyi%2Ftrace-mcp",
+    "url": "https://github.com/nikolai-vysotskyi/trace-mcp",
+    "source_description": "Code graph MCP: 81 languages, 91 frameworks, 72.7% fewer PR-review tokens, comprehension at parity",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nikolai-vysotskyi/trace-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-traceweave": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gokeshenzhen%2Ftraceweave",
+    "url": "https://github.com/gokeshenzhen/TraceWeave",
+    "source_description": "Portable MCP runtime for RTL logs and VCD; repository setup adds FSDB and site EDA integration",
+    "licence": "MIT",
+    "licence_url": "https://github.com/gokeshenzhen/TraceWeave/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-transcriptor": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.samson-art%2Ftranscriptor-mcp",
+    "url": "https://github.com/samson-art/transcriptor-mcp",
+    "source_description": "Fetch transcripts, subtitles, chapters, metadata and frames from YouTube and 10+ video platforms",
+    "licence": "MIT",
+    "licence_url": "https://github.com/samson-art/transcriptor-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-transloadit-server": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.transloadit%2Fmcp-server",
+    "url": "https://github.com/transloadit/node-sdk",
+    "source_description": "Process video, audio, images and documents with Transloadit Robots. Connect by URL with OAuth.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/transloadit/node-sdk/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-trino": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tuannvm%2Fmcp-trino",
+    "url": "https://github.com/tuannvm/mcp-trino",
+    "source_description": "MCP server for Trino distributed SQL query engine access",
+    "licence": "MIT",
+    "licence_url": "https://github.com/tuannvm/mcp-trino/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-trmm": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shin2344234%2Ftrmm-mcp",
+    "url": "https://github.com/shin2344234/trmm-mcp",
+    "source_description": "Read your TacticalRMM fleet; run commands only after per-command human approval.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/shin2344234/trmm-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-turk-hukuku-mevzuat": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aydincan%2Fturk-hukuku-mevzuat-mcp",
+    "url": "https://github.com/aydincan/turk-hukuku-mevzuat-mcp",
+    "source_description": "Türk mevzuatının resmî güncel metnini (mevzuat.gov.tr) yapay zekâya açan MCP sunucusu.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/aydincan/turk-hukuku-mevzuat-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-twocaptcha": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aruxojuyu665%2Ftwocaptcha-mcp",
+    "url": "https://github.com/0-SOFT/2Captcha-MCP",
+    "source_description": "Full 2Captcha API (43 tools) for Claude Code: 31 captcha solvers + management + webhook.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/0-SOFT/2Captcha-MCP/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-unity-ai-bridge": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.butterlatte-zhang%2Funity-ai-bridge",
+    "url": "https://github.com/butterlatte-zhang/unity-ai-bridge",
+    "source_description": "Remote-control Unity Editor from any AI IDE via file-based IPC. 62 tools, zero dependencies.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/butterlatte-zhang/unity-ai-bridge/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-uniwire": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.uniwire-dev%2Funiwire",
+    "url": "https://github.com/uniwire-dev/uniwire",
+    "source_description": "Electrical single-line and multi-line diagrams: build, check (NF C 15-100, IEC 60364), draw, PDF.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/uniwire-dev/uniwire/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-unraid": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.dinglebear%2Funraid",
+    "url": "https://github.com/dinglebear-ai/unraid",
+    "source_description": "Rust MCP server and CLI for Unraid GraphQL operations across NAS, Docker, VM, and storage workflows.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/dinglebear-ai/unraid/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-unterm": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zhitongblog%2Funterm",
+    "url": "https://github.com/zhitongblog/unterm",
+    "source_description": "The terminal AI agents can drive: spawn panes, run commands, read screens, scrolling screenshots.",
+    "licence": "other",
+    "licence_url": "https://github.com/zhitongblog/unterm/blob/master/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "mcp-usb-rea": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.emirmrkaljevic%2Fusb-rea",
+    "url": "https://github.com/emirmrkaljevic/usb-rea",
+    "source_description": "Reverse engineer USB gadgets: capture traffic, infer the protocol, generate a pyusb driver.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/emirmrkaljevic/usb-rea/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-vet": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.safedep%2Fvet-mcp",
+    "url": "https://github.com/safedep/vet",
+    "source_description": "Protect your AI agents and IDEs from malicious open-source packages.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/safedep/vet/blob/v2/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-viajante": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.felipebasurto%2Fviajante",
+    "url": "https://github.com/felipebasurto/viajante",
+    "source_description": "Flight and hotel search for the terminal, Python, and AI assistants.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/felipebasurto/viajante/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-virustotal": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.w0h1v%2Fvirustotal",
+    "url": "https://github.com/w0h1v/mcp-virustotal",
+    "source_description": "MCP server for querying VirusTotal API with comprehensive security analysis tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/w0h1v/mcp-virustotal/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-vk": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bulatko%2Fvk",
+    "url": "https://github.com/bulatko/vk-mcp-server",
+    "source_description": "VK (VKontakte): read walls, users, communities and stats; publish, edit and comment on posts.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bulatko/vk-mcp-server/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-vouch": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.vouchdev%2Fvouch",
+    "url": "https://github.com/vouchdev/vouch",
+    "source_description": "Git-native, review-gated knowledge base for LLM agents. Cited retrieval, audited writes.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/vouchdev/vouch/blob/test/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-voxisim": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.voxisim%2Fvoxisim-mcp",
+    "url": "https://github.com/voxisim/voxisim-mcp",
+    "source_description": "Virtual phone numbers and SMS verification codes for AI agents: 800+ services, 200+ countries.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/voxisim/voxisim-mcp",
+    "fetched": "2026-11-25"
+  },
+  "mcp-walmart": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.hasdata%2Fwalmart",
+    "url": "https://github.com/HasData/walmart-mcp",
+    "source_description": "Walmart search, product pages and customer reviews on walmart.com and walmart.ca, as JSON.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/HasData/walmart-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-warm": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.writerslogic%2Fwarm-mcp",
+    "url": "https://github.com/writerslogic/warm",
+    "source_description": "Local persistent memory for AI agents with recall, search, forgetting, and encrypted storage.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/writerslogic/warm/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-wayfinder": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.WBXWHT%2Fwayfinder",
+    "url": "https://github.com/StayCurious-Xuan/wayfinder",
+    "source_description": "Read local AI coding paths, decisions, and branches as an in-host voyage map.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/StayCurious-Xuan/wayfinder/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-webreaper": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.alex-on-ai%2Fwebreaper",
+    "url": "https://github.com/alex-on-ai/WebReaper",
+    "source_description": "AI-native web scraper: scrape, crawl and map any site to clean markdown over stdio. MIT-licensed.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/alex-on-ai/WebReaper",
+    "fetched": "2026-11-25"
+  },
+  "mcp-whimsical-mcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.whimsical%2Fmcp",
+    "url": "https://github.com/WhimsicalCode/mcp-server-guide",
+    "source_description": "Create and edit flowcharts, mind maps, wireframes, and docs in Whimsical, or search your workspace.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/WhimsicalCode/mcp-server-guide/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-whisper": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jwulff%2Fwhisper-mcp",
+    "url": "https://github.com/jwulff/whisper-mcp",
+    "source_description": "Local audio transcription using whisper.cpp. Transcribe with OpenAI Whisper models.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/jwulff/whisper-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-wikimoth": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.juliangeymonat-jpg%2Fwikimoth",
+    "url": "https://github.com/juliangeymonat-jpg/wikimoth",
+    "source_description": "Deterministic, token-minimal agent memory: multi-hop [[wikilink]] recall with no LLM in the loop.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/juliangeymonat-jpg/wikimoth/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-winrdp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.emog33k%2Fwinrdp-mcp",
+    "url": "https://github.com/emog33k/winrdp-mcp",
+    "source_description": "Zero-config server to provision and administer any Windows RDP box over WinRM/SSH/SMB.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/emog33k/winrdp-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-witness": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.IngTian%2Fwitness",
+    "url": "https://github.com/IngTian/witness",
+    "source_description": "Distills your sessions or any text corpus into a dated history of how its subject changed.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/IngTian/witness/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-workflowy": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mholzen%2Fworkflowy",
+    "url": "https://github.com/mholzen/workflowy",
+    "source_description": "Create, update, complete nodes, search & replace with regex and dry run, usage reports, transforms",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mholzen/workflowy/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-xamlmcp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.trrahul%2Fxamlmcp",
+    "url": "https://github.com/trrahul/XamlMcp",
+    "source_description": "Inspect and drive Avalonia, WPF, WinUI, and .NET MAUI apps through MCP.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/trrahul/XamlMcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-yab": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.yetanotherbrowser%2Fyab",
+    "url": "https://github.com/yetanotherbrowser/yab-mcp",
+    "source_description": "Your own signed-in Mac browser for any agent: open, read and act in tabs. Local and free.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/yetanotherbrowser/yab-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-yandex-market-mcp-ru": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ilyautov%2Fyandex-market-mcp-ru",
+    "url": "https://github.com/ilyautov/yandex-market-mcp-ru",
+    "source_description": "API Яндекс Маркета в ИИ-ассистенте: заказы, товары, цены, отчёты, отзывы",
+    "licence": "MIT",
+    "licence_url": "https://github.com/ilyautov/yandex-market-mcp-ru/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-yazio": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fliptheweb%2Fyazio-mcp",
+    "url": "https://github.com/fliptheweb/yazio-mcp",
+    "source_description": "MCP server for accessing Yazio user & nutrition data (unofficial)",
+    "licence": "MIT",
+    "licence_url": "https://github.com/fliptheweb/yazio-mcp/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-yelp": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.hasdata%2Fyelp",
+    "url": "https://github.com/HasData/yelp-mcp",
+    "source_description": "Yelp business search, place details and the full review feed, as structured JSON.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/HasData/yelp-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-zn-gate": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.usezn%2Fzn-gate",
+    "url": "https://github.com/usezn/zn",
+    "source_description": "The local security layer for coding agents. No account, and nothing is sent by default.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/usezn/zn/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-zoo": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KittyCAD%2Fzoo-mcp",
+    "url": "https://github.com/KittyCAD/mcp",
+    "source_description": "An MCP server that provides access to the Zoo API for various CAD operations and tools.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/KittyCAD/mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-zotero": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kujenga%2Fzotero-mcp",
+    "url": "https://github.com/kujenga/zotero-mcp",
+    "source_description": "Search your Zotero library, retrieve item metadata, and read full text from AI assistants.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/kujenga/zotero-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-zotero-bridge": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Combjellyshen%2Fzotero-bridge",
+    "url": "https://github.com/Combjellyshen/ZoteroBridge",
+    "source_description": "MCP Server for Zotero SQLite Database - collection, tagging, PDF reading and more.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/Combjellyshen/ZoteroBridge/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-zulipchat": {
+    "source_url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.akougkas%2Fzulipchat",
+    "url": "https://github.com/akougkas/zulipchat-mcp",
+    "source_description": "ZulipChat MCP: Connect AI to Zulip with 60+ tools for messaging, streams, events, and analytics",
+    "licence": "MIT",
+    "licence_url": "https://github.com/akougkas/zulipchat-mcp/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "virustotal",
+  "summary": "Queries VirusTotal for security reports on URLs, files, domains, and IP addresses.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/w0h1v/mcp-virustotal",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.w0h1v%2Fvirustotal"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/w0h1v/mcp-virustotal/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

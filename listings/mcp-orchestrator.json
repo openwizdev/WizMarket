@@ -1,0 +1,25 @@
+{
+  "name": "mcp-orchestrator",
+  "summary": "Aggregates tools across multiple MCP servers using BM25/regex search and lazy tool loading.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/rupinder2/mcp-orchestrator",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rupinder2%2Fmcp-orchestrator"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/rupinder2/mcp-orchestrator/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
