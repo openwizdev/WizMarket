@@ -1,0 +1,13 @@
+{
+  "name": "Anthropic Skills",
+  "summary": "Anthropic's public collection of Agent Skills for creative, technical, document, and enterprise tasks.",
+  "tags": [
+    "skill",
+    "skill-pack"
+  ],
+  "url": "https://github.com/anthropics/skills",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

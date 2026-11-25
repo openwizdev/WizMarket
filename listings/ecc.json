@@ -1,0 +1,13 @@
+{
+  "name": "ECC",
+  "summary": "Agent harness skills, instincts, memory, security, and research-first workflows for coding agents. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack"
+  ],
+  "url": "https://github.com/affaan-m/ECC",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

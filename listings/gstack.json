@@ -1,0 +1,13 @@
+{
+  "name": "gstack",
+  "summary": "Markdown slash-command skills turning coding agents into product, design, review, QA, security, and release roles. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack"
+  ],
+  "url": "https://github.com/garrytan/gstack",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
