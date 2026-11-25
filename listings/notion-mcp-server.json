@@ -1,0 +1,15 @@
+{
+  "name": "Notion MCP Server",
+  "summary": "Official Notion MCP server for reading, searching, and updating Notion pages and databases from AI agents. MIT.",
+  "tags": [
+    "mcp-server",
+    "notion",
+    "notes",
+    "productivity"
+  ],
+  "url": "https://github.com/makenotion/notion-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

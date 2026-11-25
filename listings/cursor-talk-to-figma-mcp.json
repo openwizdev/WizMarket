@@ -1,0 +1,15 @@
+{
+  "name": "TalkToFigma MCP",
+  "summary": "MCP server bridging AI agents and Figma to read design files and modify layouts programmatically. MIT.",
+  "tags": [
+    "mcp-server",
+    "figma",
+    "design",
+    "productivity"
+  ],
+  "url": "https://github.com/grab/cursor-talk-to-figma-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

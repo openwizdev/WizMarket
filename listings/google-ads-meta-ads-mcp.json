@@ -1,0 +1,15 @@
+{
+  "name": "Google Ads & Meta Ads MCP",
+  "summary": "MCP server connecting AI agents to Google Ads, Meta Ads, Google Analytics, and Search Console with approval-gated writes. MIT.",
+  "tags": [
+    "mcp-server",
+    "google-ads",
+    "meta-ads",
+    "analytics"
+  ],
+  "url": "https://github.com/irinabuht12-oss/google-ads-meta-ads-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
