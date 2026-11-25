@@ -1,0 +1,14 @@
+{
+  "name": "Marketing Skills (Corey Haines)",
+  "summary": "AI agent skills for conversion optimization, copywriting, SEO, analytics and growth engineering. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "marketing"
+  ],
+  "url": "https://github.com/coreyhaines31/marketingskills",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
