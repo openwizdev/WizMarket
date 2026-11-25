@@ -1,0 +1,15 @@
+{
+  "name": "Supabase MCP",
+  "summary": "Official Supabase MCP server for querying databases, managing tables and migrations, and inspecting Supabase projects.",
+  "tags": [
+    "mcp-server",
+    "supabase",
+    "postgres",
+    "database"
+  ],
+  "url": "https://github.com/supabase/mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

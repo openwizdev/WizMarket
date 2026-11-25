@@ -1,0 +1,15 @@
+{
+  "name": "Qdrant MCP Server",
+  "summary": "Official Qdrant MCP server for storing and retrieving semantic memories in a Qdrant vector database.",
+  "tags": [
+    "mcp-server",
+    "qdrant",
+    "vector-database",
+    "data"
+  ],
+  "url": "https://github.com/qdrant/mcp-server-qdrant",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

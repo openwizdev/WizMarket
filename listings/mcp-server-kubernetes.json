@@ -1,0 +1,15 @@
+{
+  "name": "MCP Server Kubernetes",
+  "summary": "MCP server for managing Kubernetes clusters, pods, deployments, services, and Helm charts through kubectl.",
+  "tags": [
+    "mcp-server",
+    "kubernetes",
+    "cloud",
+    "infrastructure"
+  ],
+  "url": "https://github.com/Flux159/mcp-server-kubernetes",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

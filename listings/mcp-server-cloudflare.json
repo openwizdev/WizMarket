@@ -1,0 +1,15 @@
+{
+  "name": "Cloudflare MCP Server",
+  "summary": "Official Cloudflare MCP servers for managing Workers, KV, R2, D1, observability, and other Cloudflare developer services.",
+  "tags": [
+    "mcp-server",
+    "cloudflare",
+    "cloud",
+    "infrastructure"
+  ],
+  "url": "https://github.com/cloudflare/mcp-server-cloudflare",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

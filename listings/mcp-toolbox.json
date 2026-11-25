@@ -1,0 +1,15 @@
+{
+  "name": "MCP Toolbox for Databases",
+  "summary": "Open-source MCP server for databases that lets AI agents query and manage SQL and NoSQL data sources with connection pooling.",
+  "tags": [
+    "mcp-server",
+    "database",
+    "sql",
+    "data"
+  ],
+  "url": "https://github.com/googleapis/mcp-toolbox",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
