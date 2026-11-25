@@ -1,0 +1,14 @@
+{
+  "name": "Firecrawl MCP Server",
+  "summary": "Official Firecrawl MCP server for web scraping, crawling, site mapping, and live web search from any MCP client. MIT.",
+  "tags": [
+    "mcp-server",
+    "scraping",
+    "search"
+  ],
+  "url": "https://github.com/firecrawl/firecrawl-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

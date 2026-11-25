@@ -1,0 +1,14 @@
+{
+  "name": "Browser MCP",
+  "summary": "MCP server and browser extension that lets AI agents control your local browser with your existing sessions. Apache-2.0.",
+  "tags": [
+    "mcp-server",
+    "browser",
+    "automation"
+  ],
+  "url": "https://github.com/BrowserMCP/mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

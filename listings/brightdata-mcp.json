@@ -1,0 +1,14 @@
+{
+  "name": "Bright Data MCP",
+  "summary": "Bright Data MCP server for public web search, scraping, and browser automation across geo-restricted sites. MIT.",
+  "tags": [
+    "mcp-server",
+    "scraping",
+    "search"
+  ],
+  "url": "https://github.com/brightdata/brightdata-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

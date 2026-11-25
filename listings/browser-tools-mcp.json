@@ -1,0 +1,14 @@
+{
+  "name": "BrowserTools MCP",
+  "summary": "MCP server that captures browser console logs, network requests, screenshots, and audits for coding agents. MIT.",
+  "tags": [
+    "mcp-server",
+    "browser",
+    "automation"
+  ],
+  "url": "https://github.com/AgentDeskAI/browser-tools-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
