@@ -1,0 +1,21 @@
+{
+  "name": "Impeccable",
+  "summary": "Design vocabulary, critique and audit playbooks, and deterministic slop detection rules for steering coding agents on UI work. Apache-2.0.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "design",
+    "community"
+  ],
+  "url": "https://github.com/pbakaus/impeccable",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Docs",
+      "url": "https://impeccable.style/docs"
+    }
+  ],
+  "status": "listed"
+}
