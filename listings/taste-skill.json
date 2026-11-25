@@ -1,0 +1,21 @@
+{
+  "name": "Taste Skill",
+  "summary": "Agent skills for frontend design taste, combining art direction, reference images, and browser checks to avoid generic AI pages. MIT.",
+  "tags": [
+    "skill",
+    "skill-pack",
+    "design",
+    "community"
+  ],
+  "url": "https://github.com/Leonxlnx/taste-skill",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Website",
+      "url": "https://tasteskill.dev"
+    }
+  ],
+  "status": "listed"
+}
