@@ -1,0 +1,15 @@
+{
+  "name": "BlenderMCP",
+  "summary": "MCP server connecting AI agents directly to Blender for prompt-assisted 3D modeling, scene creation, and manipulation.",
+  "tags": [
+    "mcp-server",
+    "3d",
+    "blender",
+    "design"
+  ],
+  "url": "https://github.com/ahujasid/mcp-for-blender",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

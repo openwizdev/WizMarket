@@ -1,0 +1,14 @@
+{
+  "name": "MCP Everything Reference Server",
+  "summary": "Official MCP reference and test server exercising prompts, resources, tools, logging, and sampling.",
+  "tags": [
+    "mcp-server",
+    "reference",
+    "testing"
+  ],
+  "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

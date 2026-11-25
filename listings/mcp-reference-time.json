@@ -1,0 +1,14 @@
+{
+  "name": "MCP Time Reference Server",
+  "summary": "Official MCP reference server for querying current times and converting timestamps across IANA timezones.",
+  "tags": [
+    "mcp-server",
+    "reference",
+    "time"
+  ],
+  "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
