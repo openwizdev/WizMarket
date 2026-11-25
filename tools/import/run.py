@@ -22,10 +22,11 @@ sys.path.insert(0, str(HERE))  # -I leaves the script's folder off sys.path; the
 
 PUBLISHER = "openwizdev"
 PUBLIC = "public-source"
-KINDS = ("coding-agent-cli", "sandbox-host", "ci", "skill", "skill-collection", "mcp-server")
+KINDS = ("coding-agent-cli", "sandbox-host", "ci", "billing", "skill", "skill-collection", "mcp-server")
 FORBIDDEN_TAGS = ("driver", "harness")  # they mean an OpenWiz driver or harness row exists
 ENTRY_KEYS = ("id", "name", "source_description", "url", "licence", "licence_url", "source_url", "tags", "plugs_into")
-ID = re.compile(r"[a-z0-9](?:[a-z0-9-]{0,38}[a-z0-9])?")
+ID = re.compile(r"[a-z0-9][a-z0-9-]{0,38}[a-z0-9]")
+TAG = re.compile(r"[a-z0-9-]+")
 LINE = re.compile(r"[^\x00-\x1f\x7f]+")
 RUN = 5
 MARKETING = ("best", "powerful", "revolutionary", "ultimate", "world-class", "cutting-edge", "blazing", "seamless",
@@ -41,7 +42,7 @@ def norm_url(url):
         return url.strip().lower()
     host = m.group(2).lower()
     host = host[4:] if host.startswith("www.") else host
-    rest = m.group(3)
+    rest = m.group(3).rstrip("/")
     rest = rest[:-4] if rest.endswith(".git") else rest
     return f"{host}{rest.rstrip('/')}"
 
@@ -76,13 +77,16 @@ def entry_problem(entry):
     if not ID.fullmatch(entry["id"]) or len(entry["id"]) > 40:
         return "id must be 2 to 40 lowercase letters, digits and hyphens"
     tags = entry["tags"]
-    if not tags or not set(tags) & set(KINDS) or set(tags) & set(FORBIDDEN_TAGS) or len(set(tags)) != len(tags):
-        return "tags need one kind tag, no driver or harness tag, none twice"
-    if len(tags) > 7:
+    if (not isinstance(tags, list) or not tags or not all(isinstance(t, str) and TAG.fullmatch(t) for t in tags)
+            or not set(tags) & set(KINDS) or set(tags) & set(FORBIDDEN_TAGS) or len(set(tags)) != len(tags)):
+        return "tags need one kind tag, lowercase letters/digits/hyphens, no driver or harness tag, none twice"
+    if len([t for t in tags if t != PUBLIC]) > 7:
         return "at most 7 tags (public-source is added)"
     for key in ("name", "plugs_into", "licence"):
         if not (isinstance(entry[key], str) and LINE.fullmatch(entry[key])):
             return f"{key} must be one line"
+    if entry["licence"] == "NOASSERTION":
+        return "licence must be an SPDX id, 'other', or 'not stated' (not NOASSERTION)"
     for key in ("url", "licence_url", "source_url"):
         if not str(entry[key]).startswith("https://"):
             return f"{key} must be https://"
@@ -151,7 +155,7 @@ def run_source(name, catalog, entries, out, base=HERE, today=None, resolves=None
         if other != pending_path:
             taken_urls.update({norm_url(e["url"]): i for i, e in load_json(other, {}).items()})
     counts = dict(written=0, refreshed=0, pending=0, duplicate=0, invalid=0, unresolved=0, refused_summary=0)
-    seen, new_pending = set(), {}
+    seen, new_pending, url_ok = set(), {}, {}
     for entry in entries:
         problem = entry_problem(entry)
         if problem:
@@ -166,7 +170,7 @@ def run_source(name, catalog, entries, out, base=HERE, today=None, resolves=None
         listing_id = entry["id"]
         ours = listing_id in mine and listing_id in listings
         if not ours:
-            if taken_urls.get(key) not in (None, listing_id) or (taken_urls.get(key) == listing_id and listing_id in listings):
+            if key in taken_urls:
                 counts["duplicate"] += 1
                 continue
             if listing_id in listings or listing_id in owned_elsewhere:
@@ -185,11 +189,18 @@ def run_source(name, catalog, entries, out, base=HERE, today=None, resolves=None
         problem = summary_problem(summary, entry["source_description"])
         if problem and not ours:
             log(f"{name}: kept {listing_id} pending: its summary {problem}")
-            new_pending[listing_id] = {**pending[listing_id], **{k: entry[k] for k in ENTRY_KEYS}}
+            new_pending[listing_id] = {**pending[listing_id], **{k: entry[k] for k in ENTRY_KEYS},
+                                       **({"catalog": entry["catalog"]} if "catalog" in entry else {})}
             counts["refused_summary"] += 1
             continue
         listing = listing_for(entry, summary, catalog)
-        dead = [u for u in [listing["url"]] + [link["url"] for link in listing["links"]] if not resolves(u)]
+        urls = list(dict.fromkeys([listing["url"]] + [link["url"] for link in listing["links"]]))
+        dead = []
+        for u in urls:
+            if u not in url_ok:
+                url_ok[u] = bool(resolves(u))
+            if not url_ok[u]:
+                dead.append(u)
         if dead:
             log(f"{name}: dropped {listing_id}: no 2xx/3xx from {', '.join(dead)}")
             counts["unresolved"] += 1

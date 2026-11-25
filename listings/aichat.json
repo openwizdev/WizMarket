@@ -1,0 +1,24 @@
+{
+  "name": "AIChat",
+  "summary": "Command-line LLM client with shell assistance, interactive chat, RAG, and tool-calling agents across multiple model providers.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/sigoden/aichat",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/sigoden/aichat"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/sigoden/aichat/blob/main/LICENSE-APACHE"
+    }
+  ],
+  "status": "listed"
+}

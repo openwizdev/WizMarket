@@ -1,0 +1,25 @@
+{
+  "name": "mcp-agent",
+  "summary": "Python framework for building Model Context Protocol agents with composable workflow patterns.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "sdk",
+    "mcp"
+  ],
+  "url": "https://github.com/lastmile-ai/mcp-agent",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/lastmile-ai/mcp-agent"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/lastmile-ai/mcp-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

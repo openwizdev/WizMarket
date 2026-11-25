@@ -1,0 +1,24 @@
+{
+  "name": "reviewdog",
+  "summary": "Automated CI code-review tool that posts linter and static-analysis findings onto pull requests.",
+  "tags": [
+    "public-source",
+    "ci",
+    "code-review"
+  ],
+  "url": "https://github.com/reviewdog/reviewdog",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/reviewdog/reviewdog"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/reviewdog/reviewdog/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

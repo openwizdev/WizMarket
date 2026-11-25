@@ -1,0 +1,24 @@
+{
+  "name": "Claude Code Action",
+  "summary": "Official GitHub Action from Anthropic for running Claude Code on pull requests and issues.",
+  "tags": [
+    "public-source",
+    "ci",
+    "github-actions"
+  ],
+  "url": "https://github.com/anthropics/claude-code-action",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/anthropics/claude-code-action"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/anthropics/claude-code-action/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

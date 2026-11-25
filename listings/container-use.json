@@ -1,0 +1,24 @@
+{
+  "name": "Container Use",
+  "summary": "Dagger-backed isolated container environments letting multiple coding agents work on a repo without clashes.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "containers"
+  ],
+  "url": "https://github.com/dagger/container-use",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/dagger/container-use"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/dagger/container-use/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

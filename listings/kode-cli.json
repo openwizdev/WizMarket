@@ -1,0 +1,24 @@
+{
+  "name": "Kode CLI",
+  "summary": "Command-line agent designed to handle both human-guided and automated computer tasks.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/shareAI-lab/Kode-CLI",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/shareAI-lab/Kode-CLI"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/shareAI-lab/Kode-CLI/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

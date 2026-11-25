@@ -1,0 +1,24 @@
+{
+  "name": "Grok CLI",
+  "summary": "Open-source terminal coding agent built to work with the Grok API.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/superagent-ai/grok-cli",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/superagent-ai/grok-cli"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/superagent-ai/grok-cli/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

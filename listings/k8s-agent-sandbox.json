@@ -1,0 +1,24 @@
+{
+  "name": "Kubernetes Agent Sandbox",
+  "summary": "Kubernetes SIG project for managing isolated, stateful workloads such as AI agent runtimes.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "kubernetes"
+  ],
+  "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

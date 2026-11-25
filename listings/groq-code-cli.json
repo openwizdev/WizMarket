@@ -1,0 +1,24 @@
+{
+  "name": "Groq Code CLI",
+  "summary": "Lightweight open-source terminal coding CLI backed by Groq models for fast iteration.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/build-with-groq/groq-code-cli",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/build-with-groq/groq-code-cli"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/build-with-groq/groq-code-cli/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

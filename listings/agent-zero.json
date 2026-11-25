@@ -1,0 +1,24 @@
+{
+  "name": "Agent Zero",
+  "summary": "Open framework for building and running autonomous AI agents.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "framework"
+  ],
+  "url": "https://github.com/agent0ai/agent-zero",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/agent0ai/agent-zero"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/agent0ai/agent-zero/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "GitHub Actions Runner",
+  "summary": "Official open-source runner software that executes jobs for GitHub Actions.",
+  "tags": [
+    "public-source",
+    "ci",
+    "github-actions"
+  ],
+  "url": "https://github.com/actions/runner",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/actions/runner"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/actions/runner/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

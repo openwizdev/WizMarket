@@ -1,0 +1,24 @@
+{
+  "name": "Codex Action",
+  "summary": "Official GitHub Action from OpenAI for running Codex in repository workflows.",
+  "tags": [
+    "public-source",
+    "ci",
+    "github-actions"
+  ],
+  "url": "https://github.com/openai/codex-action",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/openai/codex-action"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/openai/codex-action/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Anthropic Sandbox Runtime",
+  "summary": "OS-level process sandbox from Anthropic that restricts filesystem and network access without containers.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "local"
+  ],
+  "url": "https://github.com/anthropics/sandbox-runtime",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/anthropics/sandbox-runtime"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/anthropics/sandbox-runtime/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

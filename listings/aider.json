@@ -1,0 +1,24 @@
+{
+  "name": "Aider",
+  "summary": "Terminal pair-programming CLI that edits code in your local git repository with LLMs.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/Aider-AI/aider",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/Aider-AI/aider"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt"
+    }
+  ],
+  "status": "listed"
+}

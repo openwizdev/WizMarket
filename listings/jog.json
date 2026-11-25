@@ -1,0 +1,24 @@
+{
+  "name": "Jog",
+  "summary": "Hosted GitHub Actions runner service for private repos, enabled by switching a job's runs-on target to jog.",
+  "tags": [
+    "public-source",
+    "ci",
+    "github-actions"
+  ],
+  "url": "https://usejog.com",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Jog official site",
+      "url": "https://usejog.com"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://usejog.com"
+    }
+  ],
+  "status": "listed"
+}

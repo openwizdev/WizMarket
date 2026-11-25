@@ -1,0 +1,24 @@
+{
+  "name": "IronClaw",
+  "summary": "Extensible, security-minded agent operating system from NEAR AI.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "runtime"
+  ],
+  "url": "https://github.com/nearai/ironclaw",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/nearai/ironclaw"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/nearai/ironclaw/blob/main/LICENSE-APACHE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Dyad",
+  "summary": "Local open-source desktop app builder for generating web applications with AI models.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "desktop"
+  ],
+  "url": "https://github.com/dyad-sh/dyad",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/dyad-sh/dyad"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/dyad-sh/dyad/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

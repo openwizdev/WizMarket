@@ -1,0 +1,24 @@
+{
+  "name": "AiderDesk",
+  "summary": "Desktop workspace built for working with AI software-engineering agents.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "desktop"
+  ],
+  "url": "https://github.com/magiksoft/aider-desk",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/magiksoft/aider-desk"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/magiksoft/aider-desk/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

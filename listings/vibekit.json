@@ -1,0 +1,24 @@
+{
+  "name": "VibeKit",
+  "summary": "Sandbox wrapper that isolates coding agents like Claude Code, Codex, and Gemini with secret redaction and logs.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "containers"
+  ],
+  "url": "https://github.com/superagent-ai/vibekit",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/superagent-ai/vibekit"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/superagent-ai/vibekit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

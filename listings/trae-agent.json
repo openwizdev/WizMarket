@@ -1,0 +1,24 @@
+{
+  "name": "Trae Agent",
+  "summary": "ByteDance's LLM-based command-line agent for general software-engineering tasks.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/bytedance/trae-agent",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/bytedance/trae-agent"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bytedance/trae-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

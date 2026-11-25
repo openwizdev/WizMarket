@@ -1,0 +1,24 @@
+{
+  "name": "OpenAI Agents SDK (Python)",
+  "summary": "Official Python framework from OpenAI for building and coordinating multi-agent workflows.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "sdk"
+  ],
+  "url": "https://github.com/openai/openai-agents-python",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/openai/openai-agents-python"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/openai/openai-agents-python/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

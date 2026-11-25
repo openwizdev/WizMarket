@@ -1,0 +1,218 @@
+{
+  "anthropic-sandbox-runtime": {
+    "source_url": "https://github.com/anthropics/sandbox-runtime",
+    "url": "https://github.com/anthropics/sandbox-runtime",
+    "source_description": "A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/anthropics/sandbox-runtime/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "arrakis": {
+    "source_url": "https://github.com/abshkbh/arrakis",
+    "url": "https://github.com/abshkbh/arrakis",
+    "source_description": "A fully customizable and self-hosted sandboxing solution for AI agent code execution and computer use. It features out-of-the-box support for backtracking, a simple REST API and Python SDK, automatic port forwarding, and secure MicroVM isolation. Perfect for safely running, testing, and backtracking multi-step agent workflows.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/abshkbh/arrakis/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "blaxel": {
+    "source_url": "https://github.com/blaxel-ai/sdk-typescript",
+    "url": "https://github.com/blaxel-ai/sdk-typescript",
+    "source_description": "Typescript SDK for Blaxel",
+    "licence": "MIT",
+    "licence_url": "https://github.com/blaxel-ai/sdk-typescript/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "cloudflare-sandbox": {
+    "source_url": "https://github.com/cloudflare/sandbox-sdk",
+    "url": "https://github.com/cloudflare/sandbox-sdk",
+    "source_description": "Run sandboxed code environments on Cloudflare's edge network",
+    "licence": "other",
+    "licence_url": "https://github.com/cloudflare/sandbox-sdk/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "coder": {
+    "source_url": "https://github.com/coder/coder",
+    "url": "https://github.com/coder/coder",
+    "source_description": "Secure environments for developers and their agents",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/coder/coder/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "codesandbox-sdk": {
+    "source_url": "https://github.com/codesandbox/codesandbox-sdk",
+    "url": "https://github.com/codesandbox/codesandbox-sdk",
+    "source_description": "Programmatically start (AI) sandboxes on top of CodeSandbox",
+    "licence": "not stated",
+    "licence_url": "https://github.com/codesandbox/codesandbox-sdk",
+    "fetched": "2026-11-25"
+  },
+  "codex-universal": {
+    "source_url": "https://github.com/openai/codex-universal",
+    "url": "https://github.com/openai/codex-universal",
+    "source_description": "Base docker image used in Codex environments",
+    "licence": "other",
+    "licence_url": "https://github.com/openai/codex-universal/blob/main/LICENSES",
+    "fetched": "2026-11-25"
+  },
+  "container-use": {
+    "source_url": "https://github.com/dagger/container-use",
+    "url": "https://github.com/dagger/container-use",
+    "source_description": "Development environments for coding agents. Enable multiple agents to work safely and independently with your preferred stack.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/dagger/container-use/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "cua": {
+    "source_url": "https://github.com/trycua/cua",
+    "url": "https://github.com/trycua/cua",
+    "source_description": "Scale computer-use 2.0 with open-source drivers, cross-OS sandboxes, and benchmarks for training, evaluation, and data generation.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/trycua/cua/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "daytona": {
+    "source_url": "https://www.daytona.io",
+    "url": "https://www.daytona.io",
+    "source_description": "Deploy Al code with confidence using Daytona's lightning-fast infrastructure. 90ms environment creation,\nstateful operations, and enterprise-grade security.",
+    "licence": "not stated",
+    "licence_url": "https://www.daytona.io",
+    "fetched": "2026-11-25"
+  },
+  "devcontainers-cli": {
+    "source_url": "https://github.com/devcontainers/cli",
+    "url": "https://github.com/devcontainers/cli",
+    "source_description": "A reference implementation for the specification that can create and configure a dev container from a devcontainer.json.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/devcontainers/cli/blob/main/LICENSE.txt",
+    "fetched": "2026-11-25"
+  },
+  "e2b": {
+    "source_url": "https://github.com/e2b-dev/E2B",
+    "url": "https://github.com/e2b-dev/E2B",
+    "source_description": "Open-source, secure environment with real-world tools for enterprise-grade agents.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/e2b-dev/E2B/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "e2b-code-interpreter": {
+    "source_url": "https://github.com/e2b-dev/code-interpreter",
+    "url": "https://github.com/e2b-dev/code-interpreter",
+    "source_description": "Python & JS/TS SDK for running AI-generated code/code interpreting in your AI app",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/e2b-dev/code-interpreter/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "e2b-runtime": {
+    "source_url": "https://github.com/e2b-dev/runtime",
+    "url": "https://github.com/e2b-dev/runtime",
+    "source_description": "The runtime behind every E2B stack: Cloud, Enterprise, and your own machine.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/e2b-dev/runtime/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "fly-machines": {
+    "source_url": "https://docs.fly.io/machines",
+    "url": "https://docs.fly.io/machines",
+    "source_description": "Start here for Fly Machines, fast-launching VMs on Fly.io. Find the Machines introduction, the REST API, and flyctl commands for running and updating Machines.",
+    "licence": "not stated",
+    "licence_url": "https://docs.fly.io/machines",
+    "fetched": "2026-11-25"
+  },
+  "flyctl": {
+    "source_url": "https://github.com/superfly/flyctl",
+    "url": "https://github.com/superfly/flyctl",
+    "source_description": "Command line tools for fly.io services",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/superfly/flyctl/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "gitpod": {
+    "source_url": "https://github.com/gitpod-io/gitpod",
+    "url": "https://github.com/gitpod-io/gitpod",
+    "source_description": "The developer platform for on-demand cloud development environments to create software faster and more securely.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/gitpod-io/gitpod/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "k8s-agent-sandbox": {
+    "source_url": "https://github.com/kubernetes-sigs/agent-sandbox",
+    "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+    "source_description": "agent-sandbox enables easy management of isolated, stateful, singleton workloads, ideal for use cases like AI agent runtimes  and reinforcement learning (RL).",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "microsandbox": {
+    "source_url": "https://github.com/superradcompany/microsandbox",
+    "url": "https://github.com/superradcompany/microsandbox",
+    "source_description": "🧱 easy, fast, programmable and local-first microVM runtime and library",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/superradcompany/microsandbox/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "modal": {
+    "source_url": "https://github.com/modal-labs/modal-client",
+    "url": "https://github.com/modal-labs/modal-client",
+    "source_description": "SDK libraries for Modal",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/modal-labs/modal-client/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "morph-cloud": {
+    "source_url": "https://github.com/morph-labs/morph-python-sdk",
+    "url": "https://github.com/morph-labs/morph-python-sdk",
+    "source_description": "",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/morph-labs/morph-python-sdk/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "openvscode-server": {
+    "source_url": "https://github.com/gitpod-io/openvscode-server",
+    "url": "https://github.com/gitpod-io/openvscode-server",
+    "source_description": "Run upstream VS Code on a remote machine with access through a modern web browser from any device, anywhere.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/gitpod-io/openvscode-server/blob/main/LICENSE.txt",
+    "fetched": "2026-11-25"
+  },
+  "runloop": {
+    "source_url": "https://github.com/runloopai/api-client-python",
+    "url": "https://github.com/runloopai/api-client-python",
+    "source_description": "Official Python SDK for Runloop — secure Linux sandboxes (Devboxes) where AI agents run code, edit files, and expose ports",
+    "licence": "MIT",
+    "licence_url": "https://github.com/runloopai/api-client-python/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "steel-browser": {
+    "source_url": "https://github.com/steel-dev/steel-browser",
+    "url": "https://github.com/steel-dev/steel-browser",
+    "source_description": "🔥 Open Source Browser API for AI Agents & Apps. Steel Browser is a batteries-included browser sandbox that lets you automate the web without worrying about infrastructure.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/steel-dev/steel-browser/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "ubicloud": {
+    "source_url": "https://github.com/ubicloud/ubicloud",
+    "url": "https://github.com/ubicloud/ubicloud",
+    "source_description": "Open source alternative to AWS. Elastic compute, block storage (non replicated), firewall and load balancer, managed Postgres, K8s, AI inference, and IAM services.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/ubicloud/ubicloud/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "vercel-sandbox": {
+    "source_url": "https://github.com/vercel/sandbox",
+    "url": "https://github.com/vercel/sandbox",
+    "source_description": "Vercel Sandbox is an ephemeral compute primitive designed to safely run untrusted or user-generated code.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/vercel/sandbox/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "vibekit": {
+    "source_url": "https://github.com/superagent-ai/vibekit",
+    "url": "https://github.com/superagent-ai/vibekit",
+    "source_description": "Run Claude Code, Gemini, Codex — or any coding agent — in a clean, isolated sandbox with sensitive data redaction and observability baked in.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/superagent-ai/vibekit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  }
+}

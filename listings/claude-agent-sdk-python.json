@@ -1,0 +1,24 @@
+{
+  "name": "Claude Agent SDK (Python)",
+  "summary": "Official Python SDK from Anthropic for building custom agents on top of Claude.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "sdk"
+  ],
+  "url": "https://github.com/anthropics/claude-agent-sdk-python",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

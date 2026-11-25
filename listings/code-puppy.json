@@ -1,0 +1,24 @@
+{
+  "name": "Code Puppy",
+  "summary": "Command-line AI coding agent for writing and editing software.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/mpfaffenberger/code_puppy",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/mpfaffenberger/code_puppy"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mpfaffenberger/code_puppy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

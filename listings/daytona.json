@@ -1,0 +1,24 @@
+{
+  "name": "Daytona",
+  "summary": "Hosted cloud infrastructure for spinning up stateful, isolated environments to run AI-generated code.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "cloud"
+  ],
+  "url": "https://www.daytona.io",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Daytona official site",
+      "url": "https://www.daytona.io"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://www.daytona.io"
+    }
+  ],
+  "status": "listed"
+}

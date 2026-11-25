@@ -1,0 +1,24 @@
+{
+  "name": "Open Interpreter",
+  "summary": "Terminal coding agent aimed at running open-weight models locally or via API.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/openinterpreter/openinterpreter",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/openinterpreter/openinterpreter"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/openinterpreter/openinterpreter/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "gptme",
+  "summary": "Terminal AI agent with local file, shell, and web-browsing tools for building persistent workflows.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/gptme/gptme",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/gptme/gptme"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/gptme/gptme/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

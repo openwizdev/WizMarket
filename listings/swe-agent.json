@@ -1,0 +1,24 @@
+{
+  "name": "SWE-agent",
+  "summary": "Research and engineering agent that turns a language model into an automated GitHub issue fixer.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "github"
+  ],
+  "url": "https://github.com/SWE-agent/SWE-agent",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/SWE-agent/SWE-agent"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/SWE-agent/SWE-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

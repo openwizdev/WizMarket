@@ -1,0 +1,24 @@
+{
+  "name": "Devika",
+  "summary": "Open-source autonomous software-engineering agent inspired by Devin.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "autonomous"
+  ],
+  "url": "https://github.com/stitionai/devika",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/stitionai/devika"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/stitionai/devika/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

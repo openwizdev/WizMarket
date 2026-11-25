@@ -1,0 +1,24 @@
+{
+  "name": "E2B Code Interpreter",
+  "summary": "Python and JavaScript/TypeScript SDK for executing AI-generated code inside E2B sandboxes.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "sdk"
+  ],
+  "url": "https://github.com/e2b-dev/code-interpreter",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/e2b-dev/code-interpreter"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/e2b-dev/code-interpreter/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

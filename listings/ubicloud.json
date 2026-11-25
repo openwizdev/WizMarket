@@ -1,0 +1,25 @@
+{
+  "name": "Ubicloud",
+  "summary": "Open-source cloud platform providing elastic VMs, networking, Postgres, Kubernetes, and inference.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "cloud",
+    "self-hosted"
+  ],
+  "url": "https://github.com/ubicloud/ubicloud",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/ubicloud/ubicloud"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/ubicloud/ubicloud/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

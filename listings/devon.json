@@ -1,0 +1,24 @@
+{
+  "name": "Devon",
+  "summary": "Open-source terminal pair-programming agent for editing repositories.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/entropy-research/Devon",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/entropy-research/Devon"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/entropy-research/Devon/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

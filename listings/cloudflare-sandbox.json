@@ -1,0 +1,25 @@
+{
+  "name": "Cloudflare Sandbox SDK",
+  "summary": "SDK for running isolated code execution sandboxes on Cloudflare's edge platform.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "edge",
+    "sdk"
+  ],
+  "url": "https://github.com/cloudflare/sandbox-sdk",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/cloudflare/sandbox-sdk"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/cloudflare/sandbox-sdk/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

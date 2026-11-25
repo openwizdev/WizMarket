@@ -1,0 +1,24 @@
+{
+  "name": "Nanocoder",
+  "summary": "Community-built terminal coding agent that runs locally with your chosen model provider.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/Nano-Collective/nanocoder",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/Nano-Collective/nanocoder"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Nano-Collective/nanocoder/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

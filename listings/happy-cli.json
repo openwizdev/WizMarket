@@ -1,0 +1,24 @@
+{
+  "name": "Happy",
+  "summary": "Open-source app for orchestrating Claude, Codex, and Grok sessions using your existing subscriptions.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "orchestration"
+  ],
+  "url": "https://github.com/slopus/happy",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/slopus/happy"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/slopus/happy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

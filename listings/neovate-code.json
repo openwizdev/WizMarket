@@ -1,0 +1,24 @@
+{
+  "name": "Neovate Code",
+  "summary": "Interactive and headless terminal coding agent for writing code, fixing bugs, reviewing diffs, and adding tests.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/neovateai/neovate-code",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/neovateai/neovate-code"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/neovateai/neovate-code/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Opcode",
+  "summary": "Desktop toolkit for Claude Code to create custom agents, manage sessions, and run background tasks.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "desktop"
+  ],
+  "url": "https://github.com/winfunc/opcode",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/winfunc/opcode"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/winfunc/opcode/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

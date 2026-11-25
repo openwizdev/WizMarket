@@ -1,0 +1,24 @@
+{
+  "name": "Toad",
+  "summary": "Unified terminal interface for interacting with AI coding agents.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/batrachianai/toad",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/batrachianai/toad"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/batrachianai/toad/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

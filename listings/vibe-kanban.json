@@ -1,0 +1,24 @@
+{
+  "name": "Vibe Kanban",
+  "summary": "Kanban-style orchestrator for managing tasks across Claude Code, Codex, and other coding agents.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "orchestration"
+  ],
+  "url": "https://github.com/BloopAI/vibe-kanban",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/BloopAI/vibe-kanban"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/BloopAI/vibe-kanban/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
