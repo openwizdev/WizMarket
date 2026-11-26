@@ -108,5 +108,17 @@
     {"id": "pulley", "label": "Home", "url": "https://example.com/pulley", "work_link": false},
     {"id": "merge-request", "label": "Merge request", "url": "https://gitlab.example.com/group/proj/-/merge_requests/4", "work_link": true},
     {"id": "blog", "label": "Blog", "url": "https://example.com/blog/why-we-built-this", "work_link": false}
+  ],
+  "summary": [
+    {"id": "vague-tool", "summary": "A synthetic tool, listed: a link, not proven.", "level": 1},
+    {"id": "boat", "summary": "Runs each OpenWiz builder in its own boat.dev sandbox through your own signed-in boat CLI.", "level": 3},
+    {"id": "one-word", "summary": "Tool", "level": 0},
+    {"id": "category", "summary": "MCP server", "level": 1},
+    {"id": "triage", "summary": "Sort new issues with the triage labels; start nothing.", "level": 2},
+    {"id": "amp", "summary": "Amp as a harness for the OpenWiz local driver.", "level": 2},
+    {"id": "notes", "summary": "Notes.", "level": 0},
+    {"id": "helper", "summary": "A small helper.", "level": 1},
+    {"id": "cursor", "summary": "Starts, follows up with, and stops Cursor cloud agents from OpenWiz.", "level": 2},
+    {"id": "reference", "summary": "Official MCP reference and test server exercising prompts, resources, tools, logging, and sampling.", "level": 2}
   ]
 }

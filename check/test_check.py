@@ -855,7 +855,7 @@ class JevProofKind(unittest.TestCase):
                    "plugs_into": "OpenWiz driver v1", "tags": ["driver"]}
         self.review.ask_listing(listing, Fake(), lambda text: False)
         self.assertEqual(len(seen), 1)
-        self.assertEqual(set(seen[0]), {"is_driver", "is_harness", "is_skill"})
+        self.assertEqual(set(seen[0]), {"is_driver", "is_harness", "is_skill", "says_what", "says_plug"})
 
     def test_private_prose_is_not_sent(self):
         sent = []
@@ -894,6 +894,7 @@ class JevProofKind(unittest.TestCase):
         result = run("review", cwd=FIXTURES / "valid" / "verified-driver", env=env)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual(result.stdout, "example-driver: proof kind declared receipt, read receipt (fallback)\n"
+                         "example-driver: summary not judged\n"
                          "review: 1 listings, 0 findings\n")
         self.assertNotIn("TYPESAFE", result.stdout)
 
@@ -909,11 +910,15 @@ class JevProofKind(unittest.TestCase):
         text = self.bench.report(live=False)
         kind = self.bench.score_kind(self.bench.load()["kind"])
         work = self.bench.score_work_link(self.bench.load()["work_link"])
+        summary = self.bench.score_summary(self.bench.load()["summary"])
         self.assertEqual(text, f"kind tags: {kind['tags']}/{kind['n']}\n"
                          f"kind heuristic: {kind['heuristic']}/{kind['n']}\n"
                          f"work_link url-only: {work['url_only']}/{work['n']}\n"
                          f"work_link heuristic: {work['heuristic']}/{work['n']}\n"
+                         f"summary length: {summary['length']}/{summary['n']}\n"
+                         f"summary heuristic: {summary['heuristic']}/{summary['n']}\n"
                          "jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
+        self.assertEqual((summary["length"], summary["heuristic"], summary["n"]), (5, 7, 10))
         self.assertEqual((kind["tags"], kind["heuristic"], kind["n"]), (9, 11, 12))
 
     def test_live_bench_without_a_key_skips_jev(self):
@@ -1012,6 +1017,32 @@ class JevWorkLink(unittest.TestCase):
     def test_bench_counts(self):
         work = self.bench.score_work_link(self.bench.load()["work_link"])
         self.assertEqual((work["url_only"], work["heuristic"], work["n"]), (6, 9, 10))
+
+
+class JevSummary(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, str(ROOT / "check"))
+        import review
+        cls.review = review
+
+    def _answers(self, does, does_confidence, plug, plug_confidence):
+        def score(value, confidence):
+            return {"type": "score", "score": value, "confidence": confidence,
+                    "legend": {"0": "low"}, "probabilities": {"0": 1}}
+        return {"says_what": score(does, does_confidence), "says_plug": score(plug, plug_confidence)}
+
+    def test_a_confident_empty_summary_is_a_finding(self):
+        listing = {"id": "example-tool", "summary": "Tool"}
+        empty = self.review.summary_reading(listing, self._answers(0.2, 0.9, 0.2, 0.9))
+        self.assertEqual(empty["source"], "jev")
+        self.assertIn("does not say what the listing does", empty["finding"])
+        specific = self.review.summary_reading(listing, self._answers(2.0, 0.8, 1.6, 0.8))
+        self.assertIsNone(specific["finding"])
+        unsure = self.review.summary_reading(listing, self._answers(0.1, 0.4, 2.0, 0.9))
+        self.assertEqual(unsure["source"], "fallback")
+        self.assertIsNone(unsure["finding"])
+        self.assertIsNone(self.review.summary_reading(listing, None)["finding"])
 
 
 class _Body:

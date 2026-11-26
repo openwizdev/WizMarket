@@ -11,6 +11,11 @@ that same state ask whether the link is a work item and whether it is about
 this listing. WORK_WEIGHT_ITEM and WORK_WEIGHT_ABOUT combine those yeses.
 Below NOUL_CONFIDENCE_MIN on any factor used, or with no key, the reading is
 the tag rule and the link stays not judged.
+
+The summary's length is checked by the contract. Two Scores on the same state
+ask how specifically `summary` says what the listing does, and what it plugs
+into. SUMMARY_WEIGHT_DOES and SUMMARY_WEIGHT_PLUG combine them. Below
+SCORE_CONFIDENCE_MIN on either Score, the summary stays not judged.
 """
 
 import re
@@ -34,16 +39,25 @@ WORK_WEIGHT_ITEM = 0.5
 WORK_WEIGHT_ABOUT = 0.5
 WORK_FIT_YES = 0.7
 WORK_FIT_NO = 0.3
+SCORE_CONFIDENCE_MIN = 0.7
+SUMMARY_WEIGHT_DOES = 0.7
+SUMMARY_WEIGHT_PLUG = 0.3
+SUMMARY_FIT_MIN = 0.35
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
     ("skill", re.compile(r"\bskills?\b", re.I)),
 )
 _WORK_LINK = re.compile(r"(?:/pull/|/issues?/|/-/issues/|\bpull request\b|\bissue\b|\bticket\b)", re.I)
+_SUMMARY_WORD = re.compile(r"[A-Za-z0-9]+")
 
 
 def _noul_question(question, yes, no):
     return {"type": "noul", "instructions": question, "criteria": {"true": yes, "false": no}}
+
+
+def _score_question(question, criteria):
+    return {"type": "score", "instructions": question, "criteria": criteria}
 
 
 KIND_QUESTIONS = {
@@ -73,6 +87,24 @@ WORK_QUESTIONS = {
         "Is `first_link` about the work `name` and `summary` say is being built?",
         "The link is the work this listing describes.",
         "The link is about something else.",
+    ),
+}
+SUMMARY_QUESTIONS = {
+    "says_what": _score_question(
+        "How specifically does `summary` say what the listing does?",
+        [
+            "It does not say what the listing does.",
+            "It names a category, such as a tool or a server, and not what it does.",
+            "It says what it does in one concrete line.",
+        ],
+    ),
+    "says_plug": _score_question(
+        "How specifically does `summary` say what the listing plugs into?",
+        [
+            "It does not say what the listing plugs into.",
+            "It names a platform in passing.",
+            "It names the specific thing it plugs into.",
+        ],
     ),
 }
 
@@ -126,6 +158,7 @@ def listing_state(listing, private_fn):
 
 def questions_for(listing, private_fn):
     questions = dict(KIND_QUESTIONS)
+    questions.update(SUMMARY_QUESTIONS)
     if first_link(listing, private_fn) is not None:
         questions.update(WORK_QUESTIONS)
     return questions
@@ -134,6 +167,18 @@ def questions_for(listing, private_fn):
 def heuristic_work_link(label, url):
     """Keyword baseline for the bench. The review command does not use it as a verdict."""
     return bool(_WORK_LINK.search(f"{label or ''}\n{url or ''}"))
+
+
+def heuristic_summary(summary):
+    """Word-count baseline for the bench. The review command does not use it as a verdict."""
+    count = len(_SUMMARY_WORD.findall(summary or ""))
+    if count < 4:
+        return 0
+    if count < 8:
+        return 1
+    if count < 14:
+        return 2
+    return 3
 
 
 def _noul(answers, name):
@@ -198,6 +243,36 @@ def proof_reading(listing, answers):
     return {"declared": declared, "read": read, "source": "jev", "finding": finding}
 
 
+def _score(answers, name, top):
+    if not isinstance(answers, dict):
+        return None
+    item = answers.get(name)
+    if not isinstance(item, dict) or item.get("type") != "score":
+        return None
+    score, confidence = item.get("score"), item.get("confidence")
+    if any(isinstance(value, bool) or not isinstance(value, (int, float)) for value in (score, confidence)):
+        return None
+    if not 0 <= score <= top or not 0 <= confidence <= 1:
+        return None
+    return float(score), float(confidence)
+
+
+def summary_reading(listing, answers):
+    """Length still accepts the line. A low weighted fit, at high confidence, is a finding."""
+    does_top = len(SUMMARY_QUESTIONS["says_what"]["criteria"]) - 1
+    plug_top = len(SUMMARY_QUESTIONS["says_plug"]["criteria"]) - 1
+    does = _score(answers, "says_what", does_top)
+    plug = _score(answers, "says_plug", plug_top)
+    if does is None or plug is None or does[1] < SCORE_CONFIDENCE_MIN or plug[1] < SCORE_CONFIDENCE_MIN:
+        return {"line": f"{listing['id']}: summary not judged", "source": "fallback", "score": None, "finding": None}
+    fit = SUMMARY_WEIGHT_DOES * (does[0] / does_top) + SUMMARY_WEIGHT_PLUG * (plug[0] / plug_top)
+    finding = None
+    if fit < SUMMARY_FIT_MIN:
+        finding = f"{listing['id']}: summary does not say what the listing does"
+    return {"line": f"{listing['id']}: summary score {fit:.2f} (jev)", "source": "jev", "score": fit,
+            "finding": finding}
+
+
 def work_link_reading(listing, answers):
     """The check accepts the first link as a URL only. Jev may flag a confident no."""
     if listing.get("stage") != "being-built":
@@ -244,6 +319,10 @@ def review_lines(entries, client, private_fn):
             lines.append(work["line"])
             if work["finding"]:
                 findings.append("finding: " + work["finding"])
+        summary = summary_reading(entry, answers)
+        lines.append(summary["line"])
+        if summary["finding"]:
+            findings.append("finding: " + summary["finding"])
     lines.extend(findings)
     lines.append(f"review: {len(entries)} listings, {len(findings)} findings")
     return lines, findings
