@@ -1,6 +1,6 @@
 {
   "name": "Kilo Code CLI",
-  "summary": "Kilo Code CLI as a harness for the OpenWiz local driver.",
+  "summary": "Kilo Code CLI as a harness for the OpenWiz local driver. Merged for 0.1.2 and not in a release yet.",
   "tags": [
     "harness",
     "cli"
@@ -11,6 +11,10 @@
   "stage": "being-built",
   "login": "Run kilo auth login. Kilo stores the login in its local user data directory.",
   "links": [
+    {
+      "label": "OpenWiz PR #2640",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2640"
+    },
     {
       "label": "OpenWiz integration ticket",
       "url": "https://github.com/openwizdev/OpenWiz/issues/2434"

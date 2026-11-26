@@ -1,6 +1,6 @@
 {
   "name": "Goose",
-  "summary": "The Goose harness row for OpenWiz's local driver.",
+  "summary": "The Goose harness row for OpenWiz's local driver. Merged for 0.1.2 and not in a release yet.",
   "tags": [
     "harness",
     "cli"
@@ -11,6 +11,10 @@
   "stage": "being-built",
   "login": "Run goose configure. Goose saves the login in the system keyring.",
   "links": [
+    {
+      "label": "OpenWiz PR #2779",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2779"
+    },
     {
       "label": "OpenWiz harness row",
       "url": "https://github.com/openwizdev/OpenWiz/issues/2483"

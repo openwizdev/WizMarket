@@ -1,6 +1,6 @@
 {
   "name": "Hermes",
-  "summary": "Runs OpenWiz builders through the Hermes CLI and resumes the saved Hermes session on wake.",
+  "summary": "Runs OpenWiz builders through the Hermes CLI and resumes the saved Hermes session on wake. Merged for 0.1.1 and not in a release yet.",
   "tags": [
     "driver",
     "local"
