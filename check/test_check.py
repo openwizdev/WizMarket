@@ -718,5 +718,62 @@ class Workflow(Temp):
         self.assertIn("skill-check", steps)
 
 
+RELEASE = "v0.5.0"
+RELEASE_COMMIT = "cf2abfe13020661b47c47adb71afa993caaf16bf"
+MERGED_NOTE = {
+    "0.1.1": "Merged for 0.1.1 and not in a release yet.",
+    "0.1.2": "Merged for 0.1.2 and not in a release yet.",
+}
+MERGED = {
+    "factory": ("0.1.1", "https://github.com/openwizdev/OpenWiz/pull/2022"),
+    "hermes": ("0.1.1", "https://github.com/openwizdev/OpenWiz/pull/2017"),
+    "auggie": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2639"),
+    "copilot-cli": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2782"),
+    "gemini-cli": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2776"),
+    "goose": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2779"),
+    "junie-cli": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2638"),
+    "kilo-code": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2640"),
+    "kimi-code": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2785"),
+    "pi": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2774"),
+    "qwen-code": ("0.1.2", "https://github.com/openwizdev/OpenWiz/pull/2794"),
+}
+VERIFIED_SKILLS = (
+    "ask-wiz", "build-ticket", "diagnose", "feedback", "grill", "handoff", "hill-climb",
+    "install", "research", "review-ticket", "setup", "to-spec", "triage", "wayfind", "where-are-we",
+)
+LISTED_SKILLS = ("huntr", "image", "launch-fleet", "to-tickets", "write-driver")
+
+
+def listing(name):
+    return json.loads((ROOT / "listings" / f"{name}.json").read_text())
+
+
+class CurrentRelease(unittest.TestCase):
+    def test_merged_driver_and_harness_listings_name_the_pull_request(self):
+        for name, (version, pull) in MERGED.items():
+            with self.subTest(name):
+                data = listing(name)
+                self.assertEqual(data["stage"], "being-built")
+                self.assertEqual(data["status"], "listed")
+                self.assertLessEqual(len(data["summary"]), 140)
+                self.assertTrue(data["summary"].endswith(MERGED_NOTE[version]), data["summary"])
+                self.assertEqual(data["links"][0]["url"], pull)
+                self.assertIn(pull.rsplit("/", 1)[-1], data["links"][0]["label"])
+
+    def test_wizskills_listings_pin_release_v0_5_0(self):
+        for name in VERIFIED_SKILLS:
+            with self.subTest(name):
+                data = listing(f"wizskills-{name}")
+                self.assertEqual(data["url"], f"https://github.com/openwizdev/WizSkills/tree/{RELEASE}/skills/{name}")
+                self.assertEqual(data["status"], "verified")
+                self.assertEqual(data["proof"]["source"], f"openwizdev/WizSkills@{RELEASE_COMMIT}")
+        for name in LISTED_SKILLS:
+            with self.subTest(name):
+                data = listing(f"wizskills-{name}")
+                self.assertEqual(data["url"], f"https://github.com/openwizdev/WizSkills/tree/{RELEASE}/skills/{name}")
+                self.assertEqual(data["status"], "listed")
+                self.assertNotIn("proof", data)
+
+
 if __name__ == "__main__":
     unittest.main()
