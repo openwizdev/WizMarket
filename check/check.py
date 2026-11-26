@@ -25,9 +25,25 @@ RECEIPT_PATH = re.compile(PROPS["proof"]["properties"]["receipt"]["pattern"])
 SOURCE = re.compile(PROPS["proof"]["properties"]["source"]["pattern"])
 ID = re.compile(r"[a-z0-9-]{2,40}")
 HOST = re.compile(r"https://([^:/?#]*)")
-IDN_REFUSED = (stringprep.in_table_a1, stringprep.in_table_b1, stringprep.in_table_c12, stringprep.in_table_c22,
+IDN_REFUSED = (stringprep.in_table_b1, stringprep.in_table_c12, stringprep.in_table_c22,
                stringprep.in_table_c3, stringprep.in_table_c4, stringprep.in_table_c5, stringprep.in_table_c6,
                stringprep.in_table_c7, stringprep.in_table_c8, stringprep.in_table_c9)
+# RFC 5892's exception list. True is PVALID; the rest are CONTEXTJ, CONTEXTO or DISALLOWED.
+IDNA2008_EXCEPTION = {
+    0x00DF: True, 0x03C2: True, 0x06FD: True, 0x06FE: True, 0x0F0B: True, 0x3007: True,
+    0x00B7: False, 0x0375: False, 0x05F3: False, 0x05F4: False, 0x0640: False, 0x07FA: False, 0x30FB: False,
+    **{cp: False for cp in (*range(0x0660, 0x066A), *range(0x06F0, 0x06FA), *range(0x3031, 0x3036))},
+    0x302E: False, 0x302F: False, 0x303B: False,
+}
+IDNA2008_IGNORABLE = (
+    (0x00AD, 0x00AD), (0x034F, 0x034F), (0x061C, 0x061C), (0x115F, 0x1160), (0x17B4, 0x17B5),
+    (0x180B, 0x180F), (0x200B, 0x200F), (0x202A, 0x202E), (0x2060, 0x206F), (0x3164, 0x3164),
+    (0xFE00, 0xFE0F), (0xFEFF, 0xFEFF), (0xFFA0, 0xFFA0), (0xFFF0, 0xFFF8), (0x1BCA0, 0x1BCA3),
+    (0x1D173, 0x1D17A), (0xE0000, 0xE001F), (0xE0020, 0xE007F), (0xE0080, 0xE00FF),
+    (0xE0100, 0xE01EF), (0xE01F0, 0xE0FFF),
+)
+IDNA2008_BLOCKS = ((0x20D0, 0x20FF), (0x1D100, 0x1D1FF), (0x1D200, 0x1D24F))
+IDNA2008_LETTERS = {"Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"}
 IDN_INVISIBLE = "\u115f\u1160\u17b4\u17b5\u3002"
 BIDI_RTL = {"R", "AL", "AN", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
 BIDI_LTR = {"L", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
@@ -149,6 +165,29 @@ def is_line(value):
     return isinstance(value, str) and LINE.fullmatch(value) is not None
 
 
+def idna2008_pvalid(cp):
+    """RFC 5892 PVALID, using this Python's Unicode and that RFC's exception list."""
+    marked = IDNA2008_EXCEPTION.get(cp)
+    if marked is not None:
+        return marked
+    character = chr(cp)
+    category = unicodedata.category(character)
+    noncharacter = 0xFDD0 <= cp <= 0xFDEF or (cp & 0xFFFE) == 0xFFFE
+    if category == "Cn" and not noncharacter:
+        return False
+    if cp in (0x200C, 0x200D):
+        return False
+    normalized = unicodedata.normalize("NFKC", character)
+    if unicodedata.normalize("NFKC", normalized.casefold()) != character:
+        return False
+    if any(start <= cp <= stop for start, stop in (*IDNA2008_IGNORABLE, *IDNA2008_BLOCKS)):
+        return False
+    name = unicodedata.name(character, "")
+    if name.startswith(("HANGUL CHOSEONG ", "HANGUL JUNGSEONG ", "HANGUL JONGSEONG ")):
+        return False
+    return category in IDNA2008_LETTERS
+
+
 def idn_label(label):
     code = label[4:]
     try:
@@ -167,7 +206,12 @@ def idn_label(label):
     for c in text:
         if c.isascii():
             continue
-        if any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c or c in IDN_INVISIBLE:
+        # stringprep A.1 is the Unicode 3.2 unassigned set. IDNA2008 keeps such a
+        # character when it is PVALID; every other refusal below stays.
+        if stringprep.in_table_a1(c):
+            if not idna2008_pvalid(ord(c)):
+                return None
+        elif any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c or c in IDN_INVISIBLE:
             return None
         if c not in "\u00df\u03c2" and (stringprep.map_table_b2(c) != c or unicodedata.normalize("NFKC", c.casefold()) != c):
             return None
