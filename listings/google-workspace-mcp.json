@@ -1,0 +1,16 @@
+{
+  "name": "Google Workspace MCP",
+  "summary": "Free Standard Tier for Workspace MCP servers: 5,000 requests a day per project per product, no billing account.",
+  "tags": ["mcp-server", "google"],
+  "url": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Free tier quotas",
+      "url": "https://developers.google.com/workspace/guides/quota-usage-tiers"
+    }
+  ],
+  "status": "listed"
+}
