@@ -1,0 +1,16 @@
+{
+  "name": "Mellum2.1 Instruct",
+  "summary": "Free Apache 2.0 coding model for agents: 12B total, 2.5B active, answers without a chain of thought.",
+  "tags": ["model", "coding", "local"],
+  "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Instruct",
+  "plugs_into": "A coding-agent harness that calls a local or self-hosted model",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Release announcement",
+      "url": "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/"
+    }
+  ],
+  "status": "listed"
+}
