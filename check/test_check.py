@@ -908,9 +908,12 @@ class JevProofKind(unittest.TestCase):
     def test_bench_reports_the_fixture_counts(self):
         text = self.bench.report(live=False)
         kind = self.bench.score_kind(self.bench.load()["kind"])
+        work = self.bench.score_work_link(self.bench.load()["work_link"])
         self.assertEqual(text, f"kind tags: {kind['tags']}/{kind['n']}\n"
                          f"kind heuristic: {kind['heuristic']}/{kind['n']}\n"
-                         "kind jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
+                         f"work_link url-only: {work['url_only']}/{work['n']}\n"
+                         f"work_link heuristic: {work['heuristic']}/{work['n']}\n"
+                         "jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
         self.assertEqual((kind["tags"], kind["heuristic"], kind["n"]), (9, 11, 12))
 
     def test_live_bench_without_a_key_skips_jev(self):
@@ -920,8 +923,95 @@ class JevProofKind(unittest.TestCase):
         finally:
             if old is not None:
                 os.environ["TYPESAFE_API_KEY"] = old
-        self.assertIn("kind jev: skipped, TYPESAFE_API_KEY is not set", text)
+        self.assertIn("jev: skipped, TYPESAFE_API_KEY is not set", text)
         self.assertIn("kind tags: 9/12", text)
+        self.assertIn("work_link url-only: 6/10", text)
+
+
+class JevWorkLink(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, str(ROOT / "check"))
+        import jev_bench
+        import review
+        cls.bench = jev_bench
+        cls.review = review
+
+    def _listing(self, item=None, about=None):
+        listing = {"id": "example-harness", "name": "Example harness", "summary": "A synthetic harness still being built.",
+                   "plugs_into": "The local driver", "tags": ["harness"], "stage": "being-built",
+                   "links": [{"label": "Docs", "url": "https://example.com/docs"}]}
+        if item is None:
+            return listing, None
+        answers = {"is_work_item": {"type": "noul", "noul": item},
+                   "is_about_this_work": {"type": "noul", "noul": item if about is None else about}}
+        return listing, answers
+
+    def test_no_answer_leaves_the_link_unjudged(self):
+        listing, answers = self._listing()
+        reading = self.review.work_link_reading(listing, answers)
+        self.assertEqual(reading["source"], "fallback")
+        self.assertIsNone(reading["finding"])
+        self.assertIsNone(self.review.work_link_reading({"id": "x", "stage": "available"}, answers))
+
+    def test_confident_no_is_a_finding_and_a_yes_or_a_middle_value_is_not(self):
+        listing, no = self._listing(0.12, 0.08)
+        reading = self.review.work_link_reading(listing, no)
+        self.assertEqual(reading["yes"], False)
+        self.assertIn("does not read as the work's pull request or ticket", reading["finding"])
+        listing, yes = self._listing(0.91, 0.88)
+        self.assertIsNone(self.review.work_link_reading(listing, yes)["finding"])
+        self.assertEqual(self.review.work_link_reading(listing, yes)["yes"], True)
+        listing, middle = self._listing(0.5, 0.91)
+        middle_reading = self.review.work_link_reading(listing, middle)
+        self.assertEqual(middle_reading["source"], "fallback")
+        self.assertIsNone(middle_reading["finding"])
+        mixed = self.review.work_link_reading(listing, self._listing(0.91, 0.12)[1])
+        self.assertEqual(mixed["source"], "fallback")
+        self.assertIsNone(mixed["finding"])
+
+    def test_a_private_link_is_not_sent(self):
+        sent = []
+
+        class Fake:
+            def ask(self, state, questions):
+                sent.append(questions)
+                return None
+
+        listing, _ = self._listing()
+        listing["links"] = [{"label": "Ticket", "url": "https://example.com/password: hunter2"}]
+        self.review.ask_listing(listing, Fake(), lambda text: "password:" in text)
+        self.assertEqual(len(sent), 1)
+        self.assertNotIn("is_work_item", sent[0])
+        self.assertNotIn("is_about_this_work", sent[0])
+        self.assertNotIn("hunter2", json.dumps(sent[0]))
+
+    def test_work_link_questions_share_the_listing_request_and_state(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append((state, questions))
+                return None
+
+        listing, _ = self._listing()
+        self.review.ask_listing(listing, Fake(), lambda text: False)
+        self.assertEqual(len(seen), 1)
+        state, questions = seen[0]
+        self.assertEqual(state["first_link"]["url"], "https://example.com/docs")
+        self.assertTrue({"is_driver", "is_harness", "is_skill", "is_work_item", "is_about_this_work"} <= set(questions))
+
+    def test_review_of_a_being_built_fixture_does_not_judge_the_link_offline(self):
+        env = os.environ.copy()
+        env.pop("TYPESAFE_API_KEY", None)
+        result = run("review", cwd=FIXTURES / "valid" / "listed-being-built", env=env)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("example-harness: work link not judged\n", result.stdout)
+        self.assertIn("review: 1 listings, 0 findings\n", result.stdout)
+
+    def test_bench_counts(self):
+        work = self.bench.score_work_link(self.bench.load()["work_link"])
+        self.assertEqual((work["url_only"], work["heuristic"], work["n"]), (6, 9, 10))
 
 
 class _Body:

@@ -643,8 +643,9 @@ def main(argv):
                        "the check in new process, network, IPC and host-name namespaces")
     skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
     skill.set_defaults(run=cmd_skill)
-    commands.add_parser("review", help="ask Jev three Nouls about proof kind when TYPESAFE_API_KEY is set; "
-                        "otherwise keep the tag rule").set_defaults(run=cmd_review)
+    commands.add_parser("review", help="ask Jev about proof kind and a being-built work link when "
+                        "TYPESAFE_API_KEY is set; otherwise keep the tag rule and the URL check"
+                        ).set_defaults(run=cmd_review)
     changed = commands.add_parser("changed-skills", help="print skill listings added or changed since a commit")
     changed.add_argument("base")
     changed.set_defaults(run=cmd_changed_skills)

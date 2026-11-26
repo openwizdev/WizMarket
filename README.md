@@ -43,7 +43,7 @@ For a `verified` skill, `python3 -I check/check.py skill <id>` runs its pinned c
 
 `python3 -I check/check.py review` reads the same tree as `check` and does not change what `check` accepts. Proof kind stays the tag rule in the contract: `driver` or `harness` is a receipt, `skill` is a pinned check, both tags need both, and any other tag needs neither.
 
-With `TYPESAFE_API_KEY` set, Jev (`POST https://api.typesafe.ai/v1/systemone`, model `jev-1.14.0`) answers three Nouls in that one request: is it a driver, a harness, and a skill. Code combines the confident yeses with `KIND_WEIGHT_DRIVER`, `KIND_WEIGHT_HARNESS`, and `KIND_WEIGHT_SKILL`. A Noul's confidence is `abs(2p - 1)`. Below `0.4` on any of the three, or with no key or a failed call, the reading stays the tag rule and there is no finding. The key is read only from the environment.
+With `TYPESAFE_API_KEY` set, Jev (`POST https://api.typesafe.ai/v1/systemone`, model `jev-1.14.0`) answers three Nouls in that one request: is it a driver, a harness, and a skill. Code combines the confident yeses with `KIND_WEIGHT_DRIVER`, `KIND_WEIGHT_HARNESS`, and `KIND_WEIGHT_SKILL`. For a `being-built` listing the same request also asks whether `first_link` is a work item and whether it is about this listing, then combines those with `WORK_WEIGHT_ITEM` and `WORK_WEIGHT_ABOUT`. The check still accepts that link as a URL only. A Noul's confidence is `abs(2p - 1)`. Below `0.4` on any factor, or with no key or a failed call, the reading stays the tag rule and the link stays not judged. The key is read only from the environment.
 
 ```sh
 python3 -I check/jev_bench.py

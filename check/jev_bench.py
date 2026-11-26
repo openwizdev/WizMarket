@@ -31,11 +31,25 @@ def score_kind(cases):
     return {"n": len(cases), "tags": tags, "heuristic": heuristic}
 
 
+def score_work_link(cases):
+    url_only = heuristic = 0
+    for case in cases:
+        if case["work_link"]:
+            url_only += 1
+        if review.heuristic_work_link(case["label"], case["url"]) == case["work_link"]:
+            heuristic += 1
+    return {"n": len(cases), "url_only": url_only, "heuristic": heuristic}
+
+
+def _ask(listing, client):
+    private = lambda text: False
+    return client.ask(review.listing_state(listing, private), review.questions_for(listing, private))
+
+
 def score_kind_live(cases, client):
     agreed = unanswered = 0
     for case in cases:
-        state = {"name": case["name"], "summary": case["summary"], "plugs_into": case["plugs_into"]}
-        answers = client.ask(state, review.questions_for(case))
+        answers = _ask(case, client)
         reading = review.proof_reading(case, answers)
         if reading["source"] != "jev":
             unanswered += 1
@@ -44,22 +58,44 @@ def score_kind_live(cases, client):
     return {"agreed": agreed, "unanswered": unanswered, "n": len(cases)}
 
 
+def score_work_link_live(cases, client):
+    agreed = unanswered = 0
+    for case in cases:
+        listing = {"id": case["id"], "name": case["id"], "summary": "Being built.",
+                   "plugs_into": "OpenWiz", "stage": "being-built",
+                   "links": [{"label": case["label"], "url": case["url"]}]}
+        answers = _ask(listing, client)
+        reading = review.work_link_reading(listing, answers)
+        if reading["source"] != "jev":
+            unanswered += 1
+        elif reading["yes"] == case["work_link"]:
+            agreed += 1
+    return {"agreed": agreed, "unanswered": unanswered, "n": len(cases)}
+
+
+def _jev_line(name, result):
+    return (f"{name} jev ({typesafe_client.MODEL}): {result['agreed']}/{result['n']} agreed, "
+            f"{result['unanswered']} unanswered")
+
+
 def report(live=False, client=None):
-    kind = score_kind(load()["kind"])
+    data = load()
+    kind = score_kind(data["kind"])
+    work = score_work_link(data["work_link"])
     lines = [
         f"kind tags: {kind['tags']}/{kind['n']}",
         f"kind heuristic: {kind['heuristic']}/{kind['n']}",
+        f"work_link url-only: {work['url_only']}/{work['n']}",
+        f"work_link heuristic: {work['heuristic']}/{work['n']}",
     ]
     if not live:
-        lines.append("kind jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live")
+        lines.append("jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live")
         return "\n".join(lines) + "\n"
     if client is None:
-        lines.append("kind jev: skipped, TYPESAFE_API_KEY is not set")
+        lines.append("jev: skipped, TYPESAFE_API_KEY is not set")
         return "\n".join(lines) + "\n"
-    result = score_kind_live(load()["kind"], client)
-    lines.append(
-        f"kind jev ({typesafe_client.MODEL}): {result['agreed']}/{result['n']} agreed, "
-        f"{result['unanswered']} unanswered")
+    lines.append(_jev_line("kind", score_kind_live(data["kind"], client)))
+    lines.append(_jev_line("work_link", score_work_link_live(data["work_link"], client)))
     return "\n".join(lines) + "\n"
 
 

@@ -6,9 +6,11 @@ Jev is asked three separate Nouls (driver, harness, skill) about the same state
 in one request. Each Noul is one gut-check. Code combines the confident yeses
 with KIND_WEIGHT_DRIVER, KIND_WEIGHT_HARNESS, and KIND_WEIGHT_SKILL.
 
-A Noul has no confidence field. The documented stand-in is abs(2p - 1): 0 at
-0.5 and 1 at 0 or 1. Below NOUL_CONFIDENCE_MIN on any factor, the reading is
-the tag rule, the same result as when TYPESAFE_API_KEY is unset.
+A being-built listing's first link is checked only as a URL. Two more Nouls on
+that same state ask whether the link is a work item and whether it is about
+this listing. WORK_WEIGHT_ITEM and WORK_WEIGHT_ABOUT combine those yeses.
+Below NOUL_CONFIDENCE_MIN on any factor used, or with no key, the reading is
+the tag rule and the link stays not judged.
 """
 
 import re
@@ -27,11 +29,17 @@ NOUL_NO = 0.3
 KIND_WEIGHT_DRIVER = 1.0
 KIND_WEIGHT_HARNESS = 1.0
 KIND_WEIGHT_SKILL = 1.0
+# Both factors have to be yes before the weighted fit clears WORK_FIT_YES.
+WORK_WEIGHT_ITEM = 0.5
+WORK_WEIGHT_ABOUT = 0.5
+WORK_FIT_YES = 0.7
+WORK_FIT_NO = 0.3
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
     ("skill", re.compile(r"\bskills?\b", re.I)),
 )
+_WORK_LINK = re.compile(r"(?:/pull/|/issues?/|/-/issues/|\bpull request\b|\bissue\b|\bticket\b)", re.I)
 
 
 def _noul_question(question, yes, no):
@@ -53,6 +61,18 @@ KIND_QUESTIONS = {
         "Does `name`, `summary`, or `plugs_into` describe a skill an OpenWiz agent runs?",
         "It is a skill with its own check.",
         "It is not a skill.",
+    ),
+}
+WORK_QUESTIONS = {
+    "is_work_item": _noul_question(
+        "Is `first_link` a pull request, an issue, or a ticket?",
+        "The URL or its label is a pull request, issue, or ticket on any tracker.",
+        "It is a homepage, a docs page, a repo root, or another page that is not a work item.",
+    ),
+    "is_about_this_work": _noul_question(
+        "Is `first_link` about the work `name` and `summary` say is being built?",
+        "The link is the work this listing describes.",
+        "The link is about something else.",
     ),
 }
 
@@ -78,6 +98,18 @@ def heuristic_proof(name, summary, plugs_into):
     return declared_proof(found)
 
 
+def first_link(listing, private_fn):
+    if listing.get("stage") != "being-built":
+        return None
+    links = listing.get("links")
+    if not isinstance(links, list) or not links or not isinstance(links[0], dict):
+        return None
+    label, url = links[0].get("label"), links[0].get("url")
+    if not isinstance(label, str) or not isinstance(url, str) or private_fn(label) or private_fn(url):
+        return None
+    return {"label": label, "url": url}
+
+
 def listing_state(listing, private_fn):
     """Prose Jev may see. Tags stay out, so the answer is not a copy of the tag rule."""
     state = {}
@@ -86,11 +118,22 @@ def listing_state(listing, private_fn):
         if not isinstance(value, str) or private_fn(value):
             return None
         state[key] = value
+    link = first_link(listing, private_fn)
+    if link is not None:
+        state["first_link"] = link
     return state
 
 
-def questions_for(listing):
-    return dict(KIND_QUESTIONS)
+def questions_for(listing, private_fn):
+    questions = dict(KIND_QUESTIONS)
+    if first_link(listing, private_fn) is not None:
+        questions.update(WORK_QUESTIONS)
+    return questions
+
+
+def heuristic_work_link(label, url):
+    """Keyword baseline for the bench. The review command does not use it as a verdict."""
+    return bool(_WORK_LINK.search(f"{label or ''}\n{url or ''}"))
 
 
 def _noul(answers, name):
@@ -155,6 +198,26 @@ def proof_reading(listing, answers):
     return {"declared": declared, "read": read, "source": "jev", "finding": finding}
 
 
+def work_link_reading(listing, answers):
+    """The check accepts the first link as a URL only. Jev may flag a confident no."""
+    if listing.get("stage") != "being-built":
+        return None
+    item = factor_yes(_noul(answers, "is_work_item"))
+    about = factor_yes(_noul(answers, "is_about_this_work"))
+    if item is None or about is None:
+        return {"line": f"{listing['id']}: work link not judged", "source": "fallback", "yes": None,
+                "finding": None, "fit": None}
+    fit = WORK_WEIGHT_ITEM * (1.0 if item else 0.0) + WORK_WEIGHT_ABOUT * (1.0 if about else 0.0)
+    if fit >= WORK_FIT_YES:
+        return {"line": f"{listing['id']}: work link yes (jev {fit:.2f})", "source": "jev", "yes": True,
+                "finding": None, "fit": fit}
+    if fit <= WORK_FIT_NO:
+        return {"line": f"{listing['id']}: work link no (jev {fit:.2f})", "source": "jev", "yes": False, "fit": fit,
+                "finding": f"{listing['id']}: first link does not read as the work's pull request or ticket"}
+    return {"line": f"{listing['id']}: work link not judged", "source": "fallback", "yes": None,
+            "finding": None, "fit": fit}
+
+
 def ask_listing(listing, client, private_fn):
     if client is None:
         return None
@@ -162,7 +225,7 @@ def ask_listing(listing, client, private_fn):
     if state is None:
         return None
     try:
-        return client.ask(state, questions_for(listing))
+        return client.ask(state, questions_for(listing, private_fn))
     except Exception:
         return None
 
@@ -170,11 +233,17 @@ def ask_listing(listing, client, private_fn):
 def review_lines(entries, client, private_fn):
     lines, findings = [], []
     for entry in sorted(entries, key=lambda item: item["id"]):
-        reading = proof_reading(entry, ask_listing(entry, client, private_fn))
+        answers = ask_listing(entry, client, private_fn)
+        reading = proof_reading(entry, answers)
         lines.append(f"{entry['id']}: proof kind declared {reading['declared']}, "
                      f"read {reading['read']} ({reading['source']})")
         if reading["finding"]:
             findings.append("finding: " + reading["finding"])
+        work = work_link_reading(entry, answers)
+        if work is not None:
+            lines.append(work["line"])
+            if work["finding"]:
+                findings.append("finding: " + work["finding"])
     lines.extend(findings)
     lines.append(f"review: {len(entries)} listings, {len(findings)} findings")
     return lines, findings

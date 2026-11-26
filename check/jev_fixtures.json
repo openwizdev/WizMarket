@@ -96,5 +96,17 @@
       "tags": ["harness"],
       "prose_kind": "both"
     }
+  ],
+  "work_link": [
+    {"id": "github-pr", "label": "OpenWiz PR #2021", "url": "https://github.com/openwizdev/OpenWiz/pull/2021", "work_link": true},
+    {"id": "tracker-issue", "label": "Ticket", "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2", "work_link": true},
+    {"id": "docs", "label": "Docs", "url": "https://example.com/docs", "work_link": false},
+    {"id": "repo-root", "label": "Repository", "url": "https://github.com/example/repo", "work_link": false},
+    {"id": "linear", "label": "Issue", "url": "https://linear.app/team/issue/ABC-1", "work_link": true},
+    {"id": "label-only", "label": "Pull request", "url": "https://example.com/build", "work_link": true},
+    {"id": "url-only", "label": "Homepage", "url": "https://github.com/org/repo/pull/2", "work_link": true},
+    {"id": "pulley", "label": "Home", "url": "https://example.com/pulley", "work_link": false},
+    {"id": "merge-request", "label": "Merge request", "url": "https://gitlab.example.com/group/proj/-/merge_requests/4", "work_link": true},
+    {"id": "blog", "label": "Blog", "url": "https://example.com/blog/why-we-built-this", "work_link": false}
   ]
 }
