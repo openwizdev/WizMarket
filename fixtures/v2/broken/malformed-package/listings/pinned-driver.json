@@ -1,0 +1,20 @@
+{
+  "name": "Pinned driver",
+  "summary": "A synthetic driver pinned to one release of its own repository.",
+  "tags": [
+    "driver"
+  ],
+  "url": "https://example.com/pinned-driver",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed",
+  "package": {
+    "driver": "pinned-driver",
+    "version": "0.1.0",
+    "repository": "example-owner/pinned-driver",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "asset_url": "https://github.com/example-owner/pinned-driver/releases/download/v0.1.0/driver.tar.gz",
+    "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  }
+}

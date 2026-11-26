@@ -26,6 +26,10 @@ The registry behind [openwiz.dev/market](https://openwiz.dev/market): drivers, h
    python3 -I check/check.py check   # prints "check: ok, ..." and exits 0
    ```
 
+### Drivers and harnesses
+
+Publish a driver or a harness as listing v2, [`contracts/listing.v2.md`](contracts/listing.v2.md). Listing v1 does not change, and every other kind of listing stays on it. Start from the template repository [openwizdev/driver-template](https://github.com/openwizdev/driver-template); the recommended repository name is `<owner>/openwiz-driver-<name>`. The listing's `package` block pins that repository's release, and a `verified` receipt's `# driver:` line is that package's repository and commit.
+
 Field rules, URL rules, what stays private and what makes a listing `verified` (a kit receipt for a driver or harness, a pinned-commit check for a skill) are in the contract, [`contracts/listing.v1.md`](contracts/listing.v1.md). Where this page and the contract differ, the contract wins.
 
 ## Check it locally

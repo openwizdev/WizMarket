@@ -13,9 +13,13 @@ import unicodedata
 from pathlib import Path, PurePosixPath
 
 SCHEMA = json.loads((Path(__file__).resolve().parent.parent / "schema" / "listing.v1.json").read_text())
+V2_SCHEMA = json.loads((Path(__file__).resolve().parent.parent / "schema" / "listing.v2.json").read_text())
 PROPS = SCHEMA["properties"]
 DEFS = SCHEMA["$defs"]
 FIELDS = set(PROPS)
+V2_FIELDS = set(V2_SCHEMA["properties"])
+PACKAGE_SCHEMA = V2_SCHEMA["properties"]["package"]
+KEY_HOST_SCHEMA = V2_SCHEMA["properties"]["key_host"]
 REQUIRED = SCHEMA["required"]
 LINE = re.compile(DEFS["line"]["pattern"])
 HTTPS = re.compile(DEFS["https"]["pattern"])
@@ -205,9 +209,88 @@ def check_https(failures, path, name, value):
                      "write https://, a DNS host, an optional port, then a path, query or fragment of printable ASCII")
 
 
+def field_schema(prop):
+    if "$ref" in prop:
+        merged = dict(V2_SCHEMA["$defs"][prop["$ref"].rsplit("/", 1)[-1]])
+        merged.update({key: value for key, value in prop.items() if key != "$ref"})
+        return merged
+    return prop
+
+
+def matches(prop, value):
+    prop = field_schema(prop)
+    if not isinstance(value, str):
+        return False
+    if "maxLength" in prop and len(value) > prop["maxLength"]:
+        return False
+    if "pattern" in prop and re.fullmatch(prop["pattern"], value) is None:
+        return False
+    return "const" not in prop or value == prop["const"]
+
+
+def check_v2(failures, path, data, tags):
+    """A listing with package or key_host is v2. Returns its package when the block is one this check can bind."""
+    if "package" not in data and "key_host" not in data:
+        return None
+    if tags is not None and not (set(tags) & {"driver", "harness"}):
+        failures.add(path, '"package" is only for a listing tagged driver or harness',
+                     "remove package and key_host, or add the driver or harness tag")
+        return None
+    if "package" not in data:
+        failures.add(path, '"key_host" needs a package block',
+                     "add the package block the driver package contract defines, or remove key_host")
+        return None
+    package = data["package"]
+    keys = set(PACKAGE_SCHEMA["properties"])
+    if not isinstance(package, dict) or set(package) != keys:
+        failures.add(path, '"package" must hold exactly ' + ", ".join(sorted(keys)),
+                     "use the driver package contract's package block")
+        return None
+    shape = [key for key in sorted(keys - {"asset_url"}) if not matches(PACKAGE_SCHEMA["properties"][key], package[key])]
+    if shape:
+        for key in shape:
+            failures.add(path, f'"package.{key}" is not the shape the driver package contract defines',
+                         "fix it to that contract's package block")
+        return None
+    expected = f"https://github.com/{package['repository']}/releases/download/v{package['version']}/driver.tar.gz"
+    if package.get("asset_url") != expected:
+        failures.add(path, '"package.asset_url" is not a release asset of the listed repository', f"use {expected}")
+        return None
+    if "key_host" in data:
+        host, host_keys = data["key_host"], set(KEY_HOST_SCHEMA["properties"])
+        if not isinstance(host, dict) or set(host) != host_keys:
+            failures.add(path, '"key_host" must hold exactly ' + ", ".join(sorted(host_keys)),
+                         "use the driver package contract's key_host block")
+            return None
+        bad = [key for key in sorted(host_keys) if not matches(KEY_HOST_SCHEMA["properties"][key], host[key])]
+        if bad:
+            for key in bad:
+                failures.add(path, f'"key_host.{key}" is not the shape the driver package contract defines',
+                             "use an https origin, a variable name and a keychain entry, never a key")
+            return None
+    return package
+
+
+def bind_package_receipt(failures, path, package, header):
+    if not header:
+        return
+    driver = f"{package['repository']}@{package['commit']}"
+    if "driver" in header and header["driver"] != driver:
+        failures.add(path, f'the receipt\'s "# driver:" line must be "{driver}", the package\'s repository and commit',
+                     "use a receipt for this package's repository and commit")
+    kit = f"openwizdev/OpenWiz@{package['kit_commit']}"
+    if "kit" in header and header["kit"] != kit:
+        failures.add(path, f'the receipt\'s "# kit:" line must be "{kit}", the package\'s kit commit',
+                     "use a receipt for this package's kit commit")
+
+
 def check_fields(failures, path, data):
-    for key in sorted(set(data) - FIELDS):
-        failures.add(path, f'unknown field "{shown(key, "key")}"', f"remove it: listing.v1 has only {', '.join(sorted(FIELDS))}")
+    v2 = {"package", "key_host"} & set(data)
+    fields = V2_FIELDS if v2 else FIELDS
+    for key in sorted(set(data) - fields):
+        contract = "listing.v2" if v2 else "listing.v1"
+        failures.add(path, f'unknown field "{shown(key, "key")}"',
+                     f"remove it: {contract} has only {', '.join(sorted(fields))}")
     for key in REQUIRED:
         if key not in data:
             failures.add(path, f'missing field "{key}"', "add it")
@@ -326,7 +409,7 @@ def check_receipt(failures, path, listing_id, data, fix):
         name = f"{header['date']}-{header['driver'].rsplit('@', 1)[1][:12]}.txt"
         if PurePosixPath(path).name != name:
             failures.add(path, f"file name must be {name}, from its # date: and # driver: lines", fix)
-    return header.get("date")
+    return header
 
 
 def valid_date(value):
@@ -406,6 +489,7 @@ def check_tree(files):
             failures.add(path, "must be one JSON object", "fix the JSON")
             continue
         tags = check_fields(failures, path, data)
+        package = check_v2(failures, path, data, tags)
         proof = check_proof(failures, path, listing_id, data, tags)
         if proof is not None and "receipt" in proof:
             if files.get(proof["receipt"]) is None:
@@ -413,18 +497,23 @@ def check_tree(files):
                              FALSE_VERIFIED_FIX)
             else:
                 referenced.add(proof["receipt"])
-        listings.append((listing_id, data, proof))
-    dates = {}
+        listings.append((path, listing_id, data, proof, package))
+    headers = {}
     for path in sorted(p for p, d in files.items() if RECEIPT_PATH.fullmatch(p) and d is not None):
         fix = FALSE_VERIFIED_FIX if path in referenced else UNREFERENCED_FIX
-        dates[path] = check_receipt(failures, path, PurePosixPath(path).parts[1], files[path], fix)
+        headers[path] = check_receipt(failures, path, PurePosixPath(path).parts[1], files[path], fix)
     entries = []
-    for listing_id, data, proof in listings:
+    for path, listing_id, data, proof, package in listings:
         entry = {**data, "id": listing_id}
+        if package is not None:
+            entry["contract"] = "listing.v2"
+            if proof is not None and "receipt" in proof and proof["receipt"] in referenced:
+                bind_package_receipt(failures, path, package, headers.get(proof["receipt"]))
         if proof is not None:
             entry["proof"] = {}
             if "receipt" in proof and proof["receipt"] in referenced:
-                entry["proof"]["receipt"] = {"path": proof["receipt"], "date": dates[proof["receipt"]]}
+                header = headers.get(proof["receipt"]) or {}
+                entry["proof"]["receipt"] = {"path": proof["receipt"], "date": header.get("date")}
             if "source" in proof:
                 repo, commit = proof["source"].split("@")
                 entry["proof"]["skill"] = {"source": proof["source"], "check": proof["check"],
@@ -618,7 +707,7 @@ def cmd_changed_skills(args):
 
 
 def main(argv):
-    parser = argparse.ArgumentParser(prog="check.py", description="WizMarket's listing.v1 check")
+    parser = argparse.ArgumentParser(prog="check.py", description="WizMarket's listing check")
     commands = parser.add_subparsers(dest="command", required=True)
     check = commands.add_parser("check", help="check every listing and receipt")
     check.add_argument("--base", help="also refuse a receipt edited or deleted since this commit")
