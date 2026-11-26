@@ -1,0 +1,16 @@
+{
+  "name": "Ternary Bonsai 2.5 27B",
+  "summary": "Free Apache 2.0 local coding model: 5.93 GB ternary weights for tool-using agents.",
+  "tags": ["model", "local", "coding"],
+  "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+  "plugs_into": "A local coding-agent harness that loads GGUF weights",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Release announcement",
+      "url": "https://prismml.com/news/bonsai-2-5-27b"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "MCP Memory Reference Server",
+  "summary": "Official MCP reference server providing persistent agent memory backed by a local knowledge graph.",
+  "tags": [
+    "mcp-server",
+    "reference",
+    "memory"
+  ],
+  "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

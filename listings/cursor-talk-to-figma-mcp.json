@@ -1,0 +1,14 @@
+{
+  "name": "Cursor Talk To Figma MCP",
+  "summary": "MCP server enabling AI agents to read Figma designs and modify them programmatically through a Figma plugin.",
+  "tags": [
+    "mcp-server",
+    "design",
+    "figma"
+  ],
+  "url": "https://github.com/grab/cursor-talk-to-figma-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "MCP Sequential Thinking Reference Server",
+  "summary": "Official MCP reference server for structured, step-by-step problem solving through dynamic thought sequences.",
+  "tags": [
+    "mcp-server",
+    "reference",
+    "reasoning"
+  ],
+  "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

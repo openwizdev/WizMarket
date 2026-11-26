@@ -1,0 +1,14 @@
+{
+  "name": "Figma Context MCP",
+  "summary": "MCP server that serves Figma layout and design context to AI coding agents for accurate UI implementation.",
+  "tags": [
+    "mcp-server",
+    "design",
+    "figma"
+  ],
+  "url": "https://github.com/GLips/Figma-Context-MCP",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

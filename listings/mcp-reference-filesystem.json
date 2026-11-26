@@ -1,0 +1,14 @@
+{
+  "name": "MCP Filesystem Reference Server",
+  "summary": "Official MCP reference server for reading, writing, searching, and managing local files within allowed directories.",
+  "tags": [
+    "mcp-server",
+    "reference",
+    "filesystem"
+  ],
+  "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

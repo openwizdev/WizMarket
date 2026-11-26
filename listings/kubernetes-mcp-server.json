@@ -1,0 +1,15 @@
+{
+  "name": "Kubernetes MCP Server",
+  "summary": "MCP server for Kubernetes and OpenShift clusters that inspects pods, logs, and resources without requiring local kubectl.",
+  "tags": [
+    "mcp-server",
+    "kubernetes",
+    "cloud",
+    "infrastructure"
+  ],
+  "url": "https://github.com/containers/kubernetes-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
