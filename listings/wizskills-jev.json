@@ -1,0 +1,20 @@
+{
+  "name": "Jev",
+  "summary": "TypeSafe's Jev for typed judgments: routing, classification, model-per-ticket, done, safe, or which one, with a keyless fallback.",
+  "tags": [
+    "skill",
+    "wizskills",
+    "decision"
+  ],
+  "url": "https://github.com/openwizdev/WizSkills/tree/54fc341a66190f78771c27cd6b5cc4d3772ed680/skills/jev",
+  "plugs_into": "The skills an OpenWiz agent runs",
+  "publisher": "openwizdev",
+  "stage": "being-built",
+  "links": [
+    {
+      "label": "WizSkills pull request",
+      "url": "https://github.com/openwizdev/WizSkills/pull/477"
+    }
+  ],
+  "status": "listed"
+}
