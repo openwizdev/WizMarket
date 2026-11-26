@@ -1,0 +1,15 @@
+{
+  "name": "DBHub",
+  "summary": "Universal database MCP server supporting Postgres, MySQL, SQL Server, Oracle, MariaDB, SQLite, and ClickHouse.",
+  "tags": [
+    "mcp-server",
+    "database",
+    "sql",
+    "postgres"
+  ],
+  "url": "https://github.com/bytebase/dbhub",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

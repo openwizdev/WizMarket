@@ -1,0 +1,15 @@
+{
+  "name": "AWS MCP Servers",
+  "summary": "Official open-source MCP servers from AWS for cloud documentation, infrastructure, serverless, and AWS service workflows.",
+  "tags": [
+    "mcp-server",
+    "aws",
+    "cloud",
+    "infrastructure"
+  ],
+  "url": "https://github.com/awslabs/mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Postgres MCP Pro",
+  "summary": "PostgreSQL MCP server offering configurable read/write SQL access, index tuning, explain plans, and database health checks.",
+  "tags": [
+    "mcp-server",
+    "postgres",
+    "database",
+    "sql"
+  ],
+  "url": "https://github.com/crystaldba/postgres-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

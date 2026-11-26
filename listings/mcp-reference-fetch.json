@@ -1,0 +1,14 @@
+{
+  "name": "MCP Fetch Reference Server",
+  "summary": "Official MCP reference server that fetches web pages and converts HTML content into markdown for agents.",
+  "tags": [
+    "mcp-server",
+    "reference",
+    "web"
+  ],
+  "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
