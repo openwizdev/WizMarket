@@ -552,6 +552,97 @@ class IsolatedSkill(SkillSandbox):
         self.assertGone(marker)
 
 
+V2 = FIXTURES / "v2"
+V2_VALID = ["listed-driver", "verified-driver", "verified-harness"]
+V2_BROKEN = {
+    "malformed-package": ("listings/pinned-driver.json", '"package" must hold exactly'),
+    "malformed-key-host": ("listings/pinned-driver.json", '"key_host.origin" is not the shape'),
+    "key-host-without-package": ("listings/pinned-driver.json", '"key_host" needs a package block'),
+    "package-other-kind": ("listings/example-tool.json", '"package" is only for a listing tagged driver or harness'),
+    "asset-not-release": ("listings/pinned-driver.json", "not a release asset of the listed repository"),
+    "verified-other-commit": ("listings/verified-pinned.json", 'the receipt\'s "# driver:" line must be'),
+    "verified-other-kit": ("listings/verified-pinned.json", 'the receipt\'s "# kit:" line must be'),
+}
+
+
+class V2Fixtures(unittest.TestCase):
+    def test_every_v2_fixture_is_in_a_table(self):
+        self.assertEqual(sorted(p.name for p in (V2 / "broken").iterdir()), sorted(V2_BROKEN))
+        self.assertEqual(sorted(p.name for p in (V2 / "valid").iterdir()), V2_VALID)
+
+    def test_valid_v2_fixtures_are_accepted(self):
+        for name in V2_VALID:
+            with self.subTest(name):
+                result = run("check", cwd=V2 / "valid" / name)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertRegex(result.stdout, r"^check: ok, \d+ listings and \d+ receipts checked\n$")
+
+    def test_each_v2_refusal_fails_first_for_its_reason(self):
+        for name, (path, reason) in V2_BROKEN.items():
+            with self.subTest(name):
+                result = run("check", cwd=V2 / "broken" / name)
+                lines = failures(result)
+                self.assertEqual(result.returncode, 1, result.stdout)
+                self.assertEqual(len(lines), 1, result.stdout)
+                self.assertTrue(lines[0].startswith(path + ": "), lines)
+                self.assertIn(reason, lines[0])
+                self.assertIn("; fix: ", lines[0])
+
+
+class V2Index(Temp):
+    def test_verified_v2_passes_only_for_its_package_commit(self):
+        reg = self.registry("v2/valid/verified-driver", commit=False)
+        self.assertEqual(run("check", cwd=reg).returncode, 0)
+        path = reg / "listings/verified-pinned.json"
+        data = json.loads(path.read_text())
+        data["package"]["commit"] = "c" * 40
+        path.write_text(json.dumps(data, indent=2) + "\n")
+        refused = failures(run("check", cwd=reg))
+        self.assertEqual(len(refused), 1, refused)
+        self.assertIn('"# driver:" line must be', refused[0])
+        self.assertIn("example-owner/verified-pinned@" + "c" * 40, refused[0])
+        data["package"]["commit"] = "a" * 40
+        data["package"]["kit_commit"] = "c" * 40
+        path.write_text(json.dumps(data, indent=2) + "\n")
+        kit = failures(run("check", cwd=reg))
+        self.assertEqual(len(kit), 1, kit)
+        self.assertIn('"# kit:" line must be', kit[0])
+
+    def test_v2_index_carries_the_package_and_names_its_contract(self):
+        reg = self.registry(*(f"v2/valid/{name}" for name in V2_VALID))
+        result = run("index", cwd=reg)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        head = git(reg, "rev-parse", "HEAD")
+        self.assertEqual(result.stdout.replace(head, SYNTHETIC_COMMIT), (V2 / "index.json").read_text())
+        index = json.loads(result.stdout)
+        self.assertEqual(index["contract"], "listing.v1")
+        by_id = {entry["id"]: entry for entry in index["listings"]}
+        for entry in by_id.values():
+            self.assertEqual(entry["contract"], "listing.v2")
+            self.assertEqual(set(entry["package"]),
+                             {"driver", "version", "repository", "commit", "asset_url", "sha256", "kit_commit"})
+        self.assertEqual(by_id["verified-harness"]["key_host"]["origin"], "https://api.example.com")
+        self.assertNotIn("key_host", by_id["verified-pinned"])
+        pinned = by_id["verified-pinned"]
+        self.assertEqual(pinned["proof"]["receipt"]["date"], "2026-11-01")
+        self.assertIn(head, pinned["proof"]["receipt"]["url"])
+
+    def test_a_v1_listing_beside_a_v2_listing_is_byte_identical(self):
+        folders = [f"valid/{path.name}" for path in (FIXTURES / "valid").iterdir()]
+        folders += [f"v2/valid/{name}" for name in V2_VALID]
+        reg = self.registry(*folders)
+        result = run("index", cwd=reg)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        head = git(reg, "rev-parse", "HEAD")
+        got = {entry["id"]: entry for entry in json.loads(result.stdout)["listings"]}
+        want = json.loads((FIXTURES / "index.json").read_text().replace(SYNTHETIC_COMMIT, head))
+        for entry in want["listings"]:
+            self.assertEqual(json.dumps(got[entry["id"]], indent=2, sort_keys=True, ensure_ascii=False),
+                             json.dumps(entry, indent=2, sort_keys=True, ensure_ascii=False))
+            self.assertNotIn("contract", got[entry["id"]])
+            self.assertNotIn("package", got[entry["id"]])
+
+
 def workflow_steps():
     """Each job's steps as (name, run) from check.yml, read by indentation: enough for this one file."""
     jobs, job, step, block = {}, None, None, None
@@ -716,97 +807,6 @@ class Workflow(Temp):
         skill = "".join(s["run"] for s in steps["skill"])
         self.assertIn("--isolate", skill)
         self.assertIn("skill-check", steps)
-
-
-V2 = FIXTURES / "v2"
-V2_VALID = ["listed-driver", "verified-driver", "verified-harness"]
-V2_BROKEN = {
-    "malformed-package": ("listings/pinned-driver.json", '"package" must hold exactly'),
-    "malformed-key-host": ("listings/pinned-driver.json", '"key_host.origin" is not the shape'),
-    "key-host-without-package": ("listings/pinned-driver.json", '"key_host" needs a package block'),
-    "package-other-kind": ("listings/example-tool.json", '"package" is only for a listing tagged driver or harness'),
-    "asset-not-release": ("listings/pinned-driver.json", "not a release asset of the listed repository"),
-    "verified-other-commit": ("listings/verified-pinned.json", 'the receipt\'s "# driver:" line must be'),
-    "verified-other-kit": ("listings/verified-pinned.json", 'the receipt\'s "# kit:" line must be'),
-}
-
-
-class V2Fixtures(unittest.TestCase):
-    def test_every_v2_fixture_is_in_a_table(self):
-        self.assertEqual(sorted(p.name for p in (V2 / "broken").iterdir()), sorted(V2_BROKEN))
-        self.assertEqual(sorted(p.name for p in (V2 / "valid").iterdir()), V2_VALID)
-
-    def test_valid_v2_fixtures_are_accepted(self):
-        for name in V2_VALID:
-            with self.subTest(name):
-                result = run("check", cwd=V2 / "valid" / name)
-                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-                self.assertRegex(result.stdout, r"^check: ok, \d+ listings and \d+ receipts checked\n$")
-
-    def test_each_v2_refusal_fails_first_for_its_reason(self):
-        for name, (path, reason) in V2_BROKEN.items():
-            with self.subTest(name):
-                result = run("check", cwd=V2 / "broken" / name)
-                lines = failures(result)
-                self.assertEqual(result.returncode, 1, result.stdout)
-                self.assertEqual(len(lines), 1, result.stdout)
-                self.assertTrue(lines[0].startswith(path + ": "), lines)
-                self.assertIn(reason, lines[0])
-                self.assertIn("; fix: ", lines[0])
-
-
-class V2Index(Temp):
-    def test_verified_v2_passes_only_for_its_package_commit(self):
-        reg = self.registry("v2/valid/verified-driver", commit=False)
-        self.assertEqual(run("check", cwd=reg).returncode, 0)
-        path = reg / "listings/verified-pinned.json"
-        data = json.loads(path.read_text())
-        data["package"]["commit"] = "c" * 40
-        path.write_text(json.dumps(data, indent=2) + "\n")
-        refused = failures(run("check", cwd=reg))
-        self.assertEqual(len(refused), 1, refused)
-        self.assertIn('"# driver:" line must be', refused[0])
-        self.assertIn("example-owner/verified-pinned@" + "c" * 40, refused[0])
-        data["package"]["commit"] = "a" * 40
-        data["package"]["kit_commit"] = "c" * 40
-        path.write_text(json.dumps(data, indent=2) + "\n")
-        kit = failures(run("check", cwd=reg))
-        self.assertEqual(len(kit), 1, kit)
-        self.assertIn('"# kit:" line must be', kit[0])
-
-    def test_v2_index_carries_the_package_and_names_its_contract(self):
-        reg = self.registry(*(f"v2/valid/{name}" for name in V2_VALID))
-        result = run("index", cwd=reg)
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        head = git(reg, "rev-parse", "HEAD")
-        self.assertEqual(result.stdout.replace(head, SYNTHETIC_COMMIT), (V2 / "index.json").read_text())
-        index = json.loads(result.stdout)
-        self.assertEqual(index["contract"], "listing.v1")
-        by_id = {entry["id"]: entry for entry in index["listings"]}
-        for entry in by_id.values():
-            self.assertEqual(entry["contract"], "listing.v2")
-            self.assertEqual(set(entry["package"]),
-                             {"driver", "version", "repository", "commit", "asset_url", "sha256", "kit_commit"})
-        self.assertEqual(by_id["verified-harness"]["key_host"]["origin"], "https://api.example.com")
-        self.assertNotIn("key_host", by_id["verified-pinned"])
-        pinned = by_id["verified-pinned"]
-        self.assertEqual(pinned["proof"]["receipt"]["date"], "2026-11-01")
-        self.assertIn(head, pinned["proof"]["receipt"]["url"])
-
-    def test_a_v1_listing_beside_a_v2_listing_is_byte_identical(self):
-        folders = [f"valid/{path.name}" for path in (FIXTURES / "valid").iterdir()]
-        folders += [f"v2/valid/{name}" for name in V2_VALID]
-        reg = self.registry(*folders)
-        result = run("index", cwd=reg)
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
-        head = git(reg, "rev-parse", "HEAD")
-        got = {entry["id"]: entry for entry in json.loads(result.stdout)["listings"]}
-        want = json.loads((FIXTURES / "index.json").read_text().replace(SYNTHETIC_COMMIT, head))
-        for entry in want["listings"]:
-            self.assertEqual(json.dumps(got[entry["id"]], indent=2, sort_keys=True, ensure_ascii=False),
-                             json.dumps(entry, indent=2, sort_keys=True, ensure_ascii=False))
-            self.assertNotIn("contract", got[entry["id"]])
-            self.assertNotIn("package", got[entry["id"]])
 
 
 if __name__ == "__main__":
