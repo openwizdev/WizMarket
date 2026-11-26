@@ -39,6 +39,19 @@ git fetch https://github.com/openwizdev/WizMarket.git main &&
 
 For a `verified` skill, `python3 -I check/check.py skill <id>` runs its pinned check on your machine. CI runs the same checks on every pull request.
 
+## Review a listing with Jev
+
+`python3 -I check/check.py review` reads the same tree as `check` and does not change what `check` accepts. Proof kind stays the tag rule in the contract: `driver` or `harness` is a receipt, `skill` is a pinned check, both tags need both, and any other tag needs neither.
+
+With `TYPESAFE_API_KEY` set, Jev (`POST https://api.typesafe.ai/v1/systemone`, model `jev-1.14.0`) also answers a Choice on the name, summary, and plugs_into: `receipt`, `skill`, `both`, or `none`. The tags win unless that choice's probability is at least 0.7 and it disagrees, which `review` then reports. No key, or a failed call, keeps the tag rule and reports no finding. The key is read only from the environment.
+
+```sh
+python3 -I check/jev_bench.py
+python3 -I check/jev_bench.py --live   # asks Jev; needs TYPESAFE_API_KEY
+```
+
+The first command compares the tag rule and a keyword baseline with hand-labeled prose in `check/jev_fixtures.json`. `--live` adds Jev's agreement on that same set.
+
 ## Licence
 
 Apache License 2.0: see [LICENSE](LICENSE).

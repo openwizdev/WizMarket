@@ -1,0 +1,100 @@
+{
+  "kind": [
+    {
+      "id": "boat-dev",
+      "name": "boat.dev",
+      "summary": "Runs each OpenWiz builder in its own boat.dev sandbox through your own signed-in boat CLI.",
+      "plugs_into": "OpenWiz's driver v1: it starts, wakes and stops builders",
+      "tags": ["driver", "sandbox", "cloud"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "amp",
+      "name": "Amp",
+      "summary": "Amp as a harness for the OpenWiz local driver.",
+      "plugs_into": "OpenWiz local driver",
+      "tags": ["harness", "cli"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "triage",
+      "name": "Triage",
+      "summary": "Sort new issues with the triage labels; start nothing.",
+      "plugs_into": "The skills an OpenWiz agent runs",
+      "tags": ["skill", "wizskills", "triage"],
+      "prose_kind": "skill"
+    },
+    {
+      "id": "example-tool",
+      "name": "Example tool",
+      "summary": "A synthetic tool, listed: a link, not proven.",
+      "plugs_into": "The agent's MCP servers",
+      "tags": ["mcp-server"],
+      "prose_kind": "none"
+    },
+    {
+      "id": "example-driver",
+      "name": "Example driver",
+      "summary": "A synthetic driver that runs OpenWiz agents on an example host.",
+      "plugs_into": "The OpenWiz driver interface",
+      "tags": ["driver", "example-host"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "example-skill",
+      "name": "Example skill",
+      "summary": "A synthetic skill with its own check.",
+      "plugs_into": "The skills a fleet agent runs",
+      "tags": ["skill", "example"],
+      "prose_kind": "skill"
+    },
+    {
+      "id": "example-driver-kit",
+      "name": "Example driver kit",
+      "summary": "A synthetic driver that ships its own skill.",
+      "plugs_into": "The OpenWiz driver interface",
+      "tags": ["driver", "skill"],
+      "prose_kind": "both"
+    },
+    {
+      "id": "cursor-cloud-agents",
+      "name": "Cursor Cloud Agents",
+      "summary": "Starts, follows up with, and stops Cursor cloud agents from OpenWiz.",
+      "plugs_into": "OpenWiz driver v1",
+      "tags": ["driver", "cloud"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "mislabeled-driver",
+      "name": "Local runner",
+      "summary": "A driver that starts and stops OpenWiz agents on this machine.",
+      "plugs_into": "OpenWiz driver v1",
+      "tags": ["mcp-server"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "skill-authors-note",
+      "name": "Skill author notes",
+      "summary": "Shared notes for skill authors writing listings.",
+      "plugs_into": "The agent's MCP servers",
+      "tags": ["mcp-server"],
+      "prose_kind": "none"
+    },
+    {
+      "id": "mcp-tagged-driver",
+      "name": "Browser tools",
+      "summary": "An MCP server that exposes browser tools to an agent.",
+      "plugs_into": "The agent's MCP servers",
+      "tags": ["driver"],
+      "prose_kind": "none"
+    },
+    {
+      "id": "harness-and-skill",
+      "name": "Harness kit",
+      "summary": "A harness and the skill it runs.",
+      "plugs_into": "OpenWiz local driver",
+      "tags": ["harness"],
+      "prose_kind": "both"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import io
 import json
 import os
 import shutil
@@ -5,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import urllib.error
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -716,6 +718,210 @@ class Workflow(Temp):
         skill = "".join(s["run"] for s in steps["skill"])
         self.assertIn("--isolate", skill)
         self.assertIn("skill-check", steps)
+
+
+class JevProofKind(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, str(ROOT / "check"))
+        import jev_bench
+        import review
+        import typesafe_client
+        cls.bench = jev_bench
+        cls.review = review
+        cls.client_mod = typesafe_client
+
+    def test_missing_or_bad_key_builds_no_client(self):
+        cases = [None, "", "   ", "has space", "has\nline", "café-key", "bad\x7fkey"]
+        for value in cases:
+            with self.subTest(value=value):
+                env = os.environ.copy()
+                env.pop("TYPESAFE_API_KEY", None)
+                if value is not None:
+                    env["TYPESAFE_API_KEY"] = value
+                with tempfile.TemporaryDirectory():
+                    old = os.environ.get("TYPESAFE_API_KEY")
+                    os.environ.pop("TYPESAFE_API_KEY", None)
+                    if value is not None:
+                        os.environ["TYPESAFE_API_KEY"] = value
+                    try:
+                        self.assertIsNone(self.client_mod.client_from_env(opener=lambda *a, **k: (_ for _ in ()).throw(
+                            AssertionError("opener called"))))
+                    finally:
+                        if old is None:
+                            os.environ.pop("TYPESAFE_API_KEY", None)
+                        else:
+                            os.environ["TYPESAFE_API_KEY"] = old
+
+    def test_request_uses_the_documented_endpoint_and_hides_the_key(self):
+        seen = {}
+
+        def opener(request, timeout):
+            seen["url"] = request.full_url
+            seen["method"] = request.method
+            seen["timeout"] = timeout
+            seen["headers"] = {key.lower(): value for key, value in request.header_items()}
+            seen["body"] = json.loads(request.data.decode())
+            payload = json.dumps({"model": "jev-1.14.0", "answers": {"proof_kind": {
+                "type": "choice", "choice": "receipt", "confidence": 0.9,
+                "probabilities": {"receipt": 0.91, "skill": 0.03, "both": 0.03, "none": 0.03}}},
+                "usage": {"input_tokens": 10, "output_tokens": 2}}).encode()
+            return _Body(payload)
+
+        key = "unit-test-key"
+        client = self.client_mod.HttpSystemOneClient(key, opener=opener, sleep=lambda delay: None)
+        answers = client.ask({"name": "Example"}, {"proof_kind": self.review.PROOF_QUESTION})
+        self.assertEqual(seen["url"], "https://api.typesafe.ai/v1/systemone")
+        self.assertEqual(seen["method"], "POST")
+        self.assertEqual(seen["timeout"], 20)
+        self.assertEqual(seen["headers"]["authorization"], "Bearer " + key)
+        self.assertEqual(seen["headers"]["content-type"], "application/json")
+        self.assertEqual(seen["body"]["model"], "jev-1.14.0")
+        self.assertEqual(seen["body"]["state"], {"name": "Example"})
+        self.assertEqual(seen["body"]["questions"]["proof_kind"]["type"], "choice")
+        self.assertEqual(answers["proof_kind"]["choice"], "receipt")
+        self.assertNotIn(key, repr(client))
+        self.assertNotIn(key, json.dumps(answers))
+
+    def test_http_failure_and_bad_body_return_none_without_the_key(self):
+        key = "unit-test-key"
+
+        def boom(request, timeout):
+            raise urllib.error.HTTPError(request.full_url, 401, "Unauthorized", {}, io.BytesIO(b""))
+
+        client = self.client_mod.HttpSystemOneClient(key, opener=boom, sleep=lambda delay: None)
+        self.assertIsNone(client.ask({"name": "x"}, {"proof_kind": {"type": "choice", "criteria": {}}}))
+
+        def garbage(request, timeout):
+            return _Body(b"not-json")
+
+        client = self.client_mod.HttpSystemOneClient(key, opener=garbage, sleep=lambda delay: None)
+        self.assertIsNone(client.ask({}, {"q": {"type": "noul"}}))
+
+    def test_retry_after_zero_then_success(self):
+        calls = []
+
+        def opener(request, timeout):
+            calls.append(1)
+            if len(calls) == 1:
+                raise urllib.error.HTTPError(request.full_url, 429, "Too Many Requests",
+                                              {"Retry-After": "0"}, io.BytesIO(b""))
+            body = json.dumps({"answers": {"proof_kind": {"type": "choice", "choice": "none",
+                               "confidence": 1, "probabilities": {"none": 1}}}}).encode()
+            return _Body(body)
+
+        slept = []
+        client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=slept.append)
+        answers = client.ask({"name": "x"}, {"proof_kind": {"type": "choice", "criteria": {"none": "no"}}})
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(slept, [0.0])
+        self.assertEqual(answers["proof_kind"]["choice"], "none")
+
+    def test_long_retry_after_falls_back(self):
+        def opener(request, timeout):
+            raise urllib.error.HTTPError(request.full_url, 529, "Overloaded",
+                                          {"Retry-After": "30"}, io.BytesIO(b""))
+
+        client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener,
+                                                      sleep=lambda delay: (_ for _ in ()).throw(AssertionError("slept")))
+        self.assertIsNone(client.ask({}, {"q": {"type": "noul"}}))
+
+    def test_fallback_keeps_the_tag_rule_and_a_confident_disagreement_is_a_finding(self):
+        listing = {"id": "local-runner", "name": "Local runner",
+                   "summary": "A driver that starts and stops OpenWiz agents on this machine.",
+                   "plugs_into": "OpenWiz driver v1", "tags": ["mcp-server"]}
+        fallback = self.review.proof_reading(listing, None)
+        self.assertEqual((fallback["read"], fallback["source"], fallback["finding"]), ("none", "fallback", None))
+        low = {"proof_kind": {"type": "choice", "choice": "receipt", "confidence": 0.4,
+                              "probabilities": {"receipt": 0.42, "none": 0.4, "skill": 0.09, "both": 0.09}}}
+        unsure = self.review.proof_reading(listing, low)
+        self.assertEqual(unsure["source"], "fallback")
+        sure = {"proof_kind": {"type": "choice", "choice": "receipt", "confidence": 0.9,
+                               "probabilities": {"receipt": 0.91, "none": 0.03, "skill": 0.03, "both": 0.03}}}
+        hit = self.review.proof_reading(listing, sure)
+        self.assertEqual(hit["read"], "receipt")
+        self.assertIn("prose reads as receipt, tags say none", hit["finding"])
+
+    def test_private_prose_is_not_sent(self):
+        sent = []
+
+        class Fake:
+            def ask(self, state, questions):
+                sent.append(state)
+                return None
+
+        listing = {"id": "leaky", "name": "Tool", "summary": "Uses a password: hunter2 now.",
+                   "plugs_into": "The agent's MCP servers", "tags": ["mcp-server"]}
+        self.review.ask_listing(listing, Fake(), self.review_private)
+        self.assertEqual(sent, [])
+        reading = self.review.proof_reading(listing, None)
+        self.assertEqual(reading["source"], "fallback")
+        self.assertNotIn("hunter2", json.dumps(reading))
+
+    def review_private(self, text):
+        return "password:" in text
+
+    def test_client_exception_falls_back(self):
+        class Fake:
+            def ask(self, state, questions):
+                raise RuntimeError("down")
+
+        listing = {"id": "example-driver", "name": "Example driver", "summary": "A driver.",
+                   "plugs_into": "OpenWiz driver v1", "tags": ["driver"]}
+        self.assertIsNone(self.review.ask_listing(listing, Fake(), lambda text: False))
+        lines, findings = self.review.review_lines([listing], Fake(), lambda text: False)
+        self.assertEqual(findings, [])
+        self.assertIn("(fallback)", lines[0])
+
+    def test_review_command_on_a_valid_fixture_uses_the_tag_rule_offline(self):
+        env = os.environ.copy()
+        env.pop("TYPESAFE_API_KEY", None)
+        result = run("review", cwd=FIXTURES / "valid" / "verified-driver", env=env)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(result.stdout, "example-driver: proof kind declared receipt, read receipt (fallback)\n"
+                         "review: 1 listings, 0 findings\n")
+        self.assertNotIn("TYPESAFE", result.stdout)
+
+    def test_review_command_stops_on_a_contract_failure(self):
+        env = os.environ.copy()
+        env.pop("TYPESAFE_API_KEY", None)
+        result = run("review", cwd=FIXTURES / "broken" / "unknown-field", env=env)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn('unknown field "price"', result.stdout)
+        self.assertNotIn("proof kind", result.stdout)
+
+    def test_bench_reports_the_fixture_counts(self):
+        text = self.bench.report(live=False)
+        kind = self.bench.score_kind(self.bench.load()["kind"])
+        self.assertEqual(text, f"kind tags: {kind['tags']}/{kind['n']}\n"
+                         f"kind heuristic: {kind['heuristic']}/{kind['n']}\n"
+                         "kind jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
+        self.assertEqual((kind["tags"], kind["heuristic"], kind["n"]), (9, 11, 12))
+
+    def test_live_bench_without_a_key_skips_jev(self):
+        old = os.environ.pop("TYPESAFE_API_KEY", None)
+        try:
+            text = self.bench.report(live=True, client=None)
+        finally:
+            if old is not None:
+                os.environ["TYPESAFE_API_KEY"] = old
+        self.assertIn("kind jev: skipped, TYPESAFE_API_KEY is not set", text)
+        self.assertIn("kind tags: 9/12", text)
+
+
+class _Body:
+    def __init__(self, payload, status=200):
+        self._payload = payload
+        self.status = status
+
+    def read(self, limit=-1):
+        return self._payload if limit < 0 else self._payload[:limit]
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        return False
 
 
 if __name__ == "__main__":

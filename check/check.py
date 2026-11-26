@@ -600,6 +600,16 @@ def cmd_skill(args):
     return 0
 
 
+def cmd_review(args):
+    here = str(Path(__file__).resolve().parent)
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import review
+    code, text = review.run(Path.cwd(), review.client_from_env(), check_tree, worktree_files, private)
+    sys.stdout.write(text)
+    return code
+
+
 def cmd_changed_skills(args):
     root = Path.cwd()
     diff = git(root, "diff", "--name-only", "--no-renames", "--diff-filter=AMT", args.base, "HEAD", "--", "listings")
@@ -633,6 +643,8 @@ def main(argv):
                        "the check in new process, network, IPC and host-name namespaces")
     skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
     skill.set_defaults(run=cmd_skill)
+    commands.add_parser("review", help="read proof kind with Jev when TYPESAFE_API_KEY is set; "
+                        "otherwise keep the tag rule").set_defaults(run=cmd_review)
     changed = commands.add_parser("changed-skills", help="print skill listings added or changed since a commit")
     changed.add_argument("base")
     changed.set_defaults(run=cmd_changed_skills)
