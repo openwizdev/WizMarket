@@ -1,0 +1,24 @@
+{
+  "name": "nooscape-mcp",
+  "summary": "Serves dated read-only facts about wallets, endpoints, and AI agents from the public record kept by Nooscape.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/RunTimeAdmin/nooscape-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.RunTimeAdmin%2Fnooscape-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/RunTimeAdmin/nooscape-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

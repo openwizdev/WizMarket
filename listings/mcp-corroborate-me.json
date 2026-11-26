@@ -1,0 +1,23 @@
+{
+  "name": "CorroborateMe",
+  "summary": "Shows agents and apps who an end user is, issuing login links and OIDC clients plus API keys via remote MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/CNR-Consulting/corroborate-me",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.corroborateme%2Fcorroborate-me"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/CNR-Consulting/corroborate-me/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

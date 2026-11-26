@@ -1,0 +1,24 @@
+{
+  "name": "SuperOps",
+  "summary": "Connects an assistant to SuperOps unified PSA and RMM data, including clients and tickets, assets, and more.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/WYRE-AI/superops-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wyre-technology%2Fsuperops-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/WYRE-AI/superops-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

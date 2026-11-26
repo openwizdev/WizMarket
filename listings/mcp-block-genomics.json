@@ -1,0 +1,25 @@
+{
+  "name": "Block Genomics — Nexus Protocol",
+  "summary": "Proves Bitcoin block ownership with BIP-322 and registers sovereign AI agents on Nexus Protocol.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/BitmapAsset/block-genomics-nexus",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BitmapAsset%2Fblock-genomics-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/BitmapAsset/block-genomics-nexus/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

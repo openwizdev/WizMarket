@@ -1,0 +1,25 @@
+{
+  "name": "Papyrio PDF Tools",
+  "summary": "Papyrio PDF Tools runs OCR and can split, merge, convert, and compress local PDFs for an assistant.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/atabekdemurtaza/papyrio-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.atabekdemurtaza%2Fpapyrio-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/atabekdemurtaza/papyrio-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

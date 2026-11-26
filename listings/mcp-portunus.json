@@ -1,0 +1,25 @@
+{
+  "name": "Portunus",
+  "summary": "Names secrets for agents and injects each value only when execution reaches the boundary.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/mdostal/portunus",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mdostal%2Fportunus"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mdostal/portunus/blob/dev/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

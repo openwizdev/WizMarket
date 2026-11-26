@@ -1,0 +1,25 @@
+{
+  "name": "PostgreSQL (hardened, read-only)",
+  "summary": "Opens PostgreSQL over MCP for reads, rejects writes in the parsed SQL, and starts a READ ONLY transaction.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/Eszetael/postgres-mcp-hardened",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Eszetael%2Fpostgres-mcp-hardened"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Eszetael/postgres-mcp-hardened/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

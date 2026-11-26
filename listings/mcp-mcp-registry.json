@@ -1,0 +1,23 @@
+{
+  "name": "registry-mcp",
+  "summary": "Returns information held in the official MCP registry.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/jaw9c/mcp-registry-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.remote-mcp%2Fregistry-mcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/jaw9c/mcp-registry-mcp"
+    }
+  ],
+  "status": "listed"
+}

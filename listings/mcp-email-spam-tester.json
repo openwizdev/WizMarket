@@ -1,0 +1,25 @@
+{
+  "name": "email-spam-tester",
+  "summary": "Tests a message before it is sent, using one disposable address, 41 checks that cite RFCs, and a fix plan.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/serg-tanichev/email-spam-tester-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.serg-tanichev%2Femail-spam-tester"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/serg-tanichev/email-spam-tester-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

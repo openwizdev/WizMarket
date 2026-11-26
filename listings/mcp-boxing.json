@@ -1,0 +1,23 @@
+{
+  "name": "Boxerbook",
+  "summary": "Supplies boxing schedules, results, records, and rankings, plus win probabilities and odds that fight models can use.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/maxvotek/boxerbook-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.boxerbook%2Fboxing"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/maxvotek/boxerbook-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

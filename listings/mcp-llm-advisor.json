@@ -1,0 +1,24 @@
+{
+  "name": "llm-advisor",
+  "summary": "Reports live LLM and VLM benchmarks, prices, and recommendations from five sources covering 300-plus models.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/Daichi-Kudo/llm-advisor-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Daichi-Kudo%2Fllm-advisor"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Daichi-Kudo/llm-advisor-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

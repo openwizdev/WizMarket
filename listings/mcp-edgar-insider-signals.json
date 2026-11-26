@@ -1,0 +1,23 @@
+{
+  "name": "TradeStar Insider",
+  "summary": "Delivers verified SEC EDGAR insider filings for 13D, Form 4, 8-K, and 13F without sign-in, and can verify a claim.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/TradestarV5/insider-signals",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.tradestarinsider%2Fedgar-insider-signals"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/TradestarV5/insider-signals/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

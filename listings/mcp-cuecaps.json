@@ -1,0 +1,25 @@
+{
+  "name": "Cuecaps",
+  "summary": "Renders animated captions that reveal each word in turn for video and audio files, locally, through Cuecaps.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/Pantheonn3D/cuecaps-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Pantheonn3D%2Fcuecaps-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Pantheonn3D/cuecaps-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

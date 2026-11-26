@@ -1,0 +1,24 @@
+{
+  "name": "safe-fix-mcp",
+  "summary": "Locates real dead code and suggests a safe branch and pull request, gated by tests, that deletes it.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/pamela-0/safe-fix-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pamela-0%2Fsafe-fix-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pamela-0/safe-fix-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

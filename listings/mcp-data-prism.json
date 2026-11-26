@@ -1,0 +1,25 @@
+{
+  "name": "Data Prism",
+  "summary": "Applies a privacy layer that fails closed so MCP clients and LLM agents only receive pseudonymised enterprise API data.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/AindriuB/data-prism",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AindriuB%2Fdata-prism"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/AindriuB/data-prism/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

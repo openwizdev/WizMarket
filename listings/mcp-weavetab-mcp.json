@@ -1,0 +1,23 @@
+{
+  "name": "Weavetab",
+  "summary": "Gives AI agents local control of running browsers and desktop applications through Weavetab.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Weavetab/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.weavetab%2Fmcp"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/Weavetab/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

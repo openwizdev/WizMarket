@@ -1,0 +1,25 @@
+{
+  "name": "Graylog MCP Server",
+  "summary": "Queries Graylog logs, listing streams, searching messages, aggregating, and retrieving full data.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/jperelli/graylog-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jperelli%2Fgraylog-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jperelli/graylog-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "file2markdown",
+  "summary": "Converts documents and web pages into clean Markdown from URLs, scans, EPUB, XLSX, DOCX, and PDF, in a batch of 10.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "design"
+  ],
+  "url": "https://github.com/Robinhill85/file2markdown-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.file2markdown%2Ffile2markdown"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/Robinhill85/file2markdown-mcp"
+    }
+  ],
+  "status": "listed"
+}

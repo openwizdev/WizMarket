@@ -1,0 +1,25 @@
+{
+  "name": "Andy",
+  "summary": "Operates Andy so it can read WhatsApp and Instagram chats, approve posts, and update the user's agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/Andesphere/andy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Andesphere%2Fandy"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/Andesphere/andy"
+    }
+  ],
+  "status": "listed"
+}

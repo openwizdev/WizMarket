@@ -1,0 +1,25 @@
+{
+  "name": "Singularity - MCP Discovery & Security Gateway",
+  "summary": "Singularity finds, vets, and runs MCP tools via a secure audited gateway that scores prompt-injection risk.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/gaurav-kumar-sinha-060705/singularity",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gaurav-kumar-sinha-060705%2Fsingularity"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/gaurav-kumar-sinha-060705/singularity"
+    }
+  ],
+  "status": "listed"
+}

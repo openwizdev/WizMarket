@@ -1,0 +1,24 @@
+{
+  "name": "live-chemdraw-mcp",
+  "summary": "Drives an open ChemDraw window on Windows through COM automation for AI assistants.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/MALeitch/live-chemdraw-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MALeitch%2Flive-chemdraw-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/MALeitch/live-chemdraw-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

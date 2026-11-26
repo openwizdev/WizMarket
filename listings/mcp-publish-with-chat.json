@@ -1,0 +1,23 @@
+{
+  "name": "Publish with chat",
+  "summary": "Hosts sites produced with AI, offers a free preview, and lets you publish, revise, or revert by asking.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/publishwithchat/publishwithchat",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=chat.publishwith%2Fpublish-with-chat"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/publishwithchat/publishwithchat"
+    }
+  ],
+  "status": "listed"
+}

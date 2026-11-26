@@ -1,0 +1,25 @@
+{
+  "name": "GEO & SEO Readiness MCP (v2.2)",
+  "summary": "Inspects sitemaps, canonicals, JSON-LD, llms.txt, citation blockers, and AI search crawlers for GEO and SEO readiness.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/alicexixi85/geo-seo-mcp-pro",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.alicexixi85%2Fgeo-seo-mcp-pro"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/alicexixi85/geo-seo-mcp-pro/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Stock Image MCP",
+  "summary": "Finds stock images and downloads them from Pexels, Unsplash, Freepik, Pixabay, Burst, and StockVault.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/Hasilt/images-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Hasilt%2Fimages-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Hasilt/images-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

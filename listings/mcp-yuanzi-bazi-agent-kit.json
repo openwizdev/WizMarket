@@ -1,0 +1,24 @@
+{
+  "name": "Yuanzi Zhiyi Bazi Agent Kit",
+  "summary": "Computes on-device Bazi charts that include Ten Gods, corrects to true solar time, and returns structured facts plus PNG images.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/yuanzizhiyi/yuanzi-bazi-agent-kit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.yuanzizhiyi%2Fyuanzi-bazi-agent-kit"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/yuanzizhiyi/yuanzi-bazi-agent-kit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

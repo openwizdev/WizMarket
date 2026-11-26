@@ -1,0 +1,24 @@
+{
+  "name": "DataX Portugal & EU Official Registries",
+  "summary": "Queries Portugal and EU registries such as NIPC, DRE, TED, FSF, and IMPIC Portal BASE tenders, using USDC or EURC.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/DataX-Oracles-MCP/datax-portugal-eu-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.DataX-Oracles-MCP%2Fdatax-portugal-eu-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/DataX-Oracles-MCP/datax-portugal-eu-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

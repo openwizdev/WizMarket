@@ -1,0 +1,25 @@
+{
+  "name": "RuneScape Wiki",
+  "summary": "Retrieves RS3 Grand Exchange prices and item details, player hiscores, and pages on the RuneScape Wiki.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/birdwelllabs/runescape-wiki-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.birdwell%2Frunescape-wiki-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/birdwelllabs/runescape-wiki-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

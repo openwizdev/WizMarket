@@ -1,0 +1,25 @@
+{
+  "name": "sbb-opendata-mcp",
+  "summary": "Serves SBB open data that OpenDataSoft publishes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "data"
+  ],
+  "url": "https://github.com/malkreide/sbb-opendata-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.malkreide%2Fsbb-opendata-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/malkreide/sbb-opendata-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

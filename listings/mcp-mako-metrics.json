@@ -1,0 +1,25 @@
+{
+  "name": "Mako Metrics",
+  "summary": "Lists plans, creates orders, and opens Stripe checkout for humans seeking reports on competitor Meta ads intelligence.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance",
+    "observability"
+  ],
+  "url": "https://github.com/loganriebel/mako-metrics-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.makometrics%2Fmako-metrics"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/loganriebel/mako-metrics-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Boyce",
+  "summary": "Compiles SQL deterministically for AI agents so those agents no longer guess the SQL.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/boyce-io/boyce",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.boyce-io%2Fboyce"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/boyce-io/boyce/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

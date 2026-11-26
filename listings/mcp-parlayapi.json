@@ -1,0 +1,25 @@
+{
+  "name": "ParlayAPI",
+  "summary": "ParlayAPI supplies betting lines, player proposition markets, and which sources cover them, once an assistant presents its own key.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/JacobiusMakes/parlay-api-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JacobiusMakes%2Fparlayapi"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/JacobiusMakes/parlay-api-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

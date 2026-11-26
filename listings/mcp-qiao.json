@@ -1,0 +1,24 @@
+{
+  "name": "Qiao-MCP — Bridge Engineering (桥梁工程)",
+  "summary": "Qiao-MCP analyzes bridge structures across the whole lifecycle, including modeling, staging, and code checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/SorataYang/qiao-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SorataYang%2Fqiao-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/SorataYang/qiao-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

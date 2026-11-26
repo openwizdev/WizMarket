@@ -1,0 +1,24 @@
+{
+  "name": "Securedact MCP",
+  "summary": "Protects sensitive AI workflows with Securedact, a local-first privacy server on MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/GigantesHJI/securedact-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GigantesHJI%2Fsecuredact-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/GigantesHJI/securedact-mcp/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

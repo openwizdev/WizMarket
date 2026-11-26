@@ -1,0 +1,24 @@
+{
+  "name": "Huntress",
+  "summary": "Accesses Huntress reports, incidents, agents, organizations, and accounts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/WYRE-AI/huntress-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wyre-technology%2Fhuntress-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/WYRE-AI/huntress-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

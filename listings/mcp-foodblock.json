@@ -1,0 +1,24 @@
+{
+  "name": "foodblock-mcp",
+  "summary": "Turns an English description of food into structured data for any AI agent.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/FoodXDevelopment/FoodBlock",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.FoodXDevelopment%2Ffoodblock-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/FoodXDevelopment/FoodBlock/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

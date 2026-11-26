@@ -1,0 +1,23 @@
+{
+  "name": "Just Publish.",
+  "summary": "Puts an AI-built site on a public URL that is live, and updates it there after the user signs in.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/just-done/just-publish-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.justpublish%2Fjust-publish"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/just-done/just-publish-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

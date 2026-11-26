@@ -1,0 +1,24 @@
+{
+  "name": "logic-server",
+  "summary": "Supplies reasoning, memory, and a token-optimized context that AI applications can use.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/Auctalis/nocturnusai",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.nocturnus%2Flogic-server"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Auctalis/nocturnusai/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

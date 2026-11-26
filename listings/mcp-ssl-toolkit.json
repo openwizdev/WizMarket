@@ -1,0 +1,25 @@
+{
+  "name": "IDigiTrust SSL Toolkit",
+  "summary": "IDigiTrust SSL Toolkit offers free SSL and PKI tools for HTTPS audits, GM SM2 and TLCP, DCV pre-checks, CSRs, cert decoding, and P12 or JKS.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/Mintreetech/ssl-toolkit-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Mintreetech%2Fssl-toolkit-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Mintreetech/ssl-toolkit-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

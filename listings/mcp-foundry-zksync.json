@@ -1,0 +1,24 @@
+{
+  "name": "foundry-zksync",
+  "summary": "Exposes forge, cast, and anvil-zksync from foundry-zksync for development on zkSync Era.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/Jrigada/foundry-zksync-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Jrigada%2Ffoundry-zksync"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Jrigada/foundry-zksync-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

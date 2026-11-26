@@ -1,0 +1,24 @@
+{
+  "name": "Outask",
+  "summary": "Outask lists and changes JSON tasks stored in the repository.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/henryh/outask",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.henryh%2Foutask"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/henryh/outask/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "stig-mcp",
+  "summary": "Maps MITRE ATT&CK through NIST 800-53r5 to DISA STIG fix and check steps, plus mitigations and detections.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/jeneric/STIG-MCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jeneric%2Fstig-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jeneric/STIG-MCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

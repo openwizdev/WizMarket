@@ -1,0 +1,25 @@
+{
+  "name": "Capital.com MCP Server",
+  "summary": "Wraps Capital.com's Open API inside an unofficial community MCP that guards two-phase trades and puts demo use first.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/SimonTarara62/capitalcom-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SimonTarara62%2Fcapitalcom-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/SimonTarara62/capitalcom-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

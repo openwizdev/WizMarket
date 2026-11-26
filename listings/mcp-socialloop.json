@@ -1,0 +1,24 @@
+{
+  "name": "socialloop-mcp",
+  "summary": "Sells tickets, manages guests, and runs affiliates and promo codes on the AI-native SocialLoop event platform.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/socialloopai/socialloop-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.socialloopai%2Fsocialloop-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/socialloopai/socialloop-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

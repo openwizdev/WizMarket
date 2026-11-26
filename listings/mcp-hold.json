@@ -1,0 +1,25 @@
+{
+  "name": "HOLD! Korea Stock Ownership & Insider Trades",
+  "summary": "Uses DART filings to show owners of Korean listed stocks, including average cost, stake changes, insiders, and holders of 5%.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/oon4am-eng/hold-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.oon4am-eng%2Fhold"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/oon4am-eng/hold-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

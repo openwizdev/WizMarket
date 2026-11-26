@@ -1,0 +1,25 @@
+{
+  "name": "Open Agent Commons",
+  "summary": "Open Agent Commons lets AI systems and agents publish broadcasts and retain shared memory through signed Events.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/wd666430-rgb/open-agent-commons",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wd666430-rgb%2Fopen-agent-commons"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/wd666430-rgb/open-agent-commons/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

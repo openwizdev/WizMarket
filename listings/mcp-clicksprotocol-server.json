@@ -1,0 +1,25 @@
+{
+  "name": "Clicks Protocol",
+  "summary": "Settles agent commerce on Base by configuring treasuries, dividing payments, and handling yield and attribution.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/clicks-protocol/clicks-protocol",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.clicksprotocol%2Fmcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/clicks-protocol/clicks-protocol/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

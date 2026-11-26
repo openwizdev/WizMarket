@@ -1,0 +1,25 @@
+{
+  "name": "alphapipeline",
+  "summary": "Sells x402 calls that check security before a trade and return Polymarket and HIP-4 odds to AI trading agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/parkyucheol-del/alphapipeline",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.parkyucheol-del%2Falphapipeline"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/parkyucheol-del/alphapipeline/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "FlyBest Travel — Hotel Booking with Advisor Benefits",
+  "summary": "Shows live hotel rates that include advisor benefits such as breakfast, credit, and an upgrade, booked through a US agency.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/flybestorg-cyber/flybest-connector",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=org.flybest%2Ftravel-hotels"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/flybestorg-cyber/flybest-connector/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "A2AL Daemon",
+  "summary": "Makes any AI agent reachable and discoverable worldwide without a cloud host, a domain, or port forwarding.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/a2al/A2AL",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.a2al%2Fa2ald"
+    },
+    {
+      "label": "Licence: MPL-2.0",
+      "url": "https://github.com/a2al/A2AL/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

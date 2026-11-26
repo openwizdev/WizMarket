@@ -1,0 +1,25 @@
+{
+  "name": "Tideways",
+  "summary": "Reads Tideways PHP performance data, including issues, traces, and history, and never writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "observability"
+  ],
+  "url": "https://github.com/abuhamza/tideways-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.abuhamza%2Ftideways-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/abuhamza/tideways-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

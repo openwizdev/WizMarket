@@ -1,0 +1,24 @@
+{
+  "name": "doricomcp",
+  "summary": "Reads and edits the open Dorico 6 score in conversation, going through the application's own interfaces.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/kulbiq/doricomcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mka142%2Fdoricomcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/kulbiq/doricomcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

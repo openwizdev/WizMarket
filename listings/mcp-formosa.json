@@ -1,0 +1,25 @@
+{
+  "name": "Formosa MCP — Taiwan data",
+  "summary": "Serves AI agents with Taiwan data on THSR and TRA timetables, TWSE and TPEx stocks, garbage, outages, and the invoice lottery.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/ycsmiley/formosa-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ycsmiley%2Fformosa-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ycsmiley/formosa-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

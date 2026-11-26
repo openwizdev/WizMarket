@@ -1,0 +1,25 @@
+{
+  "name": "clawaimail",
+  "summary": "Provides email infrastructure so AI agents can create inboxes, send and receive mail, and search messages.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/joansongjr/clawaimail",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.joansongjr%2Fclawaimail"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/joansongjr/clawaimail/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

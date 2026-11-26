@@ -1,0 +1,25 @@
+{
+  "name": "Dev error explainers",
+  "summary": "Explains causes and fixes offline, with deterministic answers, for Postgres URL errors plus Node, npm, Next.js, and CORS.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/mahdibrr/dev-error-explainers",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mahdibrr%2Fdev-error-explainers"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mahdibrr/dev-error-explainers/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

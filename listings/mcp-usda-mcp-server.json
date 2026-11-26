@@ -1,0 +1,25 @@
+{
+  "name": "usda-mcp-server",
+  "summary": "Finds foods, compares nutrients, and looks up the entire USDA FoodData Central database.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/cyanheads/usda-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cyanheads%2Fusda-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/cyanheads/usda-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

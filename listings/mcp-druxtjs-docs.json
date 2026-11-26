@@ -1,0 +1,25 @@
+{
+  "name": "Druxt docs",
+  "summary": "Searches and reads Druxt documentation together with its API reference.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/druxt/druxtjs.org",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=org.druxtjs%2Fdocs"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/druxt/druxtjs.org/blob/develop/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

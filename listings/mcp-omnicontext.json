@@ -1,0 +1,25 @@
+{
+  "name": "OmniContext",
+  "summary": "OmniContext keeps a lasting memory across devices for Claude, covering profile details, projects, and handoffs that can resume.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/aaryanbindage/omnicontext",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aaryanbindage%2Fomnicontext"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aaryanbindage/omnicontext/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Binggio",
+  "summary": "Answers from the user's data using only approved meanings, and refuses instead of guessing.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/binggio/binggio",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.binggio%2Fbinggio"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/binggio/binggio/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

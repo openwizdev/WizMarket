@@ -1,0 +1,24 @@
+{
+  "name": "Nyc Animals",
+  "summary": "Looks up New York City records of dog licenses and dog bites at data.cityofnewyork.us.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/pipeworx-io/mcp-nyc-animals",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pipeworx-io%2Fnyc-animals"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pipeworx-io/mcp-nyc-animals/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

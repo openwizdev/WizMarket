@@ -1,0 +1,24 @@
+{
+  "name": "BirdWeather",
+  "summary": "Fetches station detections from BirdWeather, including species and stats.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/pfrederiksen/birdweather-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pfrederiksen%2Fbirdweather-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pfrederiksen/birdweather-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "md-business",
+  "summary": "Allows AI agents to read and write business documents stored as Markdown or TSV and validate them with their schemas.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/meta-taro/md-business",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.meta-taro%2Fmd-business"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/meta-taro/md-business/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

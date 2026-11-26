@@ -1,0 +1,25 @@
+{
+  "name": "Homestead Memory",
+  "summary": "Records what an AI agent did in a tamper-evident log and stores local-first memory that can be verified.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/fuckbigtech-ai/homestead-memory",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fuckbigtech-ai%2Fhomestead-memory"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/fuckbigtech-ai/homestead-memory/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

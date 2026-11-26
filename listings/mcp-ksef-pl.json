@@ -1,0 +1,24 @@
+{
+  "name": "mcp-ksef-pl",
+  "summary": "Covers Polish KSeF invoicing with API v2, XML for FA(3) and FA(2), Peppol BIS 3.0, and NIP/REGON validation.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/cmendezs/mcp-ksef-pl",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cmendezs%2Fmcp-ksef-pl"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/cmendezs/mcp-ksef-pl/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

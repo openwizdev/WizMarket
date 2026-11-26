@@ -1,0 +1,24 @@
+{
+  "name": "GPH Intelligence - Healthcare Vendor Finder",
+  "summary": "Locates 76,000+ curated vendors of healthcare services in 25 categories covering all 50 US states.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/Crindo2/gph-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Crindo2%2Fgph-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Crindo2/gph-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

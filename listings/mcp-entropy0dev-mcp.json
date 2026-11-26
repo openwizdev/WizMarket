@@ -1,0 +1,24 @@
+{
+  "name": "Entropy0",
+  "summary": "Entropy0 gives AI agents tools that judge source trust and check URL safety.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/entropy0dev/sdk",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.entropy0dev%2Fmcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/entropy0dev/sdk"
+    }
+  ],
+  "status": "listed"
+}

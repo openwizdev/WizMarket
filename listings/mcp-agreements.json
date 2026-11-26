@@ -1,0 +1,23 @@
+{
+  "name": "Shodai Agreements",
+  "summary": "Authors, validates, deploys, and operates on-chain agreements in Shodai.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/CNSLabs/agreements-api-sdk",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=network.shodai%2Fagreements"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/CNSLabs/agreements-api-sdk/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

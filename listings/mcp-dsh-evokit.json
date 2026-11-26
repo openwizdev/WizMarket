@@ -1,0 +1,24 @@
+{
+  "name": "evokit",
+  "summary": "Measures self-improvement through paired experiments and noise-aware gates, then seals a confirmation.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/edsml-jz2321/dsh-evokit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.edsml-jz2321%2Fdsh-evokit"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/edsml-jz2321/dsh-evokit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "hooklayer",
+  "summary": "Delivers viral-content intelligence to AI agents through 7 read-only tools on MCP, scored by an evidence layer.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/khan-ashifur/hooklayer",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.khan-ashifur%2Fhooklayer"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/khan-ashifur/hooklayer/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

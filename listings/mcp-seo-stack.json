@@ -1,0 +1,25 @@
+{
+  "name": "seo-stack-mcp",
+  "summary": "Packs 7 sources and 86 tools into one open-source MCP server of SEO data for AI agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/Raffaele86/seo-stack-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Raffaele86%2Fseo-stack-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Raffaele86/seo-stack-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

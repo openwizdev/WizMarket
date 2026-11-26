@@ -1,0 +1,25 @@
+{
+  "name": "jmap-calendar-mcp",
+  "summary": "Reads calendars on JMAP servers such as Stalwart and creates, changes, or optionally deletes events.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/robertdoneill/jmap-calendar-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.robertdoneill%2Fjmap-calendar-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/robertdoneill/jmap-calendar-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

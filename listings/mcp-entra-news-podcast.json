@@ -1,0 +1,25 @@
+{
+  "name": "entra-news-podcast",
+  "summary": "Searches transcripts of Merill Fernando's YouTube podcast on Microsoft Entra, called Entra.Chat.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/darrenjrobinson/EntraNewsPodcastMCPServer",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.darrenjrobinson%2Fentra-news-podcast"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/darrenjrobinson/EntraNewsPodcastMCPServer/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

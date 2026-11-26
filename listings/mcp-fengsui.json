@@ -1,0 +1,25 @@
+{
+  "name": "FengSui 烽燧",
+  "summary": "Reports router signal, history, and SMS on 4G or 5G through FengSui, the self-hosted console.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/cky008/cpe-dash",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cky008%2Ffengsui"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/cky008/cpe-dash/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

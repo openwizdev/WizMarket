@@ -1,0 +1,25 @@
+{
+  "name": "FerryCat",
+  "summary": "Moves an agent across hosts under a contract, then runs code review and a verification harness over MCP with SQLite WAL.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/GuoBug/FerryCat",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GuoBug%2Fferrycat"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/GuoBug/FerryCat/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

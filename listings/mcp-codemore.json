@@ -1,0 +1,24 @@
+{
+  "name": "codemore",
+  "summary": "Serves machine-readable reports of a static analysis scan over MCP, which an AI agent can turn into fixes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/abhinavteja123/codemore",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.abhinavteja123%2Fcodemore"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/abhinavteja123/codemore/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

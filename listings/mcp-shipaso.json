@@ -1,0 +1,25 @@
+{
+  "name": "ShipASO",
+  "summary": "ShipASO audits a Google Play or App Store listing for measured ranks, keyword gaps, and draft copy, without writing.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/airowe/store-ops",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.airowe%2Fshipaso"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/airowe/store-ops/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

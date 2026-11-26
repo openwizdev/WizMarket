@@ -1,0 +1,25 @@
+{
+  "name": "Diogenes Web3, DeFi & 402 Security MCP",
+  "summary": "Covers Solana risk analysis together with MEV defense, plus verifiers for HTTP 402 and oracles that audit smart contracts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/stand-out-of-my-sun/diogenes-web3-security-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.stand-out-of-my-sun%2Fdiogenes-web3-security-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/stand-out-of-my-sun/diogenes-web3-security-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

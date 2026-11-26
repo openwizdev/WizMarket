@@ -1,0 +1,25 @@
+{
+  "name": "Is It Trust Ready — agent-trust-readiness scanner",
+  "summary": "Scans websites and MCP servers for whether agents can trust them, then returns a scorecard that is signed and verifiable.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/mnemom/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mnemom%2Fisittrustready"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/mnemom/mcp"
+    }
+  ],
+  "status": "listed"
+}

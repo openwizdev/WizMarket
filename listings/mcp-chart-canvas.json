@@ -1,0 +1,25 @@
+{
+  "name": "chart-canvas",
+  "summary": "Builds interactive visualizations while querying SQLite, CSV, Parquet, and JSON sources.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/gluip/chart-canvas",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gluip%2Fchart-canvas"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/gluip/chart-canvas/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

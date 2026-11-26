@@ -1,0 +1,24 @@
+{
+  "name": "Codex ServerOps MCP",
+  "summary": "Performs stateful OpenSSH server operations on Windows for Codex and handles credentials locally.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/cyyprezz/codex-serverops-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cyyprezz%2Fcodex-serverops-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cyyprezz/codex-serverops-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

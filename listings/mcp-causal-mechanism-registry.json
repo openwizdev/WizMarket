@@ -1,0 +1,25 @@
+{
+  "name": "Causal Mechanism Registry",
+  "summary": "Stores named causal mechanisms in a registry that tracks versions, and records a definition, a scope, a boundary, and a test for each.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/adenkarabal/causal-mechanism-registry",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.adenkarabal%2Fcausal-mechanism-registry"
+    },
+    {
+      "label": "Licence: CC-BY-4.0",
+      "url": "https://github.com/adenkarabal/causal-mechanism-registry/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "markdown-pdf-export",
+  "summary": "Converts Markdown to PDF in Chromium, adding highlighting, KaTeX equations, a TOC, headers, and footers.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/matinfo-tech/markdown-pdf-export",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.matinfo%2Fmarkdown-pdf-export"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/matinfo-tech/markdown-pdf-export/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

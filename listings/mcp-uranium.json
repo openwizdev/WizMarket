@@ -1,0 +1,24 @@
+{
+  "name": "uranium-mcp",
+  "summary": "Provides tools from Uranium that mint NFTs, list them, and manage those digital assets hosted on the permaweb.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/xkelxmc/uranium-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.xkelxmc%2Furanium-mcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/xkelxmc/uranium-mcp"
+    }
+  ],
+  "status": "listed"
+}

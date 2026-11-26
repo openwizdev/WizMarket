@@ -1,0 +1,23 @@
+{
+  "name": "Meta Ads",
+  "summary": "Exposes 42 tools that read and 24 opt-in writes that show a preview first, for Meta Ads.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/get-mcp-ads/meta-ads-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.getmcpads%2Fmeta-ads"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/get-mcp-ads/meta-ads-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

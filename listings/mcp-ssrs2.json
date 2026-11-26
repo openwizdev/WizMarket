@@ -1,0 +1,25 @@
+{
+  "name": "SSRS2",
+  "summary": "SSRS2 turns Markdown into editable PowerPoint, Word, and PDF files, and can preview, edit, and check RDLC and RDL reports.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "git"
+  ],
+  "url": "https://github.com/AntoineGou/SSRS2",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AntoineGou%2Fssrs2"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/AntoineGou/SSRS2"
+    }
+  ],
+  "status": "listed"
+}

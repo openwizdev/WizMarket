@@ -1,0 +1,25 @@
+{
+  "name": "Agent Ready",
+  "summary": "Scans URLs and reports AI-agent readability with the Vercel Spec, then llmstxt.org alongside agent-protocol manifests.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "git"
+  ],
+  "url": "https://github.com/mlava/agent-ready-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mlava%2Fagent-ready-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mlava/agent-ready-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

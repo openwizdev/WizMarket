@@ -1,0 +1,25 @@
+{
+  "name": "NVEIL",
+  "summary": "Processes data and draws charts in NVEIL, offering 50+ chart types while raw data remains on the machine.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/nveil-ai/nveil-toolkit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nveil-ai%2Fnveil"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/nveil-ai/nveil-toolkit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

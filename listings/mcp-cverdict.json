@@ -1,0 +1,25 @@
+{
+  "name": "CVErdict",
+  "summary": "Triages CVEs without writes and links a reason to every verdict taken from CISA KEV plus EPSS and exploit feeds.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/markusweldon/cverdict",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.markusweldon%2Fcverdict"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/markusweldon/cverdict/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Discord RPC MCP",
+  "summary": "Lets an AI assistant read Discord channels, follow messages as they arrive, and control calls.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/ver-1000000/discord-rpc-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ver-1000000%2Fdiscord-rpc-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ver-1000000/discord-rpc-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "baozi-mcp",
+  "summary": "Gives AI agents 68 tools for working Solana prediction markets at Baozi.bet.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/bolivian-peru/baozi-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bolivian-peru%2Fbaozi-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bolivian-peru/baozi-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

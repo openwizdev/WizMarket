@@ -1,0 +1,25 @@
+{
+  "name": "inbox-to-action",
+  "summary": "Classifies Gmail messages, summarizes them, extracts tasks, and drafts replies, but never sends.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "communication"
+  ],
+  "url": "https://github.com/tarunlnmiit/inbox-to-action",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tarunlnmiit%2Finbox-to-action"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/tarunlnmiit/inbox-to-action/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

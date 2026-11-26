@@ -1,0 +1,25 @@
+{
+  "name": "Solana Pulse: agent safety layer",
+  "summary": "Dry-runs Solana transactions before agents sign, reporting exact balance changes, intent matches, and token traps, with 25 free each day.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/Timothymycompc/solana-pulse-ai-agent-gateway",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Timothymycompc%2Fsolana-pulse-gateway"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Timothymycompc/solana-pulse-ai-agent-gateway/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

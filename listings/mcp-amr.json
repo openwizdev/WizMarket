@@ -1,0 +1,24 @@
+{
+  "name": "AMR (antimicrobial resistance)",
+  "summary": "Finds genes, sequences, and papers on antimicrobial resistance in NCBI and UniProt.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/pabloestepaa/amr-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pabloestepaa%2Famr-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pabloestepaa/amr-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

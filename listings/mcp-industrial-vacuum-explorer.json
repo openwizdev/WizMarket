@@ -1,0 +1,24 @@
+{
+  "name": "Depureco Industrial Vacuum Explorer",
+  "summary": "Configures Depureco industrial vacuums across 150-plus products and 24 sectors, with ATEX certifications and technical specs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/depurecoindustrialvacuums-boop/industrial-vacuum-explorer-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.depurecoindustrialvacuums-boop%2Findustrial-vacuum-explorer"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/depurecoindustrialvacuums-boop/industrial-vacuum-explorer-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

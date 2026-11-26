@@ -1,0 +1,25 @@
+{
+  "name": "Opedd — Licensed Content for AI",
+  "summary": "Opedd supplies rights-cleared material that AI agents may use under a license.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/Opedd/opedd-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.opedd%2Fopedd-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Opedd/opedd-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

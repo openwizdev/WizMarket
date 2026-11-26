@@ -1,0 +1,25 @@
+{
+  "name": "stackguide-mcp",
+  "summary": "Loads context dynamically for AI assistants, following a TDD workflow and analyzing the AST.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "developer-tools"
+  ],
+  "url": "https://github.com/taimiralain/StackGuide-MCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.taimiralain%2Fstackguide-mcp"
+    },
+    {
+      "label": "Licence: GPL-3.0",
+      "url": "https://github.com/taimiralain/StackGuide-MCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

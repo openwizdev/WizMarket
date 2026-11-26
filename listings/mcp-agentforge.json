@@ -1,0 +1,23 @@
+{
+  "name": "AgentForge",
+  "summary": "AgentForge rewrites loose requests as strict, well-structured prompts suited to every coding agent.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/sciscale-studio/agentforge-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=org.sciscale%2Fagentforge-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/sciscale-studio/agentforge-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

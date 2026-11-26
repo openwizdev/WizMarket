@@ -1,0 +1,25 @@
+{
+  "name": "Komendly (Ozzy): ads and videos from your website",
+  "summary": "Ozzy builds ad creatives taken from any website and makes promo videos, with a free first Ad Pack after OAuth sign-in.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/Gahroot/Komendly",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Gahroot%2Fkomendly"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Gahroot/Komendly/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

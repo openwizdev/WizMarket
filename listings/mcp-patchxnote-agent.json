@@ -1,0 +1,24 @@
+{
+  "name": "PatchX Freenote Agent",
+  "summary": "Exposes PatchX Freenote summaries, memories, and model outputs, plus webhook workflows a user has approved.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/ZsTs119/patchx-freenote-agent",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ZsTs119%2Fpatchxnote-agent"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/ZsTs119/patchx-freenote-agent"
+    }
+  ],
+  "status": "listed"
+}

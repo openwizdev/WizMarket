@@ -1,0 +1,25 @@
+{
+  "name": "UK Legislation Changes",
+  "summary": "UK Legislation Changes records point-in-time amendments for the 528 UK law provisions, including search, version history, and changes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/busybusybussiness/uk-legislation-changes",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.busybusybussiness%2Fuk-legislation-changes"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/busybusybussiness/uk-legislation-changes/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

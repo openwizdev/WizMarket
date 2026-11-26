@@ -1,0 +1,25 @@
+{
+  "name": "RaceHooks",
+  "summary": "RaceHooks sends motorsport predictions, analytics, and race intelligence to an endpoint you supply.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "analytics"
+  ],
+  "url": "https://github.com/racehooks/racehooks-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.racehooks%2Fracehooks-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/racehooks/racehooks-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

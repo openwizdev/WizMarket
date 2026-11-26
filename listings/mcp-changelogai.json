@@ -1,0 +1,24 @@
+{
+  "name": "changelogai",
+  "summary": "Writes changelogs and proposes semver bumps by reading git history.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/ura-tools/changelogai",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ura-tools%2Fchangelogai"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ura-tools/changelogai/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

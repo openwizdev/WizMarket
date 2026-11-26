@@ -1,0 +1,23 @@
+{
+  "name": "mcp-icp-fit-scorer",
+  "summary": "Rates how well a company matches an ICP using weighted signals, then returns a score, tier, and breakdown.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/mambalabsdev/mcp-icp-fit-scorer",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.mambabuilt%2Fmcp-icp-fit-scorer"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mambalabsdev/mcp-icp-fit-scorer/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

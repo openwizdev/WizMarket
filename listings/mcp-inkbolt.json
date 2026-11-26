@@ -1,0 +1,24 @@
+{
+  "name": "Inkbolt vector and raster editor",
+  "summary": "Edits vectors and rasters locally in Inkbolt, with layered documents, stored sessions, and exports.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/skulitom/Inkbolt",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.skulitom%2Finkbolt"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/skulitom/Inkbolt/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

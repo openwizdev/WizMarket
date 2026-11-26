@@ -1,0 +1,25 @@
+{
+  "name": "memex",
+  "summary": "Stores Claude Code session memory on this machine in SQLite, without calling language models or using the network.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/pragneshbagary/memex",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pragneshbagary%2Fmemex"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pragneshbagary/memex/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

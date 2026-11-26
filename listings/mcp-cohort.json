@@ -1,0 +1,25 @@
+{
+  "name": "cohort-mcp",
+  "summary": "Keeps team AI memory in a Markdown git vault that humans approve, only on the local machine, and safe against injection.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/magnusmage/cohort",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.magnusmage%2Fcohort-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/magnusmage/cohort/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

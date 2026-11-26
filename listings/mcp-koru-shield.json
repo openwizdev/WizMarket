@@ -1,0 +1,24 @@
+{
+  "name": "koru-shield",
+  "summary": "Controls DNS filtering in Koru Shield across logs, schedules, categories, rules, and profiles.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability"
+  ],
+  "url": "https://github.com/KoruShield/koru-shield-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.korushield%2Fkoru-shield"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/KoruShield/koru-shield-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

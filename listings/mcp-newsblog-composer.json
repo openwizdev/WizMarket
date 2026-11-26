@@ -1,0 +1,25 @@
+{
+  "name": "NewsBlog Composer",
+  "summary": "NewsBlog Composer checks news articles, extracts search keywords, assembles the schema, and reviews drafts the user still writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "analytics"
+  ],
+  "url": "https://github.com/Mohammed-Jameal-J/newsblog-composer-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Mohammed-Jameal-J%2Fnewsblog-composer"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Mohammed-Jameal-J/newsblog-composer-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Postra",
+  "summary": "Plans, writes, and schedules posts on 15 social platforms, keeping drafts, media, and analytics.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "analytics"
+  ],
+  "url": "https://github.com/Postra-app/Postra-app",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=uk.co.postra%2Fpostra"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/Postra-app/Postra-app/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

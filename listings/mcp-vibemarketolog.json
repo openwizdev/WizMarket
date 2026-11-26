@@ -1,0 +1,24 @@
+{
+  "name": "Vibe Marketolog — landing A/B tests and Yandex Direct",
+  "summary": "Inside ChatGPT, Claude, and Cursor, runs landing A/B tests plus Direct, Metrika, Yandex Wordstat, and 170 or more AI models.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/vibemarketologru/vibe-landing-kit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ru.vibemarketolog%2Fvibemarketolog"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/vibemarketologru/vibe-landing-kit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

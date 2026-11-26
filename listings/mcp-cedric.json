@@ -1,0 +1,25 @@
+{
+  "name": "Cedric",
+  "summary": "Serves team chat as an AI employee with memory, linking connected apps and covering meetings, files, and scheduling.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/meet-cedric/cedric-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.meet-cedric%2Fcedric"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/meet-cedric/cedric-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

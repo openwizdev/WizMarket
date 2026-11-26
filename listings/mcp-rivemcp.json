@@ -1,0 +1,25 @@
+{
+  "name": "Polymation",
+  "summary": "Authors Rive and converts Lottie files, After Effects, Animate files, and Figma into Rive, then animates AI art and pixel art.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/paradoxsyn/rivemcp-releases",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.paradoxsyn%2Frivemcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/paradoxsyn/rivemcp-releases/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

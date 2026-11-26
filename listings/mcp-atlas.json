@@ -1,0 +1,25 @@
+{
+  "name": "mcp-atlas",
+  "summary": "Looks up owners and APNs across 568 US counties through 539 ArcGIS endpoints, with no API key.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/urbankitstudio/mcp-atlas",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.urbankitstudio%2Fmcp-atlas"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/urbankitstudio/mcp-atlas/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

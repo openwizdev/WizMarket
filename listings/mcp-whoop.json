@@ -1,0 +1,24 @@
+{
+  "name": "whoop-mcp",
+  "summary": "Reports WHOOP recovery and sleep, plus strain and workouts, to any AI, with analysis tools, demo mode, and fast setup.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/rajdeepmondaldotcom/whoop-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rajdeepmondaldotcom%2Fwhoop-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/rajdeepmondaldotcom/whoop-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

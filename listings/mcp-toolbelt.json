@@ -1,0 +1,25 @@
+{
+  "name": "Toolbelt",
+  "summary": "Provides a collaborative substrate over data, covering vectors, a knowledge graph, SQL, geospatial data, and streaming.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/toolbeltai/toolbelt-skills",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.toolbeltai%2Ftoolbelt"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/toolbeltai/toolbelt-skills/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

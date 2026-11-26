@@ -1,0 +1,24 @@
+{
+  "name": "Gov Tenders & Grants MCP: SAM.gov, Grants.gov, USAspending, UK, EU TED",
+  "summary": "Catalogs council meetings, awards, grants, and government tenders from TED, the UK, USAspending, Grants.gov, and SAM.gov.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/GeminiGeorge22/gov-tenders-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GeminiGeorge22%2Fgov-tenders-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/GeminiGeorge22/gov-tenders-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

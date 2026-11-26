@@ -1,0 +1,25 @@
+{
+  "name": "pixasso",
+  "summary": "Orchestrates frontend engineering and design from start to finish across 16 foundational pillars.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/Erebuzzz/pixasso",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Erebuzzz%2Fpixasso"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Erebuzzz/pixasso/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

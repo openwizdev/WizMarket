@@ -1,0 +1,25 @@
+{
+  "name": "Sentimatix",
+  "summary": "Tracks live NSE and BSE equity sentiment, applies NLP to news, runs technical analysis, and searches with RAG.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/Rishav0123/sentimatix",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Rishav0123%2Fsentimatix"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/Rishav0123/sentimatix"
+    }
+  ],
+  "status": "listed"
+}

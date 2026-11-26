@@ -1,0 +1,25 @@
+{
+  "name": "enterprise-mcp-gateway",
+  "summary": "Runs a Go MCP gateway for production use, applying RBAC, redacting in-flight PII, and recording an audit log.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "observability"
+  ],
+  "url": "https://github.com/BenjaminJ/enterprise-mcp-gateway",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BenjaminJ%2Fenterprise-mcp-gateway"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/BenjaminJ/enterprise-mcp-gateway/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

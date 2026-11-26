@@ -1,0 +1,25 @@
+{
+  "name": "Twitter Scraper API",
+  "summary": "Scrapes profiles, tweets, and search on Twitter/X without an API key and returns structured JSON, billing x402 per call.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/Br0ski777/twitter-scraper-x402",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Br0ski777%2Ftwitter-scraper"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Br0ski777/twitter-scraper-x402/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

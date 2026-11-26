@@ -1,0 +1,23 @@
+{
+  "name": "Fudge for Shopify",
+  "summary": "Operates a Shopify store through AI, preparing drafts for approval, listing fixes, and reporting how the store is doing.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/fudge-ai/fudge-plugin",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.fudge%2Ffudge"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/fudge-ai/fudge-plugin/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

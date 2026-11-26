@@ -1,0 +1,25 @@
+{
+  "name": "context-keeper",
+  "summary": "Stores decisions, constraints, and pipelines as durable project memory that persists across Claude sessions.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/jarmstrong158/context-keeper",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jarmstrong158%2Fcontext-keeper"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jarmstrong158/context-keeper/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

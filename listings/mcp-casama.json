@@ -1,0 +1,25 @@
+{
+  "name": "Casama",
+  "summary": "Searches Casama documentation and the API reference with no sign-in, and optionally drives Casama AI bots.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/casama-ai/casama",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.casama%2Fcasama"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/casama-ai/casama/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

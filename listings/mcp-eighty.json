@@ -1,0 +1,24 @@
+{
+  "name": "eighty",
+  "summary": "Lets Claude load and update the character sheet for a real-life RPG kept by the eighty app for self-improvement.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/metlem80/eighty-mcp-examples",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.metlem80%2Feighty"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/metlem80/eighty-mcp-examples/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

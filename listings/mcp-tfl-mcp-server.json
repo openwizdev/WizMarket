@@ -1,0 +1,24 @@
+{
+  "name": "tfl-mcp-server",
+  "summary": "Delivers live London transport data from the TfL Unified API on a community-built server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/oneill9/tfl-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.oneill9%2Ftfl-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/oneill9/tfl-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

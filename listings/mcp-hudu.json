@@ -1,0 +1,25 @@
+{
+  "name": "Hudu",
+  "summary": "Handles Hudu documentation for companies, asset records, articles, passwords, and procedures.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/WYRE-AI/hudu-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wyre-technology%2Fhudu-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/WYRE-AI/hudu-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "GrayMatter",
+  "summary": "Holds durable agent memory in GrayMatter and bounds the context, with hosted OAuth or a local Lite mode.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/ValkyrLabs/GrayMatter",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ValkyrLabs%2Fgraymatter"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/ValkyrLabs/GrayMatter/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

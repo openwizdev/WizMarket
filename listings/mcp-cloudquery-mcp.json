@@ -1,0 +1,25 @@
+{
+  "name": "CloudQuery",
+  "summary": "Exposes asset-inventory data from CloudQuery, with modes for the CLI, PostgreSQL, and the Platform.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/cloudquery/mcp-releases",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cloudquery%2Fmcp"
+    },
+    {
+      "label": "Licence: MPL-2.0",
+      "url": "https://github.com/cloudquery/mcp-releases/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

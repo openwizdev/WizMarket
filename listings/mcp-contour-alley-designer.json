@@ -1,0 +1,25 @@
+{
+  "name": "Contour Alley Designer",
+  "summary": "Plans agroforestry layouts on actual US fields, including rows of trees, carbon, leakage, and a monitoring plan for the field.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "observability"
+  ],
+  "url": "https://github.com/viridisconservation/contour-alley-designer",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.viridisconservation%2Fcontour-alley-designer"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/viridisconservation/contour-alley-designer/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

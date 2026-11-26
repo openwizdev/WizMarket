@@ -1,0 +1,23 @@
+{
+  "name": "super-log",
+  "summary": "Lets an AI agent query the local super-log bench through read-only log tools on the hub.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/saxonnicholls/super-log",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.super-log%2Fsuper-log"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/saxonnicholls/super-log/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "TrendFlow",
+  "summary": "Shows how Google Trends interest changes over time, splits it by region, and lists related queries plus current trends.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/dariomory/trendflow-js",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.mory%2Ftrendflow"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/dariomory/trendflow-js/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

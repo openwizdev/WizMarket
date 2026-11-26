@@ -1,0 +1,25 @@
+{
+  "name": "E-commerce Search & Rankings MCP",
+  "summary": "Collects product rankings and e-commerce search results from Etsy, Google Shopping, Walmart, eBay, and Amazon.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.GeminiGeorge22%2Fecommerce-search-rankings-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/GeminiGeorge22/ecommerce-search-rankings-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

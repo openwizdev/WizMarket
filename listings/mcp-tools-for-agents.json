@@ -1,0 +1,25 @@
+{
+  "name": "Tools for Agents",
+  "summary": "Supplies agents a Decision Layer, 58+ tools, and an Advisor through MCP, with a free key from POST /v1/register {}.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/max124vip-dev/tools-for-agents",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.max124vip-dev%2Ftools-for-agents"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/max124vip-dev/tools-for-agents/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

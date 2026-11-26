@@ -1,0 +1,25 @@
+{
+  "name": "faktry",
+  "summary": "Generates and edits PDFs, audio, video, and images on faktry's official MCP server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/faktry/faktry-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.faktry%2Ffaktry-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/faktry/faktry-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

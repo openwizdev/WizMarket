@@ -1,0 +1,25 @@
+{
+  "name": "IndieStack",
+  "summary": "Looks up 3,100+ developer tools in IndieStack, including install commands, compatibility data, and health scores.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/Pattyboi101/indiestack",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Pattyboi101%2Findiestack"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Pattyboi101/indiestack/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

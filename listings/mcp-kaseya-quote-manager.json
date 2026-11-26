@@ -1,0 +1,24 @@
+{
+  "name": "Kaseya Quote Manager",
+  "summary": "Fetches quotes, orders, and purchasing from Kaseya Quote Manager, known as Datto Commerce, with no writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/WYRE-AI/kaseya-quote-manager-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.WYRE-AI%2Fkaseya-quote-manager-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/WYRE-AI/kaseya-quote-manager-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

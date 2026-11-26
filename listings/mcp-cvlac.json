@@ -1,0 +1,25 @@
+{
+  "name": "CvLAC (MinCiencias)",
+  "summary": "Revises a Colombian CvLAC research CV from MinCiencias through conversation with an AI assistant.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "git"
+  ],
+  "url": "https://github.com/stivenson/cvlac-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.stivenson%2Fcvlac-mcp"
+    },
+    {
+      "label": "Licence: ISC",
+      "url": "https://github.com/stivenson/cvlac-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

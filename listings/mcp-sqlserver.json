@@ -1,0 +1,25 @@
+{
+  "name": "SQL Server MCP",
+  "summary": "Gives DBAs grouped connections, plans, and indexes for dozens of instances running SQL Server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "git"
+  ],
+  "url": "https://github.com/cvelasquez/mcp-sqlserver",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cvelasquez%2Fmcp-sqlserver"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cvelasquez/mcp-sqlserver/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

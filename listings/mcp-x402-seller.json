@@ -1,0 +1,25 @@
+{
+  "name": "x402-seller — rug, honeypot & fake-volume checks for trading agents",
+  "summary": "Checks for rugs, honeypots, and fake volume, and reports a market pulse to trading agents on EVM and Solana via x402.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/wyattpalm2-eng/x402-seller",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wyattpalm2-eng%2Fx402-seller"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/wyattpalm2-eng/x402-seller/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
