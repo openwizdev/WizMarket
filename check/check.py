@@ -206,16 +206,25 @@ def idn_label(label):
     for c in text:
         if c.isascii():
             continue
-        # stringprep A.1 is the Unicode 3.2 unassigned set. IDNA2008 keeps such a
-        # character when it is PVALID; every other refusal below stays.
+        # A.1 is unassigned in Unicode 3.2, so Nameprep's tables are not about it.
+        # map_table_b2 uses str.lower(), which is not IDNA casefold: Cherokee
+        # U+13F5 casefolds to itself and lower() does not.
         if stringprep.in_table_a1(c):
             if not idna2008_pvalid(ord(c)):
                 return None
-        elif any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c or c in IDN_INVISIBLE:
+            continue
+        if any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c or c in IDN_INVISIBLE:
             return None
         if c not in "\u00df\u03c2" and (stringprep.map_table_b2(c) != c or unicodedata.normalize("NFKC", c.casefold()) != c):
             return None
     return text
+
+
+def bidi_classes(classes):
+    """Bidi class, falling back when Unicode 3.2 left the code point unassigned."""
+    def kind(c):
+        return classes(c) or unicodedata.bidirectional(c)
+    return kind
 
 
 def bidi_label(text, classes):
@@ -237,8 +246,9 @@ def idn_host(host):
     if None in texts:
         return False
     for classes in (unicodedata.ucd_3_2_0.bidirectional, unicodedata.bidirectional):
-        if any(classes(c) in ("R", "AL", "AN") for text in texts for c in text):
-            if not all(bidi_label(text, classes) for text in texts):
+        kind = bidi_classes(classes)
+        if any(kind(c) in ("R", "AL", "AN") for text in texts for c in text):
+            if not all(bidi_label(text, kind) for text in texts):
                 return False
     return True
 

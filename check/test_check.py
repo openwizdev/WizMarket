@@ -187,6 +187,38 @@ class Rules(Temp):
         self.assertEqual(len(lines), 1, lines)
         self.assertIn('"url" must be an https:// URL', lines[0])
 
+    def test_idna2008_bidi_class_and_casefold_follow_the_current_unicode(self):
+        reg = self.registry("valid/listed-available", commit=False)
+        path = reg / "listings/example-tool.json"
+        data = json.loads(path.read_text())
+        cases = (
+            ("arabic letter from after Unicode 3.2", "https://xn--ngb60d.example.com/", True),
+            ("hebrew mark from after Unicode 3.2", "https://xn--tcb5g.example.com/", True),
+            ("cherokee letter that IDNA2008 casefold keeps", "https://xn--lce.example.com/", True),
+            ("right-to-left label with a left-to-right letter", "https://xn--ngb28p.example.com/", False),
+            ("cherokee letter that casefold maps away", "https://xn--tce.example.com/", False),
+            ("old hangul jamo", "https://xn--hk9a.example.com/", False),
+            ("unassigned code point", "https://xn--mce.example.com/", False),
+            ("capital letter that casefold maps", "https://xn--wma.example.com/", False),
+            ("leading combining mark", "https://xn--z0b.example.com/", False),
+            ("variation selector", "https://xn--cd36e.example.com/", False),
+            ("nko lajanyalan", "https://xn--ytb.example.com/", False),
+            ("zero width joiner", "https://xn--1ug.example.com/", False),
+        )
+        for name, url, ok in cases:
+            with self.subTest(name):
+                data["url"] = url
+                path.write_text(json.dumps(data, indent=2) + "\n")
+                result = run("check", cwd=reg)
+                if ok:
+                    self.assertEqual(result.returncode, 0, result.stdout)
+                    self.assertRegex(result.stdout, r"^check: ok, 1 listings and 0 receipts checked\n$")
+                else:
+                    lines = failures(result)
+                    self.assertEqual(result.returncode, 1, result.stdout)
+                    self.assertEqual(len(lines), 1, lines)
+                    self.assertIn('"url" must be an https:// URL', lines[0])
+
 
 class Index(Temp):
     def test_index_of_the_valid_fixtures_is_the_contract_example(self):
