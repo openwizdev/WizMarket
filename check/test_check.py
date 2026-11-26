@@ -168,6 +168,25 @@ class Rules(Temp):
         self.assertEqual(len(lines), 1, lines)
         self.assertIn("must be a regular file", lines[0])
 
+    def test_idna2008_labels_beyond_unicode_3_2_are_accepted(self):
+        reg = self.registry("valid/listed-available", commit=False)
+        path = reg / "listings/example-tool.json"
+        data = json.loads(path.read_text())
+        data["url"] = "https://xn--d5b4e9a9e.xn--54b7fta0cc/"
+        data["links"] = [{"label": "Chillu", "url": "https://xn--6yccdefg.example.com/"}]
+        path.write_text(json.dumps(data, indent=2) + "\n")
+        accepted = run("check", cwd=reg)
+        self.assertEqual(accepted.returncode, 0, accepted.stdout)
+        self.assertRegex(accepted.stdout, r"^check: ok, 1 listings and 0 receipts checked\n$")
+        data["url"] = "https://xn--e28h.example.com/"
+        del data["links"]
+        path.write_text(json.dumps(data, indent=2) + "\n")
+        refused = run("check", cwd=reg)
+        lines = failures(refused)
+        self.assertEqual(refused.returncode, 1, refused.stdout)
+        self.assertEqual(len(lines), 1, lines)
+        self.assertIn('"url" must be an https:// URL', lines[0])
+
 
 class Index(Temp):
     def test_index_of_the_valid_fixtures_is_the_contract_example(self):
