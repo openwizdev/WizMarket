@@ -14,6 +14,7 @@ import review
 import typesafe_client
 
 FIXTURES = Path(__file__).resolve().parent / "jev_fixtures.json"
+ROOT = FIXTURES.parent.parent
 
 
 def load():
@@ -60,6 +61,17 @@ def score_summary(cases):
     return {"n": len(cases), "length": length, "heuristic": heuristic}
 
 
+def score_receipt(cases):
+    exact = heuristic = 0
+    for case in cases:
+        text = (ROOT / case["path"]).read_text()
+        if review.contract_receipt_done(text) == case["done"]:
+            exact += 1
+        if review.heuristic_receipt_done(text) == case["done"]:
+            heuristic += 1
+    return {"n": len(cases), "exact": exact, "heuristic": heuristic}
+
+
 def score_kind_live(cases, client):
     agreed = unanswered = 0
     for case in cases:
@@ -103,6 +115,19 @@ def score_summary_live(cases, client):
     return {"agreed": agreed, "unanswered": unanswered, "n": len(cases)}
 
 
+def score_receipt_live(cases, client):
+    agreed = unanswered = 0
+    for case in cases:
+        text = (ROOT / case["path"]).read_text()
+        answers = client.ask(text, review.RECEIPT_QUESTIONS)
+        decision, _fit = review.receipt_fit(answers)
+        if decision is None:
+            unanswered += 1
+        elif decision == case["done"]:
+            agreed += 1
+    return {"agreed": agreed, "unanswered": unanswered, "n": len(cases)}
+
+
 def _jev_line(name, result):
     return (f"{name} jev ({typesafe_client.MODEL}): {result['agreed']}/{result['n']} agreed, "
             f"{result['unanswered']} unanswered")
@@ -113,6 +138,7 @@ def report(live=False, client=None):
     kind = score_kind(data["kind"])
     work = score_work_link(data["work_link"])
     summary = score_summary(data["summary"])
+    receipt = score_receipt(data["receipt"])
     lines = [
         f"kind tags: {kind['tags']}/{kind['n']}",
         f"kind heuristic: {kind['heuristic']}/{kind['n']}",
@@ -120,6 +146,8 @@ def report(live=False, client=None):
         f"work_link heuristic: {work['heuristic']}/{work['n']}",
         f"summary length: {summary['length']}/{summary['n']}",
         f"summary heuristic: {summary['heuristic']}/{summary['n']}",
+        f"receipt exact: {receipt['exact']}/{receipt['n']}",
+        f"receipt heuristic: {receipt['heuristic']}/{receipt['n']}",
     ]
     if not live:
         lines.append("jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live")
@@ -130,6 +158,7 @@ def report(live=False, client=None):
     lines.append(_jev_line("kind", score_kind_live(data["kind"], client)))
     lines.append(_jev_line("work_link", score_work_link_live(data["work_link"], client)))
     lines.append(_jev_line("summary", score_summary_live(data["summary"], client)))
+    lines.append(_jev_line("receipt", score_receipt_live(data["receipt"], client)))
     return "\n".join(lines) + "\n"
 
 

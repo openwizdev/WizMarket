@@ -16,6 +16,11 @@ The summary's length is checked by the contract. Two Scores on the same state
 ask how specifically `summary` says what the listing does, and what it plugs
 into. SUMMARY_WEIGHT_DOES and SUMMARY_WEIGHT_PLUG combine them. Below
 SCORE_CONFIDENCE_MIN on either Score, the summary stays not judged.
+
+A receipt's pass lines stay an exact match. Eight Nouls on that receipt text,
+in one request, each check one line or one property. RECEIPT_WEIGHTS combine
+them. Below NOUL_CONFIDENCE_MIN on any of the eight, there is no note, the
+same as when no key is set. A note never changes pass or fail.
 """
 
 import re
@@ -43,6 +48,9 @@ SCORE_CONFIDENCE_MIN = 0.7
 SUMMARY_WEIGHT_DOES = 0.7
 SUMMARY_WEIGHT_PLUG = 0.3
 SUMMARY_FIT_MIN = 0.35
+# Equal weights: one missed factor is 0.875, which is at or under RECEIPT_FIT_NO.
+RECEIPT_FIT_YES = 1.0
+RECEIPT_FIT_NO = 0.99
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
@@ -107,6 +115,52 @@ SUMMARY_QUESTIONS = {
         ],
     ),
 }
+
+
+
+RECEIPT_QUESTIONS = {
+    "version_pass": _noul_question(
+        "Does the text record a passing version check for openwiz:records and driver v1?",
+        "The version line passes.",
+        "The version line is missing or not a pass.",
+    ),
+    "start_pass": _noul_question(
+        "Does the text record a passing start check?",
+        "The start line passes.",
+        "The start line is missing or not a pass.",
+    ),
+    "wake_pass": _noul_question(
+        "Does the text record a passing wake check?",
+        "The wake line passes.",
+        "The wake line is missing or not a pass.",
+    ),
+    "stop_pass": _noul_question(
+        "Does the text record a passing stop check?",
+        "The stop line passes.",
+        "The stop line is missing or not a pass.",
+    ),
+    "token_pass": _noul_question(
+        "Does the text record that no login or token passed through the driver?",
+        "The token line passes.",
+        "The token line is missing or says something else.",
+    ),
+    "lines_in_order": _noul_question(
+        "Are the pass lines in kit order: version, then start, then wake, then stop, then token?",
+        "Those five lines are in that order.",
+        "They are missing or in a different order.",
+    ),
+    "note_is_literal": _noul_question(
+        "Is the status-note id written as the literal <note>?",
+        "The note id is the literal <note>.",
+        "The note id is a number or some other text.",
+    ),
+    "result_is_five": _noul_question(
+        "Is the result line Result: 5 of 5 pass?",
+        "The result line says 5 of 5 pass.",
+        "The result line is missing or says something else.",
+    ),
+}
+RECEIPT_WEIGHTS = {name: 1.0 for name in RECEIPT_QUESTIONS}
 
 
 def declared_proof(tags):
@@ -293,6 +347,42 @@ def work_link_reading(listing, answers):
             "finding": None, "fit": fit}
 
 
+
+def contract_receipt_done(text):
+    """The pass-line half of check_receipt: five exact kit lines, then Result: 5 of 5 pass."""
+    import check as gate
+    if not isinstance(text, str) or "\r" in text or not text.endswith("\n"):
+        return False
+    lines = text.split("\n")
+    if len(lines) != 15:
+        return False
+    return all(pattern.fullmatch(lines[n - 1]) for n, (_shape, pattern) in enumerate(gate.PASS_LINES, 9))
+
+
+def heuristic_receipt_done(text):
+    """Count of pass lines, for the bench. It does not notice order, the note id, or the token sentence."""
+    if not isinstance(text, str):
+        return False
+    return text.count("\npass ") >= 5 and "Result: 5 of 5 pass" in text and "fail " not in text
+
+
+def receipt_fit(answers):
+    """(done, fit). done is None when any factor is missing or below the confidence cut."""
+    flags = []
+    for name in RECEIPT_QUESTIONS:
+        flag = factor_yes(_noul(answers, name))
+        if flag is None:
+            return None, None
+        flags.append((name, flag))
+    total = sum(RECEIPT_WEIGHTS.values())
+    fit = sum(RECEIPT_WEIGHTS[name] * (1.0 if flag else 0.0) for name, flag in flags) / total
+    if fit >= RECEIPT_FIT_YES:
+        return True, fit
+    if fit <= RECEIPT_FIT_NO:
+        return False, fit
+    return None, fit
+
+
 def ask_listing(listing, client, private_fn):
     if client is None:
         return None
@@ -303,6 +393,31 @@ def ask_listing(listing, client, private_fn):
         return client.ask(state, questions_for(listing, private_fn))
     except Exception:
         return None
+
+
+
+def receipt_lines(files, client, private_fn):
+    lines = []
+    paths = sorted(path for path, data in files.items()
+                   if isinstance(data, (bytes, bytearray)) and path.startswith("receipts/"))
+    for path in paths:
+        try:
+            text_body = files[path].decode("utf-8")
+        except UnicodeDecodeError:
+            continue
+        done = contract_receipt_done(text_body)
+        note = ""
+        decision = fit = None
+        if client is not None and not private_fn(text_body):
+            try:
+                answers = client.ask(text_body, RECEIPT_QUESTIONS)
+            except Exception:
+                answers = None
+            decision, fit = receipt_fit(answers)
+        if decision is not None and decision != done:
+            note = f"; jev fit {fit:.2f} disagrees"
+        lines.append(f"{path}: contract {'pass' if done else 'fail'}{note}")
+    return lines
 
 
 def review_lines(entries, client, private_fn):
@@ -329,10 +444,14 @@ def review_lines(entries, client, private_fn):
 
 
 def run(root, client, check_tree, worktree_files, private_fn):
-    failures, entries = check_tree(worktree_files(Path(root)))
+    files = worktree_files(Path(root))
+    failures, entries = check_tree(files)
     if failures:
         return 1, "\n".join(failures) + "\n"
     lines, findings = review_lines(entries, client, private_fn)
+    summary = lines.pop()
+    lines.extend(receipt_lines(files, client, private_fn))
+    lines.append(summary)
     return (1 if findings else 0), "\n".join(lines) + "\n"
 
 
