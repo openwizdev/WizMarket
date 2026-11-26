@@ -34,9 +34,8 @@ def score_kind(cases):
 def score_kind_live(cases, client):
     agreed = unanswered = 0
     for case in cases:
-        answers = client.ask(
-            {"name": case["name"], "summary": case["summary"], "plugs_into": case["plugs_into"]},
-            {"proof_kind": review.PROOF_QUESTION})
+        state = {"name": case["name"], "summary": case["summary"], "plugs_into": case["plugs_into"]}
+        answers = client.ask(state, review.questions_for(case))
         reading = review.proof_reading(case, answers)
         if reading["source"] != "jev":
             unanswered += 1

@@ -762,15 +762,14 @@ class JevProofKind(unittest.TestCase):
             seen["timeout"] = timeout
             seen["headers"] = {key.lower(): value for key, value in request.header_items()}
             seen["body"] = json.loads(request.data.decode())
-            payload = json.dumps({"model": "jev-1.14.0", "answers": {"proof_kind": {
-                "type": "choice", "choice": "receipt", "confidence": 0.9,
-                "probabilities": {"receipt": 0.91, "skill": 0.03, "both": 0.03, "none": 0.03}}},
-                "usage": {"input_tokens": 10, "output_tokens": 2}}).encode()
+            payload = json.dumps({"model": "jev-1.14.0", "answers": {"is_driver": {"type": "noul", "noul": 0.91}},
+                                   "usage": {"input_tokens": 10, "output_tokens": 2}}).encode()
             return _Body(payload)
 
         key = "unit-test-key"
         client = self.client_mod.HttpSystemOneClient(key, opener=opener, sleep=lambda delay: None)
-        answers = client.ask({"name": "Example"}, {"proof_kind": self.review.PROOF_QUESTION})
+        question = self.review.KIND_QUESTIONS["is_driver"]
+        answers = client.ask({"name": "Example"}, {"is_driver": question})
         self.assertEqual(seen["url"], "https://api.typesafe.ai/v1/systemone")
         self.assertEqual(seen["method"], "POST")
         self.assertEqual(seen["timeout"], 20)
@@ -778,8 +777,8 @@ class JevProofKind(unittest.TestCase):
         self.assertEqual(seen["headers"]["content-type"], "application/json")
         self.assertEqual(seen["body"]["model"], "jev-1.14.0")
         self.assertEqual(seen["body"]["state"], {"name": "Example"})
-        self.assertEqual(seen["body"]["questions"]["proof_kind"]["type"], "choice")
-        self.assertEqual(answers["proof_kind"]["choice"], "receipt")
+        self.assertEqual(seen["body"]["questions"]["is_driver"]["type"], "noul")
+        self.assertEqual(answers["is_driver"]["noul"], 0.91)
         self.assertNotIn(key, repr(client))
         self.assertNotIn(key, json.dumps(answers))
 
@@ -790,7 +789,7 @@ class JevProofKind(unittest.TestCase):
             raise urllib.error.HTTPError(request.full_url, 401, "Unauthorized", {}, io.BytesIO(b""))
 
         client = self.client_mod.HttpSystemOneClient(key, opener=boom, sleep=lambda delay: None)
-        self.assertIsNone(client.ask({"name": "x"}, {"proof_kind": {"type": "choice", "criteria": {}}}))
+        self.assertIsNone(client.ask({"name": "x"}, {"is_driver": {"type": "noul"}}))
 
         def garbage(request, timeout):
             return _Body(b"not-json")
@@ -806,16 +805,15 @@ class JevProofKind(unittest.TestCase):
             if len(calls) == 1:
                 raise urllib.error.HTTPError(request.full_url, 429, "Too Many Requests",
                                               {"Retry-After": "0"}, io.BytesIO(b""))
-            body = json.dumps({"answers": {"proof_kind": {"type": "choice", "choice": "none",
-                               "confidence": 1, "probabilities": {"none": 1}}}}).encode()
+            body = json.dumps({"answers": {"is_driver": {"type": "noul", "noul": 0.04}}}).encode()
             return _Body(body)
 
         slept = []
         client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=slept.append)
-        answers = client.ask({"name": "x"}, {"proof_kind": {"type": "choice", "criteria": {"none": "no"}}})
+        answers = client.ask({"name": "x"}, {"is_driver": {"type": "noul", "instructions": "Is it a driver?"}})
         self.assertEqual(len(calls), 2)
         self.assertEqual(slept, [0.0])
-        self.assertEqual(answers["proof_kind"]["choice"], "none")
+        self.assertEqual(answers["is_driver"]["noul"], 0.04)
 
     def test_long_retry_after_falls_back(self):
         def opener(request, timeout):
@@ -832,15 +830,32 @@ class JevProofKind(unittest.TestCase):
                    "plugs_into": "OpenWiz driver v1", "tags": ["mcp-server"]}
         fallback = self.review.proof_reading(listing, None)
         self.assertEqual((fallback["read"], fallback["source"], fallback["finding"]), ("none", "fallback", None))
-        low = {"proof_kind": {"type": "choice", "choice": "receipt", "confidence": 0.4,
-                              "probabilities": {"receipt": 0.42, "none": 0.4, "skill": 0.09, "both": 0.09}}}
+        low = self._kind(0.91, 0.5, 0.05)
         unsure = self.review.proof_reading(listing, low)
-        self.assertEqual(unsure["source"], "fallback")
-        sure = {"proof_kind": {"type": "choice", "choice": "receipt", "confidence": 0.9,
-                               "probabilities": {"receipt": 0.91, "none": 0.03, "skill": 0.03, "both": 0.03}}}
+        self.assertEqual((unsure["read"], unsure["source"], unsure["finding"]), ("none", "fallback", None))
+        sure = self._kind(0.91, 0.05, 0.05)
         hit = self.review.proof_reading(listing, sure)
         self.assertEqual(hit["read"], "receipt")
+        self.assertEqual(hit["source"], "jev")
         self.assertIn("prose reads as receipt, tags say none", hit["finding"])
+
+    def _kind(self, driver, harness, skill):
+        return {name: {"type": "noul", "noul": value}
+                for name, value in (("is_driver", driver), ("is_harness", harness), ("is_skill", skill))}
+
+    def test_kind_questions_share_one_request(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append(questions)
+                return None
+
+        listing = {"id": "example-driver", "name": "Example driver", "summary": "A driver.",
+                   "plugs_into": "OpenWiz driver v1", "tags": ["driver"]}
+        self.review.ask_listing(listing, Fake(), lambda text: False)
+        self.assertEqual(len(seen), 1)
+        self.assertEqual(set(seen[0]), {"is_driver", "is_harness", "is_skill"})
 
     def test_private_prose_is_not_sent(self):
         sent = []

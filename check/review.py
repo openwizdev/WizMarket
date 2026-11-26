@@ -2,8 +2,13 @@
 
 Proof kind is the tag rule in check_proof: driver or harness needs a receipt,
 skill needs a pinned check, both tags need both, and any other tag needs neither.
-Jev is asked the same four-way Choice about the name, summary, and plugs_into.
-A probability under 0.7, a missing key, or a failed call keeps the tag rule.
+Jev is asked three separate Nouls (driver, harness, skill) about the same state
+in one request. Each Noul is one gut-check. Code combines the confident yeses
+with KIND_WEIGHT_DRIVER, KIND_WEIGHT_HARNESS, and KIND_WEIGHT_SKILL.
+
+A Noul has no confidence field. The documented stand-in is abs(2p - 1): 0 at
+0.5 and 1 at 0 or 1. Below NOUL_CONFIDENCE_MIN on any factor, the reading is
+the tag rule, the same result as when TYPESAFE_API_KEY is unset.
 """
 
 import re
@@ -14,23 +19,42 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import typesafe_client
 
-CHOICE_MIN = 0.7
-PROOF_OPTIONS = ("receipt", "skill", "both", "none")
-PROOF_QUESTION = {
-    "type": "choice",
-    "instructions": "Which proof does this listing need, from its name, summary, and plugs_into?",
-    "criteria": {
-        "receipt": "It is a driver or a harness (or both), and not a skill. Proof is one kit receipt.",
-        "skill": "It is a skill, and not a driver or a harness. Proof is a pinned source and check.",
-        "both": "It is a skill and also a driver or a harness. It needs the receipt and the pinned check.",
-        "none": "It is not a driver, a harness, or a skill, so it cannot be verified.",
-    },
-}
+# abs(2p - 1) of 0.4 is the documented 0.3 / 0.7 Noul band.
+NOUL_CONFIDENCE_MIN = 0.4
+NOUL_YES = 0.7
+NOUL_NO = 0.3
+# A confident yes contributes its weight. One full driver or harness weight is enough for a receipt.
+KIND_WEIGHT_DRIVER = 1.0
+KIND_WEIGHT_HARNESS = 1.0
+KIND_WEIGHT_SKILL = 1.0
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
     ("skill", re.compile(r"\bskills?\b", re.I)),
 )
+
+
+def _noul_question(question, yes, no):
+    return {"type": "noul", "instructions": question, "criteria": {"true": yes, "false": no}}
+
+
+KIND_QUESTIONS = {
+    "is_driver": _noul_question(
+        "Does `name`, `summary`, or `plugs_into` describe an OpenWiz driver?",
+        "It starts, wakes, or stops agents on a host.",
+        "It is not a driver.",
+    ),
+    "is_harness": _noul_question(
+        "Does `name`, `summary`, or `plugs_into` describe a harness?",
+        "A driver runs it, such as a coding-agent CLI.",
+        "It is not a harness.",
+    ),
+    "is_skill": _noul_question(
+        "Does `name`, `summary`, or `plugs_into` describe a skill an OpenWiz agent runs?",
+        "It is a skill with its own check.",
+        "It is not a skill.",
+    ),
+}
 
 
 def declared_proof(tags):
@@ -66,36 +90,69 @@ def listing_state(listing, private_fn):
 
 
 def questions_for(listing):
-    return {"proof_kind": PROOF_QUESTION}
+    return dict(KIND_QUESTIONS)
 
 
-def _choice(answers, name, options):
+def _noul(answers, name):
     if not isinstance(answers, dict):
         return None
     item = answers.get(name)
-    if not isinstance(item, dict) or item.get("type") != "choice":
+    if not isinstance(item, dict) or item.get("type") != "noul":
         return None
-    choice = item.get("choice")
-    probabilities = item.get("probabilities")
-    if choice not in options or not isinstance(probabilities, dict):
+    value = item.get("noul")
+    if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 1:
         return None
-    probability = probabilities.get(choice)
-    if isinstance(probability, bool) or not isinstance(probability, (int, float)):
+    return float(value)
+
+
+def noul_confidence(value):
+    """Documented confidence-style number for a Noul: abs(2p - 1)."""
+    return abs(2 * value - 1)
+
+
+def factor_yes(value):
+    """True or False when the Noul is confident, else None so the caller falls back."""
+    if value is None or noul_confidence(value) < NOUL_CONFIDENCE_MIN:
         return None
-    if not 0 <= probability <= 1 or probability < CHOICE_MIN:
-        return None
-    return choice
+    if value >= NOUL_YES:
+        return True
+    if value <= NOUL_NO:
+        return False
+    return None
+
+
+def _meets(total, weights):
+    needed = [weight for weight in weights if weight > 0]
+    if not needed or total <= 0:
+        return False
+    return total >= min(needed)
+
+
+def combine_kind(driver, harness, skill):
+    receipt = KIND_WEIGHT_DRIVER * (1.0 if driver else 0.0) + KIND_WEIGHT_HARNESS * (1.0 if harness else 0.0)
+    skill_mass = KIND_WEIGHT_SKILL * (1.0 if skill else 0.0)
+    has_receipt = _meets(receipt, (KIND_WEIGHT_DRIVER, KIND_WEIGHT_HARNESS))
+    has_skill = _meets(skill_mass, (KIND_WEIGHT_SKILL,))
+    if has_receipt and has_skill:
+        return "both"
+    if has_receipt:
+        return "receipt"
+    if has_skill:
+        return "skill"
+    return "none"
 
 
 def proof_reading(listing, answers):
     declared = declared_proof(listing.get("tags"))
-    choice = _choice(answers, "proof_kind", PROOF_OPTIONS)
-    if choice is None:
-        return {"declared": declared, "read": declared, "source": "fallback", "finding": None}
+    fallback = {"declared": declared, "read": declared, "source": "fallback", "finding": None}
+    factors = [factor_yes(_noul(answers, name)) for name in ("is_driver", "is_harness", "is_skill")]
+    if any(factor is None for factor in factors):
+        return fallback
+    read = combine_kind(*factors)
     finding = None
-    if choice != declared:
-        finding = f"{listing['id']}: prose reads as {choice}, tags say {declared}"
-    return {"declared": declared, "read": choice, "source": "jev", "finding": finding}
+    if read != declared:
+        finding = f"{listing['id']}: prose reads as {read}, tags say {declared}"
+    return {"declared": declared, "read": read, "source": "jev", "finding": finding}
 
 
 def ask_listing(listing, client, private_fn):
