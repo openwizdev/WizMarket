@@ -586,7 +586,7 @@ V2_BROKEN = {
     "key-host-without-package": ("listings/pinned-driver.json", '"key_host" needs a package block'),
     "package-other-kind": ("listings/example-tool.json", '"package" is only for a listing tagged driver or harness'),
     "asset-not-release": ("listings/pinned-driver.json", "not a release asset of the listed repository"),
-    "verified-other-commit": ("listings/verified-pinned.json", 'the receipt\'s "# driver:" line must be'),
+    "verified-other-commit": ("listings/verified-pinned.json", 'the receipt\'s "# driver:" line must name'),
     "verified-other-kit": ("listings/verified-pinned.json", 'the receipt\'s "# kit:" line must be'),
 }
 
