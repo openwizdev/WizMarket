@@ -254,7 +254,8 @@ def check_v2(failures, path, data, tags):
         return None
     expected = f"https://github.com/{package['repository']}/releases/download/v{package['version']}/driver.tar.gz"
     if package.get("asset_url") != expected:
-        failures.add(path, '"package.asset_url" is not a release asset of the listed repository', f"use {expected}")
+        failures.add(path, '"package.asset_url" is not a release asset of the listed repository',
+                     "make it the package's release asset")
         return None
     if "key_host" in data:
         host, host_keys = data["key_host"], set(KEY_HOST_SCHEMA["properties"])
@@ -276,7 +277,7 @@ def bind_package_receipt(failures, path, package, header):
         return
     driver = f"{package['repository']}@{package['commit']}"
     if "driver" in header and header["driver"] != driver:
-        failures.add(path, f'the receipt\'s "# driver:" line must be "{driver}", the package\'s repository and commit',
+        failures.add(path, 'the receipt\'s "# driver:" line must name the package\'s repository and commit',
                      "use a receipt for this package's repository and commit")
     kit = f"openwizdev/OpenWiz@{package['kit_commit']}"
     if "kit" in header and header["kit"] != kit:

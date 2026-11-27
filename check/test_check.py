@@ -362,6 +362,32 @@ class Review(Temp):
                 self.assertTrue(all("; fix: " in line for line in failures(result)), result.stdout)
                 shutil.rmtree(reg)
 
+    def test_r10_v2_package_diagnostics_never_repeat_a_private_repository(self):
+        planted = "thr_syn-planted_4"
+        repository = f"example-owner/{planted}"
+        cases = {
+            "asset URL": ("v2/valid/listed-driver", "pinned-driver.json", False,
+                          "not a release asset of the listed repository"),
+            "receipt": ("v2/valid/verified-driver", "verified-pinned.json", True,
+                        'the receipt\'s "# driver:" line must name'),
+        }
+        for name, (folder, listing, match_asset, reason) in cases.items():
+            with self.subTest(name):
+                reg = self.registry(folder, commit=False)
+                path = reg / "listings" / listing
+                data = json.loads(path.read_text())
+                data["package"]["repository"] = repository
+                if match_asset:
+                    data["package"]["asset_url"] = ("https://github.com/" + repository
+                                                    + "/releases/download/v1.0.0/driver.tar.gz")
+                path.write_text(json.dumps(data, indent=2) + "\n")
+                result = run("check", cwd=reg)
+                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+                self.assertIn(reason, result.stdout)
+                self.assertNotIn(planted, result.stdout)
+                self.assertNotIn(repository, result.stdout)
+                shutil.rmtree(reg)
+
     def test_r4_privacy_scan_finds_every_documented_id_shape(self):
         shapes = ["thr_s", "thr_syn-a_b-c", "thr_9" + "x" * 60, "prj_syn1", "proj_syn1", "mch_syn1", "usr_syn1",
                   "acct_syn1", "auto_syn1", "cr_0a1b2c3d-4e5f", "sess_synabcdef"]
@@ -590,6 +616,16 @@ class V2Fixtures(unittest.TestCase):
 
 
 class V2Index(Temp):
+    def test_key_host_refuses_a_64_character_dns_label(self):
+        reg = self.registry("v2/valid/verified-harness", commit=False)
+        path = reg / "listings/verified-harness.json"
+        data = json.loads(path.read_text())
+        data["key_host"]["origin"] = "https://" + "a" * 64 + ".example.com"
+        path.write_text(json.dumps(data, indent=2) + "\n")
+        refused = failures(run("check", cwd=reg))
+        self.assertEqual(len(refused), 1, refused)
+        self.assertIn('"key_host.origin" is not the shape', refused[0])
+
     def test_verified_v2_passes_only_for_its_package_commit(self):
         reg = self.registry("v2/valid/verified-driver", commit=False)
         self.assertEqual(run("check", cwd=reg).returncode, 0)
@@ -599,8 +635,8 @@ class V2Index(Temp):
         path.write_text(json.dumps(data, indent=2) + "\n")
         refused = failures(run("check", cwd=reg))
         self.assertEqual(len(refused), 1, refused)
-        self.assertIn('"# driver:" line must be', refused[0])
-        self.assertIn("example-owner/verified-pinned@" + "c" * 40, refused[0])
+        self.assertIn('"# driver:" line must name', refused[0])
+        self.assertIn("package's repository and commit", refused[0])
         data["package"]["commit"] = "a" * 40
         data["package"]["kit_commit"] = "c" * 40
         path.write_text(json.dumps(data, indent=2) + "\n")

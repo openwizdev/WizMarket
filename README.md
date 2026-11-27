@@ -1,6 +1,6 @@
 # WizMarket
 
-The registry behind [openwiz.dev/market](https://openwiz.dev/market): drivers, harnesses and skills for [OpenWiz](https://github.com/openwizdev/OpenWiz), the open source kernel for agent factories that runs fleets of coding agents on your own machines. One JSON file per listing, added by pull request. `main` holds 115 listings today, 18 of them verified.
+The registry behind [openwiz.dev/market](https://openwiz.dev/market): drivers, harnesses and skills for [OpenWiz](https://github.com/openwizdev/OpenWiz), the open source kernel for agent factories that runs fleets of coding agents on your own machines. One JSON file per listing, added by pull request. `main` holds 54 listings today, 18 of them verified.
 
 ## Publish your own
 
