@@ -4,7 +4,7 @@ Synthetic examples of [`listing.v1`](../contracts/listing.v1.md). Each folder is
 
 ## Valid
 
-Each passes the schema and every rule of the contract.
+Each passes the schema and the registry check. That check validates receipt text and skill proof fields; it does not run the driver kit or the skill's command.
 
 | Folder | Shows |
 | --- | --- |
@@ -15,17 +15,17 @@ Each passes the schema and every rule of the contract.
 | `valid/verified-skill/` | A `verified` skill with its source at a commit and its check |
 | `valid/verified-driver-and-skill/` | Tagged `driver` and `skill`, so it carries both proofs |
 
-[`index.json`](index.json) is what `check/check.py index` prints for one registry holding these six listings and their receipts, at the synthetic commit `dddddddddddddddddddddddddddddddddddddddd`.
+[`index.json`](index.json) matches what `python3 -I check/check.py index` prints for one registry holding these six listings and their receipts, with the commit in the output replaced by `dddddddddddddddddddddddddddddddddddddddd`.
 
 ## Broken
 
-Each is refused for exactly one reason.
+The table shows why each is refused.
 
 | Folder | Refused because | Caught by |
 | --- | --- | --- |
 | `broken/unknown-field/` | A field v1 does not have (`price`) | schema |
 | `broken/being-built-without-link/` | `being-built` with no link to its pull request or ticket | schema |
-| `broken/name-final-newline/` | `name` ends in a newline | schema |
+| `broken/name-final-newline/` | `name` and `url` both end in a newline | schema |
 | `broken/tag-final-newline/` | A tag ends in a newline | schema |
 | `broken/publisher-final-newline/` | `publisher` ends in a newline | schema |
 | `broken/source-final-newline/` | A skill's `source` ends in a newline | schema |
@@ -53,8 +53,6 @@ Each is refused for exactly one reason.
 | `broken/receipt-lines-out-of-order/` | The receipt's `pass stop:` comes before `pass wake:` | receipt rule |
 | `broken/receipt-token-line-other-text/` | The receipt's line 13 is `pass token: example-opaque-value`, not the kit's passing sentence | receipt rule |
 | `broken/receipt-raw-note-id/` | The receipt's `pass start:` line keeps the raw note id instead of `<note>` | receipt rule |
-
-Every broken folder's other content is valid, so the reason above is the only one.
 
 The four `*-last-label-hex*` folders also carry a valid boundary URL on the host `0x7f.example.com` (at `/example-tool` in `link-url-last-label-hex`, at `/` in the others): a numeric last label is refused, a numeric interior label is not.
 

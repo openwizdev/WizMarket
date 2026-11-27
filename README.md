@@ -1,6 +1,6 @@
 # WizMarket
 
-The registry behind [openwiz.dev/market](https://openwiz.dev/market): drivers, harnesses and skills for [OpenWiz](https://github.com/openwizdev/OpenWiz), the open source kernel for agent factories that runs fleets of coding agents on your own machines. One JSON file per listing, added by pull request. `main` holds 54 listings today, 18 of them verified.
+The registry behind [openwiz.dev/market](https://openwiz.dev/market): drivers, harnesses and skills for [OpenWiz](https://github.com/openwizdev/OpenWiz), the open source kernel for agent factories that runs fleets of coding agents on your own machines. One JSON file per listing in [`listings/`](listings/), added by pull request.
 
 ## Publish your own
 
@@ -30,14 +30,14 @@ Field rules, URL rules, what stays private and what makes a listing `verified` (
 
 ## Check it locally
 
-Needs Python 3.11 on Unix (on Windows, use WSL). To also catch edits to merged receipts, compare against `main`:
+Use Python 3.11 to match CI. On Windows, use WSL. To also catch edits or deletions of merged receipts, compare against `main` with Git:
 
 ```sh
 git fetch https://github.com/openwizdev/WizMarket.git main &&
   python3 -I check/check.py check --base FETCH_HEAD
 ```
 
-For a `verified` skill, `python3 -I check/check.py skill <id>` runs its pinned check on your machine. CI runs the same checks on every pull request.
+For a `verified` skill, `python3 -I check/check.py skill -- <id>` runs its pinned check on your machine. CI checks the registry on every pull request and runs the pinned checks in isolation only for verified skill listings the pull request adds or changes.
 
 ## Licence
 
