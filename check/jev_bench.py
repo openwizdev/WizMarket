@@ -60,9 +60,11 @@ def score_kind_live(cases, client):
 
 def score_work_link_live(cases, client):
     agreed = unanswered = 0
+    item_agreed = item_unanswered = 0
+    about_agreed = about_unanswered = 0
     for case in cases:
-        listing = {"id": case["id"], "name": case["id"], "summary": "Being built.",
-                   "plugs_into": "OpenWiz", "stage": "being-built",
+        listing = {"id": case["id"], "name": case["name"], "summary": case["summary"],
+                   "plugs_into": case["plugs_into"], "stage": "being-built",
                    "links": [{"label": case["label"], "url": case["url"]}]}
         answers = _ask(listing, client)
         reading = review.work_link_reading(listing, answers)
@@ -70,7 +72,21 @@ def score_work_link_live(cases, client):
             unanswered += 1
         elif reading["yes"] == case["work_link"]:
             agreed += 1
-    return {"agreed": agreed, "unanswered": unanswered, "n": len(cases)}
+        item, about = review.work_link_factors(answers)
+        if item is None:
+            item_unanswered += 1
+        elif item == case["is_work_item"]:
+            item_agreed += 1
+        if about is None:
+            about_unanswered += 1
+        elif about == case["is_about_this_work"]:
+            about_agreed += 1
+    n = len(cases)
+    return {
+        "agreed": agreed, "unanswered": unanswered, "n": n,
+        "item": {"agreed": item_agreed, "unanswered": item_unanswered, "n": n},
+        "about": {"agreed": about_agreed, "unanswered": about_unanswered, "n": n},
+    }
 
 
 def _jev_line(name, result):
@@ -95,7 +111,10 @@ def report(live=False, client=None):
         lines.append("jev: skipped, TYPESAFE_API_KEY is not set")
         return "\n".join(lines) + "\n"
     lines.append(_jev_line("kind", score_kind_live(data["kind"], client)))
-    lines.append(_jev_line("work_link", score_work_link_live(data["work_link"], client)))
+    work_live = score_work_link_live(data["work_link"], client)
+    lines.append(_jev_line("work_link", work_live))
+    lines.append(_jev_line("work_link item", work_live["item"]))
+    lines.append(_jev_line("work_link about", work_live["about"]))
     return "\n".join(lines) + "\n"
 
 
