@@ -18,8 +18,10 @@ into. SUMMARY_WEIGHT_DOES and SUMMARY_WEIGHT_PLUG combine them. Below
 SCORE_CONFIDENCE_MIN on either Score, the summary stays not judged.
 """
 
+import ipaddress
 import re
 import sys
+import urllib.parse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -50,6 +52,15 @@ _KIND_WORDS = (
 )
 _WORK_LINK = re.compile(r"(?:/pull/|/issues?/|/-/issues/|\bpull request\b|\bissue\b|\bticket\b)", re.I)
 _SUMMARY_WORD = re.compile(r"[A-Za-z0-9]+")
+_PRIVATE_HOST_SUFFIXES = (
+    ".localhost", ".local", ".internal", ".intranet", ".corp",
+    ".lan", ".home", ".localdomain", ".private", ".arpa",
+)
+_CREDENTIAL_PARAM = re.compile(
+    r"(?:^|[._-])(?:token|secret|key|pass(?:word|wd)?|pwd|auth(?:orization)?|"
+    r"sig(?:nature)?|session(?:id)?|sid|cookie|jwt|bearer|credential|pat|sas|code|invite|share)(?:$|[._-])",
+    re.I,
+)
 
 
 def _noul_question(question, yes, no):
@@ -130,6 +141,40 @@ def heuristic_proof(name, summary, plugs_into):
     return declared_proof(found)
 
 
+def _has_credential_param(text):
+    if not text:
+        return False
+    for key, _ in urllib.parse.parse_qsl(text, keep_blank_values=True):
+        if _CREDENTIAL_PARAM.search(key):
+            return True
+    return False
+
+
+def _public_work_url(url, private_fn):
+    """Return scheme://host[:port]/path for a public https URL, or None if private or credential-bearing."""
+    if not isinstance(url, str) or private_fn(url) or private_fn(urllib.parse.unquote(url)):
+        return None
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except ValueError:
+        return None
+    if parts.scheme.lower() != "https" or not parts.hostname:
+        return None
+    if parts.username is not None or parts.password is not None or "@" in parts.netloc:
+        return None
+    host = parts.hostname.rstrip(".").lower()
+    if not host or "." not in host or host == "localhost" or host.endswith(_PRIVATE_HOST_SUFFIXES):
+        return None
+    try:
+        ipaddress.ip_address(host)
+        return None
+    except ValueError:
+        pass
+    if _has_credential_param(parts.query) or _has_credential_param(parts.fragment):
+        return None
+    return urllib.parse.urlunsplit(("https", parts.netloc, parts.path, "", ""))
+
+
 def first_link(listing, private_fn):
     if listing.get("stage") != "being-built":
         return None
@@ -137,12 +182,15 @@ def first_link(listing, private_fn):
     if not isinstance(links, list) or not links or not isinstance(links[0], dict):
         return None
     label, url = links[0].get("label"), links[0].get("url")
-    if not isinstance(label, str) or not isinstance(url, str) or private_fn(label) or private_fn(url):
+    if not isinstance(label, str) or private_fn(label):
         return None
-    return {"label": label, "url": url}
+    clean_url = _public_work_url(url, private_fn)
+    if clean_url is None:
+        return None
+    return {"label": label, "url": clean_url}
 
 
-def listing_state(listing, private_fn):
+def listing_state(listing, private_fn, include_work_link=True):
     """Prose Jev may see. Tags stay out, so the answer is not a copy of the tag rule."""
     state = {}
     for key in ("name", "summary", "plugs_into"):
@@ -150,16 +198,17 @@ def listing_state(listing, private_fn):
         if not isinstance(value, str) or private_fn(value):
             return None
         state[key] = value
-    link = first_link(listing, private_fn)
-    if link is not None:
-        state["first_link"] = link
+    if include_work_link:
+        link = first_link(listing, private_fn)
+        if link is not None:
+            state["first_link"] = link
     return state
 
 
-def questions_for(listing, private_fn):
+def questions_for(listing, private_fn, include_work_link=True):
     questions = dict(KIND_QUESTIONS)
     questions.update(SUMMARY_QUESTIONS)
-    if first_link(listing, private_fn) is not None:
+    if include_work_link and first_link(listing, private_fn) is not None:
         questions.update(WORK_QUESTIONS)
     return questions
 
@@ -273,12 +322,16 @@ def summary_reading(listing, answers):
             "finding": finding}
 
 
+def work_link_factors(answers):
+    return (factor_yes(_noul(answers, "is_work_item")),
+            factor_yes(_noul(answers, "is_about_this_work")))
+
+
 def work_link_reading(listing, answers):
     """The check accepts the first link as a URL only. Jev may flag a confident no."""
     if listing.get("stage") != "being-built":
         return None
-    item = factor_yes(_noul(answers, "is_work_item"))
-    about = factor_yes(_noul(answers, "is_about_this_work"))
+    item, about = work_link_factors(answers)
     if item is None or about is None:
         return {"line": f"{listing['id']}: work link not judged", "source": "fallback", "yes": None,
                 "finding": None, "fit": None}
@@ -293,28 +346,28 @@ def work_link_reading(listing, answers):
             "finding": None, "fit": fit}
 
 
-def ask_listing(listing, client, private_fn):
+def ask_listing(listing, client, private_fn, include_work_link=True):
     if client is None:
         return None
-    state = listing_state(listing, private_fn)
+    state = listing_state(listing, private_fn, include_work_link=include_work_link)
     if state is None:
         return None
     try:
-        return client.ask(state, questions_for(listing, private_fn))
+        return client.ask(state, questions_for(listing, private_fn, include_work_link=include_work_link))
     except Exception:
         return None
 
 
-def review_lines(entries, client, private_fn):
+def review_lines(entries, client, private_fn, include_work_links=False):
     lines, findings = [], []
     for entry in sorted(entries, key=lambda item: item["id"]):
-        answers = ask_listing(entry, client, private_fn)
+        answers = ask_listing(entry, client, private_fn, include_work_link=include_work_links)
         reading = proof_reading(entry, answers)
         lines.append(f"{entry['id']}: proof kind declared {reading['declared']}, "
                      f"read {reading['read']} ({reading['source']})")
         if reading["finding"]:
             findings.append("finding: " + reading["finding"])
-        work = work_link_reading(entry, answers)
+        work = work_link_reading(entry, answers if include_work_links else None)
         if work is not None:
             lines.append(work["line"])
             if work["finding"]:
@@ -328,11 +381,11 @@ def review_lines(entries, client, private_fn):
     return lines, findings
 
 
-def run(root, client, check_tree, worktree_files, private_fn):
+def run(root, client, check_tree, worktree_files, private_fn, include_work_links=False):
     failures, entries = check_tree(worktree_files(Path(root)))
     if failures:
         return 1, "\n".join(failures) + "\n"
-    lines, findings = review_lines(entries, client, private_fn)
+    lines, findings = review_lines(entries, client, private_fn, include_work_links=include_work_links)
     return (1 if findings else 0), "\n".join(lines) + "\n"
 
 

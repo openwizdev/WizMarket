@@ -605,7 +605,8 @@ def cmd_review(args):
     if here not in sys.path:
         sys.path.insert(0, here)
     import review
-    code, text = review.run(Path.cwd(), review.client_from_env(), check_tree, worktree_files, private)
+    code, text = review.run(Path.cwd(), review.client_from_env(), check_tree, worktree_files, private,
+                            include_work_links=args.public_work_links)
     sys.stdout.write(text)
     return code
 
@@ -643,9 +644,11 @@ def main(argv):
                        "the check in new process, network, IPC and host-name namespaces")
     skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
     skill.set_defaults(run=cmd_skill)
-    commands.add_parser("review", help="ask Jev about proof kind, a being-built work link, and the summary "
-                        "when TYPESAFE_API_KEY is set; otherwise keep the tag, URL, and length rules"
-                        ).set_defaults(run=cmd_review)
+    review_cmd = commands.add_parser("review", help="ask Jev about proof kind, a being-built work link, and the summary "
+                                     "when TYPESAFE_API_KEY is set; otherwise keep the tag, URL, and length rules")
+    review_cmd.add_argument("--public-work-links", action="store_true",
+                            help="confirm being-built first links are public and send their scheme, host, and path to Jev")
+    review_cmd.set_defaults(run=cmd_review)
     changed = commands.add_parser("changed-skills", help="print skill listings added or changed since a commit")
     changed.add_argument("base")
     changed.set_defaults(run=cmd_changed_skills)

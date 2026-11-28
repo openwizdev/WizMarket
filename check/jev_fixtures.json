@@ -98,16 +98,116 @@
     }
   ],
   "work_link": [
-    {"id": "github-pr", "label": "OpenWiz PR #2021", "url": "https://github.com/openwizdev/OpenWiz/pull/2021", "work_link": true},
-    {"id": "tracker-issue", "label": "Ticket", "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2", "work_link": true},
-    {"id": "docs", "label": "Docs", "url": "https://example.com/docs", "work_link": false},
-    {"id": "repo-root", "label": "Repository", "url": "https://github.com/example/repo", "work_link": false},
-    {"id": "linear", "label": "Issue", "url": "https://linear.app/team/issue/ABC-1", "work_link": true},
-    {"id": "label-only", "label": "Pull request", "url": "https://example.com/build", "work_link": true},
-    {"id": "url-only", "label": "Homepage", "url": "https://github.com/org/repo/pull/2", "work_link": true},
-    {"id": "pulley", "label": "Home", "url": "https://example.com/pulley", "work_link": false},
-    {"id": "merge-request", "label": "Merge request", "url": "https://gitlab.example.com/group/proj/-/merge_requests/4", "work_link": true},
-    {"id": "blog", "label": "Blog", "url": "https://example.com/blog/why-we-built-this", "work_link": false}
+    {
+      "id": "github-pr",
+      "name": "Conductor",
+      "summary": "Runs OpenWiz builders in Conductor cloud workspaces.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "OpenWiz PR #2021",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2021",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "tracker-issue",
+      "name": "Example harness",
+      "summary": "Example harness integration for the OpenWiz local driver.",
+      "plugs_into": "OpenWiz local driver",
+      "label": "Ticket",
+      "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "docs",
+      "name": "Example tool",
+      "summary": "An MCP server for searching project documentation.",
+      "plugs_into": "The agent's MCP servers",
+      "label": "Docs",
+      "url": "https://example.com/docs",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    },
+    {
+      "id": "repo-root",
+      "name": "Example driver",
+      "summary": "Runs OpenWiz agents in example cloud sandboxes.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "Repository",
+      "url": "https://github.com/example/repo",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    },
+    {
+      "id": "linear",
+      "name": "Linear sync skill",
+      "summary": "Syncs OpenWiz builder status updates to Linear issues.",
+      "plugs_into": "The skills an OpenWiz agent runs",
+      "label": "Issue",
+      "url": "https://linear.app/team/issue/ABC-1",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "label-only",
+      "name": "Build watcher",
+      "summary": "Tracks build status for OpenWiz agents.",
+      "plugs_into": "The agent's MCP servers",
+      "label": "Pull request",
+      "url": "https://example.com/build",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "url-only",
+      "name": "Repo harness",
+      "summary": "Runs the repo CLI as an OpenWiz local harness.",
+      "plugs_into": "OpenWiz local driver",
+      "label": "Homepage",
+      "url": "https://github.com/org/repo/pull/2",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "pulley",
+      "name": "Pulley runner",
+      "summary": "Schedules OpenWiz builder jobs across local hosts.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "Home",
+      "url": "https://example.com/pulley",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    },
+    {
+      "id": "merge-request",
+      "name": "Proj driver",
+      "summary": "Starts and stops OpenWiz builders on GitLab runners.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "Merge request",
+      "url": "https://gitlab.example.com/group/proj/-/merge_requests/4",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "blog",
+      "name": "Launch notes",
+      "summary": "Publishes OpenWiz release notes from merged PRs.",
+      "plugs_into": "The skills an OpenWiz agent runs",
+      "label": "Blog",
+      "url": "https://example.com/blog/why-we-built-this",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    }
   ],
   "summary": [
     {"id": "vague-tool", "summary": "A synthetic tool, listed: a link, not proven.", "level": 1},
