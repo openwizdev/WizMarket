@@ -1,0 +1,24 @@
+{
+  "name": "mcp-wan",
+  "summary": "Generates video with Wan AI from an MCP server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/AceDataCloud/WanMCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AceDataCloud%2Fmcp-wan"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AceDataCloud/WanMCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

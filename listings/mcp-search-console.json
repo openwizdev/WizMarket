@@ -1,0 +1,25 @@
+{
+  "name": "Search Console MCP",
+  "summary": "Pulls SEO and traffic reports from GA4, AdSense, Bing Webmaster Tools, and Google Search Console in one server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "analytics"
+  ],
+  "url": "https://github.com/saurabhsharma2u/search-console-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.saurabhsharma2u%2Fsearch-console-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/saurabhsharma2u/search-console-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

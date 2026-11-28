@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/openwizdev/WizMarket/blob/main/schema/listing.v2.json",
+  "title": "WizMarket listing v2: one listings/<id>.json file with a package block",
+  "description": "contracts/listing.v2.md is the format. It is listing v1 plus the driver package contract's package block and optional key_host block. The id and file name rule, no repeated keys, the kind rules, the receipt, the asset URL binding and the receipt binding are checked by check/check.py, not here. A listing with no package block is listing v1 and is not this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "summary",
+    "tags",
+    "url",
+    "plugs_into",
+    "publisher",
+    "stage",
+    "status",
+    "package"
+  ],
+  "properties": {
+    "name": {
+      "$ref": "#/$defs/line"
+    },
+    "summary": {
+      "$ref": "#/$defs/line",
+      "maxLength": 140
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^(?![\\s\\S]*\\n)[a-z0-9-]+$"
+      }
+    },
+    "url": {
+      "$ref": "#/$defs/https"
+    },
+    "plugs_into": {
+      "$ref": "#/$defs/line"
+    },
+    "publisher": {
+      "$ref": "#/$defs/login"
+    },
+    "stage": {
+      "enum": [
+        "available",
+        "being-built"
+      ]
+    },
+    "login": {
+      "$ref": "#/$defs/line"
+    },
+    "links": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/line"
+          },
+          "url": {
+            "$ref": "#/$defs/https"
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "listed",
+        "verified"
+      ]
+    },
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "receipt": {
+          "type": "string",
+          "pattern": "^(?![\\s\\S]*\\n)receipts/[a-z0-9-]{2,40}/[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{12}\\.txt$"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}@[0-9a-f]{40}$"
+        },
+        "check": {
+          "$ref": "#/$defs/line"
+        }
+      },
+      "dependentRequired": {
+        "source": [
+          "check"
+        ],
+        "check": [
+          "source"
+        ]
+      }
+    },
+    "package": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "driver",
+        "version",
+        "repository",
+        "commit",
+        "asset_url",
+        "sha256",
+        "kit_commit"
+      ],
+      "properties": {
+        "driver": {
+          "$ref": "#/$defs/driver"
+        },
+        "version": {
+          "$ref": "#/$defs/version"
+        },
+        "repository": {
+          "$ref": "#/$defs/repository"
+        },
+        "commit": {
+          "$ref": "#/$defs/commit"
+        },
+        "asset_url": {
+          "type": "string",
+          "pattern": "^https://github\\.com/[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/[A-Za-z0-9_-][A-Za-z0-9_.-]*/releases/download/v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)/driver\\.tar\\.gz(?![\\s\\S])"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "kit_commit": {
+          "$ref": "#/$defs/commit"
+        }
+      }
+    },
+    "key_host": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "variable",
+        "keychain"
+      ],
+      "properties": {
+        "origin": {
+          "type": "string",
+          "pattern": "^https://(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?![\\s\\S])"
+        },
+        "variable": {
+          "type": "string",
+          "pattern": "^[A-Z][A-Z0-9_]{0,63}(?![\\s\\S])"
+        },
+        "keychain": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*(?![\\s\\S])"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "const": "verified"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "proof"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "proof"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "stage"
+        ],
+        "properties": {
+          "stage": {
+            "const": "being-built"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "links"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "line": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)[^\\u0000-\\u001F\\u007F-\\u009F\\u2028\\u2029]+$"
+    },
+    "https": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)https://(?=[A-Za-z0-9.-]{1,253}(?:[:/?#]|$))(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+[A-Za-z](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?::(?:6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[1-9][0-9]{0,3}))?(?:[/?#][!-~]*)?$"
+    },
+    "login": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}$"
+    },
+    "driver": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])",
+      "maxLength": 40
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)(?![\\s\\S])"
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}(?![\\s\\S])"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}(?![\\s\\S])"
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/[A-Za-z0-9_-][A-Za-z0-9_.-]*(?![\\s\\S])"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Apollo.io",
+  "summary": "Searches B2B prospects, enriches lead records, and manages outreach sequences in Apollo.io.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/apolloio/apollo-mcp-plugin",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.apolloio%2Fapollo-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/apolloio/apollo-mcp-plugin/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

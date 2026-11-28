@@ -1,0 +1,25 @@
+{
+  "name": "NessFlow",
+  "summary": "Starts SEO site audits and reads back issues, the health score and the fixes, plus rankings and logs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability",
+    "analytics"
+  ],
+  "url": "https://github.com/NessFlow/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.nessflow%2Fmcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/NessFlow/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

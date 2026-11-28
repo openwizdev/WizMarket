@@ -1,0 +1,24 @@
+{
+  "name": "Model MCP",
+  "summary": "Connects MCP clients to live Autodesk Revit models with per-change undo and read-only mode.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/sharafutdinovdi/revit-model-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sharafutdinovdi%2Frevit-model-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/sharafutdinovdi/revit-model-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

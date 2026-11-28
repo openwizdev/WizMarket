@@ -1,0 +1,23 @@
+{
+  "name": "paprika3d (the three.js toolset for coding agents)",
+  "summary": "Screenshots, tests, inspects, and profiles WebGL and Three.js scenes built by coding agents.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Keeno-Corp/paprika3d",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.paprika3d%2Fpaprika3d"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Keeno-Corp/paprika3d/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

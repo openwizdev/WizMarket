@@ -1,0 +1,23 @@
+{
+  "name": "MCP Skills Server",
+  "summary": "Loads and serves agent skill files from a mounted local directory with hot reload.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/srprasanna/mcp-skill-hub",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.srprasanna%2Fmcp-skill-hub"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/srprasanna/mcp-skill-hub/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

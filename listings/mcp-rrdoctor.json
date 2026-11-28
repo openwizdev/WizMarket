@@ -1,0 +1,23 @@
+{
+  "name": "Research Repo Doctor",
+  "summary": "Research Repo Doctor runs an Artifact Evaluation preflight deterministically and grades run paths of research repositories.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Tom409114/research-repo-doctor",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Tom409114%2Frrdoctor"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Tom409114/research-repo-doctor/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

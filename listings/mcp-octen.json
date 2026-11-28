@@ -1,0 +1,25 @@
+{
+  "name": "octen-mcp",
+  "summary": "Converts URLs into structured Markdown with page categories, outlines, and search highlights.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/Octen-Team/octen-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Octen-Team%2Focten-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Octen-Team/octen-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

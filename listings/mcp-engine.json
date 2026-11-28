@@ -1,0 +1,24 @@
+{
+  "name": "WebLoom",
+  "summary": "Uses 104 WebLoom tools that control the user's real Chrome through CDP and browse, install, and publish Threads inside chat.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/webloomhq/engine",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.webloomhq%2Fengine"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/webloomhq/engine/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

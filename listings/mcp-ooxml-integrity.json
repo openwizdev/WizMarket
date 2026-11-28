@@ -1,0 +1,23 @@
+{
+  "name": "ooxml-integrity",
+  "summary": "ooxml-integrity inspects Word and PowerPoint files once machines finish edits, looking for missing comments, revisions, and notes.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Dmitry-Kov/ooxml-integrity",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Dmitry-Kov%2Fooxml-integrity"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Dmitry-Kov/ooxml-integrity/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

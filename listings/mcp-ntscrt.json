@@ -1,0 +1,24 @@
+{
+  "name": "NTSCRT",
+  "summary": "Applies simulated VHS, CRT, and analog television signal effects to images and video.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/finnmckenty/NTSCRT",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.finnmckenty%2Fntscrt"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/finnmckenty/NTSCRT/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Perenna",
+  "summary": "Stores durable, Git-backed memory records for AI agents with minimal overhead.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/scarletkc/Perenna",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.scarletkc%2Fperenna"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/scarletkc/Perenna/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

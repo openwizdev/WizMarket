@@ -1,0 +1,23 @@
+{
+  "name": "Health by Dr Brad",
+  "summary": "Reads and updates a personal JSON health record stored in the user's own cloud storage.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/DrBradStanfield/roadmap",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.DrBradStanfield%2Fhealth-by-dr-brad"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/DrBradStanfield/roadmap/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "x402 Bazaar Listing Monitor",
+  "summary": "Flags drops in x402 Bazaar resource listings by comparing them with the public catalog used for discovery.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ACJLabs/x402-listing-monitor",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.acjlabs%2Fx402-listing-monitor"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/ACJLabs/x402-listing-monitor"
+    }
+  ],
+  "status": "listed"
+}

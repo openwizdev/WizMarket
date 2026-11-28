@@ -1,0 +1,23 @@
+{
+  "name": "Modelmeter",
+  "summary": "Tracks sunset checks, model events, pricing, and deprecations as the AI stack changelog of record.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/modelmeters/modelmeter",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=xyz.modelmeter%2Fmodelmeter"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/modelmeters/modelmeter/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

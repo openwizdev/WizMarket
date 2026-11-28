@@ -1,0 +1,25 @@
+{
+  "name": "Nexus MCP",
+  "summary": "Nexus MCP queries Notion and Supabase together on one server built around safety.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/madhvendrasinghsolanki/Nexus-MCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.madhvendrasinghsolanki%2Fnexus-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/madhvendrasinghsolanki/Nexus-MCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

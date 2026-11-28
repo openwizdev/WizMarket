@@ -1,0 +1,24 @@
+{
+  "name": "dryrun",
+  "summary": "Analyzes PostgreSQL schemas offline from committed snapshots for linting and migration safety.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database"
+  ],
+  "url": "https://github.com/boringSQL/dryrun",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.boringSQL%2Fdryrun"
+    },
+    {
+      "label": "Licence: BSD-2-Clause",
+      "url": "https://github.com/boringSQL/dryrun/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

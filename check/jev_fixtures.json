@@ -1,0 +1,212 @@
+{
+  "kind": [
+    {
+      "id": "boat-dev",
+      "name": "boat.dev",
+      "summary": "Runs each OpenWiz builder in its own boat.dev sandbox through your own signed-in boat CLI.",
+      "plugs_into": "OpenWiz's driver v1: it starts, wakes and stops builders",
+      "tags": ["driver", "sandbox", "cloud"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "amp",
+      "name": "Amp",
+      "summary": "Amp as a harness for the OpenWiz local driver.",
+      "plugs_into": "OpenWiz local driver",
+      "tags": ["harness", "cli"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "triage",
+      "name": "Triage",
+      "summary": "Sort new issues with the triage labels; start nothing.",
+      "plugs_into": "The skills an OpenWiz agent runs",
+      "tags": ["skill", "wizskills", "triage"],
+      "prose_kind": "skill"
+    },
+    {
+      "id": "example-tool",
+      "name": "Example tool",
+      "summary": "A synthetic tool, listed: a link, not proven.",
+      "plugs_into": "The agent's MCP servers",
+      "tags": ["mcp-server"],
+      "prose_kind": "none"
+    },
+    {
+      "id": "example-driver",
+      "name": "Example driver",
+      "summary": "A synthetic driver that runs OpenWiz agents on an example host.",
+      "plugs_into": "The OpenWiz driver interface",
+      "tags": ["driver", "example-host"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "example-skill",
+      "name": "Example skill",
+      "summary": "A synthetic skill with its own check.",
+      "plugs_into": "The skills a fleet agent runs",
+      "tags": ["skill", "example"],
+      "prose_kind": "skill"
+    },
+    {
+      "id": "example-driver-kit",
+      "name": "Example driver kit",
+      "summary": "A synthetic driver that ships its own skill.",
+      "plugs_into": "The OpenWiz driver interface",
+      "tags": ["driver", "skill"],
+      "prose_kind": "both"
+    },
+    {
+      "id": "cursor-cloud-agents",
+      "name": "Cursor Cloud Agents",
+      "summary": "Starts, follows up with, and stops Cursor cloud agents from OpenWiz.",
+      "plugs_into": "OpenWiz driver v1",
+      "tags": ["driver", "cloud"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "mislabeled-driver",
+      "name": "Local runner",
+      "summary": "A driver that starts and stops OpenWiz agents on this machine.",
+      "plugs_into": "OpenWiz driver v1",
+      "tags": ["mcp-server"],
+      "prose_kind": "receipt"
+    },
+    {
+      "id": "skill-authors-note",
+      "name": "Skill author notes",
+      "summary": "Shared notes for skill authors writing listings.",
+      "plugs_into": "The agent's MCP servers",
+      "tags": ["mcp-server"],
+      "prose_kind": "none"
+    },
+    {
+      "id": "mcp-tagged-driver",
+      "name": "Browser tools",
+      "summary": "An MCP server that exposes browser tools to an agent.",
+      "plugs_into": "The agent's MCP servers",
+      "tags": ["driver"],
+      "prose_kind": "none"
+    },
+    {
+      "id": "harness-and-skill",
+      "name": "Harness kit",
+      "summary": "A harness and the skill it runs.",
+      "plugs_into": "OpenWiz local driver",
+      "tags": ["harness"],
+      "prose_kind": "both"
+    }
+  ],
+  "work_link": [
+    {
+      "id": "github-pr",
+      "name": "Conductor",
+      "summary": "Runs OpenWiz builders in Conductor cloud workspaces.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "OpenWiz PR #2021",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2021",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "tracker-issue",
+      "name": "Example harness",
+      "summary": "Example harness integration for the OpenWiz local driver.",
+      "plugs_into": "OpenWiz local driver",
+      "label": "Ticket",
+      "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "docs",
+      "name": "Example tool",
+      "summary": "An MCP server for searching project documentation.",
+      "plugs_into": "The agent's MCP servers",
+      "label": "Docs",
+      "url": "https://example.com/docs",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    },
+    {
+      "id": "repo-root",
+      "name": "Example driver",
+      "summary": "Runs OpenWiz agents in example cloud sandboxes.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "Repository",
+      "url": "https://github.com/example/repo",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    },
+    {
+      "id": "linear",
+      "name": "Linear sync skill",
+      "summary": "Syncs OpenWiz builder status updates to Linear issues.",
+      "plugs_into": "The skills an OpenWiz agent runs",
+      "label": "Issue",
+      "url": "https://linear.app/team/issue/ABC-1",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "label-only",
+      "name": "Build watcher",
+      "summary": "Tracks build status for OpenWiz agents.",
+      "plugs_into": "The agent's MCP servers",
+      "label": "Pull request",
+      "url": "https://example.com/build",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "url-only",
+      "name": "Repo harness",
+      "summary": "Runs the repo CLI as an OpenWiz local harness.",
+      "plugs_into": "OpenWiz local driver",
+      "label": "Homepage",
+      "url": "https://github.com/org/repo/pull/2",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "pulley",
+      "name": "Pulley runner",
+      "summary": "Schedules OpenWiz builder jobs across local hosts.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "Home",
+      "url": "https://example.com/pulley",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    },
+    {
+      "id": "merge-request",
+      "name": "Proj driver",
+      "summary": "Starts and stops OpenWiz builders on GitLab runners.",
+      "plugs_into": "OpenWiz driver v1",
+      "label": "Merge request",
+      "url": "https://gitlab.example.com/group/proj/-/merge_requests/4",
+      "is_work_item": true,
+      "is_about_this_work": true,
+      "work_link": true
+    },
+    {
+      "id": "blog",
+      "name": "Launch notes",
+      "summary": "Publishes OpenWiz release notes from merged PRs.",
+      "plugs_into": "The skills an OpenWiz agent runs",
+      "label": "Blog",
+      "url": "https://example.com/blog/why-we-built-this",
+      "is_work_item": false,
+      "is_about_this_work": false,
+      "work_link": false
+    }
+  ]
+}

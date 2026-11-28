@@ -1,0 +1,23 @@
+{
+  "name": "Gachi Data API — Japan Station & Accessibility Data",
+  "summary": "Supplies AI agents with deep, obscure Japanese data on stations, accessibility, and hazards, and puts English first.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/eng213035/gachi-data-api",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.gachi-tokusuru%2Fjapan-data-api"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/eng213035/gachi-data-api/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

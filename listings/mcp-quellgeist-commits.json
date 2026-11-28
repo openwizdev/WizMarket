@@ -1,0 +1,24 @@
+{
+  "name": "quellgeist-commits",
+  "summary": "Exposes get_recent_commits on a local Quellgeist triage deploy log, with no writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability"
+  ],
+  "url": "https://github.com/Rajeev-Shyam/Quellgeist",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Rajeev-Shyam%2Fquellgeist-commits"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Rajeev-Shyam/Quellgeist/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

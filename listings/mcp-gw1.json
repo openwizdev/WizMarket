@@ -1,0 +1,24 @@
+{
+  "name": "Guild Wars 1 Build Compiler",
+  "summary": "Compiles read-only Guild Wars 1 builds using skill data plus encode and decode of template code, validation, and a hero roster.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/Graphmaxer/gw1-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Graphmaxer%2Fgw1-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Graphmaxer/gw1-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

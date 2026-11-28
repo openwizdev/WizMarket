@@ -1,0 +1,25 @@
+{
+  "name": "truecopy",
+  "summary": "Extracts tables, figures, and dates from PDF, Word, CSV, or pasted text, then gives a verdict about that reading.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "design"
+  ],
+  "url": "https://github.com/truecopydev/truecopy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.truecopydev%2Ftruecopy"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/truecopydev/truecopy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

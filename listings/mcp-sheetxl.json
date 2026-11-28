@@ -1,0 +1,25 @@
+{
+  "name": "sheetxl",
+  "summary": "Reads, queries, calculates, and audits .xlsx, .sxl, and .csv spreadsheets for agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security",
+    "data"
+  ],
+  "url": "https://github.com/sheetxl/sheetxl",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sheetxl%2Fsheetxl"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/sheetxl/sheetxl/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

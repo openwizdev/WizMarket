@@ -1,0 +1,24 @@
+{
+  "name": "Azure DevOps Server (formerly TFS)",
+  "summary": "Integrates on-premises TFS / Azure DevOps Server repositories and work items (not cloud DevOps).",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud"
+  ],
+  "url": "https://github.com/zwitbaum/mcp-devops-on-prem",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zwitbaum%2Fmcp-devops-on-prem"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/zwitbaum/mcp-devops-on-prem/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

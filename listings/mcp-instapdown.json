@@ -1,0 +1,25 @@
+{
+  "name": "instapdown-mcp",
+  "summary": "Offers 16 tools for Instagram creators: downloaders, an engagement audit, hashtags, hooks, when to post, and a calendar.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "communication"
+  ],
+  "url": "https://github.com/farukkolip/instapdown-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.farukkolip%2Finstapdown-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/farukkolip/instapdown-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

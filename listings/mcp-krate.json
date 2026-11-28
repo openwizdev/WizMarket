@@ -1,0 +1,24 @@
+{
+  "name": "Krate",
+  "summary": "Builds and checks shareable browser-runnable .krate web applications on Wasmtime.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/incyashraj/krate",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=tech.krate%2Fkrate"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/incyashraj/krate"
+    }
+  ],
+  "status": "listed"
+}

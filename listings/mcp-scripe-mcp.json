@@ -1,0 +1,23 @@
+{
+  "name": "Scripe",
+  "summary": "Scripe plans, drafts, schedules, and measures LinkedIn posts for a team from an AI assistant.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Scripe-GmbH/scripe-agent",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.scripe%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Scripe-GmbH/scripe-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

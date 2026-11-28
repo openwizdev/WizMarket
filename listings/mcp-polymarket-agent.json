@@ -1,0 +1,24 @@
+{
+  "name": "polymarket-agent-mcp",
+  "summary": "Offers 48 tools for Polymarket market discovery, backtesting, copy trading, and order execution.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/demwick/polymarket-agent-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.demwick%2Fpolymarket-agent-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/demwick/polymarket-agent-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

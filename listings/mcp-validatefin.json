@@ -1,0 +1,23 @@
+{
+  "name": "ValidateFin",
+  "summary": "ValidateFin checks IBAN, ACH, camt, XRechnung, Peppol, UBL, and SEPA files on the machine so no data leaves it.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/elnicaise/validatefin-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.elnicaise%2Fvalidatefin"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/elnicaise/validatefin-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

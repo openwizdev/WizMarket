@@ -1,0 +1,23 @@
+{
+  "name": "Qiskit Code Assistant MCP Server",
+  "summary": "Connects LLMs to Qiskit Code Assistant for quantum computing code completion.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Qiskit/mcp-servers",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Qiskit%2Fqiskit-code-assistant-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Qiskit/mcp-servers/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Iron Suite — Zero-Cloud SQLite FTS5 Memory Hub",
+  "summary": "Runs Iron Suite as a zero-cloud SQLite FTS5 memory hub over stdio, with byte budgets, a drift audit, and a Second Brain UI.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/arielonoriaga/iron-suite",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.arielonoriaga%2Firon-suite"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/arielonoriaga/iron-suite/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

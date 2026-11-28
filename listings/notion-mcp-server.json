@@ -1,0 +1,15 @@
+{
+  "name": "Notion MCP Server",
+  "summary": "Official hosted Notion MCP server using OAuth for agents to search workspaces, create and edit pages, and manage databases.",
+  "tags": [
+    "mcp-server",
+    "notion",
+    "notes",
+    "productivity"
+  ],
+  "url": "https://developers.notion.com/docs/mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

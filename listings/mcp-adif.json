@@ -1,0 +1,24 @@
+{
+  "name": "adif-mcp",
+  "summary": "Validates and parses amateur radio ADIF 3.1.8 logs with enumerations and geospatial checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability"
+  ],
+  "url": "https://github.com/qso-graph/adif-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.qso-graph%2Fadif-mcp"
+    },
+    {
+      "label": "Licence: GPL-3.0",
+      "url": "https://github.com/qso-graph/adif-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

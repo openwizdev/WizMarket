@@ -1,0 +1,24 @@
+{
+  "name": "Story Mapper",
+  "summary": "Offers a user-story map and kanban in a live browser UI so AI agents and people plan one shared backlog through MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/TomAtAP/storymapper",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.TomAtAP%2Fstorymapper"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/TomAtAP/storymapper/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

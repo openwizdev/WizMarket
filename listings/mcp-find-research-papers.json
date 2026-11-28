@@ -1,0 +1,24 @@
+{
+  "name": "Find Research Papers",
+  "summary": "Searches open academic metadata across PubMed, Crossref, arXiv, OpenAlex, and Semantic Scholar.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/surendranb/find-research-papers-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.surendranb%2Ffind-research-papers-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/surendranb/find-research-papers-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

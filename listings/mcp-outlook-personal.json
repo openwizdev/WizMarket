@@ -1,0 +1,25 @@
+{
+  "name": "Outlook Personal MCP",
+  "summary": "Fully controls a personal mailbox and calendar on Outlook.com through Microsoft Graph.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "security"
+  ],
+  "url": "https://github.com/salahawad/outlook-personal-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.salahawad%2Foutlook-personal-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/salahawad/outlook-personal-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "AgentServices",
+  "summary": "Exposes 52 paid endpoints on x402 so AI agents can query crypto, data, DeFi, and market intelligence.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/vbkotecha/agentservices-api",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=to.agentservices%2Fagentservices"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/vbkotecha/agentservices-api/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

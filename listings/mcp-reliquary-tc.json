@@ -1,0 +1,25 @@
+{
+  "name": "Reliquary-TC",
+  "summary": "Connects agents to Obsidian vaults with hybrid search, Markdown memory, and write approvals.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "security"
+  ],
+  "url": "https://github.com/The-40-Thieves/reliquary-tc",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.The-40-Thieves%2Freliquary-tc"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/The-40-Thieves/reliquary-tc/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

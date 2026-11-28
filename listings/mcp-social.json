@@ -1,0 +1,23 @@
+{
+  "name": "PostLake",
+  "summary": "Schedules, replies, publishes, and measures social posts across YouTube, TikTok, Instagram, LinkedIn, and X.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/PostLake/postlake-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.postlake%2Fsocial"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/PostLake/postlake-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

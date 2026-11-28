@@ -1,0 +1,24 @@
+{
+  "name": "dep-scout",
+  "summary": "Helps AI agents locate and judge mature packages in 6 ecosystems rather than rebuilding them.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/unievolver/dep-scout",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.unievolver%2Fdep-scout"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/unievolver/dep-scout/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

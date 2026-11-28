@@ -1,0 +1,23 @@
+{
+  "name": "Agent Referee",
+  "summary": "Breaks ties neutrally between AI agents and reviews an agent's output under seal, attaching signed receipts.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ccheez34/agent-referee-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ccheez34%2Fagent-referee"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ccheez34/agent-referee-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

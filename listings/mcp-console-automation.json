@@ -1,0 +1,24 @@
+{
+  "name": "mcp-console-automation",
+  "summary": "Automates and monitors interactive terminal and console applications from AI clients.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability"
+  ],
+  "url": "https://github.com/ooples/mcp-console-automation",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ooples%2Fmcp-console-automation"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ooples/mcp-console-automation/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

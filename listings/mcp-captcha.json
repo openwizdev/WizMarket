@@ -1,0 +1,25 @@
+{
+  "name": "captcha-mcp",
+  "summary": "Charges AI agents for each call without requiring accounts, where a PoW solve is the free tier and Lightning is the paid tier.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security",
+    "developer-tools"
+  ],
+  "url": "https://github.com/zekebuilds-lab/captcha-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zekebuilds-lab%2Fcaptcha-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/zekebuilds-lab/captcha-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

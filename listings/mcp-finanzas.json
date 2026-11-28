@@ -1,0 +1,23 @@
+{
+  "name": "finanzas-mcp",
+  "summary": "Offers 25 finance calculators in Spanish covering Chilean tax, DuPont, VAN/TIR, DCF, WACC, and ratios.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/MITDEVPRO/finanzas-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MITDEVPRO%2Ffinanzas-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/MITDEVPRO/finanzas-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Renyi",
+  "summary": "Checks, formats, runs, and tests Renyi programs, and shows a project map of effects, diffs, and chunks.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/renyi-lang/renyi",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=org.renyi-lang%2Frenyi"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/renyi-lang/renyi/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

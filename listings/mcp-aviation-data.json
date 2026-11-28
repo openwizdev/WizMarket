@@ -1,0 +1,25 @@
+{
+  "name": "航班管家航空数据 MCP | Flight Master Aviation Data MCP",
+  "summary": "Provides official Flight Master DAST data for flight status, weather, tracks, and delay risk over remote HTTP or npm STDIO.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "developer-tools"
+  ],
+  "url": "https://github.com/flight-master-dast/aviation-data-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.flight-master-dast%2Faviation-data-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/flight-master-dast/aviation-data-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

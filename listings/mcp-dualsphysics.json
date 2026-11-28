@@ -1,0 +1,23 @@
+{
+  "name": "DualSPHysics MCP",
+  "summary": "Gives agents tools for DualSPHysics SPH work: creating cases, running them, post-processing, and validation.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/vegetableno1/DualSPHysics-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.vegetableno1%2Fdualsphysics"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/vegetableno1/DualSPHysics-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

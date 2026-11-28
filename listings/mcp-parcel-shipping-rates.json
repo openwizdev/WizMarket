@@ -1,0 +1,23 @@
+{
+  "name": "SMKlog Parcel Shipping Rates",
+  "summary": "Quotes DHL, FedEx, UPS, and USPS parcel prices from the US to domestic routes, Canada, the UK, Germany, and Australia, without a scale.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/smklog/parcel-shipping-rates-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.smklog%2Fparcel-shipping-rates"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/smklog/parcel-shipping-rates-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

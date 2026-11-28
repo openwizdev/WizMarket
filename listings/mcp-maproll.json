@@ -1,0 +1,24 @@
+{
+  "name": "maproll",
+  "summary": "Generates static map images exposed as embeddable URLs for documents and web pages.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "data"
+  ],
+  "url": "https://github.com/maproll-io/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.maproll%2Fmaproll"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/maproll-io/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

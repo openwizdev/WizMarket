@@ -1,0 +1,23 @@
+{
+  "name": "Overleaf Web MCP",
+  "summary": "Reads, edits, compiles, and reviews Overleaf LaTeX projects using a signed-in browser session.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/mhmdaskari/overleaf-web-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mhmdaskari%2Foverleaf-web-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mhmdaskari/overleaf-web-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "app-store-connect-mcp",
+  "summary": "Handles apps and TestFlight in App Store Connect, plus reviews, sales reports, and users on the team.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/chrischall/app-store-connect-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.chrischall%2Fapp-store-connect-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/chrischall/app-store-connect-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

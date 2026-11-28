@@ -1,0 +1,25 @@
+{
+  "name": "Corvus",
+  "summary": "Inspects, decompiles, diffs, and patches PE, ELF, Mach-O, and .NET executables for reverse-engineering workflows.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "security"
+  ],
+  "url": "https://github.com/Albasha0x0/Corvus",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Albasha0x0%2Fcorvus"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Albasha0x0/Corvus/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

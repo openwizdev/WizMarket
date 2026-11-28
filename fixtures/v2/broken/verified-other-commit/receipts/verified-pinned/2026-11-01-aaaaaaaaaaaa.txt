@@ -1,0 +1,14 @@
+# listing: verified-pinned
+# host: example-host
+# driver: example-owner/verified-pinned@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+# kit: openwizdev/OpenWiz@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+# harness: Example Harness 1.0
+# model: example-model
+# date: 2026-11-01
+# run by: example-runner
+pass version: openwiz:records v1, and the schema is driver v1
+pass start: the run posted builder status note <note>
+pass wake: the run edited builder status note <note>
+pass stop: the run ended, and a wake after it is refused
+pass token: no login or token passed through the driver
+Result: 5 of 5 pass

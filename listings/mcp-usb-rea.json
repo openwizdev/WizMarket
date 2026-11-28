@@ -1,0 +1,23 @@
+{
+  "name": "usb-rea",
+  "summary": "Captures USB device traffic to infer protocols and scaffold Python libusb drivers.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/emirmrkaljevic/usb-rea",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.emirmrkaljevic%2Fusb-rea"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/emirmrkaljevic/usb-rea/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

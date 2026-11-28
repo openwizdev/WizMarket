@@ -1,0 +1,25 @@
+{
+  "name": "SearXNG MCP Server",
+  "summary": "Connects MCP clients to a self-hosted SearXNG metasearch engine with 14 search and fetch tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "design"
+  ],
+  "url": "https://github.com/bumbaRasch/searxng-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bumbaRasch%2Fsearxng-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bumbaRasch/searxng-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

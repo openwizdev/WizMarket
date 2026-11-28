@@ -1,0 +1,23 @@
+{
+  "name": "Telenow — AI Phone Calls & Voice Agents",
+  "summary": "Places calls, runs calling campaigns, and builds voice agents using numbers the user owns at Telenow.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/TelenowAI/Telenow-AI-MCP",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.telenow%2Ftelenow"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/TelenowAI/Telenow-AI-MCP/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

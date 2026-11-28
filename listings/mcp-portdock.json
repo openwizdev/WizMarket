@@ -1,0 +1,24 @@
+{
+  "name": "PortDock MCP",
+  "summary": "PortDock MCP inspects Windows COM ports without writing to hardware, covers Modbus plus MC and SCPI, and writes only to local simulators.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability"
+  ],
+  "url": "https://github.com/portdock/PortDock",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.portdock%2Fportdock-mcp"
+    },
+    {
+      "label": "Licence: GPL-3.0",
+      "url": "https://github.com/portdock/PortDock/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "lightroom-agent",
+  "summary": "Allows an AI agent to export, mask, develop, and cull photos in Lightroom Classic, with the render checked.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/fadedDexofan/lightroom-agent",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fadedDexofan%2Flightroom-agent"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/fadedDexofan/lightroom-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

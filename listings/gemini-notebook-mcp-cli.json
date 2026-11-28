@@ -1,0 +1,15 @@
+{
+  "name": "Gemini Notebook MCP",
+  "summary": "MCP server and CLI for programmatic access to Gemini Notebook (formerly NotebookLM) research notebooks. MIT.",
+  "tags": [
+    "mcp-server",
+    "notebooklm",
+    "notes",
+    "productivity"
+  ],
+  "url": "https://github.com/jacob-bd/gemini-notebook-mcp-cli",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

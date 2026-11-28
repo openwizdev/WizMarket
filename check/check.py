@@ -1,6 +1,7 @@
 import argparse
 import datetime
 import json
+import math
 import os
 import pwd
 import re
@@ -13,9 +14,13 @@ import unicodedata
 from pathlib import Path, PurePosixPath
 
 SCHEMA = json.loads((Path(__file__).resolve().parent.parent / "schema" / "listing.v1.json").read_text())
+V2_SCHEMA = json.loads((Path(__file__).resolve().parent.parent / "schema" / "listing.v2.json").read_text())
 PROPS = SCHEMA["properties"]
 DEFS = SCHEMA["$defs"]
 FIELDS = set(PROPS)
+V2_FIELDS = set(V2_SCHEMA["properties"])
+PACKAGE_SCHEMA = V2_SCHEMA["properties"]["package"]
+KEY_HOST_SCHEMA = V2_SCHEMA["properties"]["key_host"]
 REQUIRED = SCHEMA["required"]
 LINE = re.compile(DEFS["line"]["pattern"])
 HTTPS = re.compile(DEFS["https"]["pattern"])
@@ -25,9 +30,25 @@ RECEIPT_PATH = re.compile(PROPS["proof"]["properties"]["receipt"]["pattern"])
 SOURCE = re.compile(PROPS["proof"]["properties"]["source"]["pattern"])
 ID = re.compile(r"[a-z0-9-]{2,40}")
 HOST = re.compile(r"https://([^:/?#]*)")
-IDN_REFUSED = (stringprep.in_table_a1, stringprep.in_table_b1, stringprep.in_table_c12, stringprep.in_table_c22,
+IDN_REFUSED = (stringprep.in_table_b1, stringprep.in_table_c12, stringprep.in_table_c22,
                stringprep.in_table_c3, stringprep.in_table_c4, stringprep.in_table_c5, stringprep.in_table_c6,
                stringprep.in_table_c7, stringprep.in_table_c8, stringprep.in_table_c9)
+# RFC 5892's exception list. True is PVALID; the rest are CONTEXTJ, CONTEXTO or DISALLOWED.
+IDNA2008_EXCEPTION = {
+    0x00DF: True, 0x03C2: True, 0x06FD: True, 0x06FE: True, 0x0F0B: True, 0x3007: True,
+    0x00B7: False, 0x0375: False, 0x05F3: False, 0x05F4: False, 0x0640: False, 0x07FA: False, 0x30FB: False,
+    **{cp: False for cp in (*range(0x0660, 0x066A), *range(0x06F0, 0x06FA), *range(0x3031, 0x3036))},
+    0x302E: False, 0x302F: False, 0x303B: False,
+}
+IDNA2008_IGNORABLE = (
+    (0x00AD, 0x00AD), (0x034F, 0x034F), (0x061C, 0x061C), (0x115F, 0x1160), (0x17B4, 0x17B5),
+    (0x180B, 0x180F), (0x200B, 0x200F), (0x202A, 0x202E), (0x2060, 0x206F), (0x3164, 0x3164),
+    (0xFE00, 0xFE0F), (0xFEFF, 0xFEFF), (0xFFA0, 0xFFA0), (0xFFF0, 0xFFF8), (0x1BCA0, 0x1BCA3),
+    (0x1D173, 0x1D17A), (0xE0000, 0xE001F), (0xE0020, 0xE007F), (0xE0080, 0xE00FF),
+    (0xE0100, 0xE01EF), (0xE01F0, 0xE0FFF),
+)
+IDNA2008_BLOCKS = ((0x20D0, 0x20FF), (0x1D100, 0x1D1FF), (0x1D200, 0x1D24F))
+IDNA2008_LETTERS = {"Ll", "Lu", "Lo", "Nd", "Lm", "Mn", "Mc"}
 IDN_INVISIBLE = "\u115f\u1160\u17b4\u17b5\u3002"
 BIDI_RTL = {"R", "AL", "AN", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
 BIDI_LTR = {"L", "EN", "ES", "CS", "ET", "ON", "BN", "NSM"}
@@ -149,6 +170,29 @@ def is_line(value):
     return isinstance(value, str) and LINE.fullmatch(value) is not None
 
 
+def idna2008_pvalid(cp):
+    """RFC 5892 PVALID, using this Python's Unicode and that RFC's exception list."""
+    marked = IDNA2008_EXCEPTION.get(cp)
+    if marked is not None:
+        return marked
+    character = chr(cp)
+    category = unicodedata.category(character)
+    noncharacter = 0xFDD0 <= cp <= 0xFDEF or (cp & 0xFFFE) == 0xFFFE
+    if category == "Cn" and not noncharacter:
+        return False
+    if cp in (0x200C, 0x200D):
+        return False
+    normalized = unicodedata.normalize("NFKC", character)
+    if unicodedata.normalize("NFKC", normalized.casefold()) != character:
+        return False
+    if any(start <= cp <= stop for start, stop in (*IDNA2008_IGNORABLE, *IDNA2008_BLOCKS)):
+        return False
+    name = unicodedata.name(character, "")
+    if name.startswith(("HANGUL CHOSEONG ", "HANGUL JUNGSEONG ", "HANGUL JONGSEONG ")):
+        return False
+    return category in IDNA2008_LETTERS
+
+
 def idn_label(label):
     code = label[4:]
     try:
@@ -167,11 +211,25 @@ def idn_label(label):
     for c in text:
         if c.isascii():
             continue
+        # A.1 is unassigned in Unicode 3.2, so Nameprep's tables are not about it.
+        # map_table_b2 uses str.lower(), which is not IDNA casefold: Cherokee
+        # U+13F5 casefolds to itself and lower() does not.
+        if stringprep.in_table_a1(c):
+            if not idna2008_pvalid(ord(c)):
+                return None
+            continue
         if any(table(c) for table in IDN_REFUSED) or old.normalize("NFKC", c) != c or c in IDN_INVISIBLE:
             return None
         if c not in "\u00df\u03c2" and (stringprep.map_table_b2(c) != c or unicodedata.normalize("NFKC", c.casefold()) != c):
             return None
     return text
+
+
+def bidi_classes(classes):
+    """Bidi class, falling back when Unicode 3.2 left the code point unassigned."""
+    def kind(c):
+        return classes(c) or unicodedata.bidirectional(c)
+    return kind
 
 
 def bidi_label(text, classes):
@@ -193,8 +251,9 @@ def idn_host(host):
     if None in texts:
         return False
     for classes in (unicodedata.ucd_3_2_0.bidirectional, unicodedata.bidirectional):
-        if any(classes(c) in ("R", "AL", "AN") for text in texts for c in text):
-            if not all(bidi_label(text, classes) for text in texts):
+        kind = bidi_classes(classes)
+        if any(kind(c) in ("R", "AL", "AN") for text in texts for c in text):
+            if not all(bidi_label(text, kind) for text in texts):
                 return False
     return True
 
@@ -205,9 +264,89 @@ def check_https(failures, path, name, value):
                      "write https://, a DNS host, an optional port, then a path, query or fragment of printable ASCII")
 
 
+def field_schema(prop):
+    if "$ref" in prop:
+        merged = dict(V2_SCHEMA["$defs"][prop["$ref"].rsplit("/", 1)[-1]])
+        merged.update({key: value for key, value in prop.items() if key != "$ref"})
+        return merged
+    return prop
+
+
+def matches(prop, value):
+    prop = field_schema(prop)
+    if not isinstance(value, str):
+        return False
+    if "maxLength" in prop and len(value) > prop["maxLength"]:
+        return False
+    if "pattern" in prop and re.fullmatch(prop["pattern"], value) is None:
+        return False
+    return "const" not in prop or value == prop["const"]
+
+
+def check_v2(failures, path, data, tags):
+    """A listing with package or key_host is v2. Returns its package when the block is one this check can bind."""
+    if "package" not in data and "key_host" not in data:
+        return None
+    if tags is not None and not (set(tags) & {"driver", "harness"}):
+        failures.add(path, '"package" is only for a listing tagged driver or harness',
+                     "remove package and key_host, or add the driver or harness tag")
+        return None
+    if "package" not in data:
+        failures.add(path, '"key_host" needs a package block',
+                     "add the package block the driver package contract defines, or remove key_host")
+        return None
+    package = data["package"]
+    keys = set(PACKAGE_SCHEMA["properties"])
+    if not isinstance(package, dict) or set(package) != keys:
+        failures.add(path, '"package" must hold exactly ' + ", ".join(sorted(keys)),
+                     "use the driver package contract's package block")
+        return None
+    shape = [key for key in sorted(keys - {"asset_url"}) if not matches(PACKAGE_SCHEMA["properties"][key], package[key])]
+    if shape:
+        for key in shape:
+            failures.add(path, f'"package.{key}" is not the shape the driver package contract defines',
+                         "fix it to that contract's package block")
+        return None
+    expected = f"https://github.com/{package['repository']}/releases/download/v{package['version']}/driver.tar.gz"
+    if package.get("asset_url") != expected:
+        failures.add(path, '"package.asset_url" is not a release asset of the listed repository',
+                     "make it the package's release asset")
+        return None
+    if "key_host" in data:
+        host, host_keys = data["key_host"], set(KEY_HOST_SCHEMA["properties"])
+        if not isinstance(host, dict) or set(host) != host_keys:
+            failures.add(path, '"key_host" must hold exactly ' + ", ".join(sorted(host_keys)),
+                         "use the driver package contract's key_host block")
+            return None
+        bad = [key for key in sorted(host_keys) if not matches(KEY_HOST_SCHEMA["properties"][key], host[key])]
+        if bad:
+            for key in bad:
+                failures.add(path, f'"key_host.{key}" is not the shape the driver package contract defines',
+                             "use an https origin, a variable name and a keychain entry, never a key")
+            return None
+    return package
+
+
+def bind_package_receipt(failures, path, package, header):
+    if not header:
+        return
+    driver = f"{package['repository']}@{package['commit']}"
+    if "driver" in header and header["driver"] != driver:
+        failures.add(path, 'the receipt\'s "# driver:" line must name the package\'s repository and commit',
+                     "use a receipt for this package's repository and commit")
+    kit = f"openwizdev/OpenWiz@{package['kit_commit']}"
+    if "kit" in header and header["kit"] != kit:
+        failures.add(path, f'the receipt\'s "# kit:" line must be "{kit}", the package\'s kit commit',
+                     "use a receipt for this package's kit commit")
+
+
 def check_fields(failures, path, data):
-    for key in sorted(set(data) - FIELDS):
-        failures.add(path, f'unknown field "{shown(key, "key")}"', f"remove it: listing.v1 has only {', '.join(sorted(FIELDS))}")
+    v2 = {"package", "key_host"} & set(data)
+    fields = V2_FIELDS if v2 else FIELDS
+    for key in sorted(set(data) - fields):
+        contract = "listing.v2" if v2 else "listing.v1"
+        failures.add(path, f'unknown field "{shown(key, "key")}"',
+                     f"remove it: {contract} has only {', '.join(sorted(fields))}")
     for key in REQUIRED:
         if key not in data:
             failures.add(path, f'missing field "{key}"', "add it")
@@ -326,7 +465,7 @@ def check_receipt(failures, path, listing_id, data, fix):
         name = f"{header['date']}-{header['driver'].rsplit('@', 1)[1][:12]}.txt"
         if PurePosixPath(path).name != name:
             failures.add(path, f"file name must be {name}, from its # date: and # driver: lines", fix)
-    return header.get("date")
+    return header
 
 
 def valid_date(value):
@@ -406,6 +545,7 @@ def check_tree(files):
             failures.add(path, "must be one JSON object", "fix the JSON")
             continue
         tags = check_fields(failures, path, data)
+        package = check_v2(failures, path, data, tags)
         proof = check_proof(failures, path, listing_id, data, tags)
         if proof is not None and "receipt" in proof:
             if files.get(proof["receipt"]) is None:
@@ -413,18 +553,23 @@ def check_tree(files):
                              FALSE_VERIFIED_FIX)
             else:
                 referenced.add(proof["receipt"])
-        listings.append((listing_id, data, proof))
-    dates = {}
+        listings.append((path, listing_id, data, proof, package))
+    headers = {}
     for path in sorted(p for p, d in files.items() if RECEIPT_PATH.fullmatch(p) and d is not None):
         fix = FALSE_VERIFIED_FIX if path in referenced else UNREFERENCED_FIX
-        dates[path] = check_receipt(failures, path, PurePosixPath(path).parts[1], files[path], fix)
+        headers[path] = check_receipt(failures, path, PurePosixPath(path).parts[1], files[path], fix)
     entries = []
-    for listing_id, data, proof in listings:
+    for path, listing_id, data, proof, package in listings:
         entry = {**data, "id": listing_id}
+        if package is not None:
+            entry["contract"] = "listing.v2"
+            if proof is not None and "receipt" in proof and proof["receipt"] in referenced:
+                bind_package_receipt(failures, path, package, headers.get(proof["receipt"]))
         if proof is not None:
             entry["proof"] = {}
             if "receipt" in proof and proof["receipt"] in referenced:
-                entry["proof"]["receipt"] = {"path": proof["receipt"], "date": dates[proof["receipt"]]}
+                header = headers.get(proof["receipt"]) or {}
+                entry["proof"]["receipt"] = {"path": proof["receipt"], "date": header.get("date")}
             if "source" in proof:
                 repo, commit = proof["source"].split("@")
                 entry["proof"]["skill"] = {"source": proof["source"], "check": proof["check"],
@@ -600,6 +745,42 @@ def cmd_skill(args):
     return 0
 
 
+def positive_seconds(value):
+    try:
+        seconds = float(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError("must be a positive number of seconds") from error
+    if not math.isfinite(seconds) or seconds <= 0:
+        raise argparse.ArgumentTypeError("must be a positive number of seconds")
+    return seconds
+
+
+def cmd_review(args):
+    for listing_id in args.ids:
+        if not ID.fullmatch(listing_id):
+            print(f"review {shown(listing_id)}: refused, not a listing id")
+            return 1
+    here = str(Path(__file__).resolve().parent)
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import review
+    root = Path.cwd()
+    files_fn = (lambda r: commit_files(r, args.rev)) if args.rev else worktree_files
+    code, text = review.run(
+        root,
+        review.client_from_env(),
+        check_tree,
+        files_fn,
+        private,
+        include_work_links=args.public_work_links,
+        ids=args.ids or None,
+        include_unpublished=args.include_unpublished or bool(args.rev),
+        deadline=args.deadline,
+    )
+    sys.stdout.write(text)
+    return code
+
+
 def cmd_changed_skills(args):
     root = Path.cwd()
     diff = git(root, "diff", "--name-only", "--no-renames", "--diff-filter=AMT", args.base, "HEAD", "--", "listings")
@@ -618,7 +799,7 @@ def cmd_changed_skills(args):
 
 
 def main(argv):
-    parser = argparse.ArgumentParser(prog="check.py", description="WizMarket's listing.v1 check")
+    parser = argparse.ArgumentParser(prog="check.py", description="WizMarket's listing check")
     commands = parser.add_subparsers(dest="command", required=True)
     check = commands.add_parser("check", help="check every listing and receipt")
     check.add_argument("--base", help="also refuse a receipt edited or deleted since this commit")
@@ -628,11 +809,33 @@ def main(argv):
     skill = commands.add_parser("skill", help="run a skill listing's check at its pinned commit")
     skill.add_argument("id")
     skill.add_argument("--rev", help="read the listing from this commit's tree, not the working tree")
-    skill.add_argument("--timeout", type=int, default=600, help="seconds the check may run (default 600)")
+    skill.add_argument("--timeout", type=int, default=1200, help="seconds the check may run (default 1200)")
     skill.add_argument("--isolate", metavar="USER", help="run as root: acquire the source and run the check as USER, "
                        "the check in new process, network, IPC and host-name namespaces")
     skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
     skill.set_defaults(run=cmd_skill)
+    review_cmd = commands.add_parser(
+        "review",
+        help="ask Jev about proof kind and a being-built work link when TYPESAFE_API_KEY is set; "
+             "otherwise keep the tag rule and the URL check",
+        description=(
+            "Check the tree, then ask Jev about proof kind (and being-built work links with --public-work-links) "
+            "when TYPESAFE_API_KEY is set. Sends only name, summary, and plugs_into (plus public first_link scheme, "
+            "host, and path with --public-work-links). By default, sends only listings matching "
+            "refs/remotes/origin/main; unpublished drafts, local edits, and unmerged commits stay local "
+            "unless selected by id, --rev, or --include-unpublished."
+        ),
+    )
+    review_cmd.add_argument("ids", nargs="*", metavar="id",
+                            help="listing ids to review (explicitly selects those listings to send when keyed)")
+    review_cmd.add_argument("--rev", help="review this commit's tree instead of the working tree")
+    review_cmd.add_argument("--include-unpublished", action="store_true",
+                            help="also send untracked, modified, or unmerged working-tree listings to Jev")
+    review_cmd.add_argument("--public-work-links", action="store_true",
+                            help="confirm being-built first links are public and send their scheme, host, and path to Jev")
+    review_cmd.add_argument("--deadline", type=positive_seconds, default=60,
+                            help="overall seconds budget for Jev calls before falling back (default 60)")
+    review_cmd.set_defaults(run=cmd_review)
     changed = commands.add_parser("changed-skills", help="print skill listings added or changed since a commit")
     changed.add_argument("base")
     changed.set_defaults(run=cmd_changed_skills)

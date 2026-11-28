@@ -1,0 +1,23 @@
+{
+  "name": "bandsaas",
+  "summary": "Licenses music to AI under the artist's own terms and runs that artist's whole business, using 46 tools and no key.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/jyswee/bandsaas",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jyswee%2Fbandsaas"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/jyswee/bandsaas/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

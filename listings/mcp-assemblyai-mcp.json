@@ -1,0 +1,24 @@
+{
+  "name": "AssemblyAI",
+  "summary": "Transcribes audio, writes summaries, and analyzes it using AssemblyAI, covering speech-to-text as well as Speech Understanding.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/AssemblyAI/assemblyai-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.assemblyai%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AssemblyAI/assemblyai-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

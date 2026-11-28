@@ -1,0 +1,25 @@
+{
+  "name": "Chatroost — unofficial Telegram MCP server",
+  "summary": "Unofficial MTProto bridge for reading, searching, replying, and reacting in personal Telegram chats.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "search"
+  ],
+  "url": "https://github.com/mcp-telegram/mcp-telegram",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mcp-telegram%2Fmcp-telegram"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mcp-telegram/mcp-telegram/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

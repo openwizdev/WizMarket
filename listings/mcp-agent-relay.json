@@ -1,0 +1,24 @@
+{
+  "name": "agent-relay",
+  "summary": "Runs Agent Relay channels that require invites, plus agent contracts and human approval on each side.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/cloud1map/agent-relay",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cloud1map%2Fagent-relay"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cloud1map/agent-relay/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

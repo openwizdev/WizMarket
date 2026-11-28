@@ -1,0 +1,24 @@
+{
+  "name": "Words",
+  "summary": "Words calls the Datamuse API, which is free and needs no authentication.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/pipeworx-io/mcp-words",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pipeworx-io%2Fwords"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pipeworx-io/mcp-words/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

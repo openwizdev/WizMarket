@@ -1,0 +1,24 @@
+{
+  "name": "Stoa: swaps on Robinhood Chain",
+  "summary": "Handles swaps on Robinhood Chain, checks whether tokens are safe, and reports stock-token gaps, then Spotlight and Stoa Pay.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/StoaDex/Stoa",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.StoaDex%2Fstoa"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/StoaDex/Stoa"
+    }
+  ],
+  "status": "listed"
+}

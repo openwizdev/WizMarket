@@ -1,0 +1,24 @@
+{
+  "name": "reef",
+  "summary": "reef keeps memory that a person shares with their people and that stays current, inside coves that an assistant may read and update.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/diepzee/reef",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=me.reefwith%2Freef"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/diepzee/reef/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

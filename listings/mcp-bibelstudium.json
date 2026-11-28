@@ -1,0 +1,23 @@
+{
+  "name": "Bibelstudium MCP",
+  "summary": "Supports literal German Bible study with the source text, morphology, a concordance, and cross-references.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/fidpa/bibelstudium-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=de.bibelstudium-mcp%2Fbibelstudium"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/fidpa/bibelstudium-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

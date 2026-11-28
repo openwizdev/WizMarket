@@ -1,0 +1,24 @@
+{
+  "name": "Spotify Soundtrack MCP",
+  "summary": "Pairs TMDB filmographies with Spotify to match movie soundtracks, curate playlists, and control playback.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/Chiru144/Spotify-MCP-Web-And-MCP-Server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Chiru144%2Fspotify-soundtrack-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Chiru144/Spotify-MCP-Web-And-MCP-Server/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

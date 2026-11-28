@@ -1,0 +1,25 @@
+{
+  "name": "hivelore",
+  "summary": "Deterministic Git and CI gate that blocks commits reintroducing previously documented team mistakes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "memory"
+  ],
+  "url": "https://github.com/Doucs91/hivelore",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Doucs91%2Fhivelore"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Doucs91/hivelore/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

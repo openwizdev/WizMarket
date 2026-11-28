@@ -1,0 +1,23 @@
+{
+  "name": "Apple Health",
+  "summary": "Queries local Apple Health exports for sleep, activity, workout, and heart metrics.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/neiltron/apple-health-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.neiltron%2Fapple-health-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/neiltron/apple-health-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

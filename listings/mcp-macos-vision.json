@@ -1,0 +1,24 @@
+{
+  "name": "macos-vision-mcp",
+  "summary": "Runs offline Apple Vision OCR and window inspection on macOS without uploading screenshots.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/woladi/macos-vision-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.woladi%2Fmacos-vision-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/woladi/macos-vision-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

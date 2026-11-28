@@ -1,0 +1,25 @@
+{
+  "name": "Renor",
+  "summary": "Saves and recalls private agent memory facts as local Markdown notes across coding clients.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "memory"
+  ],
+  "url": "https://github.com/renorai/renor-engine",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.patrickpassosb%2Frenor"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/renorai/renor-engine/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

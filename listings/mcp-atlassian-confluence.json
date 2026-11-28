@@ -1,0 +1,24 @@
+{
+  "name": "atlassian-confluence",
+  "summary": "Reads and updates Atlassian Confluence pages, blog posts, labels, comments, and attachments.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs"
+  ],
+  "url": "https://github.com/magurelabs/magoneai-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.magurelabs%2Fatlassian-confluence"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/magurelabs/magoneai-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

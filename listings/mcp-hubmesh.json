@@ -1,0 +1,24 @@
+{
+  "name": "hubmesh",
+  "summary": "Retrieves RAG context through a deterministic multi-hop graph and makes zero LLM calls on the query path.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs"
+  ],
+  "url": "https://github.com/DemigodDSK/hubmesh",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.DemigodDSK%2Fhubmesh"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/DemigodDSK/hubmesh/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

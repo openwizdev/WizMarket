@@ -1,0 +1,25 @@
+{
+  "name": "OpenResearch MCP",
+  "summary": "Runs keyless research across web, academic, news, weather, SEC filings, and finance sources.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "finance"
+  ],
+  "url": "https://github.com/olanokhin/openresearch-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.olanokhin%2Fopenresearch-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/olanokhin/openresearch-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

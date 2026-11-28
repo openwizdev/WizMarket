@@ -1,0 +1,15 @@
+{
+  "name": "n8n MCP",
+  "summary": "MCP server for operating n8n instances to build, edit, validate, test, and debug workflows from AI agents. MIT.",
+  "tags": [
+    "mcp-server",
+    "n8n",
+    "automation",
+    "workflows"
+  ],
+  "url": "https://github.com/czlonkowski/n8n-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

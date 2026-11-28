@@ -1,0 +1,24 @@
+{
+  "name": "dnd-oracle",
+  "summary": "Looks up D&D 5e SRD monsters, spells, and equipment and assists with encounter building.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/gregario/dnd-oracle",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gregario%2Fdnd-oracle"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/gregario/dnd-oracle/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

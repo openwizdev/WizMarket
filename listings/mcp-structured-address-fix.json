@@ -1,0 +1,23 @@
+{
+  "name": "structured-address-fix-mcp",
+  "summary": "Remediates postal addresses to ISO 20022 before the November 2026 CBPR+ cliff.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/sebastienrousseau/structured-address-fix-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sebastienrousseau%2Fstructured-address-fix-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/sebastienrousseau/structured-address-fix-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

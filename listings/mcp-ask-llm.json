@@ -1,0 +1,24 @@
+{
+  "name": "ask-llm",
+  "summary": "Consults additional LLM models for code reviews and plan second opinions with verification.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/Lykhoyda/ask-llm",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Lykhoyda%2Fask-llm"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Lykhoyda/ask-llm/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

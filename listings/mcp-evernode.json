@@ -1,0 +1,23 @@
+{
+  "name": "Evernode MCP",
+  "summary": "Helps with Evernode/HotPocket dApps by supplying templates, lint for non-determinism, lease math, and live host lookup.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Hugegreencandle/evernode-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Hugegreencandle%2Fevernode-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Hugegreencandle/evernode-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

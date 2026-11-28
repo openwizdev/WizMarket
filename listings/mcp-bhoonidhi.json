@@ -1,0 +1,24 @@
+{
+  "name": "bhoonidhi-mcp",
+  "summary": "Queries and downloads Indian satellite imagery archives from ISRO Bhoonidhi.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/geovicco-dev/bhoonidhi-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.geovicco-dev%2Fbhoonidhi-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/geovicco-dev/bhoonidhi-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

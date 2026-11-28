@@ -1,0 +1,25 @@
+{
+  "name": "glassbox-framework",
+  "summary": "Verifies AI answers at runtime with claim reasoning chains, ECS scoring, red-teaming, and logs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability",
+    "security"
+  ],
+  "url": "https://github.com/TheBarmaEffect/glassbox",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.TheBarmaEffect%2Fglassbox-framework"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/TheBarmaEffect/glassbox/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

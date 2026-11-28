@@ -1,0 +1,23 @@
+{
+  "name": "SolidInvoice",
+  "summary": "Manages clients, quotes, invoices, and payment tracking inside a SolidInvoice instance.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/SolidInvoice/SolidInvoice",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=co.solidinvoice%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/SolidInvoice/SolidInvoice/blob/3.2.x/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "securecode",
+  "summary": "securecode stores secrets for Claude Code in a vault that records audits, enforces access rules, and encrypts with AES-256.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability",
+    "security"
+  ],
+  "url": "https://github.com/juanisidoro/securecode-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.juanisidoro%2Fsecurecode"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/juanisidoro/securecode-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

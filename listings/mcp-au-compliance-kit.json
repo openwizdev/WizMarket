@@ -1,0 +1,25 @@
+{
+  "name": "au-compliance-kit",
+  "summary": "Computes take-home pay for Australia and PAYG withholding, plus income tax and HELP, super, and GST, using formulas published by the ATO.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance",
+    "security"
+  ],
+  "url": "https://github.com/aftertaxau/au-compliance-kit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aftertaxau%2Fau-compliance-kit"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aftertaxau/au-compliance-kit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

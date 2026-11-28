@@ -1,0 +1,23 @@
+{
+  "name": "mcp-server",
+  "summary": "Records and distributes team engineering standards and technical guardrails as agent context.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/PackmindHub/packmind",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.packmind%2Fmcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/PackmindHub/packmind/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

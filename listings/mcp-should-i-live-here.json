@@ -1,0 +1,23 @@
+{
+  "name": "Should I Live Here?",
+  "summary": "Compares and ranks US counties from public data on crime, health, rent, hazards, air, and internet.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/gdtilghman/should-i-live-here-atlas",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gdtilghman%2Fshould-i-live-here"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/gdtilghman/should-i-live-here-atlas/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

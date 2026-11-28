@@ -1,0 +1,24 @@
+{
+  "name": "wazap",
+  "summary": "Lets an agent reach WhatsApp chats and messages, send media, and work with contacts and groups via MCP tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/razvangirgiz/wazap",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.razvangirgiz%2Fwazap"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/razvangirgiz/wazap/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

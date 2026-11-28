@@ -1,0 +1,24 @@
+{
+  "name": "OpenMyMemo",
+  "summary": "Keeps shared AI agent memory in a local user-owned folder with visible history and undo.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/MyMemoAI/openmymemo",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MyMemoAI%2Fopenmymemo"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/MyMemoAI/openmymemo/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

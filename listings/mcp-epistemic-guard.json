@@ -1,0 +1,25 @@
+{
+  "name": "epistemic-guard: Signed Tool Receipts & Verification",
+  "summary": "Checks agent tool claims using Ed25519 receipts and collapses syndicated RAG copies on the local machine.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "memory"
+  ],
+  "url": "https://github.com/AlienatedAliens/epistemic-guard",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AlienatedAliens%2Fepistemic-guard"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AlienatedAliens/epistemic-guard/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

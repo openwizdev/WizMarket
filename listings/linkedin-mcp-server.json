@@ -1,0 +1,15 @@
+{
+  "name": "LinkedIn MCP Server",
+  "summary": "Open-source MCP server giving AI agents access to LinkedIn profiles, companies, job listings, and messages. Apache-2.0.",
+  "tags": [
+    "mcp-server",
+    "linkedin",
+    "saas",
+    "productivity"
+  ],
+  "url": "https://github.com/stickerdaniel/linkedin-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

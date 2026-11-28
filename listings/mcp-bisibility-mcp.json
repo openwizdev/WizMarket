@@ -1,0 +1,25 @@
+{
+  "name": "bisibility",
+  "summary": "Tracks keyword search rankings, SERP history, and SEO opportunities inside bisibility projects.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "analytics"
+  ],
+  "url": "https://github.com/CorgiCorner/bisibility-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.bisibility%2Fmcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/CorgiCorner/bisibility-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

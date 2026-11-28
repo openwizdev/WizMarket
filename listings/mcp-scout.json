@@ -1,0 +1,24 @@
+{
+  "name": "Scout",
+  "summary": "Single-binary Go browser automation server with verified actions and bounded outputs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/klarlabs-studio/scout",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.klarlabs-studio%2Fscout"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/klarlabs-studio/scout/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

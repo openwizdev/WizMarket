@@ -1,0 +1,24 @@
+{
+  "name": "ROMKADE",
+  "summary": "ROMKADE controls a retro handheld by locating games, starting them, saving, adjusting volume, and fetching cheat codes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/RomKade/romkade-manager",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.romkade%2Fromkade"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/RomKade/romkade-manager/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Tseha",
+  "summary": "Supplies coding agents with the design system plus project coding standards rather than letting them guess.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "design"
+  ],
+  "url": "https://github.com/MariuszHenn/tseha-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.tseha%2Ftseha"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/MariuszHenn/tseha-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Parse-DMARC MCP Server",
+  "summary": "Fetches and parses DMARC aggregate email reports with a local compliance view.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "communication"
+  ],
+  "url": "https://github.com/dmarcguardhq/parse-dmarc",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.meysam81%2Fparse-dmarc"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/dmarcguardhq/parse-dmarc/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

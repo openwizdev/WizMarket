@@ -1,0 +1,23 @@
+{
+  "name": "SFTP MCP",
+  "summary": "Limits AI file access to SFTP so it can sync, transfer, edit, and browse files without opening a shell.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/AdversTM/sftp-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AdversTM%2Fsftp-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AdversTM/sftp-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

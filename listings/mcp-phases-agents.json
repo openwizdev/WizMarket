@@ -1,0 +1,23 @@
+{
+  "name": "Phases Agents",
+  "summary": "Phases Agents picks skills deterministically, discovers them locally, validates them strictly, and classifies each skill.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Cherridsaid/phases-agents",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Cherridsaid%2Fphases-agents"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Cherridsaid/phases-agents/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

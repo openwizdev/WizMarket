@@ -1,0 +1,24 @@
+{
+  "name": "agentsocks",
+  "summary": "Enables Claude Code sessions and Codex sessions to exchange messages and share tasks they track, defaulting to a single machine.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/Aelethion/agentsocks",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Aelethion%2Fagentsocks"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Aelethion/agentsocks/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

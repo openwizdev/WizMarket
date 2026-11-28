@@ -1,0 +1,24 @@
+{
+  "name": "Serato DJ library",
+  "summary": "Answers questions about a Serato DJ library with harmonic search, crate audits, and crates built from previews.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/Venut-Technologies/serato-dj-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Venut-Technologies%2Fserato-dj-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Venut-Technologies/serato-dj-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

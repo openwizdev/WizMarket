@@ -1,0 +1,24 @@
+{
+  "name": "WaveXisMCP",
+  "summary": "Automates Chrome, Edge, and Firefox with 220 WaveXis tools over CDP and BiDi, implemented entirely in Python.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/MathiasPaulenko/wavexis-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MathiasPaulenko%2Fwavexis-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/MathiasPaulenko/wavexis-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

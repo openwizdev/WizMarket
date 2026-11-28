@@ -1,0 +1,24 @@
+{
+  "name": "Gemot Deliberation Server",
+  "summary": "Provides multi-agent deliberation primitives including cruxes, vote clustering, and consensus checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/justinstimatze/gemot",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.gemot%2Fgemot"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/justinstimatze/gemot/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

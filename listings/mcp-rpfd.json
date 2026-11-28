@@ -1,0 +1,23 @@
+{
+  "name": "rpfd",
+  "summary": "Opens and updates archives stored in the RAGE Package Format.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/molchalih/rpfd",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.molchalih%2Frpfd"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/molchalih/rpfd"
+    }
+  ],
+  "status": "listed"
+}

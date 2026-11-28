@@ -1,0 +1,25 @@
+{
+  "name": "Voxisim",
+  "summary": "Supplies SMS verification codes and virtual phone numbers across 200+ countries for agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "security"
+  ],
+  "url": "https://github.com/voxisim/voxisim-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.voxisim%2Fvoxisim-mcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/voxisim/voxisim-mcp"
+    }
+  ],
+  "status": "listed"
+}

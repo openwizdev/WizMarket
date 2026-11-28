@@ -1,0 +1,24 @@
+{
+  "name": "Paladin Front PHP Rescue & Zero-PHP Migration MCP",
+  "summary": "Scans for PHP2Shell, tracked as CVE-2026-109618, and automatically moves WordPress sites onto Next.js with Zero-PHP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/AGI-CEO/php2shell-wordpress-to-nextjs-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.paladinfront.www%2Fphp-rescue-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AGI-CEO/php2shell-wordpress-to-nextjs-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

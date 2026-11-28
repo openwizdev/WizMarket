@@ -1,0 +1,25 @@
+{
+  "name": "WhyKit",
+  "summary": "Lists decisions and supporting evidence stored in a Git vault, and maps a code edit to the decisions it affects, read-only.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "security"
+  ],
+  "url": "https://github.com/CometWeb-io/whykit",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.CometWeb-io%2Fwhykit"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/CometWeb-io/whykit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

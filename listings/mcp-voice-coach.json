@@ -1,0 +1,23 @@
+{
+  "name": "Voice Coach",
+  "summary": "Voice Coach gives Claude a local analysis of public speaking, pronunciation, and pitch for voice coaching.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/fabianimv/voice-coach-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.FabianIMV%2Fvoice-coach-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/fabianimv/voice-coach-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

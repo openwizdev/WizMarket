@@ -1,0 +1,25 @@
+{
+  "name": "AI API Prices",
+  "summary": "Publishes each day's AI API list prices from over 50 providers, covering LLMs, images, video and speech, plus search and embeddings.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "design"
+  ],
+  "url": "https://github.com/Liutasil501/ai-api-prices",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Liutasil501%2Fai-api-prices"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Liutasil501/ai-api-prices/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

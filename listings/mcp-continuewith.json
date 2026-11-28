@@ -1,0 +1,23 @@
+{
+  "name": "ContinueWith",
+  "summary": "Installs and sets up ContinueWith AI handoff widgets directly from Codex, Claude Code, or Cursor.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/continuewith-ai/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.continuewith-ai%2Fcontinuewith"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/continuewith-ai/mcp"
+    }
+  ],
+  "status": "listed"
+}

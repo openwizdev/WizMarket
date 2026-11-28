@@ -1,0 +1,24 @@
+{
+  "name": "Rallybase",
+  "summary": "Rallybase lists officeholders for states, counties, and cities of the US, plus sourced public data on each row.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/sebanastan-cloud/rallybase-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=org.rallybase%2Frallybase"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/sebanastan-cloud/rallybase-mcp"
+    }
+  ],
+  "status": "listed"
+}

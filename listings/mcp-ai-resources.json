@@ -1,0 +1,25 @@
+{
+  "name": "ai-resources",
+  "summary": "Searches and reads daily fact-checked AI industry briefings covering tools, models, and funding.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/Drix10/ai-resources",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Drix10%2Fai-resources"
+    },
+    {
+      "label": "Licence: CC-BY-4.0",
+      "url": "https://github.com/Drix10/ai-resources/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

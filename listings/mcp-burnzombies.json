@@ -1,0 +1,23 @@
+{
+  "name": "BurnZombies",
+  "summary": "macOS cleanup tool that removes abandoned coding-agent processes, leftover Git worktrees, and unused node_modules directories.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/swordfish444/BurnZombies",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.swordfish444%2Fburnzombies"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/swordfish444/BurnZombies/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

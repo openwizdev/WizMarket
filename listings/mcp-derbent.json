@@ -1,0 +1,23 @@
+{
+  "name": "Derbent",
+  "summary": "Derbent checks coding-agent calls to MCP and to built-in tools, then records approvals under rules with hash-chained receipts.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/tunahanaliozturk/derbent",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tunahanaliozturk%2Fderbent"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/tunahanaliozturk/derbent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

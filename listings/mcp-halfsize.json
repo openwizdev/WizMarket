@@ -1,0 +1,25 @@
+{
+  "name": "halfsize",
+  "summary": "Compresses videos to a target byte size locally via FFmpeg and reports VMAF/SSIM scores.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "design"
+  ],
+  "url": "https://github.com/YKLovePython/halfsize",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.YKLovePython%2Fhalfsize"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/YKLovePython/halfsize/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

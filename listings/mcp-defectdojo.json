@@ -1,0 +1,24 @@
+{
+  "name": "DefectDojo",
+  "summary": "Connects agents to DefectDojo using 24 tools that include RBAC, SIEM forwarding, and an HMAC audit chain.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/inspicere/mcp-defectdojo",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.inspicere%2Fmcp-defectdojo"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/inspicere/mcp-defectdojo/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

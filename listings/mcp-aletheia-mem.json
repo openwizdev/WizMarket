@@ -1,0 +1,25 @@
+{
+  "name": "Aletheia",
+  "summary": "Local SQLite memory and rules hub that syncs coding rules across Claude Code, Codex, and Cursor.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "memory"
+  ],
+  "url": "https://github.com/mohamed-ashraf-elsaed/aletheia-mem",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mohamed-ashraf-elsaed%2Faletheia-mem"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/mohamed-ashraf-elsaed/aletheia-mem/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

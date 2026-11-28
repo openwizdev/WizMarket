@@ -1,0 +1,23 @@
+{
+  "name": "Lake Level MCP",
+  "summary": "Reports live water levels for US lakes and reservoirs using TWDB, USBR, CDEC, USACE, and USGS gauges.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/theluckystrike/lake-level-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.theluckystrike%2Flake-level-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/theluckystrike/lake-level-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

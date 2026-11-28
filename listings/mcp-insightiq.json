@@ -1,0 +1,23 @@
+{
+  "name": "insightiq",
+  "summary": "Looks up actual FRED series and historical observations from Federal Reserve Economic Data.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ravi-p-k-1/InsightIQ",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ravi-p-k-1%2Finsightiq"
+    },
+    {
+      "label": "Licence: CC0-1.0",
+      "url": "https://github.com/ravi-p-k-1/InsightIQ/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

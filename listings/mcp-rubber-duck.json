@@ -1,0 +1,23 @@
+{
+  "name": "rubber-duck",
+  "summary": "Queries multiple OpenAI-compatible LLMs and CLI agents for second opinions and debates.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/nesquikm/mcp-rubber-duck",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nesquikm%2Frubber-duck"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nesquikm/mcp-rubber-duck/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

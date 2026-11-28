@@ -1,0 +1,23 @@
+{
+  "name": "xrpl-identity-mcp",
+  "summary": "Handles XRPL identity by managing DIDs, credentials, and signer lists, and by running safe transaction workflows.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/jarod-vyent/xrpl-identity-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jarod-vyent%2Fxrpl-identity-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jarod-vyent/xrpl-identity-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

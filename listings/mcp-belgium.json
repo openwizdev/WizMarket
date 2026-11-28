@@ -1,0 +1,24 @@
+{
+  "name": "mcp-belgium",
+  "summary": "Queries 16 Belgian public APIs covering transit, statistics, geospatial data, and open datasets.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "data"
+  ],
+  "url": "https://github.com/lacausecrypto/mcp-belgium",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.lacausecrypto%2Fmcp-belgium"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/lacausecrypto/mcp-belgium/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

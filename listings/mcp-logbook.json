@@ -1,0 +1,23 @@
+{
+  "name": "logbook-mcp",
+  "summary": "Records notes, reminders, debug sessions, decisions, standups, and TODOs in a developer logbook on MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/cocaxcode/logbook-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cocaxcode%2Flogbook-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cocaxcode/logbook-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

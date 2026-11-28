@@ -1,0 +1,23 @@
+{
+  "name": "Webz.io Blogs",
+  "summary": "Searches blog posts via Webz.io when queries target blog content rather than news outlets.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Webhose/webz-news-search",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.webz%2Fblogs"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/Webhose/webz-news-search"
+    }
+  ],
+  "status": "listed"
+}

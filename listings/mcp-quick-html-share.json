@@ -1,0 +1,25 @@
+{
+  "name": "quick-html-share-mcp",
+  "summary": "Publishes HTML that a coding agent generated, at an unguessable URL, and includes viewer analytics.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "analytics"
+  ],
+  "url": "https://github.com/desper/quick-html-sharing",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.desper%2Fquick-html-share-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/desper/quick-html-sharing/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

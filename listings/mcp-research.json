@@ -1,0 +1,25 @@
+{
+  "name": "EdgeDepth Research",
+  "summary": "Tests crypto-perpetual claims in EdgeDepth from recorded counts, with baselines and a replay step.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "finance"
+  ],
+  "url": "https://github.com/edgedepthhq/edgedepth-research-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.edgedepth%2Fresearch"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/edgedepthhq/edgedepth-research-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "SEO Performance MCP",
+  "summary": "Gives an SEO verdict for each URL using GSC, GA4, Matomo, Clarity, and AI citations, choosing refresh, expand, merge, or kill.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "analytics"
+  ],
+  "url": "https://github.com/AutomateLab-tech/seo-performance-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AutomateLab-tech%2Fseo-performance-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AutomateLab-tech/seo-performance-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Booboo",
+  "summary": "Queries wiring, knowledge, and memory in an AI system, plus agents and crons, joined into a single rooted graph through MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design",
+    "memory"
+  ],
+  "url": "https://github.com/jessymariau/booboo",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jessedu29260-netizen%2Fbooboo"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jessymariau/booboo/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

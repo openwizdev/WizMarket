@@ -1,0 +1,23 @@
+{
+  "name": "Onde Inference CLI: Fine-tune & Deploy Local LLMs",
+  "summary": "Fine-tunes LoRA adapters, exports GGUF weights, and deploys local LLMs on Apple silicon via Onde.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ondeinference/onde-cli",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ondeinference%2Fonde-cli"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/ondeinference/onde-cli/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "comfyui-mcp",
+  "summary": "Drives a ComfyUI instance for text-to-image, img2img refinement, variations, and upscaling.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/miller-joe/comfyui-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.miller-joe%2Fcomfyui-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/miller-joe/comfyui-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

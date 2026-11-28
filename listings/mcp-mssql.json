@@ -1,0 +1,24 @@
+{
+  "name": "Microsoft SQL Server",
+  "summary": "Connects read-only by default to Microsoft SQL Server for schema discovery, queries, and plans.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database"
+  ],
+  "url": "https://github.com/alyiox/mcp-mssql",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.alyiox%2Fmcp-mssql"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/alyiox/mcp-mssql/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

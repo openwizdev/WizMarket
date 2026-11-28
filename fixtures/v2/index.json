@@ -1,0 +1,96 @@
+{
+  "commit": "dddddddddddddddddddddddddddddddddddddddd",
+  "contract": "listing.v1",
+  "listings": [
+    {
+      "contract": "listing.v2",
+      "id": "pinned-driver",
+      "name": "Pinned driver",
+      "package": {
+        "asset_url": "https://github.com/example-owner/pinned-driver/releases/download/v0.1.0/driver.tar.gz",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "driver": "pinned-driver",
+        "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "repository": "example-owner/pinned-driver",
+        "sha256": "abababababababababababababababababababababababababababababababab",
+        "version": "0.1.0"
+      },
+      "plugs_into": "The OpenWiz driver interface",
+      "publisher": "example-publisher",
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic driver pinned to one release of its own repository.",
+      "tags": [
+        "driver"
+      ],
+      "url": "https://example.com/pinned-driver"
+    },
+    {
+      "contract": "listing.v2",
+      "id": "verified-harness",
+      "key_host": {
+        "keychain": "example.host",
+        "origin": "https://api.example.com",
+        "variable": "EXAMPLE_API_KEY"
+      },
+      "login": "Your own example-harness login on your computer",
+      "name": "Verified pinned harness",
+      "package": {
+        "asset_url": "https://github.com/example-owner/verified-harness/releases/download/v1.2.0/driver.tar.gz",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "driver": "verified-harness",
+        "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "repository": "example-owner/verified-harness",
+        "sha256": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+        "version": "1.2.0"
+      },
+      "plugs_into": "The local driver",
+      "proof": {
+        "receipt": {
+          "date": "2026-11-01",
+          "path": "receipts/verified-harness/2026-11-01-aaaaaaaaaaaa.txt",
+          "url": "https://github.com/openwizdev/WizMarket/blob/dddddddddddddddddddddddddddddddddddddddd/receipts/verified-harness/2026-11-01-aaaaaaaaaaaa.txt"
+        }
+      },
+      "publisher": "example-publisher",
+      "stage": "available",
+      "status": "verified",
+      "summary": "A synthetic verified harness pinned to a driver release, with a key host.",
+      "tags": [
+        "harness"
+      ],
+      "url": "https://example.com/verified-pinned-harness"
+    },
+    {
+      "contract": "listing.v2",
+      "id": "verified-pinned",
+      "login": "Your own login on the example host",
+      "name": "Verified pinned driver",
+      "package": {
+        "asset_url": "https://github.com/example-owner/verified-pinned/releases/download/v1.0.0/driver.tar.gz",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "driver": "verified-pinned",
+        "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "repository": "example-owner/verified-pinned",
+        "sha256": "abababababababababababababababababababababababababababababababab",
+        "version": "1.0.0"
+      },
+      "plugs_into": "The OpenWiz driver interface",
+      "proof": {
+        "receipt": {
+          "date": "2026-11-01",
+          "path": "receipts/verified-pinned/2026-11-01-aaaaaaaaaaaa.txt",
+          "url": "https://github.com/openwizdev/WizMarket/blob/dddddddddddddddddddddddddddddddddddddddd/receipts/verified-pinned/2026-11-01-aaaaaaaaaaaa.txt"
+        }
+      },
+      "publisher": "example-publisher",
+      "stage": "available",
+      "status": "verified",
+      "summary": "A synthetic verified driver pinned to the commit its receipt names.",
+      "tags": [
+        "driver"
+      ],
+      "url": "https://example.com/verified-pinned-driver"
+    }
+  ]
+}

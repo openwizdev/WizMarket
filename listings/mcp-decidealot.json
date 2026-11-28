@@ -1,0 +1,23 @@
+{
+  "name": "Decidealot",
+  "summary": "Calls local Laya/Von or hosted Jev models over MCP to return structured scores and typed class labels.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/psyb0t/decidealot",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.psyb0t%2Fdecidealot"
+    },
+    {
+      "label": "Licence: WTFPL",
+      "url": "https://github.com/psyb0t/decidealot/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

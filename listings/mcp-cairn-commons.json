@@ -1,0 +1,23 @@
+{
+  "name": "Cairn Commons",
+  "summary": "Looks up a checked record of a dependency bug from an error, and reviews versions before installation.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/cairncommons/cairn-commons",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cairncommons%2Fcairn-commons"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cairncommons/cairn-commons/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

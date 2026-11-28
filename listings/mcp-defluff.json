@@ -1,0 +1,24 @@
+{
+  "name": "defluff",
+  "summary": "Deterministic prose linter that flags filler phrases, buzzwords, hedges, and cliches in LLM text.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/ahmedak/defluff",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ahmedak%2Fdefluff"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ahmedak/defluff/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

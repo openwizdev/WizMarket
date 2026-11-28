@@ -1,0 +1,24 @@
+{
+  "name": "bexio-mcp-server",
+  "summary": "Integrates Swiss accounting software Bexio with 315 tools for invoices, contacts, and projects.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/PromptPartner/bexio-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PromptPartner%2Fbexio-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/PromptPartner/bexio-mcp-server/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

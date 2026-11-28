@@ -1,0 +1,23 @@
+{
+  "name": "Promptheus",
+  "summary": "Refines prompts interactively with adaptive questioning across six or more LLM providers.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/abhichandra21/Promptheus",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.abhichandra21%2Fpromptheus"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/abhichandra21/Promptheus/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

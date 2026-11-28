@@ -1,0 +1,23 @@
+{
+  "name": "RFC lookup",
+  "summary": "Reads the RFC corpus with 40 times fewer tokens and flags specs that are obsoleted.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/shbernal/rfc-ai-tooling",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shbernal%2Frfc-ai-tooling"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/shbernal/rfc-ai-tooling/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

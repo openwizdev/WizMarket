@@ -1,0 +1,24 @@
+{
+  "name": "Ledgr",
+  "summary": "Connects to a self-hosted Ledgr personal finance app for bank sync, budgets, and net worth.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/KenTaniguchi-R/ledgr",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.KenTaniguchi-R%2Fledgr"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/KenTaniguchi-R/ledgr/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

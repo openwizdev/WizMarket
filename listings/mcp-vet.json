@@ -1,0 +1,23 @@
+{
+  "name": "SafeDep Vet MCP",
+  "summary": "Checks open-source dependencies for malicious packages before agents or IDEs install them.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/safedep/vet",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.safedep%2Fvet-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/safedep/vet/blob/v2/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

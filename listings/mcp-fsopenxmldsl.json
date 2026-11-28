@@ -1,0 +1,24 @@
+{
+  "name": "Excel MCP Server (FsOpenXmlDsl)",
+  "summary": "Reads, writes, and converts Excel workbooks to or from F#, C#, XML, and JSON.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "data"
+  ],
+  "url": "https://github.com/Kookerella-Ltd/Kookerella.FsOpenXmlDsl",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MarkNicholls%2Ffsopenxmldsl-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Kookerella-Ltd/Kookerella.FsOpenXmlDsl/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

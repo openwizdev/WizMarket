@@ -1,0 +1,25 @@
+{
+  "name": "ZulipChat MCP Server",
+  "summary": "Bridges agents to Zulip workspaces with over 60 tools for streams, messages, events, and stats.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "analytics"
+  ],
+  "url": "https://github.com/akougkas/zulipchat-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.akougkas%2Fzulipchat"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/akougkas/zulipchat-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

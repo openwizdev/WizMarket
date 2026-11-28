@@ -1,0 +1,23 @@
+{
+  "name": "JumpServer Bastion (jms)",
+  "summary": "Sends commands, file transfers, and asset browsing to a v4 JumpServer bastion from an assistant.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/MiFaZhan/jms-client",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.MiFaZhan%2Fjms-client"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/MiFaZhan/jms-client/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

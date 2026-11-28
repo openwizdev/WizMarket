@@ -1,0 +1,25 @@
+{
+  "name": "BananaBanana Image, Video & Speech Generation",
+  "summary": "Generates images, video, and speech via Nano Banana, Veo, GPT Image, Wan, Omni, Grok, and Gemini TTS, paid with crypto or card.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "finance"
+  ],
+  "url": "https://github.com/bananabanana-pro-mcp/bananabanana-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=pro.bananabanana%2Fimage-video"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/bananabanana-pro-mcp/bananabanana-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

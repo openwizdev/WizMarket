@@ -1,0 +1,23 @@
+{
+  "name": "PlaceCall",
+  "summary": "Places automated voice calls to businesses in the US for bookings or quotes and returns transcripts.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/voygr-tech/placecall",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.voygr-tech%2Fplacecall"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/voygr-tech/placecall/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

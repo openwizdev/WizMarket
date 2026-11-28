@@ -1,0 +1,23 @@
+{
+  "name": "СБИС (Saby) MCP (RU) — документы, подпись, ЭДО",
+  "summary": "Integrates the Russian SBIS (Saby) electronic document API for documents, signing, and certificates.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ilyautov/sbis-mcp-ru",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ilyautov%2Fsbis-mcp-ru"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ilyautov/sbis-mcp-ru/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
