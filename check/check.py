@@ -628,7 +628,7 @@ def main(argv):
     skill = commands.add_parser("skill", help="run a skill listing's check at its pinned commit")
     skill.add_argument("id")
     skill.add_argument("--rev", help="read the listing from this commit's tree, not the working tree")
-    skill.add_argument("--timeout", type=int, default=600, help="seconds the check may run (default 600)")
+    skill.add_argument("--timeout", type=int, default=1200, help="seconds the check may run (default 1200)")
     skill.add_argument("--isolate", metavar="USER", help="run as root: acquire the source and run the check as USER, "
                        "the check in new process, network, IPC and host-name namespaces")
     skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
