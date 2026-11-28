@@ -39,6 +39,21 @@ git fetch https://github.com/openwizdev/WizMarket.git main &&
 
 For a `verified` skill, `python3 -I check/check.py skill <id>` runs its pinned check on your machine. CI runs the same checks on every pull request.
 
+## Review a listing with Jev
+
+`python3 -I check/check.py review` reads the same tree as `check` and does not change what `check` accepts. Proof kind stays the tag rule in the contract: `driver` or `harness` is a receipt, `skill` is a pinned check, both tags need both, and any other tag needs neither.
+
+With `TYPESAFE_API_KEY` set, Jev (`POST https://api.typesafe.ai/v1/systemone`, model `jev-1.14.0`) answers three Nouls in that one request: is it a driver, a harness, and a skill. Code combines the confident yeses with `KIND_WEIGHT_DRIVER`, `KIND_WEIGHT_HARNESS`, and `KIND_WEIGHT_SKILL`. Each Noul is compared directly against the inclusive `0.7` (yes) and `0.3` (no) thresholds (`abs(2p - 1) >= 0.4` in exact arithmetic). Strictly between `0.3` and `0.7` on any of the three, or with no key or a failed call, the reading stays the tag rule and there is no finding. The key is read only from the environment.
+
+**Data scope and timeouts:** when `TYPESAFE_API_KEY` is set, `review` sends only `name`, `summary`, and `plugs_into` (never `tags`, `url`, `links`, receipts, or prose caught by the privacy scan). By default, it sends only listings whose content matches `refs/remotes/origin/main`; untracked drafts, local edits, unmerged branch commits, and checkouts without `origin/main` stay local and fall back to the tag rule. Select specific listings (`python3 -I check/check.py review <id> ...`), pass `--rev <rev>` to read a commit's tree, or pass `--include-unpublished` to opt in to sending unpublished working-tree listings. `review` enforces an overall `--deadline` (default 60 seconds) and stops calling TypeSafe after a service-wide failure, falling back to the tag rule for the remaining listings.
+
+```sh
+python3 -I check/jev_bench.py
+python3 -I check/jev_bench.py --live   # asks Jev; needs TYPESAFE_API_KEY
+```
+
+The first command compares the tag rule and a keyword baseline with hand-labeled prose in `check/jev_fixtures.json`. `--live` adds Jev's agreement on that same set.
+
 ## Licence
 
 Apache License 2.0: see [LICENSE](LICENSE).

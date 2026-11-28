@@ -1,6 +1,7 @@
 import argparse
 import datetime
 import json
+import math
 import os
 import pwd
 import re
@@ -600,6 +601,41 @@ def cmd_skill(args):
     return 0
 
 
+def positive_seconds(value):
+    try:
+        seconds = float(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError("must be a positive number of seconds") from error
+    if not math.isfinite(seconds) or seconds <= 0:
+        raise argparse.ArgumentTypeError("must be a positive number of seconds")
+    return seconds
+
+
+def cmd_review(args):
+    for listing_id in args.ids:
+        if not ID.fullmatch(listing_id):
+            print(f"review {shown(listing_id)}: refused, not a listing id")
+            return 1
+    here = str(Path(__file__).resolve().parent)
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import review
+    root = Path.cwd()
+    files_fn = (lambda r: commit_files(r, args.rev)) if args.rev else worktree_files
+    code, text = review.run(
+        root,
+        review.client_from_env(),
+        check_tree,
+        files_fn,
+        private,
+        ids=args.ids or None,
+        include_unpublished=args.include_unpublished or bool(args.rev),
+        deadline=args.deadline,
+    )
+    sys.stdout.write(text)
+    return code
+
+
 def cmd_changed_skills(args):
     root = Path.cwd()
     diff = git(root, "diff", "--name-only", "--no-renames", "--diff-filter=AMT", args.base, "HEAD", "--", "listings")
@@ -633,6 +669,24 @@ def main(argv):
                        "the check in new process, network, IPC and host-name namespaces")
     skill.add_argument("--source-base", default="https://github.com", help=argparse.SUPPRESS)
     skill.set_defaults(run=cmd_skill)
+    review_cmd = commands.add_parser(
+        "review",
+        help="ask Jev three Nouls about proof kind when TYPESAFE_API_KEY is set; otherwise keep the tag rule",
+        description=(
+            "Check the tree, then ask Jev three Nouls about proof kind when TYPESAFE_API_KEY is set. "
+            "Sends only name, summary, and plugs_into. By default, sends only listings matching "
+            "refs/remotes/origin/main; unpublished drafts, local edits, and unmerged commits stay local "
+            "unless selected by id, --rev, or --include-unpublished."
+        ),
+    )
+    review_cmd.add_argument("ids", nargs="*", metavar="id",
+                            help="listing ids to review (explicitly selects those listings to send when keyed)")
+    review_cmd.add_argument("--rev", help="review this commit's tree instead of the working tree")
+    review_cmd.add_argument("--include-unpublished", action="store_true",
+                            help="also send untracked, modified, or unmerged working-tree listings to Jev")
+    review_cmd.add_argument("--deadline", type=positive_seconds, default=60,
+                            help="overall seconds budget for Jev calls before falling back (default 60)")
+    review_cmd.set_defaults(run=cmd_review)
     changed = commands.add_parser("changed-skills", help="print skill listings added or changed since a commit")
     changed.add_argument("base")
     changed.set_defaults(run=cmd_changed_skills)
