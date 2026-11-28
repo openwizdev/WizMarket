@@ -1,0 +1,5 @@
+{
+  "listing_id": "canary-tool",
+  "declaration": {"network": {"api.canary.example": "Fetch synthetic metadata."}, "keys": {"CANARY_TOKEN": "Authenticate to the synthetic API."}},
+  "approved_at": "2026-11-28T08:00:00Z"
+}

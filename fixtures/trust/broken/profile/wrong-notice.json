@@ -1,0 +1,8 @@
+{
+  "default": "deny",
+  "network": ["api.canary.example"],
+  "files": {"/opt/canary/input.txt": ["read"], "/opt/canary/output.txt": ["write"]},
+  "keys": ["CANARY_TOKEN"],
+  "sandbox": "unavailable",
+  "notice": "Sandbox setup complete."
+}

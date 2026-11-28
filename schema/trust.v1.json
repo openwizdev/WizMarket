@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/openwizdev/WizMarket/blob/main/schema/trust.v1.json",
+  "title": "OpenWiz market trust v1",
+  "description": "The root validates trust/<listing id>.json. The installApproval and sandboxProfile definitions validate the corresponding local objects. contracts/trust.v1.md defines bindings and verification beyond the JSON shape.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "listing_id", "publisher", "source", "sha256", "signature", "scan_report", "review", "declaration"],
+  "properties": {
+    "schema": { "const": "openwiz.trust.v1" },
+    "listing_id": { "$ref": "#/$defs/listingId" },
+    "publisher": { "$ref": "#/$defs/githubLogin" },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "commit"],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^(?=[A-Za-z0-9-]{1,39}/)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/(?!\\.{1,2}(?![\\s\\S]))[A-Za-z0-9._-]{1,100}(?![\\s\\S])"
+        },
+        "commit": { "$ref": "#/$defs/commit" }
+      }
+    },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}(?![\\s\\S])" },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["namespace", "sshsig"],
+      "properties": {
+        "namespace": { "const": "openwiz.trust.v1" },
+        "sshsig": {
+          "type": "string",
+          "pattern": "^-----BEGIN SSH SIGNATURE-----\\n(?:[A-Za-z0-9+/]{1,70}\\n)*[A-Za-z0-9+/]{1,70}={0,2}\\n-----END SSH SIGNATURE-----\\n(?![\\s\\S])"
+        }
+      }
+    },
+    "scan_report": {
+      "type": "object",
+      "required": ["secrets", "obfuscated-code", "install-scripts", "bundled-binaries", "undeclared-network", "agent-directed-instructions"],
+      "propertyNames": { "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])" },
+      "additionalProperties": { "$ref": "#/$defs/scan" }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_family", "verdict", "reasons", "commit"],
+      "properties": {
+        "model_family": { "$ref": "#/$defs/line" },
+        "verdict": { "enum": ["pass", "fail"] },
+        "reasons": { "$ref": "#/$defs/lines" },
+        "commit": { "$ref": "#/$defs/commit" }
+      },
+      "if": { "properties": { "verdict": { "const": "fail" } } },
+      "then": { "properties": { "reasons": { "minItems": 1 } } },
+      "else": { "properties": { "reasons": { "maxItems": 0 } } }
+    },
+    "declaration": { "$ref": "#/$defs/declaration" }
+  },
+  "$defs": {
+    "listingId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]{2,40}(?![\\s\\S])"
+    },
+    "githubLogin": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}(?![\\s\\S])",
+      "maxLength": 39
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}(?![\\s\\S])"
+    },
+    "line": {
+      "type": "string",
+      "pattern": "^(?=[^\\r\\n]*\\S)[^\\u0000-\\u001F\\u007F-\\u009F\\u2028\\u2029]+(?![\\s\\S])"
+    },
+    "lines": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/line" }
+    },
+    "scan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["result", "findings"],
+      "properties": {
+        "result": { "enum": ["pass", "fail"] },
+        "findings": { "$ref": "#/$defs/lines" }
+      },
+      "if": { "properties": { "result": { "const": "fail" } } },
+      "then": { "properties": { "findings": { "minItems": 1 } } }
+    },
+    "host": {
+      "type": "string",
+      "maxLength": 253,
+      "pattern": "^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z](?:[a-z0-9-]{0,61}[a-z0-9])?(?![\\s\\S])"
+    },
+    "filePath": {
+      "type": "string",
+      "pattern": "^(?:/(?!\\.{1,2}(?:/|(?![\\s\\S])))[^/\\\\*?\\[\\]{}~\\u0000-\\u001F\\u007F-\\u009F\\u2028\\u2029]+)+(?![\\s\\S])"
+    },
+    "fileAccess": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "enum": ["read", "write"] }
+    },
+    "keyName": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]{0,63}(?![\\s\\S])"
+    },
+    "declaration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["network", "files", "keys"],
+      "properties": {
+        "network": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/host" },
+          "additionalProperties": { "$ref": "#/$defs/line" }
+        },
+        "files": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/filePath" },
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["access", "reason"],
+            "properties": {
+              "access": { "$ref": "#/$defs/fileAccess" },
+              "reason": { "$ref": "#/$defs/line" }
+            }
+          }
+        },
+        "keys": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/keyName" },
+          "additionalProperties": { "$ref": "#/$defs/line" }
+        }
+      }
+    },
+    "installApproval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listing_id", "declaration", "approved_at"],
+      "properties": {
+        "listing_id": { "$ref": "#/$defs/listingId" },
+        "declaration": { "$ref": "#/$defs/declaration" },
+        "approved_at": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^(?!0000)[0-9]{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12][0-9]|3[01])T(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]Z(?![\\s\\S])"
+        }
+      }
+    },
+    "sandboxProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["default", "network", "files", "keys", "sandbox"],
+      "properties": {
+        "default": { "const": "deny" },
+        "network": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/host" }
+        },
+        "files": {
+          "type": "object",
+          "propertyNames": { "$ref": "#/$defs/filePath" },
+          "additionalProperties": { "$ref": "#/$defs/fileAccess" }
+        },
+        "keys": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/keyName" }
+        },
+        "sandbox": { "enum": ["enforced", "unavailable"] },
+        "notice": { "const": "No system sandbox is available. This item will run unsandboxed." }
+      },
+      "if": { "properties": { "sandbox": { "const": "unavailable" } } },
+      "then": { "required": ["notice"] },
+      "else": { "not": { "required": ["notice"] } }
+    }
+  }
+}

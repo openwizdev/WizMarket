@@ -1,0 +1,11 @@
+{
+  "schema": "openwiz.trust.v1",
+  "listing_id": "canary-tool",
+  "publisher": "wiz-canary-n0nreal",
+  "source": {"repository": "wiz-canary-n0nreal/example-package", "commit": "0123456789abcdef0123456789abcdef01234567"},
+  "sha256": "72e5d6107b2e6ee665505f33d22084647f0d993ffd4f5f6407955707e44b606b",
+  "signature": {"namespace": "openwiz.trust.v1", "sshsig": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgBZgZ/GQBEtxzGjA++riGhU4W3y\n+ILvtNZ5OQBL4yS9MAAAAQb3Blbndpei50cnVzdC52MQAAAAAAAAAGc2hhNTEyAAAAUwAA\nAAtzc2gtZWQyNTUxOQAAAEAV6P9s7pCmpPx50jhFQaBEVoZAAxMNFupDpaZLTu4FdSAIQI\nm+9pIVhm+IO8q8pWVNM+PsxZi2TINmDK5mzwMO\n-----END SSH SIGNATURE-----\n"},
+  "scan_report": {"secrets": {"result": "pass", "findings": []}, "obfuscated-code": {"result": "pass", "findings": []}, "install-scripts": {"result": "pass", "findings": []}, "bundled-binaries": {"result": "pass", "findings": []}, "undeclared-network": {"result": "pass", "findings": []}, "agent-directed-instructions": {"result": "pass", "findings": []}},
+  "review": {"model_family": "Example Reviewer", "verdict": "pass", "reasons": [], "commit": "0123456"},
+  "declaration": {"network": {"api.canary.example": "Fetch synthetic metadata."}, "files": {"/opt/canary/input.txt": {"access": ["read"], "reason": "Read the synthetic input."}, "/opt/canary/output.txt": {"access": ["write"], "reason": "Save the synthetic output."}}, "keys": {"CANARY_TOKEN": "Authenticate to the synthetic API."}}
+}
