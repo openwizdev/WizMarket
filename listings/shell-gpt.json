@@ -1,0 +1,24 @@
+{
+  "name": "ShellGPT",
+  "summary": "Command-line utility for generating shell commands, code snippets, and answers via LLMs.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/TheR1D/shell_gpt",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/TheR1D/shell_gpt"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/TheR1D/shell_gpt/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

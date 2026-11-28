@@ -1,0 +1,24 @@
+{
+  "name": "Every Code",
+  "summary": "Codex CLI fork adding multi-agent orchestration, validation, browser control, and provider flexibility.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/just-every/code",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/just-every/code"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/just-every/code/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Fly Machines",
+  "summary": "Fast-starting microVMs on Fly.io controlled via REST API or flyctl for isolated agent workloads.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "microvm",
+    "cloud"
+  ],
+  "url": "https://docs.fly.io/machines",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Fly.io documentation",
+      "url": "https://docs.fly.io/machines"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://docs.fly.io/machines"
+    }
+  ],
+  "status": "listed"
+}

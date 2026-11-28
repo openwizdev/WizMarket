@@ -1,0 +1,25 @@
+{
+  "name": "Claude Squad",
+  "summary": "Terminal manager for running several CLI coding agents, including Claude Code, Codex, and OpenCode, side by side.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal",
+    "tmux"
+  ],
+  "url": "https://github.com/smtg-ai/claude-squad",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/smtg-ai/claude-squad"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/smtg-ai/claude-squad/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

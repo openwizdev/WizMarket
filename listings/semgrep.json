@@ -1,0 +1,24 @@
+{
+  "name": "Semgrep",
+  "summary": "Multi-language static-analysis scanner for catching bugs and security patterns in CI.",
+  "tags": [
+    "public-source",
+    "ci",
+    "security"
+  ],
+  "url": "https://github.com/semgrep/semgrep",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/semgrep/semgrep"
+    },
+    {
+      "label": "Licence: LGPL-2.1",
+      "url": "https://github.com/semgrep/semgrep/blob/develop/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

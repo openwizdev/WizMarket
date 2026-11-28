@@ -1,0 +1,6 @@
+# Source notes: `agent_clis`
+
+- **Catalog:** Public GitHub repositories (`https://api.github.com/graphql`, REST fallback `https://api.github.com/repos/<owner>/<repo>`).
+- **Terms & reuse:** Only public repository metadata (canonical name, URL, description, licence file / SPDX identifier) is read via GitHub's official public API under the GitHub API Terms of Service. No private data or scraped HTML is used. Descriptions are stored only in `tools/import/manifest/agent_clis.json` for copy-checking; every published listing summary is written in our own words.
+- **Licence evidence:** Each listing links directly to the repository's detected licence file (with SPDX identifier, `"other"` when GitHub reports `NOASSERTION`, or `"not stated"` linked to the repository when no licence file is present).
+- **Exclusions:** Archived repositories (e.g. `AntonOsika/gpt-engineer`, `smallcloudai/refact`, `RooCodeInc/Roo-Code`, `coder/agentapi`) and tools already listed in WizMarket (`listings/`) or OpenWiz harness rows (Claude Code, Codex, Antigravity CLI, Amp, Auggie, Cline CLI, Copilot CLI, Crush, Cursor CLI, Devin, Factory, Gemini CLI, Goose, Hermes, Junie CLI, Kilo Code, Kimi Code, Kiro CLI, Mistral Vibe, OpenClaw, OpenCode, OpenHands, Pi, Qwen Code, Warp Oz) are excluded.

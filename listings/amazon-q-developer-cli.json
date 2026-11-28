@@ -1,0 +1,24 @@
+{
+  "name": "Amazon Q Developer CLI",
+  "summary": "AWS terminal assistant for natural-language chat and building software from the command line.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/aws/amazon-q-developer-cli",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/aws/amazon-q-developer-cli"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/aws/amazon-q-developer-cli/blob/main/LICENSE.APACHE"
+    }
+  ],
+  "status": "listed"
+}

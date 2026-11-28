@@ -1,0 +1,25 @@
+{
+  "name": "Modal",
+  "summary": "Official client SDK for running serverless containers and GPU workloads on Modal.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "cloud",
+    "sdk"
+  ],
+  "url": "https://github.com/modal-labs/modal-client",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/modal-labs/modal-client"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/modal-labs/modal-client/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

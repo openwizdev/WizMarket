@@ -1,0 +1,25 @@
+{
+  "name": "Arrakis",
+  "summary": "Self-hosted microVM sandbox with REST API, Python SDK, port forwarding, and snapshot backtracking for agent runs.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "microvm",
+    "self-hosted"
+  ],
+  "url": "https://github.com/abshkbh/arrakis",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/abshkbh/arrakis"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/abshkbh/arrakis/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

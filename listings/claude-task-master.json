@@ -1,0 +1,24 @@
+{
+  "name": "Claude Task Master",
+  "summary": "Task-planning and tracking layer designed to plug into AI coding editors and agent workflows.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "planning"
+  ],
+  "url": "https://github.com/eyaltoledano/claude-task-master",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/eyaltoledano/claude-task-master"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/eyaltoledano/claude-task-master/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Dagger",
+  "summary": "Programmable container-based CI engine that runs the same build and test pipelines locally or in cloud CI.",
+  "tags": [
+    "public-source",
+    "ci",
+    "containers"
+  ],
+  "url": "https://github.com/dagger/dagger",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/dagger/dagger"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/dagger/dagger/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ForgeCode",
+  "summary": "Terminal pair-programming agent supporting Claude, OpenAI, Gemini, DeepSeek, Grok, and hundreds of models.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/tailcallhq/forgecode",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/tailcallhq/forgecode"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/tailcallhq/forgecode/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Octofriend",
+  "summary": "Open-source terminal coding assistant for everyday software development.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/synthetic-lab/octofriend",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/synthetic-lab/octofriend"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/synthetic-lab/octofriend/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

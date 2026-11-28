@@ -1,0 +1,24 @@
+{
+  "name": "iFlow CLI",
+  "summary": "Terminal coding assistant that reads repositories, edits files, and runs multi-step command-line workflows.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/iflow-ai/iflow-cli",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/iflow-ai/iflow-cli"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/iflow-ai/iflow-cli"
+    }
+  ],
+  "status": "listed"
+}

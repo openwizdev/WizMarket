@@ -1,0 +1,24 @@
+{
+  "name": "PR-Agent",
+  "summary": "Open-source automated pull-request reviewer that summarizes and comments on diffs in CI.",
+  "tags": [
+    "public-source",
+    "ci",
+    "code-review"
+  ],
+  "url": "https://github.com/The-PR-Agent/pr-agent",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/The-PR-Agent/pr-agent"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/The-PR-Agent/pr-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

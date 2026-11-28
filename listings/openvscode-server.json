@@ -1,0 +1,24 @@
+{
+  "name": "OpenVSCode Server",
+  "summary": "Browser-accessible build of upstream VS Code for remote development machines.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "workspaces"
+  ],
+  "url": "https://github.com/gitpod-io/openvscode-server",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/gitpod-io/openvscode-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/gitpod-io/openvscode-server/blob/main/LICENSE.txt"
+    }
+  ],
+  "status": "listed"
+}

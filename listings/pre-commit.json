@@ -1,0 +1,24 @@
+{
+  "name": "pre-commit",
+  "summary": "Framework for installing and running multi-language git pre-commit hooks locally and in CI.",
+  "tags": [
+    "public-source",
+    "ci",
+    "linting"
+  ],
+  "url": "https://github.com/pre-commit/pre-commit",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/pre-commit/pre-commit"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pre-commit/pre-commit/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

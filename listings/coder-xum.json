@@ -1,0 +1,24 @@
+{
+  "name": "Coder Xum",
+  "summary": "Desktop application from Coder for running isolated coding agents in parallel.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "desktop"
+  ],
+  "url": "https://github.com/coder/xum",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/coder/xum"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/coder/xum/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

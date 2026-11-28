@@ -1,0 +1,25 @@
+{
+  "name": "Continue",
+  "summary": "Open-source coding agent available as a CLI and IDE extension for repository editing.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal",
+    "ide"
+  ],
+  "url": "https://github.com/continuedev/continue",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/continuedev/continue"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/continuedev/continue/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Named Tmux Manager",
+  "summary": "Go tmux control plane for spawning, tiling, and coordinating multiple coding agents with safety policies and APIs.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "tmux",
+    "orchestration"
+  ],
+  "url": "https://github.com/Dicklesworthstone/ntm",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/Dicklesworthstone/ntm"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Dicklesworthstone/ntm/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

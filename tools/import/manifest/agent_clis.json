@@ -1,0 +1,410 @@
+{
+  "agent-zero": {
+    "source_url": "https://github.com/agent0ai/agent-zero",
+    "url": "https://github.com/agent0ai/agent-zero",
+    "source_description": "Agent Zero AI framework",
+    "licence": "other",
+    "licence_url": "https://github.com/agent0ai/agent-zero/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "agentops": {
+    "source_url": "https://github.com/AgentOps-AI/agentops",
+    "url": "https://github.com/AgentOps-AI/agentops",
+    "source_description": "Python SDK for AI agent monitoring, LLM cost tracking, benchmarking, and more. Integrates with most LLMs and agent frameworks including CrewAI, Agno, OpenAI Agents SDK, Langchain, Autogen, AG2, and CamelAI",
+    "licence": "MIT",
+    "licence_url": "https://github.com/AgentOps-AI/agentops/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "aichat": {
+    "source_url": "https://github.com/sigoden/aichat",
+    "url": "https://github.com/sigoden/aichat",
+    "source_description": "All-in-one LLM CLI tool featuring Shell Assistant, Chat-REPL, RAG, AI Tools & Agents, with access to OpenAI, Claude, Gemini, Ollama, Groq, and more.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/sigoden/aichat/blob/main/LICENSE-APACHE",
+    "fetched": "2026-11-25"
+  },
+  "aider": {
+    "source_url": "https://github.com/Aider-AI/aider",
+    "url": "https://github.com/Aider-AI/aider",
+    "source_description": "aider is AI pair programming in your terminal",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt",
+    "fetched": "2026-11-25"
+  },
+  "aider-desk": {
+    "source_url": "https://github.com/magiksoft/aider-desk",
+    "url": "https://github.com/magiksoft/aider-desk",
+    "source_description": "Platform for AI-powered software engineers",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/magiksoft/aider-desk/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "amazon-q-developer-cli": {
+    "source_url": "https://github.com/aws/amazon-q-developer-cli",
+    "url": "https://github.com/aws/amazon-q-developer-cli",
+    "source_description": "✨ Agentic chat experience in your terminal. Build applications using natural language.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/aws/amazon-q-developer-cli/blob/main/LICENSE.APACHE",
+    "fetched": "2026-11-25"
+  },
+  "auto-code-rover": {
+    "source_url": "https://github.com/AutoCodeRoverSG/auto-code-rover",
+    "url": "https://github.com/AutoCodeRoverSG/auto-code-rover",
+    "source_description": "A project structure aware autonomous software engineer aiming for autonomous program improvement. Resolved 37.3% tasks (pass@1) in SWE-bench lite and 46.2% tasks (pass@1) in SWE-bench verified with each task costs less than $0.7.",
+    "licence": "other",
+    "licence_url": "https://github.com/AutoCodeRoverSG/auto-code-rover/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "claude-agent-sdk-python": {
+    "source_url": "https://github.com/anthropics/claude-agent-sdk-python",
+    "url": "https://github.com/anthropics/claude-agent-sdk-python",
+    "source_description": "",
+    "licence": "MIT",
+    "licence_url": "https://github.com/anthropics/claude-agent-sdk-python/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "claude-squad": {
+    "source_url": "https://github.com/smtg-ai/claude-squad",
+    "url": "https://github.com/smtg-ai/claude-squad",
+    "source_description": "Manage multiple AI terminal agents like Claude Code, Codex, OpenCode, and Amp.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/smtg-ai/claude-squad/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "claude-task-master": {
+    "source_url": "https://github.com/eyaltoledano/claude-task-master",
+    "url": "https://github.com/eyaltoledano/claude-task-master",
+    "source_description": "An AI-powered task-management system you can drop into Cursor, Lovable, Windsurf, Roo, and others.",
+    "licence": "other",
+    "licence_url": "https://github.com/eyaltoledano/claude-task-master/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "cmux": {
+    "source_url": "https://github.com/manaflow-ai/cmux",
+    "url": "https://github.com/manaflow-ai/cmux",
+    "source_description": "Open source Ghostty-based macOS terminal with vertical tabs and notifications for AI coding agents. Built for multitasking, organization, and programmability.",
+    "licence": "other",
+    "licence_url": "https://github.com/manaflow-ai/cmux/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "code-puppy": {
+    "source_url": "https://github.com/mpfaffenberger/code_puppy",
+    "url": "https://github.com/mpfaffenberger/code_puppy",
+    "source_description": "Agentic AI for writing code",
+    "licence": "MIT",
+    "licence_url": "https://github.com/mpfaffenberger/code_puppy/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "coder-xum": {
+    "source_url": "https://github.com/coder/xum",
+    "url": "https://github.com/coder/xum",
+    "source_description": "A desktop app for isolated, parallel agentic development",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/coder/xum/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "continue-cli": {
+    "source_url": "https://github.com/continuedev/continue",
+    "url": "https://github.com/continuedev/continue",
+    "source_description": "open-source coding agent",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/continuedev/continue/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "crystal-nimbalyst": {
+    "source_url": "https://github.com/stravu/crystal",
+    "url": "https://github.com/stravu/crystal",
+    "source_description": "(Crystal is now Nimbalyst) Run multiple Codex and Claude Code AI sessions in parallel git worktrees. Test, compare approaches & manage AI-assisted development workflows in one desktop app.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/stravu/crystal/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "deepagents": {
+    "source_url": "https://github.com/langchain-ai/deepagents",
+    "url": "https://github.com/langchain-ai/deepagents",
+    "source_description": "The batteries-included agent harness.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/langchain-ai/deepagents/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "devika": {
+    "source_url": "https://github.com/stitionai/devika",
+    "url": "https://github.com/stitionai/devika",
+    "source_description": "Devika is the first open-source implementation of an Agentic Software Engineer. Initially started as an open-source alternative to Devin.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/stitionai/devika/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "devon": {
+    "source_url": "https://github.com/entropy-research/Devon",
+    "url": "https://github.com/entropy-research/Devon",
+    "source_description": "Devon: An open-source pair programmer",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/entropy-research/Devon/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "dyad": {
+    "source_url": "https://github.com/dyad-sh/dyad",
+    "url": "https://github.com/dyad-sh/dyad",
+    "source_description": "Local, open-source AI app builder for power users ✨ v0 / Lovable / Replit / Bolt alternative 🌟 Star if you like it!",
+    "licence": "other",
+    "licence_url": "https://github.com/dyad-sh/dyad/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "every-code": {
+    "source_url": "https://github.com/just-every/code",
+    "url": "https://github.com/just-every/code",
+    "source_description": "Every Code - push frontier AI to it limits. A fork of the Codex CLI with validation, automation, browser integration, multi-agents, theming, and much more. Orchestrate agents from OpenAI, Claude, Gemini or any provider.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/just-every/code/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "forgecode": {
+    "source_url": "https://github.com/tailcallhq/forgecode",
+    "url": "https://github.com/tailcallhq/forgecode",
+    "source_description": "AI enabled pair programmer for Claude, GPT, O Series, Grok, Deepseek, Gemini and 300+ models",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/tailcallhq/forgecode/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "freebuff": {
+    "source_url": "https://github.com/CodebuffAI/freebuff",
+    "url": "https://github.com/CodebuffAI/freebuff",
+    "source_description": "The free coding agent",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/CodebuffAI/freebuff/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "gptme": {
+    "source_url": "https://github.com/gptme/gptme",
+    "url": "https://github.com/gptme/gptme",
+    "source_description": "Your agent in your terminal, equipped with local tools: writes code, uses the terminal, browses the web. Make your own persistent autonomous agent on top!",
+    "licence": "MIT",
+    "licence_url": "https://github.com/gptme/gptme/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "grok-cli": {
+    "source_url": "https://github.com/superagent-ai/grok-cli",
+    "url": "https://github.com/superagent-ai/grok-cli",
+    "source_description": "An open-source coding agent for the Grok API",
+    "licence": "MIT",
+    "licence_url": "https://github.com/superagent-ai/grok-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "groq-code-cli": {
+    "source_url": "https://github.com/build-with-groq/groq-code-cli",
+    "url": "https://github.com/build-with-groq/groq-code-cli",
+    "source_description": "A highly customizable, lightweight, and open-source coding CLI powered by Groq for instant iteration.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/build-with-groq/groq-code-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "happy-cli": {
+    "source_url": "https://github.com/slopus/happy",
+    "url": "https://github.com/slopus/happy",
+    "source_description": "Orchestrate Claude, Codex and Grok in one app. Open-source (MIT), reuses the subscriptions you already pay for.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/slopus/happy/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "humanlayer": {
+    "source_url": "https://github.com/humanlayer/humanlayer",
+    "url": "https://github.com/humanlayer/humanlayer",
+    "source_description": "The best way to get AI coding agents to solve hard problems in complex codebases.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/humanlayer/humanlayer/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "iflow-cli": {
+    "source_url": "https://github.com/iflow-ai/iflow-cli",
+    "url": "https://github.com/iflow-ai/iflow-cli",
+    "source_description": "iFlow cli is a comprehensive command-line intelligence that embeds in your terminal, analyzes your repositories, does coding tasks, interprets your needs across contexts, and boosts efficiency by performing tasks from simple file operations to complex workflow automation.",
+    "licence": "not stated",
+    "licence_url": "https://github.com/iflow-ai/iflow-cli",
+    "fetched": "2026-11-25"
+  },
+  "ironclaw": {
+    "source_url": "https://github.com/nearai/ironclaw",
+    "url": "https://github.com/nearai/ironclaw",
+    "source_description": "IronClaw is an Agent OS focused on privacy, security and extensibility",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/nearai/ironclaw/blob/main/LICENSE-APACHE",
+    "fetched": "2026-11-25"
+  },
+  "kode-cli": {
+    "source_url": "https://github.com/shareAI-lab/Kode-CLI",
+    "url": "https://github.com/shareAI-lab/Kode-CLI",
+    "source_description": "Kode CLI — Design for post-human workflows. One unit agent for every human & computer task.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/shareAI-lab/Kode-CLI/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "letta-code": {
+    "source_url": "https://github.com/letta-ai/letta-code",
+    "url": "https://github.com/letta-ai/letta-code",
+    "source_description": "Agents that self-improve with experience",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/letta-ai/letta-code/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "llm-cli": {
+    "source_url": "https://github.com/simonw/llm",
+    "url": "https://github.com/simonw/llm",
+    "source_description": "Access large language models from the command-line",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/simonw/llm/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mcp-agent": {
+    "source_url": "https://github.com/lastmile-ai/mcp-agent",
+    "url": "https://github.com/lastmile-ai/mcp-agent",
+    "source_description": "Build effective agents using Model Context Protocol and simple workflow patterns",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/lastmile-ai/mcp-agent/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "mini-swe-agent": {
+    "source_url": "https://github.com/SWE-agent/mini-swe-agent",
+    "url": "https://github.com/SWE-agent/mini-swe-agent",
+    "source_description": "The 100 line AI agent that solves GitHub issues or helps you in your command line. Radically simple, no huge configs, no giant monorepo—but scores >74% on SWE-bench verified!",
+    "licence": "MIT",
+    "licence_url": "https://github.com/SWE-agent/mini-swe-agent/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "nanocoder": {
+    "source_url": "https://github.com/Nano-Collective/nanocoder",
+    "url": "https://github.com/Nano-Collective/nanocoder",
+    "source_description": "An open coding agent for your terminal, built by a community collective rather than a company. Bring your own model, keep your code on your machine, and owe nothing to anyone.",
+    "licence": "other",
+    "licence_url": "https://github.com/Nano-Collective/nanocoder/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "neovate-code": {
+    "source_url": "https://github.com/neovateai/neovate-code",
+    "url": "https://github.com/neovateai/neovate-code",
+    "source_description": "Neovate Code is a code agent to enhance your development. You can use it to generate code, fix bugs, review code, add tests, and more. You can run it in interactive mode or headless mode.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/neovateai/neovate-code/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "ntm": {
+    "source_url": "https://github.com/Dicklesworthstone/ntm",
+    "url": "https://github.com/Dicklesworthstone/ntm",
+    "source_description": "Named Tmux Manager: a Go control plane to spawn, tile, and coordinate multiple AI coding agents (Claude, Codex, Antigravity, omp, Grok) across tmux panes - graph-aware work triage, safety policy and approvals, Agent Mail coordination, checkpoints/timelines, and robot JSON + REST/SSE/WebSocket/OpenAPI surfaces.",
+    "licence": "other",
+    "licence_url": "https://github.com/Dicklesworthstone/ntm/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "octofriend": {
+    "source_url": "https://github.com/synthetic-lab/octofriend",
+    "url": "https://github.com/synthetic-lab/octofriend",
+    "source_description": "An open-source coding helper. Very friendly!",
+    "licence": "MIT",
+    "licence_url": "https://github.com/synthetic-lab/octofriend/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "opcode": {
+    "source_url": "https://github.com/winfunc/opcode",
+    "url": "https://github.com/winfunc/opcode",
+    "source_description": "A powerful GUI app and Toolkit for Claude Code - Create custom agents, manage interactive Claude Code sessions, run secure background agents, and more.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/winfunc/opcode/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "open-interpreter": {
+    "source_url": "https://github.com/openinterpreter/openinterpreter",
+    "url": "https://github.com/openinterpreter/openinterpreter",
+    "source_description": "A coding agent for open models like Kimi K3.1 and GLM 5.3",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/openinterpreter/openinterpreter/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "open-swe": {
+    "source_url": "https://github.com/langchain-ai/open-swe",
+    "url": "https://github.com/langchain-ai/open-swe",
+    "source_description": "An Open-Source Asynchronous Coding Agent",
+    "licence": "MIT",
+    "licence_url": "https://github.com/langchain-ai/open-swe/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "openai-agents-python": {
+    "source_url": "https://github.com/openai/openai-agents-python",
+    "url": "https://github.com/openai/openai-agents-python",
+    "source_description": "A lightweight, powerful framework for multi-agent workflows",
+    "licence": "MIT",
+    "licence_url": "https://github.com/openai/openai-agents-python/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "plandex": {
+    "source_url": "https://github.com/plandex-ai/plandex",
+    "url": "https://github.com/plandex-ai/plandex",
+    "source_description": "Open source AI coding agent. Designed for large projects and real world tasks.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/plandex-ai/plandex/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "qodo-command": {
+    "source_url": "https://github.com/qodo-ai/command",
+    "url": "https://github.com/qodo-ai/command",
+    "source_description": "The Qodo Gen CLI lets you interact with the Qodo platform from your terminal for automation, advanced AI workflows, or CI/CD integration.",
+    "licence": "other",
+    "licence_url": "https://github.com/qodo-ai/command/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "ra-aid": {
+    "source_url": "https://github.com/ai-christianson/RA.Aid",
+    "url": "https://github.com/ai-christianson/RA.Aid",
+    "source_description": "Develop software autonomously.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/ai-christianson/RA.Aid/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "sculptor": {
+    "source_url": "https://github.com/imbue-ai/sculptor",
+    "url": "https://github.com/imbue-ai/sculptor",
+    "source_description": "Build product with grounded, parallel coding agents.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/imbue-ai/sculptor/blob/main/LICENSE.md",
+    "fetched": "2026-11-25"
+  },
+  "shell-gpt": {
+    "source_url": "https://github.com/TheR1D/shell_gpt",
+    "url": "https://github.com/TheR1D/shell_gpt",
+    "source_description": "A command-line productivity tool powered by AI large language models like GPT-5, will help you accomplish your tasks faster and more efficiently.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/TheR1D/shell_gpt/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "swe-agent": {
+    "source_url": "https://github.com/SWE-agent/SWE-agent",
+    "url": "https://github.com/SWE-agent/SWE-agent",
+    "source_description": "SWE-agent takes a GitHub issue and tries to automatically fix it, using your LM of choice. It can also be employed for offensive cybersecurity or competitive coding challenges. [NeurIPS 2024]",
+    "licence": "MIT",
+    "licence_url": "https://github.com/SWE-agent/SWE-agent/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "toad": {
+    "source_url": "https://github.com/batrachianai/toad",
+    "url": "https://github.com/batrachianai/toad",
+    "source_description": "A unified interface for AI in your terminal.",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/batrachianai/toad/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "trae-agent": {
+    "source_url": "https://github.com/bytedance/trae-agent",
+    "url": "https://github.com/bytedance/trae-agent",
+    "source_description": "Trae Agent is an LLM-based agent for general purpose software engineering tasks.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/bytedance/trae-agent/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "vibe-kanban": {
+    "source_url": "https://github.com/BloopAI/vibe-kanban",
+    "url": "https://github.com/BloopAI/vibe-kanban",
+    "source_description": "Get 10X more out of Claude Code, Codex or any coding agent",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/BloopAI/vibe-kanban/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  }
+}

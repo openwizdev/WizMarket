@@ -1,0 +1,24 @@
+{
+  "name": "Cua",
+  "summary": "Open-source cross-OS sandboxes, drivers, and benchmarks for computer-use agents.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "computer-use"
+  ],
+  "url": "https://github.com/trycua/cua",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/trycua/cua"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/trycua/cua/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

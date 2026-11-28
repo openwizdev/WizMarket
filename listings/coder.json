@@ -1,0 +1,24 @@
+{
+  "name": "Coder",
+  "summary": "Self-hosted workspace platform for provisioning isolated cloud environments for developers and coding agents.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "workspaces"
+  ],
+  "url": "https://github.com/coder/coder",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/coder/coder"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/coder/coder/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

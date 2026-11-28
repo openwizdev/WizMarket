@@ -1,0 +1,24 @@
+{
+  "name": "Deep Agents",
+  "summary": "LangChain agent harness providing a full runtime and tool loop for coding and general agents.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "framework"
+  ],
+  "url": "https://github.com/langchain-ai/deepagents",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/langchain-ai/deepagents"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/langchain-ai/deepagents/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Codex Universal",
+  "summary": "Base Docker image published by OpenAI for Codex execution environments.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "containers"
+  ],
+  "url": "https://github.com/openai/codex-universal",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/openai/codex-universal"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/openai/codex-universal/blob/main/LICENSES"
+    }
+  ],
+  "status": "listed"
+}

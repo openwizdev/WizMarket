@@ -1,0 +1,24 @@
+{
+  "name": "Limitr",
+  "summary": "In-app usage metering, credit balances, and spend-cap policy engine for users and AI agents.",
+  "tags": [
+    "public-source",
+    "billing",
+    "usage-limits"
+  ],
+  "url": "https://github.com/dev-formata-io/limitr",
+  "plugs_into": "Usage caps and billing around your agents",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/dev-formata-io/limitr"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/dev-formata-io/limitr/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

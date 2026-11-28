@@ -1,0 +1,24 @@
+{
+  "name": "Buildkite Agent",
+  "summary": "Open-source Go daemon for polling and executing Buildkite CI jobs on your own machines.",
+  "tags": [
+    "public-source",
+    "ci",
+    "runners"
+  ],
+  "url": "https://github.com/buildkite/agent",
+  "plugs_into": "Your repository's CI",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/buildkite/agent"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/buildkite/agent/blob/main/LICENSE.txt"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,146 @@
+{
+  "act": {
+    "source_url": "https://github.com/nektos/act",
+    "url": "https://github.com/nektos/act",
+    "source_description": "Run your GitHub Actions locally 🚀",
+    "licence": "MIT",
+    "licence_url": "https://github.com/nektos/act/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "actions-runner-controller": {
+    "source_url": "https://github.com/actions/actions-runner-controller",
+    "url": "https://github.com/actions/actions-runner-controller",
+    "source_description": "Kubernetes controller for GitHub Actions self-hosted runners",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/actions/actions-runner-controller/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "buildkite-agent": {
+    "source_url": "https://github.com/buildkite/agent",
+    "url": "https://github.com/buildkite/agent",
+    "source_description": "The Buildkite Agent is an open-source toolkit written in Go for securely running build jobs on any device or network",
+    "licence": "MIT",
+    "licence_url": "https://github.com/buildkite/agent/blob/main/LICENSE.txt",
+    "fetched": "2026-11-25"
+  },
+  "claude-code-action": {
+    "source_url": "https://github.com/anthropics/claude-code-action",
+    "url": "https://github.com/anthropics/claude-code-action",
+    "source_description": "",
+    "licence": "MIT",
+    "licence_url": "https://github.com/anthropics/claude-code-action/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "codecov-action": {
+    "source_url": "https://github.com/codecov/codecov-action",
+    "url": "https://github.com/codecov/codecov-action",
+    "source_description": "GitHub Action that uploads coverage to Codecov :open_umbrella:",
+    "licence": "MIT",
+    "licence_url": "https://github.com/codecov/codecov-action/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "codex-action": {
+    "source_url": "https://github.com/openai/codex-action",
+    "url": "https://github.com/openai/codex-action",
+    "source_description": "",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/openai/codex-action/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "dagger": {
+    "source_url": "https://github.com/dagger/dagger",
+    "url": "https://github.com/dagger/dagger",
+    "source_description": "Automation engine to build, test and ship any codebase. Runs locally, in CI, or directly in the cloud",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/dagger/dagger/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "earthly": {
+    "source_url": "https://github.com/earthly/earthly",
+    "url": "https://github.com/earthly/earthly",
+    "source_description": "Super simple build framework with fast, repeatable builds and an instantly familiar syntax – like Dockerfile and Makefile had a baby.",
+    "licence": "MPL-2.0",
+    "licence_url": "https://github.com/earthly/earthly/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "github-actions-runner": {
+    "source_url": "https://github.com/actions/runner",
+    "url": "https://github.com/actions/runner",
+    "source_description": "The Runner for GitHub Actions :rocket:",
+    "licence": "MIT",
+    "licence_url": "https://github.com/actions/runner/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "jog": {
+    "source_url": "https://usejog.com",
+    "url": "https://usejog.com",
+    "source_description": "Change runs-on to jog and pay 80% less. GitHub Actions runners for private repositories at $0.0012 a minute for 2 vCPUs, against GitHub's $0.006.",
+    "licence": "not stated",
+    "licence_url": "https://usejog.com",
+    "fetched": "2026-11-25"
+  },
+  "limitr": {
+    "source_url": "https://github.com/dev-formata-io/limitr",
+    "url": "https://github.com/dev-formata-io/limitr",
+    "source_description": "Most flexible usage billing & limits for AI: credits, metering, caps, and custom deals for every user and agent, in one policy that runs in your app and changes live.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/dev-formata-io/limitr/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "pr-agent": {
+    "source_url": "https://github.com/The-PR-Agent/pr-agent",
+    "url": "https://github.com/The-PR-Agent/pr-agent",
+    "source_description": "🚀 PR Agent: The Original Open-Source PR Reviewer. This project is not the Qodo free tier.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/The-PR-Agent/pr-agent/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "pre-commit": {
+    "source_url": "https://github.com/pre-commit/pre-commit",
+    "url": "https://github.com/pre-commit/pre-commit",
+    "source_description": "A framework for managing and maintaining multi-language pre-commit hooks.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/pre-commit/pre-commit/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "qodo-cover": {
+    "source_url": "https://github.com/qodo-ai/qodo-cover",
+    "url": "https://github.com/qodo-ai/qodo-cover",
+    "source_description": "Qodo-Cover: An AI-Powered Tool for Automated Test Generation and Code Coverage Enhancement! 💻🤖🧪🐞",
+    "licence": "AGPL-3.0",
+    "licence_url": "https://github.com/qodo-ai/qodo-cover/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "reviewdog": {
+    "source_url": "https://github.com/reviewdog/reviewdog",
+    "url": "https://github.com/reviewdog/reviewdog",
+    "source_description": "🐶 Automated code review tool integrated with any code analysis tools regardless of programming language",
+    "licence": "MIT",
+    "licence_url": "https://github.com/reviewdog/reviewdog/blob/master/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "run-gemini-cli": {
+    "source_url": "https://github.com/google-github-actions/run-gemini-cli",
+    "url": "https://github.com/google-github-actions/run-gemini-cli",
+    "source_description": "A GitHub Action invoking the Gemini CLI.",
+    "licence": "Apache-2.0",
+    "licence_url": "https://github.com/google-github-actions/run-gemini-cli/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "runs-on": {
+    "source_url": "https://github.com/runs-on/runs-on",
+    "url": "https://github.com/runs-on/runs-on",
+    "source_description": "Self-hosted GitHub Actions runners made simple. For AWS. 10x cheaper, up to 2x faster, and unlimited caching. Best alternative to Actions Runner Controller.",
+    "licence": "MIT",
+    "licence_url": "https://github.com/runs-on/runs-on/blob/main/LICENSE",
+    "fetched": "2026-11-25"
+  },
+  "semgrep": {
+    "source_url": "https://github.com/semgrep/semgrep",
+    "url": "https://github.com/semgrep/semgrep",
+    "source_description": "Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.",
+    "licence": "LGPL-2.1",
+    "licence_url": "https://github.com/semgrep/semgrep/blob/develop/LICENSE",
+    "fetched": "2026-11-25"
+  }
+}

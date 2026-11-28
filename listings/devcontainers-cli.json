@@ -1,0 +1,24 @@
+{
+  "name": "Dev Containers CLI",
+  "summary": "Reference CLI for building and running standardized containers defined by devcontainer.json.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "containers"
+  ],
+  "url": "https://github.com/devcontainers/cli",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/devcontainers/cli"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/devcontainers/cli/blob/main/LICENSE.txt"
+    }
+  ],
+  "status": "listed"
+}

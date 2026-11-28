@@ -1,0 +1,24 @@
+{
+  "name": "LLM",
+  "summary": "Command-line utility by Simon Willison for prompting and piping data through large language models.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/simonw/llm",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/simonw/llm"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/simonw/llm/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

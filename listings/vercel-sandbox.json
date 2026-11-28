@@ -1,0 +1,25 @@
+{
+  "name": "Vercel Sandbox",
+  "summary": "Ephemeral cloud compute sandbox from Vercel for executing untrusted or agent-generated code.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "cloud",
+    "sdk"
+  ],
+  "url": "https://github.com/vercel/sandbox",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/vercel/sandbox"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/vercel/sandbox/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

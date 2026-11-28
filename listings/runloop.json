@@ -1,0 +1,25 @@
+{
+  "name": "Runloop",
+  "summary": "Python client library for Runloop's hosted Linux devboxes where coding agents execute code and edit files.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "cloud",
+    "sdk"
+  ],
+  "url": "https://github.com/runloopai/api-client-python",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/runloopai/api-client-python"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/runloopai/api-client-python/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

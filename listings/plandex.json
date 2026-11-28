@@ -1,0 +1,24 @@
+{
+  "name": "Plandex",
+  "summary": "Open-source terminal coding agent built to plan and apply multi-file changes on larger codebases.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "terminal"
+  ],
+  "url": "https://github.com/plandex-ai/plandex",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/plandex-ai/plandex"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/plandex-ai/plandex/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

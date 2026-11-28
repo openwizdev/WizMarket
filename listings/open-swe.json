@@ -1,0 +1,24 @@
+{
+  "name": "Open SWE",
+  "summary": "Asynchronous coding agent by LangChain that tackles repository tasks in the background.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "github"
+  ],
+  "url": "https://github.com/langchain-ai/open-swe",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/langchain-ai/open-swe"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/langchain-ai/open-swe/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

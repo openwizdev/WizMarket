@@ -1,0 +1,25 @@
+{
+  "name": "Crystal (Nimbalyst)",
+  "summary": "Desktop app (now Nimbalyst) for running parallel Codex and Claude Code sessions in separate git worktrees.",
+  "tags": [
+    "public-source",
+    "coding-agent-cli",
+    "desktop",
+    "worktrees"
+  ],
+  "url": "https://github.com/stravu/crystal",
+  "plugs_into": "An agent CLI you run yourself",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/stravu/crystal"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/stravu/crystal/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

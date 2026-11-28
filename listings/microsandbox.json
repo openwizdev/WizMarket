@@ -1,0 +1,25 @@
+{
+  "name": "Microsandbox",
+  "summary": "Local-first programmable microVM runtime and library for running isolated code.",
+  "tags": [
+    "public-source",
+    "sandbox-host",
+    "microvm",
+    "local"
+  ],
+  "url": "https://github.com/superradcompany/microsandbox",
+  "plugs_into": "A machine your agents run on",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: GitHub public repositories",
+      "url": "https://github.com/superradcompany/microsandbox"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/superradcompany/microsandbox/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
