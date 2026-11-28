@@ -772,6 +772,7 @@ def cmd_review(args):
         check_tree,
         files_fn,
         private,
+        include_work_links=args.public_work_links,
         ids=args.ids or None,
         include_unpublished=args.include_unpublished or bool(args.rev),
         deadline=args.deadline,
@@ -815,10 +816,12 @@ def main(argv):
     skill.set_defaults(run=cmd_skill)
     review_cmd = commands.add_parser(
         "review",
-        help="ask Jev three Nouls about proof kind when TYPESAFE_API_KEY is set; otherwise keep the tag rule",
+        help="ask Jev about proof kind and a being-built work link when TYPESAFE_API_KEY is set; "
+             "otherwise keep the tag rule and the URL check",
         description=(
-            "Check the tree, then ask Jev three Nouls about proof kind when TYPESAFE_API_KEY is set. "
-            "Sends only name, summary, and plugs_into. By default, sends only listings matching "
+            "Check the tree, then ask Jev about proof kind (and being-built work links with --public-work-links) "
+            "when TYPESAFE_API_KEY is set. Sends only name, summary, and plugs_into (plus public first_link scheme, "
+            "host, and path with --public-work-links). By default, sends only listings matching "
             "refs/remotes/origin/main; unpublished drafts, local edits, and unmerged commits stay local "
             "unless selected by id, --rev, or --include-unpublished."
         ),
@@ -828,6 +831,8 @@ def main(argv):
     review_cmd.add_argument("--rev", help="review this commit's tree instead of the working tree")
     review_cmd.add_argument("--include-unpublished", action="store_true",
                             help="also send untracked, modified, or unmerged working-tree listings to Jev")
+    review_cmd.add_argument("--public-work-links", action="store_true",
+                            help="confirm being-built first links are public and send their scheme, host, and path to Jev")
     review_cmd.add_argument("--deadline", type=positive_seconds, default=60,
                             help="overall seconds budget for Jev calls before falling back (default 60)")
     review_cmd.set_defaults(run=cmd_review)
