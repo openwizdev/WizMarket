@@ -1,3 +1,4 @@
+import contextlib
 import io
 import json
 import os
@@ -6,6 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import unittest.mock
 import urllib.error
 from pathlib import Path
 
@@ -724,9 +726,11 @@ class JevProofKind(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         sys.path.insert(0, str(ROOT / "check"))
+        import check as check_mod
         import jev_bench
         import review
         import typesafe_client
+        cls.check_mod = check_mod
         cls.bench = jev_bench
         cls.review = review
         cls.client_mod = typesafe_client
@@ -937,6 +941,318 @@ class JevProofKind(unittest.TestCase):
         self.assertIn("kind tags: 9/12", text)
         self.assertIn("work_link url-only: 6/10", text)
 
+    def _run_review_cli(self, cwd, argv, client):
+        buf = io.StringIO()
+        old_cwd = os.getcwd()
+        try:
+            os.chdir(cwd)
+            with unittest.mock.patch.object(self.review, "client_from_env", return_value=client):
+                with contextlib.redirect_stdout(buf):
+                    code = self.check_mod.main(["review", *argv])
+        finally:
+            os.chdir(old_cwd)
+        return code, buf.getvalue()
+
+    def _synthetic_checkout(self, root):
+        shutil.copytree(FIXTURES / "valid" / "verified-driver", root, dirs_exist_ok=True)
+        git(root, "init", "-q", "-b", "main")
+        git(root, "add", "-A")
+        git(root, "commit", "-q", "-m", "published")
+        git(root, "update-ref", "refs/remotes/origin/main", "HEAD")
+
+        branch_listing = {
+            "name": "Local branch runner",
+            "summary": "A driver committed locally ahead of main.",
+            "tags": ["mcp-server"],
+            "url": "https://example.com/local-branch-runner",
+            "plugs_into": "OpenWiz driver v1",
+            "publisher": "example-publisher",
+            "stage": "available",
+            "status": "listed",
+        }
+        (root / "listings" / "local-branch-runner.json").write_text(json.dumps(branch_listing) + "\n")
+        git(root, "add", "listings/local-branch-runner.json")
+        git(root, "commit", "-q", "-m", "local branch commit")
+
+        draft_listing = {
+            "name": "Embargoed Draft Tool",
+            "summary": "Unannounced partner integration under embargo.",
+            "tags": ["mcp-server"],
+            "url": "https://example.com/embargoed-draft",
+            "plugs_into": "OpenWiz driver v1",
+            "publisher": "example-publisher",
+            "stage": "available",
+            "status": "listed",
+        }
+        (root / "listings" / "embargoed-draft.json").write_text(json.dumps(draft_listing) + "\n")
+        return root
+
+    def test_noul_inclusive_0_3_and_0_7_boundaries(self):
+        self.assertIs(self.review.factor_yes(0.7), True)
+        self.assertIs(self.review.factor_yes(0.3), False)
+        self.assertIs(self.review.factor_yes(1.0), True)
+        self.assertIs(self.review.factor_yes(0.0), False)
+        self.assertIsNone(self.review.factor_yes(0.6999999999999999))
+        self.assertIsNone(self.review.factor_yes(0.30000000000000004))
+        self.assertIsNone(self.review.factor_yes(0.5))
+
+        driver_prose = {
+            "id": "local-runner",
+            "name": "Local runner",
+            "summary": "A driver that starts and stops OpenWiz agents.",
+            "plugs_into": "OpenWiz driver v1",
+            "tags": ["mcp-server"],
+        }
+        at_yes = self.review.proof_reading(driver_prose, self._kind(0.7, 0.3, 0.3))
+        self.assertEqual((at_yes["source"], at_yes["read"]), ("jev", "receipt"))
+        self.assertIn("prose reads as receipt, tags say none", at_yes["finding"])
+
+        below_yes = self.review.proof_reading(driver_prose, self._kind(0.6999999999999999, 0.3, 0.3))
+        self.assertEqual((below_yes["source"], below_yes["read"], below_yes["finding"]), ("fallback", "none", None))
+
+        non_driver_prose = {
+            "id": "mcp-tagged-driver",
+            "name": "Browser tools",
+            "summary": "An MCP server exposing browser tools.",
+            "plugs_into": "The agent's MCP servers",
+            "tags": ["driver"],
+        }
+        at_no = self.review.proof_reading(non_driver_prose, self._kind(0.3, 0.3, 0.3))
+        self.assertEqual((at_no["source"], at_no["read"]), ("jev", "none"))
+        self.assertIn("prose reads as none, tags say receipt", at_no["finding"])
+
+        above_no = self.review.proof_reading(non_driver_prose, self._kind(0.30000000000000004, 0.3, 0.3))
+        self.assertEqual((above_no["source"], above_no["read"], above_no["finding"]), ("fallback", "receipt", None))
+
+    def test_timeout_stops_calling_jev_and_falls_back_for_remaining_listings(self):
+        calls = []
+
+        def stalled(request, timeout):
+            calls.append(timeout)
+            raise TimeoutError("timed out")
+
+        entries = [
+            {"id": f"tool-{i:02d}", "name": f"Tool {i}", "summary": "A tool.",
+             "plugs_into": "The agent's MCP servers", "tags": ["mcp-server"]}
+            for i in range(12)
+        ]
+        client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=stalled, sleep=lambda d: None)
+        lines, findings = self.review.review_lines(entries, client, lambda text: False)
+        self.assertEqual(len(calls), 1)
+        self.assertTrue(client.unavailable)
+        self.assertEqual(findings, [])
+        self.assertEqual(sum("(fallback)" in line for line in lines), 12)
+        self.assertTrue(any("stopped calling TypeSafe" in line for line in lines))
+        self.assertEqual(lines[-1], "review: 12 listings, 0 findings")
+
+    def test_service_wide_http_failures_stop_sweep_while_per_listing_400_continues(self):
+        entries = [
+            {"id": f"tool-{i:02d}", "name": f"Tool {i}", "summary": "A tool.",
+             "plugs_into": "The agent's MCP servers", "tags": ["mcp-server"]}
+            for i in range(5)
+        ]
+        cases = [
+            ("urlerror", 1, lambda req, t: (_ for _ in ()).throw(urllib.error.URLError("dns down"))),
+            ("401", 1, lambda req, t: (_ for _ in ()).throw(
+                urllib.error.HTTPError(req.full_url, 401, "Unauthorized", {}, io.BytesIO(b"")))),
+            ("503", 3, lambda req, t: (_ for _ in ()).throw(
+                urllib.error.HTTPError(req.full_url, 503, "Unavailable", {}, io.BytesIO(b"")))),
+            ("529-long-retry", 1, lambda req, t: (_ for _ in ()).throw(
+                urllib.error.HTTPError(req.full_url, 529, "Overloaded", {"Retry-After": "30"}, io.BytesIO(b"")))),
+        ]
+        for label, expected_calls, opener in cases:
+            with self.subTest(label):
+                count = []
+
+                def wrapped(req, timeout, fn=opener, counter=count):
+                    counter.append(1)
+                    return fn(req, timeout)
+
+                client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=wrapped, sleep=lambda d: None)
+                lines, findings = self.review.review_lines(entries, client, lambda text: False)
+                self.assertEqual(len(count), expected_calls)
+                self.assertTrue(client.unavailable)
+                self.assertEqual(findings, [])
+                self.assertEqual(lines[-1], "review: 5 listings, 0 findings")
+
+        fake_calls = []
+
+        class FailingFake:
+            def ask(self, state, questions):
+                fake_calls.append(state)
+                raise RuntimeError("down")
+
+        lines, findings = self.review.review_lines(entries, FailingFake(), lambda text: False)
+        self.assertEqual(len(fake_calls), 1)
+        self.assertEqual(findings, [])
+
+        mixed_calls = []
+
+        def first_400_then_ok(req, timeout):
+            mixed_calls.append(1)
+            if len(mixed_calls) == 1:
+                raise urllib.error.HTTPError(req.full_url, 400, "Bad Request", {}, io.BytesIO(b""))
+            return _Body(json.dumps({"answers": self._kind(0.05, 0.05, 0.05)}).encode())
+
+        client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=first_400_then_ok, sleep=lambda d: None)
+        lines, findings = self.review.review_lines(entries[:3], client, lambda text: False)
+        self.assertEqual(len(mixed_calls), 3)
+        self.assertFalse(client.unavailable)
+        proof_lines = [line for line in lines if ": proof kind " in line]
+        self.assertEqual(len(proof_lines), 3)
+        self.assertIn("(fallback)", proof_lines[0])
+        self.assertIn("(jev)", proof_lines[1])
+        self.assertIn("(jev)", proof_lines[2])
+
+    def test_overall_deadline_caps_request_timeouts_and_falls_back(self):
+        now = [0.0]
+        seen_timeouts = []
+
+        def fake_clock():
+            return now[0]
+
+        def slow_opener(req, timeout):
+            seen_timeouts.append(timeout)
+            now[0] += 10.0
+            return _Body(json.dumps({"answers": self._kind(0.05, 0.05, 0.05)}).encode())
+
+        entries = [
+            {"id": f"tool-{i:02d}", "name": f"Tool {i}", "summary": "A tool.",
+             "plugs_into": "The agent's MCP servers", "tags": ["mcp-server"]}
+            for i in range(6)
+        ]
+        client = self.client_mod.HttpSystemOneClient(
+            "unit-test-key", opener=slow_opener, sleep=lambda d: None, clock=fake_clock)
+        lines, findings = self.review.review_lines(
+            entries, client, lambda text: False, deadline=25.0, clock=fake_clock)
+        self.assertEqual(seen_timeouts, [20, 15.0, 5.0])
+        self.assertEqual(findings, [])
+        self.assertEqual(sum("(jev)" in line for line in lines), 3)
+        self.assertEqual(sum("(fallback)" in line for line in lines), 3)
+        self.assertTrue(any("deadline" in line for line in lines))
+
+        bad_deadline = run("review", "--deadline", "0", cwd=FIXTURES / "valid" / "verified-driver")
+        self.assertNotEqual(bad_deadline.returncode, 0)
+
+    def test_review_skips_unpublished_drafts_edits_and_unmerged_commits_by_default(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            reg = self._synthetic_checkout(Path(tmp) / "repo")
+            sent = []
+
+            def opener(request, timeout):
+                body = json.loads(request.data.decode())
+                sent.append(body["state"])
+                return _Body(json.dumps({"answers": self._kind(0.9, 0.05, 0.05)}).encode())
+
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, [], client)
+            self.assertEqual(code, 0, out)
+            listing_sent = [item for item in sent if isinstance(item, dict)]
+            receipt_sent = [item for item in sent if isinstance(item, str)]
+            self.assertEqual([item["name"] for item in listing_sent], ["Example driver"])
+            self.assertEqual(len(receipt_sent), 1)
+            self.assertIn("pass token:", receipt_sent[0])
+            self.assertNotIn("Embargoed", json.dumps(sent))
+            self.assertNotIn("Local branch runner", json.dumps(sent))
+            self.assertIn("embargoed-draft: proof kind declared none, read none (fallback, unpublished)", out)
+            self.assertIn("embargoed-draft: summary not judged", out)
+            self.assertIn("local-branch-runner: proof kind declared none, read none (fallback, unpublished)", out)
+            self.assertIn("example-driver: proof kind declared receipt, read receipt (jev)", out)
+            self.assertIn("unpublished", out)
+
+            # Locally modifying the published listing makes it unpublished until committed/merged.
+            sent.clear()
+            driver_path = reg / "listings" / "example-driver.json"
+            data = json.loads(driver_path.read_text())
+            data["summary"] = "Embargoed local edit to an existing published listing."
+            driver_path.write_text(json.dumps(data) + "\n")
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, [], client)
+            self.assertEqual(code, 0, out)
+            self.assertEqual(sent, [])
+            self.assertIn("example-driver: proof kind declared receipt, read receipt (fallback, unpublished)", out)
+
+            # Outside a git repo (or without origin/main), nothing is sent by default.
+            nongit = Path(tmp) / "nongit"
+            shutil.copytree(FIXTURES / "valid" / "listed-available", nongit)
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(nongit, [], client)
+            self.assertEqual(code, 0, out)
+            self.assertEqual(sent, [])
+            self.assertIn("(fallback, unpublished)", out)
+
+    def test_review_sends_selected_ids_rev_and_include_unpublished_on_opt_in(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            reg = self._synthetic_checkout(Path(tmp) / "repo")
+            sent = []
+
+            def opener(request, timeout):
+                body = json.loads(request.data.decode())
+                sent.append(body["state"])
+                return _Body(json.dumps({"answers": self._kind(0.7, 0.3, 0.3)}).encode())
+
+            # Selecting a draft by id sends only that draft and reports its finding.
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, ["embargoed-draft"], client)
+            self.assertEqual(code, 1, out)
+            self.assertEqual([item["name"] for item in sent], ["Embargoed Draft Tool"])
+            self.assertIn("finding: embargoed-draft: prose reads as receipt, tags say none", out)
+            self.assertIn("review: 1 listings, 1 findings", out)
+
+            # --rev HEAD reads only committed listings from HEAD, never untracked drafts.
+            sent.clear()
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, ["--rev", "HEAD"], client)
+            self.assertEqual(code, 1, out)
+            self.assertEqual(
+                sorted(item["name"] for item in sent if isinstance(item, dict)),
+                ["Example driver", "Local branch runner"],
+            )
+            self.assertEqual(sum(isinstance(item, str) for item in sent), 1)
+            self.assertNotIn("Embargoed", json.dumps(sent))
+
+            # --include-unpublished explicitly opts all working-tree listings in.
+            sent.clear()
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, ["--include-unpublished"], client)
+            self.assertEqual(code, 1, out)
+            self.assertEqual(
+                sorted(item["name"] for item in sent if isinstance(item, dict)),
+                ["Embargoed Draft Tool", "Example driver", "Local branch runner"],
+            )
+            self.assertEqual(sum(isinstance(item, str) for item in sent), 1)
+
+            # Invalid and missing listing ids are refused without calling TypeSafe.
+            sent.clear()
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, ["Bad_Id"], client)
+            self.assertEqual(code, 1)
+            self.assertEqual(sent, [])
+            self.assertIn("not a listing id", out)
+
+            code, out = self._run_review_cli(reg, ["missing-tool"], client)
+            self.assertEqual(code, 1)
+            self.assertEqual(sent, [])
+            self.assertIn("listings/missing-tool.json is not there", out)
+
+            # Even with opt-in, private credential patterns stay blocked and never reach TypeSafe.
+            leaky = reg / "listings" / "leaky-draft.json"
+            leaky.write_text(json.dumps({
+                "name": "Leaky",
+                "summary": "Uses password: supersecretvalue here.",
+                "tags": ["mcp-server"],
+                "url": "https://example.com/leaky",
+                "plugs_into": "The agent's MCP servers",
+                "publisher": "example-publisher",
+                "stage": "available",
+                "status": "listed",
+            }) + "\n")
+            client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self._run_review_cli(reg, ["--include-unpublished"], client)
+            self.assertEqual(code, 1)
+            self.assertEqual(sent, [])
+            self.assertIn("a token", out)
+
 
 class JevWorkLink(unittest.TestCase):
     @classmethod
@@ -1022,6 +1338,128 @@ class JevWorkLink(unittest.TestCase):
     def test_bench_counts(self):
         work = self.bench.score_work_link(self.bench.load()["work_link"])
         self.assertEqual((work["url_only"], work["heuristic"], work["n"]), (6, 9, 10))
+
+    def test_review_does_not_send_work_link_without_public_confirmation(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append((state, questions))
+                return {"is_driver": {"type": "noul", "noul": 0.05},
+                        "is_harness": {"type": "noul", "noul": 0.91},
+                        "is_skill": {"type": "noul", "noul": 0.05},
+                        "is_work_item": {"type": "noul", "noul": 0.91},
+                        "is_about_this_work": {"type": "noul", "noul": 0.91}}
+
+        import check as check_mod
+        code, text = self.review.run(FIXTURES / "valid" / "listed-being-built", Fake(),
+                                     check_mod.check_tree, check_mod.worktree_files, check_mod.private)
+        self.assertEqual(code, 0, text)
+        self.assertEqual(len(seen), 1)
+        state, questions = seen[0]
+        self.assertNotIn("first_link", state)
+        self.assertNotIn("is_work_item", questions)
+        self.assertNotIn("is_about_this_work", questions)
+        self.assertIn("example-harness: work link not judged\n", text)
+
+        seen.clear()
+        code, text = self.review.run(FIXTURES / "valid" / "listed-being-built", Fake(),
+                                     check_mod.check_tree, check_mod.worktree_files, check_mod.private,
+                                     include_work_links=True)
+        self.assertEqual(code, 0, text)
+        self.assertEqual(len(seen), 1)
+        state, questions = seen[0]
+        self.assertEqual(state["first_link"]["url"],
+                         "https://github.com/example-owner/example-harness/pull/1")
+        self.assertIn("is_work_item", questions)
+        self.assertIn("is_about_this_work", questions)
+        self.assertIn("example-harness: work link yes (jev 1.00)\n", text)
+
+    def test_credential_bearing_and_private_work_links_are_never_sent(self):
+        import check as check_mod
+        urls = [
+            ("https://tracker.example.com/org/repo/-/issues/1?token=secret123", "secret123"),
+            ("https://tracker.example.com/org/repo/-/issues/1?api_key=abc123", "abc123"),
+            ("https://tracker.example.com/org/repo/-/issues/1#token=fragsecret", "fragsecret"),
+            ("https://tracker.example.com/org/repo/-/issues/1?sig=deadbeef", "deadbeef"),
+            ("https://user:pass@tracker.example.com/org/repo/-/issues/1", "user:pass"),
+            ("https://user@tracker.example.com/org/repo/-/issues/1", "user@"),
+            ("https://localhost/org/repo/issues/1", "localhost"),
+            ("https://tracker.internal/org/repo/issues/1", "tracker.internal"),
+            ("https://tracker.local/org/repo/issues/1", "tracker.local"),
+            ("https://10.0.0.1/org/repo/issues/1", "10.0.0.1"),
+            ("https://127.0.0.1/org/repo/issues/1", "127.0.0.1"),
+            ("https://tracker.example.com/org/password%3A%20hunter2", "hunter2"),
+        ]
+        for url, secret in urls:
+            with self.subTest(url=url):
+                seen = []
+
+                class Fake:
+                    def ask(self, state, questions):
+                        seen.append((state, questions))
+                        return None
+
+                listing, _ = self._listing()
+                listing["links"] = [{"label": "Ticket", "url": url}]
+                self.review.ask_listing(listing, Fake(), check_mod.private)
+                self.assertEqual(len(seen), 1)
+                state, questions = seen[0]
+                self.assertNotIn("first_link", state)
+                self.assertNotIn("is_work_item", questions)
+                self.assertNotIn("is_about_this_work", questions)
+                self.assertNotIn(secret, json.dumps(state))
+
+    def test_query_and_fragment_are_stripped_from_sent_work_link(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append(state)
+                return None
+
+        listing, _ = self._listing()
+        listing["links"] = [{"label": "Ticket",
+                             "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2"}]
+        self.review.ask_listing(listing, Fake(), lambda text: False)
+        self.assertEqual(len(seen), 1)
+        self.assertEqual(seen[0]["first_link"]["url"],
+                         "https://tracker.example.com/example-owner/example-harness/-/issues/1")
+        self.assertNotIn("view=full", json.dumps(seen[0]))
+        self.assertNotIn("note-2", json.dumps(seen[0]))
+
+    def test_live_bench_uses_listing_prose_and_scores_item_and_about_separately(self):
+        work_states = []
+
+        class Fake:
+            def ask(self, state, questions):
+                if "is_work_item" in questions:
+                    work_states.append(state)
+                    item = 0.91 if "pull" in state["first_link"]["url"] or "issues" in state["first_link"]["url"] else 0.09
+                    return {"is_work_item": {"type": "noul", "noul": item},
+                            "is_about_this_work": {"type": "noul", "noul": 0.91}}
+                return {"is_driver": {"type": "noul", "noul": 0.91},
+                        "is_harness": {"type": "noul", "noul": 0.05},
+                        "is_skill": {"type": "noul", "noul": 0.05}}
+
+        data = self.bench.load()["work_link"]
+        for case in data:
+            self.assertIn("name", case)
+            self.assertIn("summary", case)
+            self.assertIn("plugs_into", case)
+            self.assertIn("is_work_item", case)
+            self.assertIn("is_about_this_work", case)
+            self.assertNotEqual(case["name"], case["id"])
+            self.assertNotEqual(case["summary"], "Being built.")
+
+        text = self.bench.report(live=True, client=Fake())
+        self.assertEqual(len(work_states), len(data))
+        self.assertEqual(work_states[0]["name"], data[0]["name"])
+        self.assertEqual(work_states[0]["summary"], data[0]["summary"])
+        self.assertNotIn("view=full", json.dumps(work_states))
+        self.assertIn("work_link jev (", text)
+        self.assertIn("work_link item jev (", text)
+        self.assertIn("work_link about jev (", text)
 
 
 class JevSummary(unittest.TestCase):
@@ -1125,6 +1563,72 @@ class JevReceipt(unittest.TestCase):
         self.assertIs(self.review.factor_yes(0.30), False)
         self.assertIsNone(self.review.factor_yes(0.699))
         self.assertIsNone(self.review.factor_yes(0.301))
+
+    def test_unpublished_receipts_and_service_failures_stay_local(self):
+        import check as check_mod
+        import typesafe_client
+        with tempfile.TemporaryDirectory() as tmp:
+            reg = Path(tmp) / "repo"
+            shutil.copytree(FIXTURES / "valid" / "verified-driver", reg)
+            git(reg, "init", "-q", "-b", "main")
+            git(reg, "add", "-A")
+            git(reg, "commit", "-q", "-m", "published")
+            git(reg, "update-ref", "refs/remotes/origin/main", "HEAD")
+
+            # Add an untracked second receipt for the already-published listing.
+            orig = reg / "receipts" / "example-driver" / "2026-11-01-aaaaaaaaaaaa.txt"
+            draft = reg / "receipts" / "example-driver" / "2026-11-02-cccccccccccc.txt"
+            draft.write_text(
+                orig.read_text().replace("a" * 40, "c" * 40).replace("2026-11-01", "2026-11-02")
+            )
+
+            sent = []
+
+            def opener(request, timeout):
+                body = json.loads(request.data.decode())
+                sent.append(body["state"])
+                if isinstance(body["state"], str):
+                    return _Body(json.dumps({
+                        "answers": {name: {"type": "noul", "noul": 0.05} for name in body["questions"]}
+                    }).encode())
+                return _Body(json.dumps({
+                    "answers": {
+                        "is_driver": {"type": "noul", "noul": 0.9},
+                        "is_harness": {"type": "noul", "noul": 0.05},
+                        "is_skill": {"type": "noul", "noul": 0.05},
+                    }
+                }).encode())
+
+            client = typesafe_client.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self.review.run(reg, client, check_mod.check_tree, check_mod.worktree_files, check_mod.private)
+            self.assertEqual(code, 0, out)
+            receipt_sent = [item for item in sent if isinstance(item, str)]
+            self.assertEqual(len(receipt_sent), 1)
+            self.assertIn("aaaaaaaaaaaa", receipt_sent[0])
+            self.assertNotIn("cccccccccccc", receipt_sent[0])
+            self.assertIn("2026-11-01-aaaaaaaaaaaa.txt: contract pass; jev fit 0.00 disagrees", out)
+            self.assertIn("2026-11-02-cccccccccccc.txt: contract pass\n", out)
+            self.assertIn("1 unpublished receipt not sent to TypeSafe", out)
+
+            # After a service-wide failure on the listing call, no receipt is sent.
+            sent.clear()
+
+            def failing_opener(request, timeout):
+                body = json.loads(request.data.decode())
+                sent.append(body["state"])
+                raise urllib.error.HTTPError(request.full_url, 401, "Unauthorized", {}, None)
+
+            failing = typesafe_client.HttpSystemOneClient(
+                "unit-test-key", opener=failing_opener, sleep=lambda d: None)
+            code, out = self.review.run(
+                reg, failing, check_mod.check_tree, check_mod.worktree_files, check_mod.private,
+                include_unpublished=True,
+            )
+            self.assertEqual(code, 0, out)
+            self.assertEqual(len(sent), 1)
+            self.assertIsInstance(sent[0], dict)
+            self.assertIn("stopped calling TypeSafe after", out)
+            self.assertIn("2026-11-01-aaaaaaaaaaaa.txt: contract pass\n", out)
 
 
 class _Body:
