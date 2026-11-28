@@ -1,0 +1,5 @@
+{
+  "listing_id": "canary-tool",
+  "declaration": {"network": {"api.canary.example": "Fetch synthetic metadata."}, "files": {"/opt/canary/input.txt": {"access": ["read"], "reason": "Read the synthetic input."}, "/opt/canary/output.txt": {"access": ["write"], "reason": "Save the synthetic output."}}, "keys": {"CANARY_TOKEN": "Authenticate to the synthetic API."}},
+  "approved_at": "2026-11-28T08:00:00+01:00"
+}
