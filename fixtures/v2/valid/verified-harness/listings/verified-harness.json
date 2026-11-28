@@ -1,0 +1,30 @@
+{
+  "name": "Verified pinned harness",
+  "summary": "A synthetic verified harness pinned to a driver release, with a key host.",
+  "tags": [
+    "harness"
+  ],
+  "url": "https://example.com/verified-pinned-harness",
+  "plugs_into": "The local driver",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "login": "Your own example-harness login on your computer",
+  "status": "verified",
+  "proof": {
+    "receipt": "receipts/verified-harness/2026-11-01-aaaaaaaaaaaa.txt"
+  },
+  "package": {
+    "driver": "verified-harness",
+    "version": "1.2.0",
+    "repository": "example-owner/verified-harness",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "asset_url": "https://github.com/example-owner/verified-harness/releases/download/v1.2.0/driver.tar.gz",
+    "sha256": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+    "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "key_host": {
+    "origin": "https://api.example.com",
+    "variable": "EXAMPLE_API_KEY",
+    "keychain": "example.host"
+  }
+}

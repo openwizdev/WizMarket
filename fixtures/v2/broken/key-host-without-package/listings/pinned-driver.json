@@ -1,0 +1,17 @@
+{
+  "name": "Pinned driver",
+  "summary": "A synthetic driver pinned to one release of its own repository.",
+  "tags": [
+    "driver"
+  ],
+  "url": "https://example.com/pinned-driver",
+  "plugs_into": "The OpenWiz driver interface",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed",
+  "key_host": {
+    "origin": "https://api.example.com",
+    "variable": "EXAMPLE_API_KEY",
+    "keychain": "example.host"
+  }
+}
