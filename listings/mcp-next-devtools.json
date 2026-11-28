@@ -3,9 +3,7 @@
   "summary": "Exposes Next.js developer diagnostics and tooling to coding agents over stdio.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "cloud",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/vercel/next-devtools-mcp",
   "plugs_into": "The MCP servers your agents load",

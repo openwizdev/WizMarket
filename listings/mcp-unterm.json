@@ -3,8 +3,7 @@
   "summary": "Lets agents spawn terminal panes, execute commands, inspect screen output, and take screenshots.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/zhitongblog/unterm",
   "plugs_into": "The MCP servers your agents load",

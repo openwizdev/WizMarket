@@ -3,8 +3,7 @@
   "summary": "Manages calendars, contacts, and tasks across CalDAV/CardDAV platforms via 27 tools.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/PhilflowIO/dav-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -1,11 +1,10 @@
 {
   "name": "fs-mcp-rs",
-  "summary": "Rust filesystem server with configurable root isolation, bounded I/O, and file search.",
+  "summary": "Rust-based file access server with sandboxed directory roots, capped I/O reads, search, and optional shell tools.",
   "tags": [
     "public-source",
     "mcp-server",
-    "search",
-    "git"
+    "search"
   ],
   "url": "https://github.com/nihmadev/fs-mcp-rs",
   "plugs_into": "The MCP servers your agents load",

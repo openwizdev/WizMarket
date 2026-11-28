@@ -3,8 +3,7 @@
   "summary": "Publishes and discovers AI agents in DNS through RFC 9460 SVCB records.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/dns-aid/dns-aid-core",
   "plugs_into": "The MCP servers your agents load",

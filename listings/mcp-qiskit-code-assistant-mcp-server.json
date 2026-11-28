@@ -3,8 +3,7 @@
   "summary": "Connects LLMs to Qiskit Code Assistant for quantum computing code completion.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Qiskit/mcp-servers",
   "plugs_into": "The MCP servers your agents load",

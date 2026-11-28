@@ -3,8 +3,7 @@
   "summary": "Observes live processes and containers with perf, lsof, tcpdump, py-spy, and strace.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/shreyassaw5394/debuganything",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Tracks agent skills and recorded failure lessons so coding assistants avoid repeating past mistakes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/benyalgx/Kira",
   "plugs_into": "The MCP servers your agents load",

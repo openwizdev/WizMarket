@@ -3,8 +3,7 @@
   "summary": "Provides Korea's 2022 revised middle and high school curriculum learning graph and standards.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/raphysicst-create/korean-secondary-learning-map-mcp",
   "plugs_into": "The MCP servers your agents load",

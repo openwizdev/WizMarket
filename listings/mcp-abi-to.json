@@ -3,8 +3,7 @@
   "summary": "Generates MCP servers from EVM smart contract ABIs so agents can inspect and invoke contracts.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/nirholas/UCAI",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Agent gateway combining Rhumb Index capability scoring with governed external tool execution.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/supertrained/rhumb",
   "plugs_into": "The MCP servers your agents load",

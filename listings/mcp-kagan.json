@@ -3,8 +3,7 @@
   "summary": "Terminal Kanban board for orchestrating autonomous coding agents in isolated Git worktrees.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/kagan-sh/kagan",
   "plugs_into": "The MCP servers your agents load",

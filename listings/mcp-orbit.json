@@ -3,8 +3,7 @@
   "summary": "Manages local-first task queues and audited Git-worktree workflows for coding agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/constellation-works/orbit",
   "plugs_into": "The MCP servers your agents load",

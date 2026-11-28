@@ -3,8 +3,7 @@
   "summary": "Verifies MCP tool definitions against a signed public log to detect post-approval schema changes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/GautamTalksDev/mcp-pin",
   "plugs_into": "The MCP servers your agents load",

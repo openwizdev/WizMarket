@@ -3,8 +3,7 @@
   "summary": "Provides an encrypted channel so Codex, Cursor, Claude Code, and other agents can coordinate.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/1gr14/agents-party",
   "plugs_into": "The MCP servers your agents load",

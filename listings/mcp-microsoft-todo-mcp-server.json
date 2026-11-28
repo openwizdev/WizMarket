@@ -3,8 +3,7 @@
   "summary": "Manages Microsoft To Do lists, tasks, checklists, and reminders through Microsoft Graph.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/jordanburke/microsoft-todo-mcp-server",
   "plugs_into": "The MCP servers your agents load",

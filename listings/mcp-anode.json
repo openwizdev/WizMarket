@@ -3,8 +3,7 @@
   "summary": "Runs a separate background Windows desktop session for native GUI automation and app testing.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/skulitom/Anode",
   "plugs_into": "The MCP servers your agents load",

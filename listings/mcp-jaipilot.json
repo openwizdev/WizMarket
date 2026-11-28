@@ -3,8 +3,7 @@
   "summary": "Generates high-coverage Java unit tests with multi-class workflows for coding agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/JAIPilot/jaipilot",
   "plugs_into": "The MCP servers your agents load",

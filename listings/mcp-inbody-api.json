@@ -3,8 +3,7 @@
   "summary": "Fetches InBody body-composition scans including body fat, muscle mass, and body water.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/rwestergren/inbody-api-mcp",
   "plugs_into": "The MCP servers your agents load",

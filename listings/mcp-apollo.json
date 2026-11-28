@@ -3,8 +3,7 @@
   "summary": "Searches B2B prospects, enriches lead records, and manages outreach sequences in Apollo.io.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/apolloio/apollo-mcp-plugin",
   "plugs_into": "The MCP servers your agents load",

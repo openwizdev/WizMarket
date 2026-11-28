@@ -3,8 +3,7 @@
   "summary": "Open-source headless CMS server for managing typed content schemas, drafts, and entries.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/kozmos-tech/inhalt",
   "plugs_into": "The MCP servers your agents load",

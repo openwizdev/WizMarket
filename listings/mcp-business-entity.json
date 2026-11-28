@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "finance"
   ],
   "url": "https://github.com/martc03/gov-mcp-servers",
   "plugs_into": "The MCP servers your agents load",

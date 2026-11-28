@@ -3,8 +3,7 @@
   "summary": "Queries multiple OpenAI-compatible LLMs and CLI agents for second opinions and debates.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/nesquikm/mcp-rubber-duck",
   "plugs_into": "The MCP servers your agents load",

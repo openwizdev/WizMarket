@@ -3,8 +3,7 @@
   "summary": "Computes shortest maritime shipping routes between ports with canal rules, drafts, and GeoJSON.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mayurrawte/searoute-ts",
   "plugs_into": "The MCP servers your agents load",

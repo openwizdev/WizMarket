@@ -3,8 +3,7 @@
   "summary": "Exposes learned website request catalogs as callable API operations for agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/goodnight000/api-anything",
   "plugs_into": "The MCP servers your agents load",

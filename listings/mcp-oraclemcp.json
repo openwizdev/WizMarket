@@ -4,8 +4,7 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "database",
-    "git"
+    "database"
   ],
   "url": "https://github.com/MuhDur/oraclemcp",
   "plugs_into": "The MCP servers your agents load",

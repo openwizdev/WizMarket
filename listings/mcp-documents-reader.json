@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "design"
+    "design",
+    "data"
   ],
   "url": "https://github.com/xt765/mcp_documents_reader",
   "plugs_into": "The MCP servers your agents load",

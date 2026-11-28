@@ -1,11 +1,10 @@
 {
   "name": "Pumperly",
-  "summary": "Looks up real-time fuel and EV charging prices along routes or near locations across ~40 countries.",
+  "summary": "Finds live gas and EV charging rates nearby or along driving routes across roughly 40 countries via Pumperly.",
   "tags": [
     "public-source",
     "mcp-server",
-    "search",
-    "git"
+    "search"
   ],
   "url": "https://github.com/GeiserX/pumperly-mcp",
   "plugs_into": "The MCP servers your agents load",

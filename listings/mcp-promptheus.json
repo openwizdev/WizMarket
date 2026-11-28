@@ -3,8 +3,7 @@
   "summary": "Refines prompts interactively with adaptive questioning across six or more LLM providers.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/abhichandra21/Promptheus",
   "plugs_into": "The MCP servers your agents load",

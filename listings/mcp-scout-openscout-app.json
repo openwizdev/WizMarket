@@ -3,8 +3,7 @@
   "summary": "Coordinates local coding agents and tracks task handoffs across a local mesh control plane.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/openscout-app/scout",
   "plugs_into": "The MCP servers your agents load",

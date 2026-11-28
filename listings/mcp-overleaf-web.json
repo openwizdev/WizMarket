@@ -3,8 +3,7 @@
   "summary": "Reads, edits, compiles, and reviews Overleaf LaTeX projects using a signed-in browser session.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mhmdaskari/overleaf-web-mcp",
   "plugs_into": "The MCP servers your agents load",

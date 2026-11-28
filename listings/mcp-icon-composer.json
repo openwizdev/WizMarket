@@ -3,8 +3,7 @@
   "summary": "Builds and edits .icon bundles for Apple platforms with iOS 26+ Liquid Glass rendering.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ethbak/icon-composer-mcp",
   "plugs_into": "The MCP servers your agents load",

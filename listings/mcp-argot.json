@@ -3,8 +3,7 @@
   "summary": "Runs local statistical code checks against repository patterns mined from Git history.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/get-tmonier/argot",
   "plugs_into": "The MCP servers your agents load",

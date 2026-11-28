@@ -230,8 +230,10 @@ def make_source_url(server_name: str) -> str:
 
 def infer_tags(server: dict, repo_info: dict | None = None) -> list[str]:
     """Return ['mcp-server'] plus at most 2 topical tags (never driver or harness)."""
+    raw_name = (server.get("name") or "").strip()
+    slug = raw_name.split("/", 1)[1] if "/" in raw_name else raw_name
     text = " ".join(filter(None, [
-        server.get("name") or "",
+        slug,
         server.get("title") or "",
         server.get("description") or "",
         (repo_info or {}).get("description") or "",
@@ -266,7 +268,10 @@ def build_entry(server: dict, repo_info: dict | None, url: str) -> dict:
     server_name = clean_line(server.get("name") or "")
     reg_desc = clean_line(server.get("description") or "")
     repo_desc = clean_line((repo_info or {}).get("description") or "")
-    source_desc = reg_desc or repo_desc
+    if reg_desc and repo_desc and repo_desc.lower() != reg_desc.lower():
+        source_desc = f"{reg_desc} | {repo_desc}"
+    else:
+        source_desc = reg_desc or repo_desc
     licence, licence_url = licence_from_repo(repo_info, url)
     return {
         "id": make_id(server),
@@ -284,6 +289,13 @@ def build_entry(server: dict, repo_info: dict | None, url: str) -> dict:
 def is_active_latest(item: dict) -> bool:
     meta = (item.get("_meta") or {}).get(OFFICIAL_META_KEY) or {}
     return bool(meta.get("isLatest")) and meta.get("status") == "active"
+
+
+def _dedupe_key(url: str) -> str:
+    gh = parse_github_repo(url)
+    if gh:
+        return f"https://github.com/{gh[0].lower()}/{gh[1].lower()}"
+    return normalise_shard_url(url)
 
 
 def filter_servers(
@@ -327,11 +339,11 @@ def filter_servers(
         if not url:
             drops["no_url"] += 1
             continue
-        norm = normalise_shard_url(url)
-        if not norm:
+        pre_key = _dedupe_key(url)
+        if not pre_key:
             drops["no_url"] += 1
             continue
-        if norm in seen_urls:
+        if pre_key in seen_urls:
             drops["duplicate_url"] += 1
             continue
 
@@ -356,13 +368,19 @@ def filter_servers(
                 drops["website_unresolved"] += 1
                 continue
 
+        post_key = _dedupe_key(url)
+        if post_key in seen_urls:
+            drops["duplicate_url"] += 1
+            continue
+
         reg_desc = clean_line(server.get("description") or "")
         repo_desc = clean_line((repo_info or {}).get("description") or "")
         if is_placeholder(server.get("name") or "", server.get("title") or "", reg_desc or repo_desc):
             drops["placeholder_or_empty"] += 1
             continue
 
-        seen_urls.add(norm)
+        seen_urls.add(pre_key)
+        seen_urls.add(post_key)
         entry = build_entry(server, repo_info, url)
         kept.append((stars, entry))
 
@@ -433,10 +451,12 @@ def query_github_repos_graphql(repos: list[tuple[str, str]], batch_size: int = 4
             )
             if proc.stdout:
                 try:
-                    data = json.loads(proc.stdout).get("data") or {}
-                    break
+                    parsed = json.loads(proc.stdout)
                 except json.JSONDecodeError:
-                    pass
+                    parsed = None
+                if isinstance(parsed, dict) and isinstance(parsed.get("data"), dict) and parsed["data"]:
+                    data = parsed["data"]
+                    break
             if attempt < 2:
                 time.sleep(2 * (attempt + 1))
         for idx, (owner, repo) in enumerate(chunk):

@@ -3,8 +3,7 @@
   "summary": "Queries publicly available Indian mutual fund NAVs, schemes, and historical data.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/NayakwadiS/mftool-mcp",
   "plugs_into": "The MCP servers your agents load",

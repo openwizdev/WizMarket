@@ -1,6 +1,6 @@
 {
   "name": "BestPrice",
-  "summary": "Read-only product search, offer comparison, and price history for Greek shopping via BestPrice.",
+  "summary": "Queries BestPrice for Greek retail products, comparing merchant listings and tracking historical prices read-only.",
   "tags": [
     "public-source",
     "mcp-server",

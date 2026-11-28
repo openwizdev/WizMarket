@@ -3,8 +3,7 @@
   "summary": "Validates part-by-part 3D object specs and exports meshes in STL, 3MF, OBJ, or glTF.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/rtmandreyev/construct",
   "plugs_into": "The MCP servers your agents load",

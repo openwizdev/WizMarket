@@ -3,8 +3,7 @@
   "summary": "Deploys and manages ERC-20 tokens across 10 EVM networks through 17 Bitbond Token Tool endpoints.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/bitbond/token-tool-mcp",
   "plugs_into": "The MCP servers your agents load",

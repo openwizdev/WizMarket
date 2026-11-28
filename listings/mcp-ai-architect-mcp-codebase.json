@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "developer-tools"
   ],
   "url": "https://github.com/cdeust/ai-architect-mcp-codebase",
   "plugs_into": "The MCP servers your agents load",

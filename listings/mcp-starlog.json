@@ -3,8 +3,7 @@
   "summary": "Checks software packages for CVEs, licences, and maintenance signals before installation.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/starloghq/index",
   "plugs_into": "The MCP servers your agents load",

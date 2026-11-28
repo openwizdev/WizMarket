@@ -4,8 +4,7 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "search",
-    "git"
+    "search"
   ],
   "url": "https://github.com/rubatoyd/KCI_openAPI",
   "plugs_into": "The MCP servers your agents load",

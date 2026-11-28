@@ -3,8 +3,7 @@
   "summary": "Implements the A202 protocol for verifiable commercial mandates, obligations, and transaction records.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/a202-protocol/a202",
   "plugs_into": "The MCP servers your agents load",

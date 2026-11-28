@@ -3,8 +3,7 @@
   "summary": "Exposes 57 Meta platform tools covering the Instagram Graph API and Threads API.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mikusnuz/meta-mcp",
   "plugs_into": "The MCP servers your agents load",

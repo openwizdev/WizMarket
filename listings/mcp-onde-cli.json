@@ -3,8 +3,7 @@
   "summary": "Fine-tunes LoRA adapters, exports GGUF weights, and deploys local LLMs on Apple silicon via Onde.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ondeinference/onde-cli",
   "plugs_into": "The MCP servers your agents load",

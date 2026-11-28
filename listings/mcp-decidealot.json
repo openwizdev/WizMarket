@@ -1,10 +1,9 @@
 {
   "name": "Decidealot",
-  "summary": "Runs local Laya/Von or hosted Jev models for typed classification and scoring over MCP.",
+  "summary": "Calls local Laya/Von or hosted Jev models over MCP to return structured scores and typed class labels.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/psyb0t/decidealot",
   "plugs_into": "The MCP servers your agents load",

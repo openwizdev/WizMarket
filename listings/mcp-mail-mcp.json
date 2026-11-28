@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "communication"
+    "communication",
+    "security"
   ],
   "url": "https://github.com/Atomic-Mail/atomic-mail-agentic",
   "plugs_into": "The MCP servers your agents load",

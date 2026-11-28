@@ -3,8 +3,7 @@
   "summary": "Connects agents to the Flow Nexus hosted platform for swarms, sandboxes, and workflows.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ruvnet/flow-nexus",
   "plugs_into": "The MCP servers your agents load",

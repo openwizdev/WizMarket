@@ -3,8 +3,7 @@
   "summary": "Read-only server for Istanbul open city datasets covering transit, parking, water, and services.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Batu1-1an/istanbulmcp",
   "plugs_into": "The MCP servers your agents load",

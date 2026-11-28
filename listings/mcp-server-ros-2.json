@@ -3,8 +3,7 @@
   "summary": "Inspects ROS 2 topics and nodes while invoking robot services and actions over MCP.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/wise-vision/ros2_mcp",
   "plugs_into": "The MCP servers your agents load",

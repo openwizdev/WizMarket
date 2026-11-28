@@ -3,8 +3,7 @@
   "summary": "Integrates the Russian SBIS (Saby) electronic document API for documents, signing, and certificates.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ilyautov/sbis-mcp-ru",
   "plugs_into": "The MCP servers your agents load",

@@ -3,9 +3,7 @@
   "summary": "Runs local static analysis on Go repositories for call graphs, symbols, and impact checks.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "search",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ozgurcd/gograph",
   "plugs_into": "The MCP servers your agents load",

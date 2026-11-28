@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "security"
   ],
   "url": "https://github.com/februality/cowboy-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "design"
   ],
   "url": "https://github.com/Glade-tool/glade-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Explains shell command flags, pipes, and redirects offline while flagging destructive operations.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/aurelio-nakamura/cmdxray",
   "plugs_into": "The MCP servers your agents load",

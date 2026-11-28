@@ -1,10 +1,9 @@
 {
   "name": "BurnZombies",
-  "summary": "macOS helper that cleans up orphaned coding-agent processes, stale worktrees, and node_modules.",
+  "summary": "macOS cleanup tool that removes abandoned coding-agent processes, leftover Git worktrees, and unused node_modules directories.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/swordfish444/BurnZombies",
   "plugs_into": "The MCP servers your agents load",

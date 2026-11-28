@@ -3,8 +3,7 @@
   "summary": "Coordinates concurrent coding agents above Git to detect conflicting intent early.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/naw103/foremerge",
   "plugs_into": "The MCP servers your agents load",

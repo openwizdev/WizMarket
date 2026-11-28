@@ -3,8 +3,7 @@
   "summary": "Checks open-source dependencies for malicious packages before agents or IDEs install them.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/safedep/vet",
   "plugs_into": "The MCP servers your agents load",

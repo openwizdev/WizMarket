@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "memory"
   ],
   "url": "https://github.com/writerslogic/warm",
   "plugs_into": "The MCP servers your agents load",

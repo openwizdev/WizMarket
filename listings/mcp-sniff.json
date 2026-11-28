@@ -1,10 +1,9 @@
 {
   "name": "sniff",
-  "summary": "Checks running web apps for server errors, dead links, and broken forms with reproduction steps.",
+  "summary": "Audits live web apps to surface broken links, failing forms, and HTTP server errors along with reproduction steps.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Aboudjem/sniff",
   "plugs_into": "The MCP servers your agents load",

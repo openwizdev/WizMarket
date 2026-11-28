@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "communication"
   ],
   "url": "https://github.com/parterburn/dabble.me",
   "plugs_into": "The MCP servers your agents load",

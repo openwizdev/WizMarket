@@ -3,8 +3,7 @@
   "summary": "Discovers and operates Tapo smart-home plugs, bulbs, and switches from TP-Link.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mihai-dinculescu/tapo",
   "plugs_into": "The MCP servers your agents load",

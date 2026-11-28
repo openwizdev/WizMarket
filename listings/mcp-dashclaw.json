@@ -3,8 +3,7 @@
   "summary": "Adds policy checks, remote approval gates, and audit logs for unattended agent runs.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ucsandman/DashClaw",
   "plugs_into": "The MCP servers your agents load",

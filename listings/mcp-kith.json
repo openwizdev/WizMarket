@@ -3,8 +3,7 @@
   "summary": "Coordinates parallel coding agents locally with work claims, isolated Git worktrees, and integration checks.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/connorhriley/kith",
   "plugs_into": "The MCP servers your agents load",

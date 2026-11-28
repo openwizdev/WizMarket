@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "cloud",
-    "git"
+    "docs"
   ],
   "url": "https://github.com/dominikamann/agent-mail-gateway",
   "plugs_into": "The MCP servers your agents load",

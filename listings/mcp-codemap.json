@@ -3,8 +3,7 @@
   "summary": "Uses Roslyn to query C# and VB.NET symbols, call graphs, and architecture facts.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/bbajt/csharp-code-map",
   "plugs_into": "The MCP servers your agents load",

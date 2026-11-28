@@ -3,8 +3,7 @@
   "summary": "Wraps Zoo CAD utilities and modeling endpoints so agents can invoke Zoo operations.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/KittyCAD/mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Audits Amazon catalog listings with 13 automated quality checks on Category Listing Reports.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/BWB03/amazon-catalog-cli",
   "plugs_into": "The MCP servers your agents load",

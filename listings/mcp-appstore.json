@@ -3,8 +3,7 @@
   "summary": "Rust server offering 114 tools for App Store Connect with an optional read-only safety mode.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/forgeopslabs/appstore-mcp",
   "plugs_into": "The MCP servers your agents load",

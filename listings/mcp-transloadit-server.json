@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "security"
+    "security",
+    "design"
   ],
   "url": "https://github.com/transloadit/node-sdk",
   "plugs_into": "The MCP servers your agents load",

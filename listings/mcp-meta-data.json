@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "finance"
+    "finance",
+    "data"
   ],
   "url": "https://github.com/derekslinz/meta-data-mcp",
   "plugs_into": "The MCP servers your agents load",

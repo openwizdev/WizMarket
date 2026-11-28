@@ -4,7 +4,7 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git"
+    "developer-tools"
   ],
   "url": "https://github.com/andreilungeanu/codex-delegate-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Explores Verilog, SystemVerilog, and VHDL hardware hierarchy, connectivity, and RTL source.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/keplertech/naja-scope",
   "plugs_into": "The MCP servers your agents load",

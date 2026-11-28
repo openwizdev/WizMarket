@@ -3,8 +3,7 @@
   "summary": "Inspects and automates XAML desktop apps built with WinUI, WPF, .NET MAUI, and Avalonia.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/trrahul/XamlMcp",
   "plugs_into": "The MCP servers your agents load",

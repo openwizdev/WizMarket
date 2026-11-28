@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "communication"
+    "communication",
+    "data"
   ],
   "url": "https://github.com/dosev-ai/mcp-office",
   "plugs_into": "The MCP servers your agents load",

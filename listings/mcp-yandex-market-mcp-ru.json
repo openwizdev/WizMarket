@@ -3,8 +3,7 @@
   "summary": "Integrates the Russian Yandex Market API for orders, catalog items, pricing, reviews, and reports.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ilyautov/yandex-market-mcp-ru",
   "plugs_into": "The MCP servers your agents load",

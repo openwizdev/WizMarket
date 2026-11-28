@@ -3,8 +3,7 @@
   "summary": "Helps AI agents launch, discover, and monitor cross-chain tokens on Printr.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/PrintrFi/printr-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Wraps existing MCP servers to convert JSON payloads to compact GCF format with session dedup.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/blackwell-systems/gcf-proxy",
   "plugs_into": "The MCP servers your agents load",

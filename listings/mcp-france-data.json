@@ -3,8 +3,7 @@
   "summary": "Cross-references 13 French public datasets covering health, business registries, demographics, and real estate.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/cturkieh/france-data-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -1,11 +1,11 @@
 {
   "name": "Corvus",
-  "summary": "Decompiles, compares, searches, and patches .NET and native binaries (PE, ELF, Mach-O).",
+  "summary": "Inspects, decompiles, diffs, and patches PE, ELF, Mach-O, and .NET executables for reverse-engineering workflows.",
   "tags": [
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "security"
   ],
   "url": "https://github.com/Albasha0x0/Corvus",
   "plugs_into": "The MCP servers your agents load",

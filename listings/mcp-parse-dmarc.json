@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "communication"
   ],
   "url": "https://github.com/dmarcguardhq/parse-dmarc",
   "plugs_into": "The MCP servers your agents load",

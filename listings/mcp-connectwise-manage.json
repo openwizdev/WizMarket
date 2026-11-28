@@ -1,10 +1,9 @@
 {
   "name": "ConnectWise Manage",
-  "summary": "Connects AI assistants to ConnectWise Manage PSA tickets, companies, projects, and time logs.",
+  "summary": "Exposes ConnectWise Manage PSA records so agents can work with service tickets, client accounts, projects, and time entries.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/WYRE-AI/connectwise-manage-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "design"
   ],
   "url": "https://github.com/Combjellyshen/ZoteroBridge",
   "plugs_into": "The MCP servers your agents load",

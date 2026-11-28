@@ -3,8 +3,7 @@
   "summary": "Unofficial client for reading Yazio user profile and nutrition tracking data.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/fliptheweb/yazio-mcp",
   "plugs_into": "The MCP servers your agents load",

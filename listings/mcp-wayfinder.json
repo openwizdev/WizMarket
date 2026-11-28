@@ -3,8 +3,7 @@
   "summary": "Reads local coding-agent session history, branches, and decisions as a structured map.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/StayCurious-Xuan/wayfinder",
   "plugs_into": "The MCP servers your agents load",

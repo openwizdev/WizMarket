@@ -3,8 +3,7 @@
   "summary": "Processes and analyzes images using Microsoft's Florence-2 vision model.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/jkawamoto/mcp-florence2",
   "plugs_into": "The MCP servers your agents load",

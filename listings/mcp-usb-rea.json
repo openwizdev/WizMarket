@@ -3,8 +3,7 @@
   "summary": "Captures USB device traffic to infer protocols and scaffold Python libusb drivers.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/emirmrkaljevic/usb-rea",
   "plugs_into": "The MCP servers your agents load",

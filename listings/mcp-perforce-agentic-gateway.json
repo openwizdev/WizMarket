@@ -3,8 +3,7 @@
   "summary": "Local MCP proxy gateway aggregating multiple servers behind a compact code-execution interface.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/perforce/perforce-agentic-gateway",
   "plugs_into": "The MCP servers your agents load",

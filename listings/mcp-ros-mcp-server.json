@@ -3,8 +3,7 @@
   "summary": "Bridges MCP clients to Robot Operating System (ROS) robots for inspection and control.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/robotmcp/ros-mcp-server",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Records local microphone audio and converts speech into text for MCP agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/decibri/mcp-listen",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Connects MCP clients to Apple App Store Connect for apps, builds, and TestFlight management.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/SardorbekR/appstore-connect-mcp",
   "plugs_into": "The MCP servers your agents load",

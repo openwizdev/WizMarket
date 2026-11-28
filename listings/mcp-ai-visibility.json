@@ -3,8 +3,7 @@
   "summary": "Monitors how brands appear in answers from Claude, ChatGPT, Gemini, and Perplexity.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/sharozdawa/ai-visibility",
   "plugs_into": "The MCP servers your agents load",

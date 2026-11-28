@@ -4,8 +4,7 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "search",
-    "git"
+    "search"
   ],
   "url": "https://github.com/lulzasaur9192/marketplace-search-mcp",
   "plugs_into": "The MCP servers your agents load",

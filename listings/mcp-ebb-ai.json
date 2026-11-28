@@ -3,8 +3,7 @@
   "summary": "Schedules non-urgent LLM batch workloads during lower-carbon electrical grid hours before a deadline.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/tidegap/tidegap",
   "plugs_into": "The MCP servers your agents load",

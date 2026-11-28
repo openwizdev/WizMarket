@@ -3,8 +3,7 @@
   "summary": "Wraps ruby_native CLI commands to build and ship Rails apps for iOS and Android stores.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ruby-native/gem",
   "plugs_into": "The MCP servers your agents load",

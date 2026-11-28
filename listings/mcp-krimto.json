@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "docs"
   ],
   "url": "https://github.com/krimto-labs/krimto",
   "plugs_into": "The MCP servers your agents load",

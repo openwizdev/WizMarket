@@ -1,10 +1,9 @@
 {
   "name": "Bruno MCP Studio",
-  "summary": "Authors, edits, and executes Bruno .bru and .yml API collections for HTTP, gRPC, and WebSocket.",
+  "summary": "Creates, updates, and runs Bruno API test suites (.bru and .yml) over HTTP, gRPC, and WebSocket without the CLI.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Ostico/bruno-mcp-studio",
   "plugs_into": "The MCP servers your agents load",

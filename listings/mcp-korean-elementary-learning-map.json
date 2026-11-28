@@ -3,8 +3,7 @@
   "summary": "Provides Korea's 2022 revised elementary curriculum learning graph with 620 standards.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/taehyeonglim/korean-elementary-learning-map-mcp",
   "plugs_into": "The MCP servers your agents load",

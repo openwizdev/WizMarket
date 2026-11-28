@@ -3,8 +3,7 @@
   "summary": "Exposes ComfyUI image and video generation workflows as parameterized tools for MCP clients.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/MetaBrain-Labs/ComfyUI-MCP-Server-TypeScript",
   "plugs_into": "The MCP servers your agents load",

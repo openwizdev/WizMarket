@@ -3,8 +3,7 @@
   "summary": "Formats 22 Arab currencies, Hijri dates, Arabic number-to-words (tafqit), and RTL/bidi text.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/cc1a2b/arabicfmt",
   "plugs_into": "The MCP servers your agents load",

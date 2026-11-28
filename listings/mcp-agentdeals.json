@@ -1,10 +1,9 @@
 {
   "name": "AgentDeals",
-  "summary": "Queries a catalog of developer infrastructure free tiers, startup credits, and vendor pricing.",
+  "summary": "Compares hosting, database, and AI vendor pricing, free-tier allowances, and startup credit offers for agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/robhunter/agentdeals",
   "plugs_into": "The MCP servers your agents load",

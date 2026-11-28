@@ -1,6 +1,6 @@
 {
   "name": "HasData Airbnb",
-  "summary": "Searches Airbnb stays by dates and location and returns full listing details as JSON via HasData.",
+  "summary": "Queries HasData to look up Airbnb properties by destination and travel dates and return structured property records.",
   "tags": [
     "public-source",
     "mcp-server",

@@ -1,8 +1,10 @@
 """Offline unit tests for the Official MCP Registry source plug-in."""
 import hashlib
+import json
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "sources"))
 import mcp_registry as mr
@@ -171,11 +173,115 @@ class TestMcpRegistry(unittest.TestCase):
         self.assertEqual(drops["placeholder_or_empty"], 1)
         self.assertEqual(drops["website_unresolved"], 1)
         # Never driver or harness tags
+        by_id = {entry["id"]: entry for _, entry in kept}
+        self.assertEqual(by_id["mcp-good-high"]["tags"], ["mcp-server", "database"])
+        self.assertEqual(by_id["mcp-good-low"]["tags"], ["mcp-server", "communication"])
         for _, entry in kept:
             self.assertIn("mcp-server", entry["tags"])
             self.assertNotIn("driver", entry["tags"])
             self.assertNotIn("harness", entry["tags"])
             self.assertEqual(entry["plugs_into"], mr.PLUGS_INTO)
+
+    def test_infer_tags_ignores_reverse_dns_namespace(self):
+        self.assertEqual(
+            mr.infer_tags({
+                "name": "io.github.neiltron/apple-health-mcp",
+                "title": "Apple Health",
+                "description": "Local-first Apple Health MCP server for sleep and workouts.",
+            }),
+            ["mcp-server"],
+        )
+        self.assertEqual(
+            mr.infer_tags({
+                "name": "io.github.vercel/next-devtools-mcp",
+                "title": "next-devtools-mcp",
+                "description": "Next.js development tools MCP server with stdio transport.",
+            }),
+            ["mcp-server"],
+        )
+        self.assertEqual(
+            mr.infer_tags({
+                "name": "io.github.acme/agentshield",
+                "title": "AgentShield",
+                "description": "Secret defense and audit logging for autonomous agents.",
+            }),
+            ["mcp-server", "observability", "security"],
+        )
+        self.assertEqual(
+            mr.infer_tags({
+                "name": "io.github.acme/github-issues",
+                "title": "GitHub Issues",
+                "description": "Read and triage repository issues.",
+            }),
+            ["mcp-server", "git"],
+        )
+
+    def test_query_github_repos_graphql_retries_missing_data(self):
+        good_payload = json.dumps({
+            "data": {
+                "r0": {
+                    "url": "https://github.com/acme/tool",
+                    "isPrivate": False,
+                    "isArchived": False,
+                    "isFork": False,
+                    "stargazerCount": 7,
+                    "description": "Tool",
+                    "defaultBranchRef": {"name": "main"},
+                    "licenseInfo": {"spdxId": "MIT"},
+                    "lic1": {"oid": "abc"},
+                    "lic2": None,
+                }
+            }
+        })
+        replies = [
+            mock.Mock(stdout='{"message": "API rate limit exceeded"}'),
+            mock.Mock(stdout='{"errors": [{"message": "502"}], "data": null}'),
+            mock.Mock(stdout=good_payload),
+        ]
+        with mock.patch.object(mr.subprocess, "run", side_effect=replies) as run_mock, \
+             mock.patch.object(mr.time, "sleep"):
+            got = mr.query_github_repos_graphql([("acme", "tool")])
+        self.assertEqual(run_mock.call_count, 3)
+        self.assertEqual(got["acme/tool"]["url"], "https://github.com/acme/tool")
+
+        not_found = [mock.Mock(stdout='{"data": {"r0": null}, "errors": [{"type": "NOT_FOUND"}]}')]
+        with mock.patch.object(mr.subprocess, "run", side_effect=not_found) as run_mock, \
+             mock.patch.object(mr.time, "sleep"):
+            got_missing = mr.query_github_repos_graphql([("acme", "missing")])
+        self.assertEqual(run_mock.call_count, 1)
+        self.assertIsNone(got_missing["acme/missing"])
+
+    def test_filter_servers_dedupes_github_case_and_canonical_url(self):
+        items = [
+            _item("io.github.acme/tool-upper", "Queries SQL tables for analytics.", title="Tool Upper",
+                  repo="https://github.com/Acme/Tool"),
+            _item("io.github.acme/tool-lower", "Same repo with lowercase URL.", title="Tool Lower",
+                  repo="https://github.com/acme/tool"),
+            _item("io.github.old/tool-renamed", "Renamed repo resolving to Acme/Tool.", title="Tool Renamed",
+                  repo="https://github.com/old-org/tool"),
+        ]
+        repo_meta = {
+            "url": "https://github.com/Acme/Tool", "isPrivate": False, "isArchived": False,
+            "isFork": False, "stargazerCount": 20, "description": "SQL tool",
+            "spdx_id": "MIT", "licence_file_url": "https://github.com/Acme/Tool/blob/main/LICENSE",
+        }
+        gh_repos = {"acme/tool": repo_meta, "old-org/tool": repo_meta}
+        kept, drops = mr.filter_servers(items, gh_repos)
+        self.assertEqual([e["id"] for _, e in kept], ["mcp-tool-upper"])
+        self.assertEqual(drops["duplicate_url"], 2)
+
+    def test_build_entry_includes_both_registry_and_repo_descriptions(self):
+        server = {"name": "io.github.acme/tool", "title": "Tool", "description": "Registry description here."}
+        repo = {"url": "https://github.com/acme/tool", "description": "Repository description here.",
+                "spdx_id": "MIT", "licence_file_url": "https://github.com/acme/tool/blob/main/LICENSE"}
+        entry = mr.build_entry(server, repo, repo["url"])
+        self.assertEqual(entry["source_description"], "Registry description here. | Repository description here.")
+
+        same_repo = {**repo, "description": "registry description here."}
+        self.assertEqual(mr.build_entry(server, same_repo, repo["url"])["source_description"], "Registry description here.")
+
+        empty_repo = {**repo, "description": ""}
+        self.assertEqual(mr.build_entry(server, empty_repo, repo["url"])["source_description"], "Registry description here.")
 
 
 if __name__ == "__main__":

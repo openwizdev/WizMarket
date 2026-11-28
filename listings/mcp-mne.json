@@ -3,8 +3,7 @@
   "summary": "Runs MNE-Python neurophysiology analysis for EEG, MEG, sEEG, ECoG, and fNIRS data.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Exekiel179/MNE-MCP",
   "plugs_into": "The MCP servers your agents load",

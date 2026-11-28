@@ -3,8 +3,7 @@
   "summary": "Edits, compiles, and simulates IEC Structured Text inside CODESYS V3.5 PLC projects.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/johannesPettersson80/codesys-mcp-toolkit",
   "plugs_into": "The MCP servers your agents load",

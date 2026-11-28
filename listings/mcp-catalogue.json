@@ -1,6 +1,6 @@
 {
   "name": "3DAssets.dev",
-  "summary": "Searches and downloads CC0 3D GLB models and game asset packs from 3DAssets.dev.",
+  "summary": "Browses and fetches public-domain CC0 3D models (GLB) and bundled game assets from 3DAssets.dev.",
   "tags": [
     "public-source",
     "mcp-server",

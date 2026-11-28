@@ -3,8 +3,7 @@
   "summary": "Connects MCP clients to the Amazon Advertising API for campaign management and reporting.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/KuudoAI/amazon-ads-mcp",
   "plugs_into": "The MCP servers your agents load",

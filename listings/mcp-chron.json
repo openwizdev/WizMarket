@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "security"
   ],
   "url": "https://github.com/SirinivasK/chron",
   "plugs_into": "The MCP servers your agents load",

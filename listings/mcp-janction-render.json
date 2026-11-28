@@ -1,10 +1,9 @@
 {
   "name": "JANCTION Render",
-  "summary": "Renders Blender scenes and 3D models (GLB, FBX, USD, STL) into shots, turntables, and MP4 on cloud GPUs.",
+  "summary": "Renders GLB, FBX, USD, STL, and Blender files on cloud GPUs into stills, turntables, and MP4 clips.",
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
     "design"
   ],
   "url": "https://github.com/JasmyLab-JANCTION/janction-render",

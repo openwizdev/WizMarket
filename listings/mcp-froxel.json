@@ -3,8 +3,7 @@
   "summary": "Sculpts, paints, scripts, rigs, and exports MagicaVoxel .vox models to glTF.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/theromis/Froxel",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Builds local task-aware context packs and verified file trails for TypeScript and JavaScript repos.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mohanagy/madar",
   "plugs_into": "The MCP servers your agents load",

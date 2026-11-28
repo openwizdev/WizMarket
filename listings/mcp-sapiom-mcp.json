@@ -3,8 +3,7 @@
   "summary": "Provides local Sapiom tooling to author, test, inspect, and deploy agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/sapiom/sapiom-js",
   "plugs_into": "The MCP servers your agents load",

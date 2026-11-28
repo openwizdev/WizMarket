@@ -3,8 +3,7 @@
   "summary": "Generates pre-coding SKILL.md reliability files for agent repositories using Trustabl rules.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/trustabl/agent-reliability-skills",
   "plugs_into": "The MCP servers your agents load",

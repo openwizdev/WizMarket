@@ -3,8 +3,7 @@
   "summary": "Controls Digilent WaveForms hardware instruments including oscilloscope, logic analyzer, and waveform generator.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/KenosInc/dwf-mcp-server",
   "plugs_into": "The MCP servers your agents load",

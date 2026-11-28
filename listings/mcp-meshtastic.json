@@ -3,8 +3,7 @@
   "summary": "Discovers, monitors, and controls Meshtastic mesh-radio hardware and apps over TCP or serial.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/meshtastic/meshtastic-mcp",
   "plugs_into": "The MCP servers your agents load",

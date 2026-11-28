@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "communication"
+    "communication",
+    "analytics"
   ],
   "url": "https://github.com/akougkas/zulipchat-mcp",
   "plugs_into": "The MCP servers your agents load",

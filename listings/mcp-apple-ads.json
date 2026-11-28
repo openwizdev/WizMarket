@@ -3,8 +3,7 @@
   "summary": "Runs local Apple Ads API v1 keyword research and gated App Store campaign operations.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/zelentsov-dev/apple-ads-mcp",
   "plugs_into": "The MCP servers your agents load",

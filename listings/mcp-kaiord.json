@@ -3,8 +3,7 @@
   "summary": "Reads, validates, and converts FIT, ZWO, TCX, and Garmin Connect fitness files.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pablo-albaladejo/kaiord",
   "plugs_into": "The MCP servers your agents load",

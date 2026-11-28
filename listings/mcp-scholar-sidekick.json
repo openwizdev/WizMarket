@@ -3,8 +3,7 @@
   "summary": "Verifies academic DOIs and citations against retraction and open-access data across CSL styles.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mlava/scholar-sidekick-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Provides typed MCP tools for operating and configuring Marzban proxy panels.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Ilmar7786/marzban-sdk",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Controls Android emulators and devices over adb for screenshots, UI trees, input, and Gradle.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/iksnerd/adb-mcp",
   "plugs_into": "The MCP servers your agents load",

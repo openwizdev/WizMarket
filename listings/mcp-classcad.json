@@ -3,8 +3,7 @@
   "summary": "Constructs and validates 3D CAD parts and assemblies locally through the ClassCAD engine.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/awv-informatik/classcad-ai",
   "plugs_into": "The MCP servers your agents load",

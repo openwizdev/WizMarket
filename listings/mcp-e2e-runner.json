@@ -3,8 +3,7 @@
   "summary": "Executes JSON-defined end-to-end tests across a parallel Chrome browser pool via 16 tools.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/fastslack/mtw-e2e-runner",
   "plugs_into": "The MCP servers your agents load",

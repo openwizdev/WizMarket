@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "finance"
   ],
   "url": "https://github.com/atxp-dev/atxp",
   "plugs_into": "The MCP servers your agents load",

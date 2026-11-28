@@ -3,8 +3,7 @@
   "summary": "Reads and updates a personal JSON health record stored in the user's own cloud storage.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/DrBradStanfield/roadmap",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Integrates the HaloPSA REST API for managing clients, tickets, assets, contracts, and reports.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/WYRE-AI/halopsa-mcp",
   "plugs_into": "The MCP servers your agents load",

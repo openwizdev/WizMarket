@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "communication"
+    "communication",
+    "design"
   ],
   "url": "https://github.com/YKLovePython/halfsize",
   "plugs_into": "The MCP servers your agents load",

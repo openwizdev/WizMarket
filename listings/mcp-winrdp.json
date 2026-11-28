@@ -3,8 +3,7 @@
   "summary": "Provisions and administers Windows RDP hosts over WinRM, SSH, and SMB with 144 tools.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/emog33k/winrdp-mcp",
   "plugs_into": "The MCP servers your agents load",

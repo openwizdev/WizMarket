@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "security"
   ],
   "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
   "plugs_into": "The MCP servers your agents load",

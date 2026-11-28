@@ -3,8 +3,7 @@
   "summary": "Reads VKontakte communities, walls, profiles, and stats and publishes or edits posts and comments.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/bulatko/vk-mcp-server",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Places automated voice calls to businesses in the US for bookings or quotes and returns transcripts.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/voygr-tech/placecall",
   "plugs_into": "The MCP servers your agents load",

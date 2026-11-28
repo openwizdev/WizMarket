@@ -3,8 +3,7 @@
   "summary": "Edits Microsoft Word .docx documents with live updates, tracked changes, and citations.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/KitchenSink4AI/KitchenSink4Word",
   "plugs_into": "The MCP servers your agents load",

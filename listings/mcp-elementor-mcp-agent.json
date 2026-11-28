@@ -3,8 +3,7 @@
   "summary": "Manages multi-site WordPress Elementor pages with safe edits, template export, and version tracking.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Mogacode-ma/elementor-mcp-agent",
   "plugs_into": "The MCP servers your agents load",
