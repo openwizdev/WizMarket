@@ -6,23 +6,31 @@ Jev is asked three separate Nouls (driver, harness, skill) about the same state
 in one request. Each Noul is one gut-check. Code combines the confident yeses
 with KIND_WEIGHT_DRIVER, KIND_WEIGHT_HARNESS, and KIND_WEIGHT_SKILL.
 
+A being-built listing's first link is checked only as a URL. With
+--public-work-links, two more Nouls on that same state ask whether the link is
+a work item and whether it is about this listing. WORK_WEIGHT_ITEM and
+WORK_WEIGHT_ABOUT combine those yeses.
+
 Each Noul is compared directly to the inclusive 0.7 (yes) and 0.3 (no)
 thresholds (exact arithmetic equivalent of abs(2p - 1) >= 0.4). Strictly
-between 0.3 and 0.7 on any factor, the reading is the tag rule, the same result
-as when TYPESAFE_API_KEY is unset.
+between 0.3 and 0.7 on any factor, or with no key, the reading is the tag rule
+and the link stays not judged.
 
 Data scope: when TYPESAFE_API_KEY is set, only `name`, `summary`, and
-`plugs_into` are sent. By default, only listings matching
+`plugs_into` are sent (plus public `first_link` scheme, host, and path with
+--public-work-links). By default, only listings matching
 refs/remotes/origin/main are sent; unpublished drafts, local edits, and
 unmerged commits stay local unless selected by id, --rev, or
 --include-unpublished.
 """
 
 import hashlib
+import ipaddress
 import re
 import subprocess
 import sys
 import time
+import urllib.parse
 from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -39,10 +47,25 @@ _LISTING_ID = re.compile(r"[a-z0-9-]{2,40}")
 KIND_WEIGHT_DRIVER = 1.0
 KIND_WEIGHT_HARNESS = 1.0
 KIND_WEIGHT_SKILL = 1.0
+# Both factors have to be yes before the weighted fit clears WORK_FIT_YES.
+WORK_WEIGHT_ITEM = 0.5
+WORK_WEIGHT_ABOUT = 0.5
+WORK_FIT_YES = 0.7
+WORK_FIT_NO = 0.3
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
     ("skill", re.compile(r"\bskills?\b", re.I)),
+)
+_WORK_LINK = re.compile(r"(?:/pull/|/issues?/|/-/issues/|\bpull request\b|\bissue\b|\bticket\b)", re.I)
+_PRIVATE_HOST_SUFFIXES = (
+    ".localhost", ".local", ".internal", ".intranet", ".corp",
+    ".lan", ".home", ".localdomain", ".private", ".arpa",
+)
+_CREDENTIAL_PARAM = re.compile(
+    r"(?:^|[._-])(?:token|secret|key|pass(?:word|wd)?|pwd|auth(?:orization)?|"
+    r"sig(?:nature)?|session(?:id)?|sid|cookie|jwt|bearer|credential|pat|sas|code|invite|share)(?:$|[._-])",
+    re.I,
 )
 
 
@@ -65,6 +88,18 @@ KIND_QUESTIONS = {
         "Does `name`, `summary`, or `plugs_into` describe a skill an OpenWiz agent runs?",
         "It is a skill with its own check.",
         "It is not a skill.",
+    ),
+}
+WORK_QUESTIONS = {
+    "is_work_item": _noul_question(
+        "Is `first_link` a pull request, an issue, or a ticket?",
+        "The URL or its label is a pull request, issue, or ticket on any tracker.",
+        "It is a homepage, a docs page, a repo root, or another page that is not a work item.",
+    ),
+    "is_about_this_work": _noul_question(
+        "Is `first_link` about the work `name` and `summary` say is being built?",
+        "The link is the work this listing describes.",
+        "The link is about something else.",
     ),
 }
 
@@ -90,7 +125,56 @@ def heuristic_proof(name, summary, plugs_into):
     return declared_proof(found)
 
 
-def listing_state(listing, private_fn):
+def _has_credential_param(text):
+    if not text:
+        return False
+    for key, _ in urllib.parse.parse_qsl(text, keep_blank_values=True):
+        if _CREDENTIAL_PARAM.search(key):
+            return True
+    return False
+
+
+def _public_work_url(url, private_fn):
+    """Return scheme://host[:port]/path for a public https URL, or None if private or credential-bearing."""
+    if not isinstance(url, str) or private_fn(url) or private_fn(urllib.parse.unquote(url)):
+        return None
+    try:
+        parts = urllib.parse.urlsplit(url)
+    except ValueError:
+        return None
+    if parts.scheme.lower() != "https" or not parts.hostname:
+        return None
+    if parts.username is not None or parts.password is not None or "@" in parts.netloc:
+        return None
+    host = parts.hostname.rstrip(".").lower()
+    if not host or "." not in host or host == "localhost" or host.endswith(_PRIVATE_HOST_SUFFIXES):
+        return None
+    try:
+        ipaddress.ip_address(host)
+        return None
+    except ValueError:
+        pass
+    if _has_credential_param(parts.query) or _has_credential_param(parts.fragment):
+        return None
+    return urllib.parse.urlunsplit(("https", parts.netloc, parts.path, "", ""))
+
+
+def first_link(listing, private_fn):
+    if listing.get("stage") != "being-built":
+        return None
+    links = listing.get("links")
+    if not isinstance(links, list) or not links or not isinstance(links[0], dict):
+        return None
+    label, url = links[0].get("label"), links[0].get("url")
+    if not isinstance(label, str) or private_fn(label):
+        return None
+    clean_url = _public_work_url(url, private_fn)
+    if clean_url is None:
+        return None
+    return {"label": label, "url": clean_url}
+
+
+def listing_state(listing, private_fn, include_work_link=True):
     """Prose Jev may see. Tags stay out, so the answer is not a copy of the tag rule."""
     state = {}
     for key in ("name", "summary", "plugs_into"):
@@ -98,11 +182,23 @@ def listing_state(listing, private_fn):
         if not isinstance(value, str) or private_fn(value):
             return None
         state[key] = value
+    if include_work_link:
+        link = first_link(listing, private_fn)
+        if link is not None:
+            state["first_link"] = link
     return state
 
 
-def questions_for(listing):
-    return dict(KIND_QUESTIONS)
+def questions_for(listing, private_fn, include_work_link=True):
+    questions = dict(KIND_QUESTIONS)
+    if include_work_link and first_link(listing, private_fn) is not None:
+        questions.update(WORK_QUESTIONS)
+    return questions
+
+
+def heuristic_work_link(label, url):
+    """Keyword baseline for the bench. The review command does not use it as a verdict."""
+    return bool(_WORK_LINK.search(f"{label or ''}\n{url or ''}"))
 
 
 def _noul(answers, name):
@@ -167,6 +263,30 @@ def proof_reading(listing, answers):
     return {"declared": declared, "read": read, "source": "jev", "finding": finding}
 
 
+def work_link_factors(answers):
+    return (factor_yes(_noul(answers, "is_work_item")),
+            factor_yes(_noul(answers, "is_about_this_work")))
+
+
+def work_link_reading(listing, answers):
+    """The check accepts the first link as a URL only. Jev may flag a confident no."""
+    if listing.get("stage") != "being-built":
+        return None
+    item, about = work_link_factors(answers)
+    if item is None or about is None:
+        return {"line": f"{listing['id']}: work link not judged", "source": "fallback", "yes": None,
+                "finding": None, "fit": None}
+    fit = WORK_WEIGHT_ITEM * (1.0 if item else 0.0) + WORK_WEIGHT_ABOUT * (1.0 if about else 0.0)
+    if fit >= WORK_FIT_YES:
+        return {"line": f"{listing['id']}: work link yes (jev {fit:.2f})", "source": "jev", "yes": True,
+                "finding": None, "fit": fit}
+    if fit <= WORK_FIT_NO:
+        return {"line": f"{listing['id']}: work link no (jev {fit:.2f})", "source": "jev", "yes": False, "fit": fit,
+                "finding": f"{listing['id']}: first link does not read as the work's pull request or ticket"}
+    return {"line": f"{listing['id']}: work link not judged", "source": "fallback", "yes": None,
+            "finding": None, "fit": fit}
+
+
 def _git_blob_hash(data, hex_len):
     algo = hashlib.sha256 if hex_len == 64 else hashlib.sha1
     return algo(f"blob {len(data)}\0".encode("ascii") + data).hexdigest()
@@ -214,19 +334,21 @@ def _ask(client, state, questions, timeout=None):
     return client.ask(state, questions)
 
 
-def ask_listing(listing, client, private_fn, *, timeout=None):
+def ask_listing(listing, client, private_fn, include_work_link=True, *, timeout=None):
     if client is None:
         return None
-    state = listing_state(listing, private_fn)
+    state = listing_state(listing, private_fn, include_work_link=include_work_link)
     if state is None:
         return None
     try:
-        return _ask(client, state, questions_for(listing), timeout=timeout)
+        return _ask(client, state, questions_for(listing, private_fn, include_work_link=include_work_link),
+                    timeout=timeout)
     except Exception:
         return None
 
 
-def review_lines(entries, client, private_fn, *, allowed_ids=None, deadline=REVIEW_DEADLINE, clock=time.monotonic):
+def review_lines(entries, client, private_fn, include_work_links=False, *,
+                 allowed_ids=None, deadline=REVIEW_DEADLINE, clock=time.monotonic):
     lines, findings = [], []
     end = None if deadline is None else clock() + deadline
     stop_reason = None
@@ -237,6 +359,9 @@ def review_lines(entries, client, private_fn, *, allowed_ids=None, deadline=REVI
             reading = proof_reading(entry, None)
             lines.append(f"{entry['id']}: proof kind declared {reading['declared']}, "
                          f"read {reading['read']} ({reading['source']}, unpublished)")
+            work = work_link_reading(entry, None)
+            if work is not None:
+                lines.append(work["line"])
             continue
         answers = None
         if client is not None and stop_reason is None:
@@ -246,10 +371,12 @@ def review_lines(entries, client, private_fn, *, allowed_ids=None, deadline=REVI
                 stop_reason = "deadline"
             else:
                 remaining = None if end is None else max(0.0, end - clock())
-                state = listing_state(entry, private_fn)
+                state = listing_state(entry, private_fn, include_work_link=include_work_links)
                 if state is not None:
                     try:
-                        answers = _ask(client, state, questions_for(entry), timeout=remaining)
+                        answers = _ask(client, state,
+                                       questions_for(entry, private_fn, include_work_link=include_work_links),
+                                       timeout=remaining)
                     except Exception:
                         stop_reason = "service failure"
                         answers = None
@@ -260,6 +387,11 @@ def review_lines(entries, client, private_fn, *, allowed_ids=None, deadline=REVI
                      f"read {reading['read']} ({reading['source']})")
         if reading["finding"]:
             findings.append("finding: " + reading["finding"])
+        work = work_link_reading(entry, answers if include_work_links else None)
+        if work is not None:
+            lines.append(work["line"])
+            if work["finding"]:
+                findings.append("finding: " + work["finding"])
     lines.extend(findings)
     if unpublished_skipped:
         noun = "listing" if unpublished_skipped == 1 else "listings"
@@ -271,7 +403,7 @@ def review_lines(entries, client, private_fn, *, allowed_ids=None, deadline=REVI
     return lines, findings
 
 
-def run(root, client, check_tree, files_fn, private_fn, *,
+def run(root, client, check_tree, files_fn, private_fn, include_work_links=False, *,
         ids=None, include_unpublished=False, published_ids=None,
         deadline=REVIEW_DEADLINE, clock=time.monotonic):
     if ids:
@@ -296,8 +428,8 @@ def run(root, client, check_tree, files_fn, private_fn, *,
         allowed_ids = None
     else:
         allowed_ids = published_listings(Path(root), files) if published_ids is None else set(published_ids)
-    lines, findings = review_lines(entries, client, private_fn, allowed_ids=allowed_ids,
-                                   deadline=deadline, clock=clock)
+    lines, findings = review_lines(entries, client, private_fn, include_work_links=include_work_links,
+                                   allowed_ids=allowed_ids, deadline=deadline, clock=clock)
     return (1 if findings else 0), "\n".join(lines) + "\n"
 
 

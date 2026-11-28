@@ -912,9 +912,12 @@ class JevProofKind(unittest.TestCase):
     def test_bench_reports_the_fixture_counts(self):
         text = self.bench.report(live=False)
         kind = self.bench.score_kind(self.bench.load()["kind"])
+        work = self.bench.score_work_link(self.bench.load()["work_link"])
         self.assertEqual(text, f"kind tags: {kind['tags']}/{kind['n']}\n"
                          f"kind heuristic: {kind['heuristic']}/{kind['n']}\n"
-                         "kind jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
+                         f"work_link url-only: {work['url_only']}/{work['n']}\n"
+                         f"work_link heuristic: {work['heuristic']}/{work['n']}\n"
+                         "jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
         self.assertEqual((kind["tags"], kind["heuristic"], kind["n"]), (9, 11, 12))
 
     def test_live_bench_without_a_key_skips_jev(self):
@@ -924,8 +927,9 @@ class JevProofKind(unittest.TestCase):
         finally:
             if old is not None:
                 os.environ["TYPESAFE_API_KEY"] = old
-        self.assertIn("kind jev: skipped, TYPESAFE_API_KEY is not set", text)
+        self.assertIn("jev: skipped, TYPESAFE_API_KEY is not set", text)
         self.assertIn("kind tags: 9/12", text)
+        self.assertIn("work_link url-only: 6/10", text)
 
     def _run_review_cli(self, cwd, argv, client):
         buf = io.StringIO()
@@ -1226,6 +1230,214 @@ class JevProofKind(unittest.TestCase):
             self.assertEqual(code, 1)
             self.assertEqual(sent, [])
             self.assertIn("a token", out)
+
+
+class JevWorkLink(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, str(ROOT / "check"))
+        import jev_bench
+        import review
+        cls.bench = jev_bench
+        cls.review = review
+
+    def _listing(self, item=None, about=None):
+        listing = {"id": "example-harness", "name": "Example harness", "summary": "A synthetic harness still being built.",
+                   "plugs_into": "The local driver", "tags": ["harness"], "stage": "being-built",
+                   "links": [{"label": "Docs", "url": "https://example.com/docs"}]}
+        if item is None:
+            return listing, None
+        answers = {"is_work_item": {"type": "noul", "noul": item},
+                   "is_about_this_work": {"type": "noul", "noul": item if about is None else about}}
+        return listing, answers
+
+    def test_no_answer_leaves_the_link_unjudged(self):
+        listing, answers = self._listing()
+        reading = self.review.work_link_reading(listing, answers)
+        self.assertEqual(reading["source"], "fallback")
+        self.assertIsNone(reading["finding"])
+        self.assertIsNone(self.review.work_link_reading({"id": "x", "stage": "available"}, answers))
+
+    def test_confident_no_is_a_finding_and_a_yes_or_a_middle_value_is_not(self):
+        listing, no = self._listing(0.12, 0.08)
+        reading = self.review.work_link_reading(listing, no)
+        self.assertEqual(reading["yes"], False)
+        self.assertIn("does not read as the work's pull request or ticket", reading["finding"])
+        listing, yes = self._listing(0.91, 0.88)
+        self.assertIsNone(self.review.work_link_reading(listing, yes)["finding"])
+        self.assertEqual(self.review.work_link_reading(listing, yes)["yes"], True)
+        listing, middle = self._listing(0.5, 0.91)
+        middle_reading = self.review.work_link_reading(listing, middle)
+        self.assertEqual(middle_reading["source"], "fallback")
+        self.assertIsNone(middle_reading["finding"])
+        mixed = self.review.work_link_reading(listing, self._listing(0.91, 0.12)[1])
+        self.assertEqual(mixed["source"], "fallback")
+        self.assertIsNone(mixed["finding"])
+
+    def test_a_private_link_is_not_sent(self):
+        sent = []
+
+        class Fake:
+            def ask(self, state, questions):
+                sent.append(questions)
+                return None
+
+        listing, _ = self._listing()
+        listing["links"] = [{"label": "Ticket", "url": "https://example.com/password: hunter2"}]
+        self.review.ask_listing(listing, Fake(), lambda text: "password:" in text)
+        self.assertEqual(len(sent), 1)
+        self.assertNotIn("is_work_item", sent[0])
+        self.assertNotIn("is_about_this_work", sent[0])
+        self.assertNotIn("hunter2", json.dumps(sent[0]))
+
+    def test_work_link_questions_share_the_listing_request_and_state(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append((state, questions))
+                return None
+
+        listing, _ = self._listing()
+        self.review.ask_listing(listing, Fake(), lambda text: False)
+        self.assertEqual(len(seen), 1)
+        state, questions = seen[0]
+        self.assertEqual(state["first_link"]["url"], "https://example.com/docs")
+        self.assertTrue({"is_driver", "is_harness", "is_skill", "is_work_item", "is_about_this_work"} <= set(questions))
+
+    def test_review_of_a_being_built_fixture_does_not_judge_the_link_offline(self):
+        env = os.environ.copy()
+        env.pop("TYPESAFE_API_KEY", None)
+        result = run("review", cwd=FIXTURES / "valid" / "listed-being-built", env=env)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("example-harness: work link not judged\n", result.stdout)
+        self.assertIn("review: 1 listings, 0 findings\n", result.stdout)
+
+    def test_bench_counts(self):
+        work = self.bench.score_work_link(self.bench.load()["work_link"])
+        self.assertEqual((work["url_only"], work["heuristic"], work["n"]), (6, 9, 10))
+
+    def test_review_does_not_send_work_link_without_public_confirmation(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append((state, questions))
+                return {"is_driver": {"type": "noul", "noul": 0.05},
+                        "is_harness": {"type": "noul", "noul": 0.91},
+                        "is_skill": {"type": "noul", "noul": 0.05},
+                        "is_work_item": {"type": "noul", "noul": 0.91},
+                        "is_about_this_work": {"type": "noul", "noul": 0.91}}
+
+        import check as check_mod
+        code, text = self.review.run(FIXTURES / "valid" / "listed-being-built", Fake(),
+                                     check_mod.check_tree, check_mod.worktree_files, check_mod.private)
+        self.assertEqual(code, 0, text)
+        self.assertEqual(len(seen), 1)
+        state, questions = seen[0]
+        self.assertNotIn("first_link", state)
+        self.assertNotIn("is_work_item", questions)
+        self.assertNotIn("is_about_this_work", questions)
+        self.assertIn("example-harness: work link not judged\n", text)
+
+        seen.clear()
+        code, text = self.review.run(FIXTURES / "valid" / "listed-being-built", Fake(),
+                                     check_mod.check_tree, check_mod.worktree_files, check_mod.private,
+                                     include_work_links=True)
+        self.assertEqual(code, 0, text)
+        self.assertEqual(len(seen), 1)
+        state, questions = seen[0]
+        self.assertEqual(state["first_link"]["url"],
+                         "https://github.com/example-owner/example-harness/pull/1")
+        self.assertIn("is_work_item", questions)
+        self.assertIn("is_about_this_work", questions)
+        self.assertIn("example-harness: work link yes (jev 1.00)\n", text)
+
+    def test_credential_bearing_and_private_work_links_are_never_sent(self):
+        import check as check_mod
+        urls = [
+            ("https://tracker.example.com/org/repo/-/issues/1?token=secret123", "secret123"),
+            ("https://tracker.example.com/org/repo/-/issues/1?api_key=abc123", "abc123"),
+            ("https://tracker.example.com/org/repo/-/issues/1#token=fragsecret", "fragsecret"),
+            ("https://tracker.example.com/org/repo/-/issues/1?sig=deadbeef", "deadbeef"),
+            ("https://user:pass@tracker.example.com/org/repo/-/issues/1", "user:pass"),
+            ("https://user@tracker.example.com/org/repo/-/issues/1", "user@"),
+            ("https://localhost/org/repo/issues/1", "localhost"),
+            ("https://tracker.internal/org/repo/issues/1", "tracker.internal"),
+            ("https://tracker.local/org/repo/issues/1", "tracker.local"),
+            ("https://10.0.0.1/org/repo/issues/1", "10.0.0.1"),
+            ("https://127.0.0.1/org/repo/issues/1", "127.0.0.1"),
+            ("https://tracker.example.com/org/password%3A%20hunter2", "hunter2"),
+        ]
+        for url, secret in urls:
+            with self.subTest(url=url):
+                seen = []
+
+                class Fake:
+                    def ask(self, state, questions):
+                        seen.append((state, questions))
+                        return None
+
+                listing, _ = self._listing()
+                listing["links"] = [{"label": "Ticket", "url": url}]
+                self.review.ask_listing(listing, Fake(), check_mod.private)
+                self.assertEqual(len(seen), 1)
+                state, questions = seen[0]
+                self.assertNotIn("first_link", state)
+                self.assertNotIn("is_work_item", questions)
+                self.assertNotIn("is_about_this_work", questions)
+                self.assertNotIn(secret, json.dumps(state))
+
+    def test_query_and_fragment_are_stripped_from_sent_work_link(self):
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append(state)
+                return None
+
+        listing, _ = self._listing()
+        listing["links"] = [{"label": "Ticket",
+                             "url": "https://tracker.example.com/example-owner/example-harness/-/issues/1?view=full#note-2"}]
+        self.review.ask_listing(listing, Fake(), lambda text: False)
+        self.assertEqual(len(seen), 1)
+        self.assertEqual(seen[0]["first_link"]["url"],
+                         "https://tracker.example.com/example-owner/example-harness/-/issues/1")
+        self.assertNotIn("view=full", json.dumps(seen[0]))
+        self.assertNotIn("note-2", json.dumps(seen[0]))
+
+    def test_live_bench_uses_listing_prose_and_scores_item_and_about_separately(self):
+        work_states = []
+
+        class Fake:
+            def ask(self, state, questions):
+                if "is_work_item" in questions:
+                    work_states.append(state)
+                    item = 0.91 if "pull" in state["first_link"]["url"] or "issues" in state["first_link"]["url"] else 0.09
+                    return {"is_work_item": {"type": "noul", "noul": item},
+                            "is_about_this_work": {"type": "noul", "noul": 0.91}}
+                return {"is_driver": {"type": "noul", "noul": 0.91},
+                        "is_harness": {"type": "noul", "noul": 0.05},
+                        "is_skill": {"type": "noul", "noul": 0.05}}
+
+        data = self.bench.load()["work_link"]
+        for case in data:
+            self.assertIn("name", case)
+            self.assertIn("summary", case)
+            self.assertIn("plugs_into", case)
+            self.assertIn("is_work_item", case)
+            self.assertIn("is_about_this_work", case)
+            self.assertNotEqual(case["name"], case["id"])
+            self.assertNotEqual(case["summary"], "Being built.")
+
+        text = self.bench.report(live=True, client=Fake())
+        self.assertEqual(len(work_states), len(data))
+        self.assertEqual(work_states[0]["name"], data[0]["name"])
+        self.assertEqual(work_states[0]["summary"], data[0]["summary"])
+        self.assertNotIn("view=full", json.dumps(work_states))
+        self.assertIn("work_link jev (", text)
+        self.assertIn("work_link item jev (", text)
+        self.assertIn("work_link about jev (", text)
 
 
 class _Body:
