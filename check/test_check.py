@@ -1410,7 +1410,7 @@ class JevProofKind(unittest.TestCase):
             self.assertIn("a token", out)
 
 
-class JevWorkLink(unittest.TestCase):
+class JevWorkLink(Temp):
     @classmethod
     def setUpClass(cls):
         sys.path.insert(0, str(ROOT / "check"))
@@ -1497,6 +1497,7 @@ class JevWorkLink(unittest.TestCase):
 
     def test_review_does_not_send_work_link_without_public_confirmation(self):
         seen = []
+        work_link = "https://github.com/example-owner/example-harness/pull/1"
 
         class Fake:
             def ask(self, state, questions):
@@ -1508,25 +1509,26 @@ class JevWorkLink(unittest.TestCase):
                         "is_about_this_work": {"type": "noul", "noul": 0.91}}
 
         import check as check_mod
-        code, text = self.review.run(FIXTURES / "valid" / "listed-being-built", Fake(),
+        reg = self.registry("valid/listed-being-built")
+        code, text = self.review.run(reg, Fake(),
                                      check_mod.check_tree, check_mod.worktree_files, check_mod.private)
         self.assertEqual(code, 0, text)
         self.assertEqual(len(seen), 1)
         state, questions = seen[0]
         self.assertNotIn("first_link", state)
+        self.assertNotIn(work_link, json.dumps((state, questions)))
         self.assertNotIn("is_work_item", questions)
         self.assertNotIn("is_about_this_work", questions)
         self.assertIn("example-harness: work link not judged\n", text)
 
         seen.clear()
-        code, text = self.review.run(FIXTURES / "valid" / "listed-being-built", Fake(),
+        code, text = self.review.run(reg, Fake(),
                                      check_mod.check_tree, check_mod.worktree_files, check_mod.private,
                                      include_work_links=True)
         self.assertEqual(code, 0, text)
         self.assertEqual(len(seen), 1)
         state, questions = seen[0]
-        self.assertEqual(state["first_link"]["url"],
-                         "https://github.com/example-owner/example-harness/pull/1")
+        self.assertEqual(state["first_link"]["url"], work_link)
         self.assertIn("is_work_item", questions)
         self.assertIn("is_about_this_work", questions)
         self.assertIn("example-harness: work link yes (jev 1.00)\n", text)
