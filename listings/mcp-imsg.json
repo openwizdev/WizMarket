@@ -1,6 +1,6 @@
 {
   "name": "imsg-mcp",
-  "summary": "Reads and searches iMessage and SMS on a Mac the user controls, and sends only after approval.",
+  "summary": "Reads and searches iMessage and SMS on a Mac the user controls; sending is opt-in and per-message approval must be enforced by the client.",
   "tags": [
     "public-source",
     "mcp-server",

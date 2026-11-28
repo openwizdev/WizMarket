@@ -1,6 +1,6 @@
 {
   "name": "cohort-mcp",
-  "summary": "Keeps team AI memory in a Markdown git vault that humans approve, only on the local machine, and safe against injection.",
+  "summary": "Processes team AI memory locally, storing a GitHub-backed Markdown vault with human approval, data-fenced loads, and an instruction linter.",
   "tags": [
     "public-source",
     "mcp-server",
