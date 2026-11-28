@@ -899,6 +899,7 @@ class JevProofKind(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.assertEqual(result.stdout, "example-driver: proof kind declared receipt, read receipt (fallback)\n"
                          "example-driver: summary not judged\n"
+                         "receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt: contract pass\n"
                          "review: 1 listings, 0 findings\n")
         self.assertNotIn("TYPESAFE", result.stdout)
 
@@ -915,14 +916,18 @@ class JevProofKind(unittest.TestCase):
         kind = self.bench.score_kind(self.bench.load()["kind"])
         work = self.bench.score_work_link(self.bench.load()["work_link"])
         summary = self.bench.score_summary(self.bench.load()["summary"])
+        receipt = self.bench.score_receipt(self.bench.load()["receipt"])
         self.assertEqual(text, f"kind tags: {kind['tags']}/{kind['n']}\n"
                          f"kind heuristic: {kind['heuristic']}/{kind['n']}\n"
                          f"work_link url-only: {work['url_only']}/{work['n']}\n"
                          f"work_link heuristic: {work['heuristic']}/{work['n']}\n"
                          f"summary length: {summary['length']}/{summary['n']}\n"
                          f"summary heuristic: {summary['heuristic']}/{summary['n']}\n"
+                         f"receipt exact: {receipt['exact']}/{receipt['n']}\n"
+                         f"receipt heuristic: {receipt['heuristic']}/{receipt['n']}\n"
                          "jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live\n")
         self.assertEqual((summary["length"], summary["heuristic"], summary["n"]), (5, 7, 10))
+        self.assertEqual((receipt["exact"], receipt["heuristic"], receipt["n"]), (7, 4, 7))
         self.assertEqual((kind["tags"], kind["heuristic"], kind["n"]), (9, 11, 12))
 
     def test_live_bench_without_a_key_skips_jev(self):
@@ -1142,7 +1147,11 @@ class JevProofKind(unittest.TestCase):
             client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
             code, out = self._run_review_cli(reg, [], client)
             self.assertEqual(code, 0, out)
-            self.assertEqual([item["name"] for item in sent], ["Example driver"])
+            listing_sent = [item for item in sent if isinstance(item, dict)]
+            receipt_sent = [item for item in sent if isinstance(item, str)]
+            self.assertEqual([item["name"] for item in listing_sent], ["Example driver"])
+            self.assertEqual(len(receipt_sent), 1)
+            self.assertIn("pass token:", receipt_sent[0])
             self.assertNotIn("Embargoed", json.dumps(sent))
             self.assertNotIn("Local branch runner", json.dumps(sent))
             self.assertIn("embargoed-draft: proof kind declared none, read none (fallback, unpublished)", out)
@@ -1195,7 +1204,11 @@ class JevProofKind(unittest.TestCase):
             client = self.client_mod.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
             code, out = self._run_review_cli(reg, ["--rev", "HEAD"], client)
             self.assertEqual(code, 1, out)
-            self.assertEqual(sorted(item["name"] for item in sent), ["Example driver", "Local branch runner"])
+            self.assertEqual(
+                sorted(item["name"] for item in sent if isinstance(item, dict)),
+                ["Example driver", "Local branch runner"],
+            )
+            self.assertEqual(sum(isinstance(item, str) for item in sent), 1)
             self.assertNotIn("Embargoed", json.dumps(sent))
 
             # --include-unpublished explicitly opts all working-tree listings in.
@@ -1204,9 +1217,10 @@ class JevProofKind(unittest.TestCase):
             code, out = self._run_review_cli(reg, ["--include-unpublished"], client)
             self.assertEqual(code, 1, out)
             self.assertEqual(
-                sorted(item["name"] for item in sent),
+                sorted(item["name"] for item in sent if isinstance(item, dict)),
                 ["Embargoed Draft Tool", "Example driver", "Local branch runner"],
             )
+            self.assertEqual(sum(isinstance(item, str) for item in sent), 1)
 
             # Invalid and missing listing ids are refused without calling TypeSafe.
             sent.clear()
@@ -1472,6 +1486,149 @@ class JevSummary(unittest.TestCase):
         self.assertEqual(unsure["source"], "fallback")
         self.assertIsNone(unsure["finding"])
         self.assertIsNone(self.review.summary_reading(listing, None)["finding"])
+
+
+class JevReceipt(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        sys.path.insert(0, str(ROOT / "check"))
+        import review
+        cls.review = review
+
+    def test_exact_pass_lines_decide_and_a_jev_disagreement_is_only_a_note(self):
+        done = (FIXTURES / "valid/verified-driver/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        failed = (FIXTURES / "broken/receipt-4-of-5/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        ordered = (FIXTURES / "broken/receipt-lines-out-of-order/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        self.assertTrue(self.review.contract_receipt_done(done))
+        self.assertFalse(self.review.contract_receipt_done(failed))
+        self.assertFalse(self.review.contract_receipt_done(ordered))
+        self.assertTrue(self.review.heuristic_receipt_done(ordered))
+        seen = []
+
+        class Fake:
+            def ask(self, state, questions):
+                seen.append((state, questions))
+                return {name: {"type": "noul", "noul": 0.05} for name in questions}
+
+        lines = self.review.receipt_lines(
+            {"receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt": done.encode()}, Fake(), lambda text: False)
+        self.assertEqual(lines, ["receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt: contract pass; jev fit 0.00 disagrees"])
+        self.assertEqual(len(seen), 1)
+        self.assertIn("pass token:", seen[0][0])
+        self.assertEqual(set(seen[0][1]), set(self.review.RECEIPT_QUESTIONS))
+        quiet = self.review.receipt_lines(
+            {"receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt": done.encode()}, Fake(), lambda text: True)
+        self.assertEqual(quiet, ["receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt: contract pass"])
+        self.assertEqual(len(seen), 1)
+
+        class Unsure:
+            def ask(self, state, questions):
+                answers = {name: {"type": "noul", "noul": 0.05} for name in questions}
+                answers["version_pass"]["noul"] = 0.5
+                return answers
+
+        held = self.review.receipt_lines(
+            {"receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt": done.encode()}, Unsure(), lambda text: False)
+        self.assertEqual(held, ["receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt: contract pass"])
+
+    def test_receipt_note_accepts_inclusive_noul_probability_bounds(self):
+        done = (FIXTURES / "valid/verified-driver/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        failed = (FIXTURES / "broken/receipt-4-of-5/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        path = "receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt"
+
+        def client_with(overrides, default=0.95):
+            class Stub:
+                def ask(self, state, questions):
+                    answers = {name: {"type": "noul", "noul": default} for name in questions}
+                    for key, value in overrides.items():
+                        answers[key]["noul"] = value
+                    return answers
+            return Stub()
+
+        boundary_disagree = self.review.receipt_lines(
+            {path: done.encode()}, client_with({"version_pass": 0.70, "token_pass": 0.30}), lambda text: False)
+        self.assertEqual(boundary_disagree, [f"{path}: contract pass; jev fit 0.88 disagrees"])
+
+        boundary_yes_on_fail = self.review.receipt_lines(
+            {path: failed.encode()}, client_with({"version_pass": 0.70}), lambda text: False)
+        self.assertEqual(boundary_yes_on_fail, [f"{path}: contract fail; jev fit 1.00 disagrees"])
+
+        for uncertain in ({"version_pass": 0.699, "token_pass": 0.05}, {"token_pass": 0.301}):
+            with self.subTest(uncertain=uncertain):
+                quiet = self.review.receipt_lines(
+                    {path: done.encode()}, client_with(uncertain), lambda text: False)
+                self.assertEqual(quiet, [f"{path}: contract pass"])
+
+        self.assertIs(self.review.factor_yes(0.70), True)
+        self.assertIs(self.review.factor_yes(0.30), False)
+        self.assertIsNone(self.review.factor_yes(0.699))
+        self.assertIsNone(self.review.factor_yes(0.301))
+
+    def test_unpublished_receipts_and_service_failures_stay_local(self):
+        import check as check_mod
+        import typesafe_client
+        with tempfile.TemporaryDirectory() as tmp:
+            reg = Path(tmp) / "repo"
+            shutil.copytree(FIXTURES / "valid" / "verified-driver", reg)
+            git(reg, "init", "-q", "-b", "main")
+            git(reg, "add", "-A")
+            git(reg, "commit", "-q", "-m", "published")
+            git(reg, "update-ref", "refs/remotes/origin/main", "HEAD")
+
+            # Add an untracked second receipt for the already-published listing.
+            orig = reg / "receipts" / "example-driver" / "2026-11-01-aaaaaaaaaaaa.txt"
+            draft = reg / "receipts" / "example-driver" / "2026-11-02-cccccccccccc.txt"
+            draft.write_text(
+                orig.read_text().replace("a" * 40, "c" * 40).replace("2026-11-01", "2026-11-02")
+            )
+
+            sent = []
+
+            def opener(request, timeout):
+                body = json.loads(request.data.decode())
+                sent.append(body["state"])
+                if isinstance(body["state"], str):
+                    return _Body(json.dumps({
+                        "answers": {name: {"type": "noul", "noul": 0.05} for name in body["questions"]}
+                    }).encode())
+                return _Body(json.dumps({
+                    "answers": {
+                        "is_driver": {"type": "noul", "noul": 0.9},
+                        "is_harness": {"type": "noul", "noul": 0.05},
+                        "is_skill": {"type": "noul", "noul": 0.05},
+                    }
+                }).encode())
+
+            client = typesafe_client.HttpSystemOneClient("unit-test-key", opener=opener, sleep=lambda d: None)
+            code, out = self.review.run(reg, client, check_mod.check_tree, check_mod.worktree_files, check_mod.private)
+            self.assertEqual(code, 0, out)
+            receipt_sent = [item for item in sent if isinstance(item, str)]
+            self.assertEqual(len(receipt_sent), 1)
+            self.assertIn("aaaaaaaaaaaa", receipt_sent[0])
+            self.assertNotIn("cccccccccccc", receipt_sent[0])
+            self.assertIn("2026-11-01-aaaaaaaaaaaa.txt: contract pass; jev fit 0.00 disagrees", out)
+            self.assertIn("2026-11-02-cccccccccccc.txt: contract pass\n", out)
+            self.assertIn("1 unpublished receipt not sent to TypeSafe", out)
+
+            # After a service-wide failure on the listing call, no receipt is sent.
+            sent.clear()
+
+            def failing_opener(request, timeout):
+                body = json.loads(request.data.decode())
+                sent.append(body["state"])
+                raise urllib.error.HTTPError(request.full_url, 401, "Unauthorized", {}, None)
+
+            failing = typesafe_client.HttpSystemOneClient(
+                "unit-test-key", opener=failing_opener, sleep=lambda d: None)
+            code, out = self.review.run(
+                reg, failing, check_mod.check_tree, check_mod.worktree_files, check_mod.private,
+                include_unpublished=True,
+            )
+            self.assertEqual(code, 0, out)
+            self.assertEqual(len(sent), 1)
+            self.assertIsInstance(sent[0], dict)
+            self.assertIn("stopped calling TypeSafe after", out)
+            self.assertIn("2026-11-01-aaaaaaaaaaaa.txt: contract pass\n", out)
 
 
 class _Body:

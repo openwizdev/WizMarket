@@ -22,9 +22,15 @@ into. SUMMARY_WEIGHT_DOES and SUMMARY_WEIGHT_PLUG combine them. Below
 SCORE_CONFIDENCE_MIN on either Score, or with no key, the summary stays not
 judged.
 
-Data scope: when TYPESAFE_API_KEY is set, only `name`, `summary`, and
-`plugs_into` are sent (plus public `first_link` scheme, host, and path with
---public-work-links). By default, only listings matching
+A receipt's pass lines stay an exact match. Eight Nouls on that receipt text,
+in one request, each check one line or one property. RECEIPT_WEIGHTS combine
+them. Strictly between 0.3 and 0.7 on any of the eight, or with no key, there
+is no note. A note never changes pass or fail.
+
+Data scope: when TYPESAFE_API_KEY is set, listing requests send only `name`,
+`summary`, and `plugs_into` (plus public `first_link` scheme, host, and path
+with --public-work-links), and receipt text is sent in its own separate
+request. By default, only listings and receipts matching
 refs/remotes/origin/main are sent; unpublished drafts, local edits, and
 unmerged commits stay local unless selected by id, --rev, or
 --include-unpublished.
@@ -62,6 +68,9 @@ SCORE_CONFIDENCE_MIN = 0.7
 SUMMARY_WEIGHT_DOES = 0.7
 SUMMARY_WEIGHT_PLUG = 0.3
 SUMMARY_FIT_MIN = 0.35
+# Equal weights: one missed factor is 0.875, which is at or under RECEIPT_FIT_NO.
+RECEIPT_FIT_YES = 1.0
+RECEIPT_FIT_NO = 0.99
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
@@ -135,6 +144,52 @@ SUMMARY_QUESTIONS = {
         ],
     ),
 }
+
+
+
+RECEIPT_QUESTIONS = {
+    "version_pass": _noul_question(
+        "Does the text record a passing version check for openwiz:records and driver v1?",
+        "The version line passes.",
+        "The version line is missing or not a pass.",
+    ),
+    "start_pass": _noul_question(
+        "Does the text record a passing start check?",
+        "The start line passes.",
+        "The start line is missing or not a pass.",
+    ),
+    "wake_pass": _noul_question(
+        "Does the text record a passing wake check?",
+        "The wake line passes.",
+        "The wake line is missing or not a pass.",
+    ),
+    "stop_pass": _noul_question(
+        "Does the text record a passing stop check?",
+        "The stop line passes.",
+        "The stop line is missing or not a pass.",
+    ),
+    "token_pass": _noul_question(
+        "Does the text record that no login or token passed through the driver?",
+        "The token line passes.",
+        "The token line is missing or says something else.",
+    ),
+    "lines_in_order": _noul_question(
+        "Are the pass lines in kit order: version, then start, then wake, then stop, then token?",
+        "Those five lines are in that order.",
+        "They are missing or in a different order.",
+    ),
+    "note_is_literal": _noul_question(
+        "Is the status-note id written as the literal <note>?",
+        "The note id is the literal <note>.",
+        "The note id is a number or some other text.",
+    ),
+    "result_is_five": _noul_question(
+        "Is the result line Result: 5 of 5 pass?",
+        "The result line says 5 of 5 pass.",
+        "The result line is missing or says something else.",
+    ),
+}
+RECEIPT_WEIGHTS = {name: 1.0 for name in RECEIPT_QUESTIONS}
 
 
 def declared_proof(tags):
@@ -363,13 +418,48 @@ def work_link_reading(listing, answers):
             "finding": None, "fit": fit}
 
 
+def contract_receipt_done(text):
+    """The pass-line half of check_receipt: five exact kit lines, then Result: 5 of 5 pass."""
+    import check as gate
+    if not isinstance(text, str) or "\r" in text or not text.endswith("\n"):
+        return False
+    lines = text.split("\n")
+    if len(lines) != 15:
+        return False
+    return all(pattern.fullmatch(lines[n - 1]) for n, (_shape, pattern) in enumerate(gate.PASS_LINES, 9))
+
+
+def heuristic_receipt_done(text):
+    """Count of pass lines, for the bench. It does not notice order, the note id, or the token sentence."""
+    if not isinstance(text, str):
+        return False
+    return text.count("\npass ") >= 5 and "Result: 5 of 5 pass" in text and "fail " not in text
+
+
+def receipt_fit(answers):
+    """(done, fit). done is None when any factor is missing or below the confidence cut."""
+    flags = []
+    for name in RECEIPT_QUESTIONS:
+        flag = factor_yes(_noul(answers, name))
+        if flag is None:
+            return None, None
+        flags.append((name, flag))
+    total = sum(RECEIPT_WEIGHTS.values())
+    fit = sum(RECEIPT_WEIGHTS[name] * (1.0 if flag else 0.0) for name, flag in flags) / total
+    if fit >= RECEIPT_FIT_YES:
+        return True, fit
+    if fit <= RECEIPT_FIT_NO:
+        return False, fit
+    return None, fit
+
+
 def _git_blob_hash(data, hex_len):
     algo = hashlib.sha256 if hex_len == 64 else hashlib.sha1
     return algo(f"blob {len(data)}\0".encode("ascii") + data).hexdigest()
 
 
-def published_listings(root, files):
-    """Listing ids whose working-tree bytes match refs/remotes/origin/main."""
+def _published_paths(root, files, folder):
+    """Paths under folder whose working-tree bytes match refs/remotes/origin/main."""
     try:
         ref = subprocess.run(
             ["git", "-C", str(root), "rev-parse", "--verify", "--quiet", "refs/remotes/origin/main^{commit}"],
@@ -378,7 +468,7 @@ def published_listings(root, files):
         if ref.returncode != 0:
             return set()
         listing = subprocess.run(
-            ["git", "-C", str(root), "ls-tree", "-z", "refs/remotes/origin/main", "--", "listings/"],
+            ["git", "-C", str(root), "ls-tree", "-r", "-z", "refs/remotes/origin/main", "--", folder],
             capture_output=True,
         )
         if listing.returncode != 0:
@@ -398,10 +488,23 @@ def published_listings(root, files):
         if data is None:
             continue
         if _git_blob_hash(data, len(sha)) == sha:
-            name = PurePosixPath(path)
-            if len(name.parts) == 2 and name.suffix == ".json":
-                published.add(name.stem)
+            published.add(path)
     return published
+
+
+def published_listings(root, files):
+    """Listing ids whose working-tree bytes match refs/remotes/origin/main."""
+    published = set()
+    for path in _published_paths(root, files, "listings/"):
+        name = PurePosixPath(path)
+        if len(name.parts) == 2 and name.suffix == ".json":
+            published.add(name.stem)
+    return published
+
+
+def published_receipts(root, files):
+    """Receipt paths whose working-tree bytes match refs/remotes/origin/main."""
+    return _published_paths(root, files, "receipts/")
 
 
 def _ask(client, state, questions, timeout=None):
@@ -423,10 +526,58 @@ def ask_listing(listing, client, private_fn, include_work_link=True, *, timeout=
         return None
 
 
-def review_lines(entries, client, private_fn, include_work_links=False, *,
-                 allowed_ids=None, deadline=REVIEW_DEADLINE, clock=time.monotonic):
+def _receipt_lines(files, client, private_fn, *, selected_ids=None, allowed_ids=None,
+                   allowed_paths=None, end=None, stop_reason=None, clock=time.monotonic):
+    lines = []
+    unpublished_skipped = 0
+    paths = sorted(path for path, data in files.items()
+                   if isinstance(data, (bytes, bytearray)) and path.startswith("receipts/"))
+    for path in paths:
+        parts = PurePosixPath(path).parts
+        listing_id = parts[1] if len(parts) >= 2 else None
+        if selected_ids is not None and listing_id not in selected_ids:
+            continue
+        try:
+            text_body = files[path].decode("utf-8")
+        except UnicodeDecodeError:
+            continue
+        done = contract_receipt_done(text_body)
+        note = ""
+        decision = fit = None
+        if client is not None and (
+            (allowed_ids is not None and listing_id not in allowed_ids)
+            or (allowed_paths is not None and path not in allowed_paths)
+        ):
+            unpublished_skipped += 1
+        elif client is not None and stop_reason is None and not private_fn(text_body):
+            if getattr(client, "unavailable", False):
+                stop_reason = getattr(client, "stop_reason", None) or "service failure"
+            elif end is not None and clock() >= end:
+                stop_reason = "deadline"
+            else:
+                remaining = None if end is None else max(0.0, end - clock())
+                try:
+                    answers = _ask(client, text_body, RECEIPT_QUESTIONS, timeout=remaining)
+                except Exception:
+                    stop_reason = "service failure"
+                    answers = None
+                if stop_reason is None and getattr(client, "unavailable", False):
+                    stop_reason = getattr(client, "stop_reason", None) or "service failure"
+                decision, fit = receipt_fit(answers)
+        if decision is not None and decision != done:
+            note = f"; jev fit {fit:.2f} disagrees"
+        lines.append(f"{path}: contract {'pass' if done else 'fail'}{note}")
+    return lines, stop_reason, unpublished_skipped
+
+
+def receipt_lines(files, client, private_fn):
+    lines, _stop, _skipped = _receipt_lines(files, client, private_fn)
+    return lines
+
+
+def _review_listings(entries, client, private_fn, include_work_links=False, *,
+                     allowed_ids=None, end=None, clock=time.monotonic):
     lines, findings = [], []
-    end = None if deadline is None else clock() + deadline
     stop_reason = None
     unpublished_skipped = 0
     for entry in sorted(entries, key=lambda item: item["id"]):
@@ -474,14 +625,32 @@ def review_lines(entries, client, private_fn, include_work_links=False, *,
         lines.append(summary["line"])
         if summary["finding"]:
             findings.append("finding: " + summary["finding"])
+    return lines, findings, stop_reason, unpublished_skipped
+
+
+def _review_footer(lines, entries, findings, unpublished_skipped, stop_reason, receipt_skipped=0):
     lines.extend(findings)
     if unpublished_skipped:
         noun = "listing" if unpublished_skipped == 1 else "listings"
         lines.append(f"note: {unpublished_skipped} unpublished {noun} not sent to TypeSafe; "
                      "pass listing id(s), --rev <rev>, or --include-unpublished to send")
+    elif receipt_skipped:
+        noun = "receipt" if receipt_skipped == 1 else "receipts"
+        lines.append(f"note: {receipt_skipped} unpublished {noun} not sent to TypeSafe; "
+                     "pass listing id(s), --rev <rev>, or --include-unpublished to send")
     if stop_reason:
         lines.append(f"note: stopped calling TypeSafe after {stop_reason}; using tag-rule fallback")
     lines.append(f"review: {len(entries)} listings, {len(findings)} findings")
+
+
+def review_lines(entries, client, private_fn, include_work_links=False, *,
+                 allowed_ids=None, deadline=REVIEW_DEADLINE, clock=time.monotonic):
+    end = None if deadline is None else clock() + deadline
+    lines, findings, stop_reason, unpublished_skipped = _review_listings(
+        entries, client, private_fn, include_work_links=include_work_links,
+        allowed_ids=allowed_ids, end=end, clock=clock,
+    )
+    _review_footer(lines, entries, findings, unpublished_skipped, stop_reason)
     return lines, findings
 
 
@@ -496,6 +665,8 @@ def run(root, client, check_tree, files_fn, private_fn, include_work_links=False
     failures, entries = check_tree(files)
     if failures:
         return 1, "\n".join(failures) + "\n"
+    selected_ids = None
+    allowed_receipt_paths = None
     if ids:
         by_id = {entry["id"]: entry for entry in entries}
         wanted = list(dict.fromkeys(ids))
@@ -505,13 +676,25 @@ def run(root, client, check_tree, files_fn, private_fn, include_work_links=False
                 f"review {listing_id}: refused, listings/{listing_id}.json is not there" for listing_id in missing
             ) + "\n"
         entries = [by_id[listing_id] for listing_id in wanted]
+        selected_ids = set(wanted)
         allowed_ids = None
     elif client is None or include_unpublished:
         allowed_ids = None
     else:
         allowed_ids = published_listings(Path(root), files) if published_ids is None else set(published_ids)
-    lines, findings = review_lines(entries, client, private_fn, include_work_links=include_work_links,
-                                   allowed_ids=allowed_ids, deadline=deadline, clock=clock)
+        if published_ids is None:
+            allowed_receipt_paths = published_receipts(Path(root), files)
+    end = None if deadline is None else clock() + deadline
+    lines, findings, stop_reason, unpublished_skipped = _review_listings(
+        entries, client, private_fn, include_work_links=include_work_links,
+        allowed_ids=allowed_ids, end=end, clock=clock,
+    )
+    r_lines, stop_reason, receipt_skipped = _receipt_lines(
+        files, client, private_fn, selected_ids=selected_ids, allowed_ids=allowed_ids,
+        allowed_paths=allowed_receipt_paths, end=end, stop_reason=stop_reason, clock=clock,
+    )
+    lines.extend(r_lines)
+    _review_footer(lines, entries, findings, unpublished_skipped, stop_reason, receipt_skipped=receipt_skipped)
     return (1 if findings else 0), "\n".join(lines) + "\n"
 
 

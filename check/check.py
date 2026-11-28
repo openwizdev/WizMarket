@@ -672,21 +672,23 @@ def main(argv):
     skill.set_defaults(run=cmd_skill)
     review_cmd = commands.add_parser(
         "review",
-        help="ask Jev about proof kind, a being-built work link, and the summary when TYPESAFE_API_KEY is set; "
-             "otherwise keep the tag, URL, and length rules",
+        help="ask Jev about proof kind, a being-built work link, the summary, and a receipt's pass lines "
+             "when TYPESAFE_API_KEY is set; otherwise keep the tag, URL, length, and exact-line rules",
         description=(
-            "Check the tree, then ask Jev about proof kind, the summary, and being-built work links "
-            "(with --public-work-links) when TYPESAFE_API_KEY is set. Sends only name, summary, and plugs_into "
-            "(plus public first_link scheme, host, and path with --public-work-links). By default, sends only "
-            "listings matching refs/remotes/origin/main; unpublished drafts, local edits, and unmerged commits "
-            "stay local unless selected by id, --rev, or --include-unpublished."
+            "Check the tree, then ask Jev about proof kind, the summary, being-built work links "
+            "(with --public-work-links), and receipt pass lines when TYPESAFE_API_KEY is set. Listing "
+            "requests send only name, summary, and plugs_into (plus public first_link scheme, host, and "
+            "path with --public-work-links), and receipt text is sent in its own separate request. By "
+            "default, sends only listings and receipts matching refs/remotes/origin/main; unpublished "
+            "drafts, local edits, and unmerged commits stay local unless selected by id, --rev, or "
+            "--include-unpublished."
         ),
     )
     review_cmd.add_argument("ids", nargs="*", metavar="id",
                             help="listing ids to review (explicitly selects those listings to send when keyed)")
     review_cmd.add_argument("--rev", help="review this commit's tree instead of the working tree")
     review_cmd.add_argument("--include-unpublished", action="store_true",
-                            help="also send untracked, modified, or unmerged working-tree listings to Jev")
+                            help="also send untracked, modified, or unmerged working-tree listings and receipts to Jev")
     review_cmd.add_argument("--public-work-links", action="store_true",
                             help="confirm being-built first links are public and send their scheme, host, and path to Jev")
     review_cmd.add_argument("--deadline", type=positive_seconds, default=60,

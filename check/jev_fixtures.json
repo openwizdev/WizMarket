@@ -220,5 +220,14 @@
     {"id": "helper", "summary": "A small helper.", "level": 1},
     {"id": "cursor", "summary": "Starts, follows up with, and stops Cursor cloud agents from OpenWiz.", "level": 2},
     {"id": "reference", "summary": "Official MCP reference and test server exercising prompts, resources, tools, logging, and sampling.", "level": 2}
+  ],
+  "receipt": [
+    {"id": "verified-driver", "path": "fixtures/valid/verified-driver/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "done": true},
+    {"id": "verified-driver-and-skill", "path": "fixtures/valid/verified-driver-and-skill/receipts/example-driver-kit/2026-11-01-aaaaaaaaaaaa.txt", "done": true},
+    {"id": "names-another-listing", "path": "fixtures/broken/receipt-names-another-listing/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "done": true},
+    {"id": "four-of-five", "path": "fixtures/broken/receipt-4-of-5/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "done": false},
+    {"id": "out-of-order", "path": "fixtures/broken/receipt-lines-out-of-order/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "done": false},
+    {"id": "other-token-line", "path": "fixtures/broken/receipt-token-line-other-text/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "done": false},
+    {"id": "raw-note-id", "path": "fixtures/broken/receipt-raw-note-id/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt", "done": false}
   ]
 }
