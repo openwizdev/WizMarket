@@ -1,0 +1,25 @@
+{
+  "name": "Whimsical",
+  "summary": "Official remote OAuth integration for searching and editing Whimsical docs, wireframes, and diagrams.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/WhimsicalCode/mcp-server-guide",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.whimsical%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/WhimsicalCode/mcp-server-guide/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

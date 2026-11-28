@@ -1,0 +1,24 @@
+{
+  "name": "calibre-mcp",
+  "summary": "Searches, reads, and curates Calibre ebook libraries with semantic lookup and gated writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/caelum29/calibre-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.caelum29%2Fcalibre-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/caelum29/calibre-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

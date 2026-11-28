@@ -1,0 +1,25 @@
+{
+  "name": "mnemon-mcp",
+  "summary": "Zero-cloud SQLite FTS5 and vector hybrid memory server with layered recall and fact versioning.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/nikitacometa/mnemon-memory-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nikitacometa%2Fmnemon-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nikitacometa/mnemon-memory-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

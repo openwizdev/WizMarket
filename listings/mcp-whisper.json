@@ -1,0 +1,24 @@
+{
+  "name": "whisper-mcp",
+  "summary": "Transcribes local audio files offline with OpenAI Whisper models via whisper.cpp.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/jwulff/whisper-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jwulff%2Fwhisper-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jwulff/whisper-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

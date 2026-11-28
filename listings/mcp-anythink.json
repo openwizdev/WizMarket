@@ -1,0 +1,24 @@
+{
+  "name": "Anythink all-in-one backend: data, auth, files, workflows, payments, APIs",
+  "summary": "Controls Anythink backends covering data models, auth, files, workflows, APIs, and payments.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/anythink-cloud/anythink-cli",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=cloud.anythink%2Fanythink"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/anythink-cloud/anythink-cli/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

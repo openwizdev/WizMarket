@@ -1,0 +1,23 @@
+{
+  "name": "cv",
+  "summary": "Exposes Francisco Perez-Sorrosal's curriculum vitae and career history over MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/francisco-perez-sorrosal/cv",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.francisco-perez-sorrosal%2Fcv"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/francisco-perez-sorrosal/cv/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

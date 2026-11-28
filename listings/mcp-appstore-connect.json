@@ -1,0 +1,23 @@
+{
+  "name": "appstore-connect",
+  "summary": "Connects MCP clients to Apple App Store Connect for apps, builds, and TestFlight management.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/SardorbekR/appstore-connect-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.SardorbekR%2Fappstore-connect"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/SardorbekR/appstore-connect-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

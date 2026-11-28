@@ -1,0 +1,24 @@
+{
+  "name": "lore",
+  "summary": "Stores multi-harness session memory so agents can retrieve context across sessions.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/jordanhindo/lore",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jordanhindo%2Flore"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/jordanhindo/lore/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

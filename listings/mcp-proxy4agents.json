@@ -1,0 +1,25 @@
+{
+  "name": "proxy4agents-mcp",
+  "summary": "Provides geo-targeted residential proxy sessions and request routing for web-browsing agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "developer-tools"
+  ],
+  "url": "https://github.com/NovadaLabs/novada-proxy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.NovadaLabs%2Fproxy4agents-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/NovadaLabs/novada-proxy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

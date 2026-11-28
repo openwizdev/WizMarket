@@ -1,0 +1,25 @@
+{
+  "name": "dreamd",
+  "summary": "Stores auditable, source-cited agent memory in local files shared across Cline, Cursor, and Claude Code.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security",
+    "memory"
+  ],
+  "url": "https://github.com/botzrDev/dreamd",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.botzrDev%2Fdreamd"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/botzrDev/dreamd/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

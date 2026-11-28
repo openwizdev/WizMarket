@@ -1,0 +1,24 @@
+{
+  "name": "Codex–Claude Council",
+  "summary": "Lets signed-in Codex CLI and Claude Code sessions debate read-only until they reach consensus.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/hamza-aziz-ai/codex-claude-council",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hamza-aziz-ai%2Fcodex-claude-council"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/hamza-aziz-ai/codex-claude-council/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

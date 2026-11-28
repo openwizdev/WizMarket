@@ -1,0 +1,23 @@
+{
+  "name": "mcp",
+  "summary": "Provides local Sapiom tooling to author, test, inspect, and deploy agents.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/sapiom/sapiom-js",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sapiom%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/sapiom/sapiom-js/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

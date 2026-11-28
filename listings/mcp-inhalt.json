@@ -1,0 +1,23 @@
+{
+  "name": "inhalt",
+  "summary": "Open-source headless CMS server for managing typed content schemas, drafts, and entries.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/kozmos-tech/inhalt",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kozmos-tech%2Finhalt"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/kozmos-tech/inhalt/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

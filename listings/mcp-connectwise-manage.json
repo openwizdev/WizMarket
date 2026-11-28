@@ -1,0 +1,23 @@
+{
+  "name": "ConnectWise Manage",
+  "summary": "Exposes ConnectWise Manage PSA records so agents can work with service tickets, client accounts, projects, and time entries.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/WYRE-AI/connectwise-manage-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wyre-technology%2Fconnectwise-manage-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/WYRE-AI/connectwise-manage-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

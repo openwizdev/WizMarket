@@ -1,0 +1,24 @@
+{
+  "name": "posecode-mcp",
+  "summary": "Authors, validates, and renders 3D human movement sequences in the Posecode format.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/posecode-dev/posecode",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.posecode-dev%2Fposecode-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/posecode-dev/posecode/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

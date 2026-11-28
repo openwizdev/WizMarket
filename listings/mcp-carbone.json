@@ -1,0 +1,25 @@
+{
+  "name": "Carbone MCP",
+  "summary": "Generates and converts PDF, Office, and HTML documents from templates using Carbone.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design",
+    "data"
+  ],
+  "url": "https://github.com/carboneio/carbone-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.carbone%2Fcarbone-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/carboneio/carbone-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

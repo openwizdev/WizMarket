@@ -1,0 +1,23 @@
+{
+  "name": "Momentic",
+  "summary": "Reviews bug-bash findings and inspects Momentic automated test runs and quarantined tests.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/momentic-ai/skills",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.momentic%2Fmomentic"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/momentic-ai/skills/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

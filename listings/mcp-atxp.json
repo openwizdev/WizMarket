@@ -1,0 +1,25 @@
+{
+  "name": "ATXP — Agent Payment & Wallet Infrastructure",
+  "summary": "Provides agent wallets, email, phone numbers, and paid tools for search, media, and SMS.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "finance"
+  ],
+  "url": "https://github.com/atxp-dev/atxp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.atxp-dev%2Fatxp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/atxp-dev/atxp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

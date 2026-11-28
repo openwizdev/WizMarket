@@ -1,0 +1,23 @@
+{
+  "name": "TiaCommander",
+  "summary": "Bridges MCP clients with the Siemens TIA Portal Openness API for automated PLC engineering tasks.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/a4webdev/tiacommander-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.a4webdev%2Ftiacommander-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/a4webdev/tiacommander-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

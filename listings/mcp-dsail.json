@@ -1,0 +1,24 @@
+{
+  "name": "DSAIL",
+  "summary": "Client and stdio proxy for the DSAIL service that turns written policies into deterministic checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/JaxonAI/dsail",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.jaxon%2Fdsail"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/JaxonAI/dsail/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

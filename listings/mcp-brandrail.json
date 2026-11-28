@@ -1,0 +1,25 @@
+{
+  "name": "Brandrail",
+  "summary": "Checks frontend code locally against design system tokens, components, and brand rules.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "design"
+  ],
+  "url": "https://github.com/brandrail-app/brandrail",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=au.com.brandrail%2Fbrandrail"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/brandrail-app/brandrail/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Perforce Agentic Gateway",
+  "summary": "Local MCP proxy gateway aggregating multiple servers behind a compact code-execution interface.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/perforce/perforce-agentic-gateway",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.perforce%2Fperforce-agentic-gateway"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/perforce/perforce-agentic-gateway/blob/main/LICENSE.md"
+    }
+  ],
+  "status": "listed"
+}

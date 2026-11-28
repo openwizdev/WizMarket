@@ -1,0 +1,25 @@
+{
+  "name": "Proton Mail (unofficial)",
+  "summary": "Unofficial IMAP/SMTP bridge for searching, reading, organizing, and sending Proton Mail.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "communication"
+  ],
+  "url": "https://github.com/sethbang/proton-mail-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sethbang%2Fproton-mail-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/sethbang/proton-mail-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

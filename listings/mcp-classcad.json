@@ -1,0 +1,23 @@
+{
+  "name": "ClassCAD",
+  "summary": "Constructs and validates 3D CAD parts and assemblies locally through the ClassCAD engine.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/awv-informatik/classcad-ai",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.awv-informatik%2Fclasscad"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/awv-informatik/classcad-ai"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Yab, Yet Another Browser",
+  "summary": "Drives a local signed-in macOS browser so agents can open, inspect, and interact with tabs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/yetanotherbrowser/yab-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.yetanotherbrowser%2Fyab"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/yetanotherbrowser/yab-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

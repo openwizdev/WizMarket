@@ -1,0 +1,24 @@
+{
+  "name": "QuoteMem",
+  "summary": "Local long-term agent memory storing verbatim source quotes, versioned edits, and verified deletion.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/edsml-jz2321/QuoteMem",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.edsml-jz2321%2Fquotemem"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/edsml-jz2321/QuoteMem/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

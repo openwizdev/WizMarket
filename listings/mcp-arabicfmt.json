@@ -1,0 +1,23 @@
+{
+  "name": "arabicfmt-mcp",
+  "summary": "Formats 22 Arab currencies, Hijri dates, Arabic number-to-words (tafqit), and RTL/bidi text.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/cc1a2b/arabicfmt",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cc1a2b%2Farabicfmt-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/cc1a2b/arabicfmt/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

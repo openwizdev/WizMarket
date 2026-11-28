@@ -1,0 +1,25 @@
+{
+  "name": "Business Entity",
+  "summary": "Provides four tools for SEC company lookups and US SBA small-business intelligence.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "finance"
+  ],
+  "url": "https://github.com/martc03/gov-mcp-servers",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.martc03%2Fbusiness-entity"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/martc03/gov-mcp-servers/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

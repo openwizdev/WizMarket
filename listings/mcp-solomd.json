@@ -1,0 +1,25 @@
+{
+  "name": "SoloMD",
+  "summary": "Searches and reads local Markdown vaults including backlinks, tags, outlines, tasks, and Git log.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/zhitongblog/solomd",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.zhitongblog%2Fsolomd"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/zhitongblog/solomd/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

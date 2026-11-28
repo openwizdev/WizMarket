@@ -1,0 +1,25 @@
+{
+  "name": "rebar",
+  "summary": "Event-sourced issue tracker and Jira reconciler with plan gates and signed completion checks.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "productivity"
+  ],
+  "url": "https://github.com/navapbc/rebar",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.navapbc%2Frebar"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/navapbc/rebar/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

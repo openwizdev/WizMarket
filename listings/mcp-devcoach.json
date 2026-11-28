@@ -1,0 +1,24 @@
+{
+  "name": "devcoach",
+  "summary": "Generates short local coding lessons from AI-written code to explain unfamiliar patterns.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/UltimaPhoenix/dev-coach",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.UltimaPhoenix%2Fdevcoach"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/UltimaPhoenix/dev-coach/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

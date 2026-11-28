@@ -1,0 +1,25 @@
+{
+  "name": "Markifact - Ads & Analytics",
+  "summary": "Manages ad campaigns and analytics across Meta, Google Ads, TikTok, LinkedIn, GA4, and HubSpot.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "productivity",
+    "analytics"
+  ],
+  "url": "https://github.com/markifact/markifact-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.markifact%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/markifact/markifact-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

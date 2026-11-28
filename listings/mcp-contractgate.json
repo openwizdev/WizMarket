@@ -1,0 +1,23 @@
+{
+  "name": "AISchemaGate and DataContractGate",
+  "summary": "Checks and repairs structured LLM JSON outputs and pipeline boundaries against typed data contracts.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/nightmoose/contractgate",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nightmoose%2Fcontractgate"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nightmoose/contractgate/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

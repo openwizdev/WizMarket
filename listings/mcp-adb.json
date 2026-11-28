@@ -1,0 +1,23 @@
+{
+  "name": "adb-mcp: Android emulator and device control over adb",
+  "summary": "Controls Android emulators and devices over adb for screenshots, UI trees, input, and Gradle.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/iksnerd/adb-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.iksnerd%2Fadb-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/iksnerd/adb-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "patch-tuesday",
+  "summary": "Queries Microsoft MSRC Patch Tuesday advisories enriched with EPSS scores and CISA KEV status.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/jonnybottles/patch-tuesday-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.jonnybottles%2Fpatch-tuesday"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/jonnybottles/patch-tuesday-mcp"
+    }
+  ],
+  "status": "listed"
+}

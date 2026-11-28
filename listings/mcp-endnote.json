@@ -1,0 +1,24 @@
+{
+  "name": "endnote-mcp",
+  "summary": "Searches an EndNote reference library, formats citations, and reads attached PDFs.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/gokmengokhan/endnote-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gokmengokhan%2Fendnote-mcp"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/gokmengokhan/endnote-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ReadAnyDoc",
+  "summary": "Converts scanned documents, Office files, and PDFs into Markdown tables and cited structured fields.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs"
+  ],
+  "url": "https://github.com/arpitpatel25/ReadAnyDoc",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.arpitpatel25%2Freadanydoc"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/arpitpatel25/ReadAnyDoc/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "catalog-cli-pro",
+  "summary": "Audits Amazon catalog listings with 13 automated quality checks on Category Listing Reports.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/BWB03/amazon-catalog-cli",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BWB03%2Fcatalog-cli-pro"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/BWB03/amazon-catalog-cli/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

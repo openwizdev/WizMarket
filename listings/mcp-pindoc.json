@@ -1,0 +1,25 @@
+{
+  "name": "pindoc",
+  "summary": "Self-hosted typed team memory server that pins agent knowledge artifacts to code.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "memory"
+  ],
+  "url": "https://github.com/var-gg/pindoc",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.var-gg%2Fpindoc"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/var-gg/pindoc/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

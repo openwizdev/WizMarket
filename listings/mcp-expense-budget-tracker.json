@@ -1,0 +1,25 @@
+{
+  "name": "Expense Budget Tracker",
+  "summary": "Tracks personal budgets, expenses, account transfers, and multi-currency financial reports via OAuth.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "finance"
+  ],
+  "url": "https://github.com/kirill-markin/expense-budget-tracker",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.expense-budget-tracker%2Fexpense-budget-tracker"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/kirill-markin/expense-budget-tracker/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

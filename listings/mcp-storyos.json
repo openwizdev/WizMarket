@@ -1,0 +1,23 @@
+{
+  "name": "StoryOS",
+  "summary": "Connects MCP clients to a self-hosted StoryOS workspace for relational records, approvals, and views.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/StoryFunnels/storyOS",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=dev.storyos%2Fstoryos"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/StoryFunnels/storyOS/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

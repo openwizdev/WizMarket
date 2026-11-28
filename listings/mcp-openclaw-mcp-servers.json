@@ -1,0 +1,24 @@
+{
+  "name": "OpenClaw MCP Ecosystem",
+  "summary": "Bundles nine remote Cloudflare Workers MCP servers providing 49 tools with a free tier.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud"
+  ],
+  "url": "https://github.com/yedanyagamiai-cmd/openclaw-mcp-servers",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.yedanyagamiai-cmd%2Fopenclaw-mcp-servers"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/yedanyagamiai-cmd/openclaw-mcp-servers/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

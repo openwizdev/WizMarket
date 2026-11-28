@@ -1,0 +1,23 @@
+{
+  "name": "cmdxray",
+  "summary": "Explains shell command flags, pipes, and redirects offline while flagging destructive operations.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/aurelio-nakamura/cmdxray",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aurelio-nakamura%2Fcmdxray"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aurelio-nakamura/cmdxray/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

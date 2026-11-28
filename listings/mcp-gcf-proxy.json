@@ -1,0 +1,23 @@
+{
+  "name": "gcf-proxy",
+  "summary": "Wraps existing MCP servers to convert JSON payloads to compact GCF format with session dedup.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/blackwell-systems/gcf-proxy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.blackwell-systems%2Fgcf-proxy"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/blackwell-systems/gcf-proxy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

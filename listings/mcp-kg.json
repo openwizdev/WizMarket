@@ -1,0 +1,24 @@
+{
+  "name": "kg",
+  "summary": "Provides a local knowledge-graph memory store for AI assistants over MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/nnar1o/kg",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nnar1o%2Fkg-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/nnar1o/kg/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

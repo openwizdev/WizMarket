@@ -1,0 +1,24 @@
+{
+  "name": "optionsahoy-mcp",
+  "summary": "Calculates equity compensation taxes and exercise plans for ISO, AMT, NSO, RSU, and QSBS across 50 states.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/AlvisoOculus/optionsahoy-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AlvisoOculus%2Foptionsahoy-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AlvisoOculus/optionsahoy-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

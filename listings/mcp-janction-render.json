@@ -1,0 +1,24 @@
+{
+  "name": "JANCTION Render",
+  "summary": "Renders GLB, FBX, USD, STL, and Blender files on cloud GPUs into stills, turntables, and MP4 clips.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/JasmyLab-JANCTION/janction-render",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JasmyLab-JANCTION%2Fjanction-render"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/JasmyLab-JANCTION/janction-render/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

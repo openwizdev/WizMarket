@@ -1,0 +1,25 @@
+{
+  "name": "quantoracle",
+  "summary": "Provides 73 deterministic quantitative finance calculators for options, risk, and statistics.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance",
+    "data"
+  ],
+  "url": "https://github.com/QuantOracledev/quantoracle",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.fel123%2Fquantoracle"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/QuantOracledev/quantoracle/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

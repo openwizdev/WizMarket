@@ -1,0 +1,24 @@
+{
+  "name": "mindmap-mcp-server",
+  "summary": "Captures local-first memory in one AI tool and hands off context to resume in another offline.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/ravi-labs/mindmap-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ravi-labs%2Fmindmap-mcp-server"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/ravi-labs/mindmap-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

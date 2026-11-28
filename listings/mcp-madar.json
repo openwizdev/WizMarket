@@ -1,0 +1,23 @@
+{
+  "name": "Madar",
+  "summary": "Builds local task-aware context packs and verified file trails for TypeScript and JavaScript repos.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/mohanagy/madar",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mohanagy%2Fmadar"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mohanagy/madar/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

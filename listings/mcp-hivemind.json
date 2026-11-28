@@ -1,0 +1,24 @@
+{
+  "name": "hivemind",
+  "summary": "Synchronizes a shared live plan across coding agents directly through a Git remote.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/Leonhest/hivemind",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Leonhest%2Fhivemind"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Leonhest/hivemind/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

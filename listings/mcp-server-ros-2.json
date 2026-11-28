@@ -1,0 +1,23 @@
+{
+  "name": "mcp_server_ros_2",
+  "summary": "Inspects ROS 2 topics and nodes while invoking robot services and actions over MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/wise-vision/ros2_mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.wise-vision%2Fmcp_server_ros_2"
+    },
+    {
+      "label": "Licence: MPL-2.0",
+      "url": "https://github.com/wise-vision/ros2_mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

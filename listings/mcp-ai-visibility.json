@@ -1,0 +1,23 @@
+{
+  "name": "ai-visibility",
+  "summary": "Monitors how brands appear in answers from Claude, ChatGPT, Gemini, and Perplexity.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/sharozdawa/ai-visibility",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sharozdawa%2Fai-visibility"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/sharozdawa/ai-visibility/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

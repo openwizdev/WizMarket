@@ -1,0 +1,23 @@
+{
+  "name": "Bruno MCP Studio",
+  "summary": "Creates, updates, and runs Bruno API test suites (.bru and .yml) over HTTP, gRPC, and WebSocket without the CLI.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Ostico/bruno-mcp-studio",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Ostico%2Fbruno-mcp-studio"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Ostico/bruno-mcp-studio/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "flow-nexus",
+  "summary": "Connects agents to the Flow Nexus hosted platform for swarms, sandboxes, and workflows.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ruvnet/flow-nexus",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ruvnet%2Fflow-nexus"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/ruvnet/flow-nexus"
+    }
+  ],
+  "status": "listed"
+}

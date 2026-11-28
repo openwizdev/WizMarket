@@ -1,0 +1,24 @@
+{
+  "name": "Tirith",
+  "summary": "Coordinates parallel coding agents through shared memory notes, notices, interface contracts, and claims.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/eabz/tirith",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.eabz%2Ftirith"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/eabz/tirith/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

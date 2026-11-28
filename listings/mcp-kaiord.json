@@ -1,0 +1,23 @@
+{
+  "name": "kaiord",
+  "summary": "Reads, validates, and converts FIT, ZWO, TCX, and Garmin Connect fitness files.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/pablo-albaladejo/kaiord",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pablo-albaladejo%2Fkaiord"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pablo-albaladejo/kaiord/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

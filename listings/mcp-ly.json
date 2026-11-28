@@ -1,0 +1,23 @@
+{
+  "name": "Legislative Yuan",
+  "summary": "Queries Taiwan's Legislative Yuan API v2 for bills, legislators, and parliamentary records.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/narumiruna/ly-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.narumiruna%2Fly-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/narumiruna/ly-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

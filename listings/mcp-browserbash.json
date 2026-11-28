@@ -1,0 +1,24 @@
+{
+  "name": "browserbash",
+  "summary": "Runs plain-English end-to-end browser tests in real Chrome with deterministic pass/fail verdicts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/PramodDutta/browserbash",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PramodDutta%2Fbrowserbash"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/PramodDutta/browserbash"
+    }
+  ],
+  "status": "listed"
+}

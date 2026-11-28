@@ -1,0 +1,24 @@
+{
+  "name": "Papertrade AI",
+  "summary": "Paper-trades BTC and ETH perpetual futures on Papertrade via OAuth with built-in guardrails.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/nirholas/papertrade-ai",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nirholas%2Fpapertrade-ai"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nirholas/papertrade-ai/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

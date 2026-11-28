@@ -1,0 +1,23 @@
+{
+  "name": "elementor-mcp-agent",
+  "summary": "Manages multi-site WordPress Elementor pages with safe edits, template export, and version tracking.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Mogacode-ma/elementor-mcp-agent",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Mogacode-ma%2Felementor-mcp-agent"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/Mogacode-ma/elementor-mcp-agent/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

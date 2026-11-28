@@ -1,0 +1,25 @@
+{
+  "name": "Atomic Mail",
+  "summary": "Gives agents a programmable JMAP email inbox over stdio with proof-of-work authentication.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "security"
+  ],
+  "url": "https://github.com/Atomic-Mail/atomic-mail-agentic",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Atomic-Mail%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Atomic-Mail/atomic-mail-agentic/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

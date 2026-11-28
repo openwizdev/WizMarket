@@ -1,0 +1,24 @@
+{
+  "name": "Unity AI Bridge",
+  "summary": "Controls the Unity Editor from AI IDEs over file-based IPC using 62 zero-dependency tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/butterlatte-zhang/unity-ai-bridge",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.butterlatte-zhang%2Funity-ai-bridge"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/butterlatte-zhang/unity-ai-bridge/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

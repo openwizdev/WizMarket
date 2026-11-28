@@ -1,0 +1,24 @@
+{
+  "name": "HasData Airbnb",
+  "summary": "Queries HasData to look up Airbnb properties by destination and travel dates and return structured property records.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/HasData/airbnb-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.hasdata%2Fairbnb"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/HasData/airbnb-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

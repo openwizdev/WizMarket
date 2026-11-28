@@ -1,0 +1,23 @@
+{
+  "name": "Agent Reliability Skills",
+  "summary": "Generates pre-coding SKILL.md reliability files for agent repositories using Trustabl rules.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/trustabl/agent-reliability-skills",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.trustabl%2Fagent-reliability-skills"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/trustabl/agent-reliability-skills/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Google AI Search MCP",
+  "summary": "Provides Google AI web search and doc retrieval powered by either Gemini API or Vertex AI.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "docs"
+  ],
+  "url": "https://github.com/shariqriazz/google-ai-search-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shariqriazz%2Fgoogle-ai-search-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/shariqriazz/google-ai-search-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

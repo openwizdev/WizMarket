@@ -1,0 +1,24 @@
+{
+  "name": "apache-flink-mcp-server",
+  "summary": "Monitors and inspects one or more Apache Flink streaming clusters through MCP tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability"
+  ],
+  "url": "https://github.com/Ashfaqbs/apache-flink-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Ashfaqbs%2Fapache-flink-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Ashfaqbs/apache-flink-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

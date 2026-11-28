@@ -1,0 +1,25 @@
+{
+  "name": "AgentShield Enterprise Zero-Leak Secret Defense & Kernel Sandbox",
+  "summary": "Adds runtime secret-leak prevention, kernel sandboxing, and audit logging for autonomous agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability",
+    "security"
+  ],
+  "url": "https://github.com/RitualDev-Lab/AgentShield",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.RitualDev-Lab%2Fagentshield"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/RitualDev-Lab/AgentShield/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

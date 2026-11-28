@@ -1,0 +1,25 @@
+{
+  "name": "krimto",
+  "summary": "Stores team and personal coding-agent memory as plain Markdown files inside a Git repository.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "docs"
+  ],
+  "url": "https://github.com/krimto-labs/krimto",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.krimto-labs%2Fkrimto"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/krimto-labs/krimto/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
