@@ -16,6 +16,12 @@ thresholds (exact arithmetic equivalent of abs(2p - 1) >= 0.4). Strictly
 between 0.3 and 0.7 on any factor, or with no key, the reading is the tag rule
 and the link stays not judged.
 
+The summary's length is checked by the contract. Two Scores on the same state
+ask how specifically `summary` says what the listing does, and what it plugs
+into. SUMMARY_WEIGHT_DOES and SUMMARY_WEIGHT_PLUG combine them. Below
+SCORE_CONFIDENCE_MIN on either Score, or with no key, the summary stays not
+judged.
+
 Data scope: when TYPESAFE_API_KEY is set, only `name`, `summary`, and
 `plugs_into` are sent (plus public `first_link` scheme, host, and path with
 --public-work-links). By default, only listings matching
@@ -52,12 +58,17 @@ WORK_WEIGHT_ITEM = 0.5
 WORK_WEIGHT_ABOUT = 0.5
 WORK_FIT_YES = 0.7
 WORK_FIT_NO = 0.3
+SCORE_CONFIDENCE_MIN = 0.7
+SUMMARY_WEIGHT_DOES = 0.7
+SUMMARY_WEIGHT_PLUG = 0.3
+SUMMARY_FIT_MIN = 0.35
 _KIND_WORDS = (
     ("driver", re.compile(r"\bdrivers?\b", re.I)),
     ("harness", re.compile(r"\bharnesses?\b", re.I)),
     ("skill", re.compile(r"\bskills?\b", re.I)),
 )
 _WORK_LINK = re.compile(r"(?:/pull/|/issues?/|/-/issues/|\bpull request\b|\bissue\b|\bticket\b)", re.I)
+_SUMMARY_WORD = re.compile(r"[A-Za-z0-9]+")
 _PRIVATE_HOST_SUFFIXES = (
     ".localhost", ".local", ".internal", ".intranet", ".corp",
     ".lan", ".home", ".localdomain", ".private", ".arpa",
@@ -71,6 +82,10 @@ _CREDENTIAL_PARAM = re.compile(
 
 def _noul_question(question, yes, no):
     return {"type": "noul", "instructions": question, "criteria": {"true": yes, "false": no}}
+
+
+def _score_question(question, criteria):
+    return {"type": "score", "instructions": question, "criteria": criteria}
 
 
 KIND_QUESTIONS = {
@@ -100,6 +115,24 @@ WORK_QUESTIONS = {
         "Is `first_link` about the work `name` and `summary` say is being built?",
         "The link is the work this listing describes.",
         "The link is about something else.",
+    ),
+}
+SUMMARY_QUESTIONS = {
+    "says_what": _score_question(
+        "How specifically does `summary` say what the listing does?",
+        [
+            "It does not say what the listing does.",
+            "It names a category, such as a tool or a server, and not what it does.",
+            "It says what it does in one concrete line.",
+        ],
+    ),
+    "says_plug": _score_question(
+        "How specifically does `summary` say what the listing plugs into?",
+        [
+            "It does not say what the listing plugs into.",
+            "It names a platform in passing.",
+            "It names the specific thing it plugs into.",
+        ],
     ),
 }
 
@@ -191,6 +224,7 @@ def listing_state(listing, private_fn, include_work_link=True):
 
 def questions_for(listing, private_fn, include_work_link=True):
     questions = dict(KIND_QUESTIONS)
+    questions.update(SUMMARY_QUESTIONS)
     if include_work_link and first_link(listing, private_fn) is not None:
         questions.update(WORK_QUESTIONS)
     return questions
@@ -199,6 +233,18 @@ def questions_for(listing, private_fn, include_work_link=True):
 def heuristic_work_link(label, url):
     """Keyword baseline for the bench. The review command does not use it as a verdict."""
     return bool(_WORK_LINK.search(f"{label or ''}\n{url or ''}"))
+
+
+def heuristic_summary(summary):
+    """Word-count baseline for the bench. The review command does not use it as a verdict."""
+    count = len(_SUMMARY_WORD.findall(summary or ""))
+    if count < 4:
+        return 0
+    if count < 8:
+        return 1
+    if count < 14:
+        return 2
+    return 3
 
 
 def _noul(answers, name):
@@ -261,6 +307,36 @@ def proof_reading(listing, answers):
     if read != declared:
         finding = f"{listing['id']}: prose reads as {read}, tags say {declared}"
     return {"declared": declared, "read": read, "source": "jev", "finding": finding}
+
+
+def _score(answers, name, top):
+    if not isinstance(answers, dict):
+        return None
+    item = answers.get(name)
+    if not isinstance(item, dict) or item.get("type") != "score":
+        return None
+    score, confidence = item.get("score"), item.get("confidence")
+    if any(isinstance(value, bool) or not isinstance(value, (int, float)) for value in (score, confidence)):
+        return None
+    if not 0 <= score <= top or not 0 <= confidence <= 1:
+        return None
+    return float(score), float(confidence)
+
+
+def summary_reading(listing, answers):
+    """Length still accepts the line. A low weighted fit, at high confidence, is a finding."""
+    does_top = len(SUMMARY_QUESTIONS["says_what"]["criteria"]) - 1
+    plug_top = len(SUMMARY_QUESTIONS["says_plug"]["criteria"]) - 1
+    does = _score(answers, "says_what", does_top)
+    plug = _score(answers, "says_plug", plug_top)
+    if does is None or plug is None or does[1] < SCORE_CONFIDENCE_MIN or plug[1] < SCORE_CONFIDENCE_MIN:
+        return {"line": f"{listing['id']}: summary not judged", "source": "fallback", "score": None, "finding": None}
+    fit = SUMMARY_WEIGHT_DOES * (does[0] / does_top) + SUMMARY_WEIGHT_PLUG * (plug[0] / plug_top)
+    finding = None
+    if fit < SUMMARY_FIT_MIN:
+        finding = f"{listing['id']}: summary does not say what the listing does"
+    return {"line": f"{listing['id']}: summary score {fit:.2f} (jev)", "source": "jev", "score": fit,
+            "finding": finding}
 
 
 def work_link_factors(answers):
@@ -362,6 +438,8 @@ def review_lines(entries, client, private_fn, include_work_links=False, *,
             work = work_link_reading(entry, None)
             if work is not None:
                 lines.append(work["line"])
+            summary = summary_reading(entry, None)
+            lines.append(summary["line"])
             continue
         answers = None
         if client is not None and stop_reason is None:
@@ -392,6 +470,10 @@ def review_lines(entries, client, private_fn, include_work_links=False, *,
             lines.append(work["line"])
             if work["finding"]:
                 findings.append("finding: " + work["finding"])
+        summary = summary_reading(entry, answers)
+        lines.append(summary["line"])
+        if summary["finding"]:
+            findings.append("finding: " + summary["finding"])
     lines.extend(findings)
     if unpublished_skipped:
         noun = "listing" if unpublished_skipped == 1 else "listings"

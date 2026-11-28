@@ -46,6 +46,20 @@ def _ask(listing, client):
     return client.ask(review.listing_state(listing, private), review.questions_for(listing, private))
 
 
+def summary_length_ok(summary):
+    return isinstance(summary, str) and "\n" not in summary and 1 <= len(summary) <= 140
+
+
+def score_summary(cases):
+    length = heuristic = 0
+    for case in cases:
+        if summary_length_ok(case["summary"]) == (case["level"] >= 2):
+            length += 1
+        if review.heuristic_summary(case["summary"]) == case["level"]:
+            heuristic += 1
+    return {"n": len(cases), "length": length, "heuristic": heuristic}
+
+
 def score_kind_live(cases, client):
     agreed = unanswered = 0
     for case in cases:
@@ -89,6 +103,22 @@ def score_work_link_live(cases, client):
     }
 
 
+def score_summary_live(cases, client):
+    agreed = unanswered = 0
+    for case in cases:
+        listing = {"id": case["id"], "name": case["id"], "summary": case["summary"], "plugs_into": "OpenWiz",
+                   "tags": ["mcp-server"]}
+        answers = _ask(listing, client)
+        reading = review.summary_reading(listing, answers)
+        if reading["source"] != "jev":
+            unanswered += 1
+            continue
+        predicted = min(3, max(0, round(reading["score"] * 3)))
+        if predicted == case["level"]:
+            agreed += 1
+    return {"agreed": agreed, "unanswered": unanswered, "n": len(cases)}
+
+
 def _jev_line(name, result):
     return (f"{name} jev ({typesafe_client.MODEL}): {result['agreed']}/{result['n']} agreed, "
             f"{result['unanswered']} unanswered")
@@ -98,11 +128,14 @@ def report(live=False, client=None):
     data = load()
     kind = score_kind(data["kind"])
     work = score_work_link(data["work_link"])
+    summary = score_summary(data["summary"])
     lines = [
         f"kind tags: {kind['tags']}/{kind['n']}",
         f"kind heuristic: {kind['heuristic']}/{kind['n']}",
         f"work_link url-only: {work['url_only']}/{work['n']}",
         f"work_link heuristic: {work['heuristic']}/{work['n']}",
+        f"summary length: {summary['length']}/{summary['n']}",
+        f"summary heuristic: {summary['heuristic']}/{summary['n']}",
     ]
     if not live:
         lines.append("jev: not run; set TYPESAFE_API_KEY and run python3 -I check/jev_bench.py --live")
@@ -115,6 +148,7 @@ def report(live=False, client=None):
     lines.append(_jev_line("work_link", work_live))
     lines.append(_jev_line("work_link item", work_live["item"]))
     lines.append(_jev_line("work_link about", work_live["about"]))
+    lines.append(_jev_line("summary", score_summary_live(data["summary"], client)))
     return "\n".join(lines) + "\n"
 
 

@@ -672,14 +672,14 @@ def main(argv):
     skill.set_defaults(run=cmd_skill)
     review_cmd = commands.add_parser(
         "review",
-        help="ask Jev about proof kind and a being-built work link when TYPESAFE_API_KEY is set; "
-             "otherwise keep the tag rule and the URL check",
+        help="ask Jev about proof kind, a being-built work link, and the summary when TYPESAFE_API_KEY is set; "
+             "otherwise keep the tag, URL, and length rules",
         description=(
-            "Check the tree, then ask Jev about proof kind (and being-built work links with --public-work-links) "
-            "when TYPESAFE_API_KEY is set. Sends only name, summary, and plugs_into (plus public first_link scheme, "
-            "host, and path with --public-work-links). By default, sends only listings matching "
-            "refs/remotes/origin/main; unpublished drafts, local edits, and unmerged commits stay local "
-            "unless selected by id, --rev, or --include-unpublished."
+            "Check the tree, then ask Jev about proof kind, the summary, and being-built work links "
+            "(with --public-work-links) when TYPESAFE_API_KEY is set. Sends only name, summary, and plugs_into "
+            "(plus public first_link scheme, host, and path with --public-work-links). By default, sends only "
+            "listings matching refs/remotes/origin/main; unpublished drafts, local edits, and unmerged commits "
+            "stay local unless selected by id, --rev, or --include-unpublished."
         ),
     )
     review_cmd.add_argument("ids", nargs="*", metavar="id",
