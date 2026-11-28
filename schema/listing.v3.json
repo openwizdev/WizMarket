@@ -252,7 +252,8 @@
             "loop",
             "plugin",
             "tool",
-            "factory"
+            "factory",
+            "persona"
           ]
         },
         "reason": {"$ref": "#/$defs/line"},
