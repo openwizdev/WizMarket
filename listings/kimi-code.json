@@ -1,6 +1,6 @@
 {
   "name": "Kimi Code",
-  "summary": "The Kimi Code harness row for OpenWiz's local driver.",
+  "summary": "The Kimi Code harness row for OpenWiz's local driver. Merged for 0.1.2 and not in a release yet.",
   "tags": [
     "harness",
     "cli"
@@ -11,6 +11,10 @@
   "stage": "being-built",
   "login": "Run kimi login. Kimi saves it in the credentials folder in .kimi-code under your home directory.",
   "links": [
+    {
+      "label": "OpenWiz PR #2785",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2785"
+    },
     {
       "label": "OpenWiz harness row",
       "url": "https://github.com/openwizdev/OpenWiz/issues/2515"

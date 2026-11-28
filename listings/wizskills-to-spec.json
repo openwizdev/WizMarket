@@ -6,13 +6,13 @@
     "wizskills",
     "planning"
   ],
-  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/to-spec",
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.5.0/skills/to-spec",
   "plugs_into": "The skills an OpenWiz agent runs",
   "publisher": "openwizdev",
   "stage": "available",
   "status": "verified",
   "proof": {
-    "source": "openwizdev/WizSkills@a040e40f2b28462c47ee0c2845966d27acd06de5",
+    "source": "openwizdev/WizSkills@cf2abfe13020661b47c47adb71afa993caaf16bf",
     "check": "python3 -I skills/to-spec/test/test_video.py"
   }
 }

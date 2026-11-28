@@ -1,6 +1,6 @@
 {
   "name": "JetBrains Junie CLI",
-  "summary": "JetBrains Junie CLI as a harness for the OpenWiz local driver.",
+  "summary": "JetBrains Junie CLI as a harness for the OpenWiz local driver. Merged for 0.1.2 and not in a release yet.",
   "tags": [
     "harness",
     "cli"
@@ -11,6 +11,10 @@
   "stage": "being-built",
   "login": "Sign in with JetBrains, or set JUNIE_API_KEY yourself.",
   "links": [
+    {
+      "label": "OpenWiz PR #2638",
+      "url": "https://github.com/openwizdev/OpenWiz/pull/2638"
+    },
     {
       "label": "OpenWiz integration ticket",
       "url": "https://github.com/openwizdev/OpenWiz/issues/2442"
