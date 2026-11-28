@@ -1,0 +1,25 @@
+{
+  "name": "nasa-images",
+  "summary": "Browses NASA images through an MCP server that includes a UI.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "design"
+  ],
+  "url": "https://github.com/kaitoy/nasa-images-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.kaitoy%2Fnasa-images"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/kaitoy/nasa-images-mcp-server/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

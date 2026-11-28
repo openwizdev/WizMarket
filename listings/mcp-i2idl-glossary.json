@@ -1,0 +1,23 @@
+{
+  "name": "I2IDL Glossary of Digital Learning",
+  "summary": "Opens I2IDL digital-learning concepts, plus semantic relationships and citations, as a public read-only MCP glossary.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/blakeplock/i2idl-linked-data",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.blakeplock%2Fi2idl-glossary"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/blakeplock/i2idl-linked-data/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

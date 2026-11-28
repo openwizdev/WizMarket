@@ -1,0 +1,23 @@
+{
+  "name": "cal-scheduler",
+  "summary": "Schedules CalDAV events in the right timezone, with validated recurrence and edits to a single occurrence.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/limey/cal-scheduler-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.limey%2Fcal-scheduler-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/limey/cal-scheduler-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

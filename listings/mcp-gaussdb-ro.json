@@ -1,0 +1,23 @@
+{
+  "name": "GaussDB Read-Only MCP",
+  "summary": "Gives coding agents read-only access to Huawei GaussDB in both centralized and distributed modes.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/gxc/gaussdb-ro-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gxc%2Fgaussdb-ro-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/gxc/gaussdb-ro-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Openchargemap",
+  "summary": "Searches Open Charge Map, a global database of EV charging stations at openchargemap.io.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database"
+  ],
+  "url": "https://github.com/pipeworx-io/mcp-openchargemap",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pipeworx-io%2Fopenchargemap"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pipeworx-io/mcp-openchargemap/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

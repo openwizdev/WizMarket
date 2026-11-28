@@ -1,0 +1,23 @@
+{
+  "name": "chrome-dev-mcp",
+  "summary": "Debugs a Chrome tab that is already running, using breakpoints, stepping, scope variables, the console, and the network.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/congzhou09/chrome-dev-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.congzhou09%2Fchrome-dev-mcp"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/congzhou09/chrome-dev-mcp"
+    }
+  ],
+  "status": "listed"
+}

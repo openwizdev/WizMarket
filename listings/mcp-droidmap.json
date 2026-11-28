@@ -1,0 +1,24 @@
+{
+  "name": "droidmap",
+  "summary": "Maps an Android project as a graph, reporting the impact of changes, with checks for Hilt, Room, Koin, navigation, and Gradle.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git"
+  ],
+  "url": "https://github.com/hussainshirazi/droidmap",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.hussainshirazi%2Fdroidmap"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/hussainshirazi/droidmap/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Muumuu Domain MCP Server",
+  "summary": "Connects Muumuu Domain with the official MCP server used as a remote bridge.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/pepabo/muumuu-domain-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pepabo%2Fmuumuu-domain-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pepabo/muumuu-domain-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

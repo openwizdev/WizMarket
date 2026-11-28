@@ -1,0 +1,24 @@
+{
+  "name": "Memory OS AI",
+  "summary": "Relays Memory OS AI project memory locally over stdio, after a shared v4 service is installed and authenticated.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/RoaminS/Memory-os-ai",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.RoaminS%2Fmemory-os-ai"
+    },
+    {
+      "label": "Licence: LGPL-3.0",
+      "url": "https://github.com/RoaminS/Memory-os-ai/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

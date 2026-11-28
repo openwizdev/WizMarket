@@ -1,0 +1,24 @@
+{
+  "name": "NHANES (design-correct survey analysis)",
+  "summary": "Analyzes NHANES with survey weights, pooled cycles, confidence intervals, and NCHS reliability flags applied in a design-correct way.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/Black-Swan-Causal-Labs/nhanes-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.blackswancausallabs%2Fnhanes-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Black-Swan-Causal-Labs/nhanes-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

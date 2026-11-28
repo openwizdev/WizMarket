@@ -1,0 +1,24 @@
+{
+  "name": "Japan Data MCP",
+  "summary": "Exposes 30 Japanese-data tools covering address, furigana, transit, the Diet, holidays, weather, and corporate registry.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "data"
+  ],
+  "url": "https://github.com/Mameta29/japan-data-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Mameta29%2Fjapan-data-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/Mameta29/japan-data-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

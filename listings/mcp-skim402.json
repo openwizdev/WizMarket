@@ -1,0 +1,24 @@
+{
+  "name": "skim402",
+  "summary": "Cleans both markdown and structured data from the web, with a free card API key or optional per-call wallet or x402 payment.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs"
+  ],
+  "url": "https://github.com/JessieJanie/skim402",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.JessieJanie%2Fskim402"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/JessieJanie/skim402/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "mcp-einvoicing-in",
+  "summary": "Processes India GST e-invoicing with schema v1.1 of FORM GST INV-01, including IRP-IRN.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/cmendezs/mcp-einvoicing-in",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.cmendezs%2Fmcp-einvoicing-in"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/cmendezs/mcp-einvoicing-in/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

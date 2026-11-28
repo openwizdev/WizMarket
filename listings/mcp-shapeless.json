@@ -1,0 +1,24 @@
+{
+  "name": "ShapelessAI",
+  "summary": "ShapelessAI, an AI marketing team, produces video, images, and posts, then publishes and schedules them on 18 networks and reads results.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/ShapelessAI/shapelessai",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.shapelessai%2Fshapeless"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ShapelessAI/shapelessai/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

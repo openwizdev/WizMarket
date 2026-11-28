@@ -1,0 +1,23 @@
+{
+  "name": "Flockbay",
+  "summary": "Builds, runs, and playtests a Godot 4 game inside a live Godot editor within the Flockbay app.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/flockbay/flockbay-plugin",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.flockbay%2Fflockbay"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/flockbay/flockbay-plugin/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

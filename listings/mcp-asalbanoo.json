@@ -1,0 +1,25 @@
+{
+  "name": "Asal Banoo",
+  "summary": "Searches Asal Banoo in an unofficial read-only mode for cosmetics and skin care, comparing prices, sizes, and deals.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "finance"
+  ],
+  "url": "https://github.com/sepehr071/asalbanoo-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.sepehr071%2Fasalbanoo-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/sepehr071/asalbanoo-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

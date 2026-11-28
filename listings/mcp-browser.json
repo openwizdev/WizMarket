@@ -1,0 +1,24 @@
+{
+  "name": "MCP Browser",
+  "summary": "Lets AI agents control a real WKWebView inside a native macOS browser that speaks MCP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/brainfuel/mcp-browser",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.brainfuel%2Fmcp-browser"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/brainfuel/mcp-browser/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

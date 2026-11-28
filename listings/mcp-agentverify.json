@@ -1,0 +1,24 @@
+{
+  "name": "Agent Verify",
+  "summary": "Runs 124 tested security checks against AI agents and against MCP configs, from an AI coding assistant.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/AI-Blockchain-Ventures/agentverify",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.AI-Blockchain-Ventures%2Fagentverify"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/AI-Blockchain-Ventures/agentverify/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

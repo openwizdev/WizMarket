@@ -1,0 +1,23 @@
+{
+  "name": "mcp-gads",
+  "summary": "Asks Google Ads about campaigns, keywords, assets, and more, using natural language.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/pijusz/mcp-gads",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pijusz%2Fmcp-gads"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pijusz/mcp-gads/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

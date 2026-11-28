@@ -1,0 +1,25 @@
+{
+  "name": "OwnMemory",
+  "summary": "OwnMemory stores memory for Claude in encrypted form on a server the user deploys under a personal Cloudflare account.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "memory"
+  ],
+  "url": "https://github.com/ownmemoryhq/ownmemory",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=app.ownmemory%2Fownmemory"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/ownmemoryhq/ownmemory/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

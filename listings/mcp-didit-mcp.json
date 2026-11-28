@@ -1,0 +1,25 @@
+{
+  "name": "Didit MCP Server",
+  "summary": "Didit gives AI agents fraud workflows, transaction monitoring, wallet screening, AML, KYB, and KYC.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "observability",
+    "security"
+  ],
+  "url": "https://github.com/didit-protocol/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=me.didit%2Fmcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/didit-protocol/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

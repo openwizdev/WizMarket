@@ -1,0 +1,24 @@
+{
+  "name": "Resend Email MCP",
+  "summary": "Covers the Resend email API in full and adds debugging for deliverability, DNS, and bounces.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/helbertparanhos/resend-email-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.helbertparanhos%2Fresend-email-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/helbertparanhos/resend-email-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

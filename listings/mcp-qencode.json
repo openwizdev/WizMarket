@@ -1,0 +1,24 @@
+{
+  "name": "qencode",
+  "summary": "Offers AI agents a video pipeline that analyzes footage, transcodes it to MP4, HLS, and DASH, then edits, protects, and delivers it.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/Qencode-Corp/mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.qencode%2Fqencode"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Qencode-Corp/mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

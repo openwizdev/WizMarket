@@ -1,0 +1,23 @@
+{
+  "name": "Spring Boot Runtime Diagnostics",
+  "summary": "Supplies agents with Spring Boot runtime evidence they cannot modify, covering beans, routes, health, and startup.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/neilmorse/spring-runtime-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.neilmorse%2Fspring-runtime-mcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/neilmorse/spring-runtime-mcp/blob/master/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

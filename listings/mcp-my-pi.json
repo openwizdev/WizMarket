@@ -1,0 +1,25 @@
+{
+  "name": "my-pi",
+  "summary": "Offers coding agents a local-first runtime on MCP, including safe workspace access, Git, and navigation through AST and LSP.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "developer-tools"
+  ],
+  "url": "https://github.com/BoxBoxmari/my-pi",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.BoxBoxmari%2Fmy-pi"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/BoxBoxmari/my-pi/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

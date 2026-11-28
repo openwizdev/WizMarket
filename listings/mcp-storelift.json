@@ -1,0 +1,23 @@
+{
+  "name": "storelift",
+  "summary": "storelift reports AI visibility, reviews, rivals, and keyword ranks for the App Store and Google Play, on the Pro plan and above.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/vom-core/storelift-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=net.storelift%2Fstorelift"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/vom-core/storelift-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

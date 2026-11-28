@@ -1,0 +1,24 @@
+{
+  "name": "keypeek",
+  "summary": "Counts which secrets coding assistants can read, and never returns the values.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/Evalogical-Inc/keypeek",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Evalogical-Inc%2Fkeypeek"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Evalogical-Inc/keypeek/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

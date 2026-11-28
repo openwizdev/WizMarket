@@ -1,0 +1,23 @@
+{
+  "name": "Haulest",
+  "summary": "Haulest handles quote requests, guides, licence checks, reviewed movers, and moving cost ranges.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Panaweb-LLC/haulest-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.haulest%2Fhaulest"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Panaweb-LLC/haulest-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

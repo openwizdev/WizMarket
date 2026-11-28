@@ -1,0 +1,25 @@
+{
+  "name": "legalithm-mcp-server",
+  "summary": "Classifies risk under the EU AI Act, covers obligations plus Article 50 disclosures, and runs offline with no API key.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/legalithm-org/legalithm",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.PedramMadani%2Flegalithm-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/legalithm-org/legalithm/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

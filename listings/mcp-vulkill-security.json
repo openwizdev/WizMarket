@@ -1,0 +1,24 @@
+{
+  "name": "VulKill Security",
+  "summary": "VulKill Security covers AppSec and DAST over 12 domains, 260+ controls, with 3-layer triage and optional Watchtower at 100 file credits/day.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/dytredline/VulKill",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.dytredline%2Fvulkill-security"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/dytredline/VulKill/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

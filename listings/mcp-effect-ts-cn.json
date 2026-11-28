@@ -1,0 +1,23 @@
+{
+  "name": "Effect 中文文档",
+  "summary": "Searches 234 offline, dependency-free Chinese translations of official Effect docs for v3 and v4, citing the source section and commit.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/aaronlou/effect-ts.cn",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.aaronlou%2Feffect-ts-cn"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aaronlou/effect-ts.cn/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

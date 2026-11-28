@@ -1,0 +1,25 @@
+{
+  "name": "mcp-bitbucket-dc",
+  "summary": "Connects over MCP to Bitbucket Data Center and to Bitbucket Server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "docs"
+  ],
+  "url": "https://github.com/tekthar/atlassian-data-center-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.tekthar%2Fmcp-bitbucket-dc"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/tekthar/atlassian-data-center-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

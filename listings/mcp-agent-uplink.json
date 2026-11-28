@@ -1,0 +1,24 @@
+{
+  "name": "agent-uplink",
+  "summary": "Carries local messages between AI sessions using role accounts, DMs, and channels over MCP, on Windows only.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication"
+  ],
+  "url": "https://github.com/pkj8282/Agent-Uplink",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.pkj8282%2Fagent-uplink"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pkj8282/Agent-Uplink/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

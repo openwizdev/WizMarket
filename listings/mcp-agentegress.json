@@ -1,0 +1,24 @@
+{
+  "name": "agentegress",
+  "summary": "On Windows, identifies which AI agent talks to what and names the MCP server involved, then gives a security verdict drawn from rules.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/co2water/agentegress",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.co2water%2Fagentegress"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/co2water/agentegress/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

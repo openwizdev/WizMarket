@@ -1,0 +1,25 @@
+{
+  "name": "PrivacyScrubber PII Masking MCP",
+  "summary": "Masks PII and secrets entirely in memory for Cursor, for Claude, and for AI agents, under zero trust.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security",
+    "memory"
+  ],
+  "url": "https://github.com/moxno/privacyscrubber-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.moxno%2Fprivacyscrubber-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/moxno/privacyscrubber-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

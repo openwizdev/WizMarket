@@ -1,0 +1,23 @@
+{
+  "name": "KeepState",
+  "summary": "Starts, watches, messages, and pauses durable KeepState agent sessions, and asks a person when approval is needed.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/Keepstateai/cli",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.keepstate%2Fks"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Keepstateai/cli/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

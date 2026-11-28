@@ -1,0 +1,25 @@
+{
+  "name": "AI SENSE Free Public Tools",
+  "summary": "Publishes 89 AI SENSE tools for the public, spanning webhooks, queues, semantic search, audio data transfer, and agent workflows.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "design"
+  ],
+  "url": "https://github.com/aisenseapi/aisense-free-public-rest-apis",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.aisenseapi%2Ffree-public-tools"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/aisenseapi/aisense-free-public-rest-apis/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

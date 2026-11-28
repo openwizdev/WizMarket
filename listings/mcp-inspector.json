@@ -1,0 +1,23 @@
+{
+  "name": "inspector",
+  "summary": "Analyzes site safety and trust, checks a domain's reputation, and flags phishing using GridinSoft.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/gridinsoft/mcp-inspector",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.gridinsoft%2Finspector"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/gridinsoft/mcp-inspector/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

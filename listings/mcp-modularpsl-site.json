@@ -1,0 +1,23 @@
+{
+  "name": "PSL Modular Prefab Modular Housing Reference",
+  "summary": "Publishes PSL Modular articles covering delivery, container homes, ADU laws, state permits, and US prefab housing.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/YangzhenRuan/psl-modular-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.modularpsl%2Fsite"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/YangzhenRuan/psl-modular-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

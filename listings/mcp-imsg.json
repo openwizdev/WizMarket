@@ -1,0 +1,25 @@
+{
+  "name": "imsg-mcp",
+  "summary": "Reads and searches iMessage and SMS on a Mac the user controls; sending is opt-in and per-message approval must be enforced by the client.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search",
+    "communication"
+  ],
+  "url": "https://github.com/project-nomos/imsg-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.project-nomos%2Fimsg-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/project-nomos/imsg-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

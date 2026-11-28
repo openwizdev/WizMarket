@@ -1,0 +1,23 @@
+{
+  "name": "UQUAL Loan Readiness",
+  "summary": "Draws on UQUAL tools for loan readiness, plus educational calculations and references from agencies.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/drewTuzson/uqual-loan-readiness",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.uqual%2Floan-readiness"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/drewTuzson/uqual-loan-readiness/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

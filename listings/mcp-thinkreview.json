@@ -1,0 +1,25 @@
+{
+  "name": "ThinkReview",
+  "summary": "ThinkReview performs live pull and merge request reviews through review_url_code using OAuth or Bearer auth on the portal.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "git",
+    "security"
+  ],
+  "url": "https://github.com/Thinkode/thinkreview-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Thinkode%2Fthinkreview"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Thinkode/thinkreview-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

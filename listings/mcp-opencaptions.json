@@ -1,0 +1,25 @@
+{
+  "name": "OpenCaptions",
+  "summary": "Renders captions that animate one word at a time for videos, either on this computer or on a self-hosted OpenCaptions server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud",
+    "design"
+  ],
+  "url": "https://github.com/leogaudin/opencaptions",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.leogaudin%2Fopencaptions"
+    },
+    {
+      "label": "Licence: AGPL-3.0",
+      "url": "https://github.com/leogaudin/opencaptions/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

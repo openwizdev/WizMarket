@@ -1,0 +1,24 @@
+{
+  "name": "Vayancy TravelOS",
+  "summary": "Vayancy TravelOS books Mediterranean luxury villas, using live PMS inventory and placing holds directly in Stripe.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/nikoskalyvas/vayancy-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nikoskalyvas%2Fvayancy-travelos"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/nikoskalyvas/vayancy-mcp"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "VMware AVI",
+  "summary": "Operates VMware's AVI load balancer, also called NSX ALB, and AKO on Kubernetes through 28 MCP tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "cloud"
+  ],
+  "url": "https://github.com/vmware-skills/VMware-AVI",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.vmware-skills%2Fvmware-avi"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/vmware-skills/VMware-AVI/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

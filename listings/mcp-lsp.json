@@ -1,0 +1,24 @@
+{
+  "name": "lsp-mcp",
+  "summary": "Serves the Language Server Protocol to MCP clients from one universal endpoint.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/theUpsider/lsp-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.theUpsider%2Flsp-mcp"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/theUpsider/lsp-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

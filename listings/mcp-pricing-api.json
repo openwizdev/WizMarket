@@ -1,0 +1,23 @@
+{
+  "name": "ComparEdge Pricing",
+  "summary": "Reports verified pricing for 490+ SaaS, AI, and LLM tools, covering plans, hidden costs, and TCO, then alternatives.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/comparedge/pricing-api",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.comparedge%2Fpricing-api"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/comparedge/pricing-api/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

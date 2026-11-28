@@ -1,0 +1,24 @@
+{
+  "name": "MifBlender",
+  "summary": "Drives a running Blender session through MifBlender, using 437 typed tools that validate parameters and read results back.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/mifsopo1/MifBlender",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mifsopo1%2Fmifblender"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/mifsopo1/MifBlender"
+    }
+  ],
+  "status": "listed"
+}

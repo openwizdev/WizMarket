@@ -1,0 +1,25 @@
+{
+  "name": "lit-forge-mcp",
+  "summary": "Covers asset planning, market data, economic releases, speakers from central banks, US macro, and geopolitics across 19 tools.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance",
+    "communication"
+  ],
+  "url": "https://github.com/noblabs/lit-forge-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.noblabs%2Flit-forge-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/noblabs/lit-forge-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "hammerspoon",
+  "summary": "Drives macOS from Hammerspoon using 75 tools that cover Bluetooth, windows, audio, Spaces, and more.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/mobabur94/hammerspoon-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.mobabur94%2Fhammerspoon"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mobabur94/hammerspoon-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

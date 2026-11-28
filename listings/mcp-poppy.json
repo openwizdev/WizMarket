@@ -1,0 +1,24 @@
+{
+  "name": "poppy",
+  "summary": "Remembers developer decisions, preferences, and lessons on this machine through a CLI and an MCP server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "memory"
+  ],
+  "url": "https://github.com/trags-garden/poppy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.trags%2Fpoppy"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/trags-garden/poppy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Units-LE",
+  "summary": "Units-LE extracts frequencies, percentages, sizes, and durations into a single base unit and rejects ambiguous values.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/nolindnaidoo/units-le",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nolindnaidoo%2Funits-le"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nolindnaidoo/units-le/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

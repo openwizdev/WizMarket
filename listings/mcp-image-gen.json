@@ -1,0 +1,24 @@
+{
+  "name": "Image Gen",
+  "summary": "Creates and edits images for a coding agent through Gemini and OpenAI with your own API keys.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/nuver-labs/image-gen-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.nuverlabs%2Fimage-gen"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nuver-labs/image-gen-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

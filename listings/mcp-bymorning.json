@@ -1,0 +1,24 @@
+{
+  "name": "ByMorning",
+  "summary": "Runs ByMorning as a self-hosted, open-source gateway for MCP and models, serving the installation's Tools through OAuth.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "security"
+  ],
+  "url": "https://github.com/bymorning/bymorning",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.bymorning%2Fbymorning"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/bymorning/bymorning/blob/dev/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

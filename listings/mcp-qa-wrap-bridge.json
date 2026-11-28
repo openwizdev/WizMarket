@@ -1,0 +1,24 @@
+{
+  "name": "QA Wrap bridge",
+  "summary": "QA Wrap bridge lets a coding agent read test sessions stored by QA Wrap locally and does not write.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "productivity"
+  ],
+  "url": "https://github.com/NJ-Burrito/QA-Wrap",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.NJ-Burrito%2Fqa-wrap-bridge"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/NJ-Burrito/QA-Wrap/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

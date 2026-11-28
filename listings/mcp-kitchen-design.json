@@ -1,0 +1,24 @@
+{
+  "name": "NewKitchenAI - Kitchen Design Reference",
+  "summary": "Reads NewKitchenAI reference material on pricing, AI design examples, materials, and kitchen styles, with no writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design"
+  ],
+  "url": "https://github.com/weiwosuoai/newkitchenai-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.newkitchenai%2Fkitchen-design"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/weiwosuoai/newkitchenai-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "groundwork",
+  "summary": "Assesses deployment readiness for extraction AI and document QA, including grounding, extraction, and a CI gate.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/nickjlamb/groundwork",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nickjlamb%2Fgroundwork"
+    },
+    {
+      "label": "Licence: other",
+      "url": "https://github.com/nickjlamb/groundwork/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

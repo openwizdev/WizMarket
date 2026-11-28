@@ -1,0 +1,23 @@
+{
+  "name": "One Person Company OS",
+  "summary": "One Person Company OS constructs and revises a visual control panel aimed at founders who run an AI-native company alone.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/living-hi/one-person-company-os",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.living-hi%2Fone-person-company-os"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/living-hi/one-person-company-os/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

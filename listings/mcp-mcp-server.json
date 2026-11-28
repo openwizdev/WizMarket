@@ -1,0 +1,25 @@
+{
+  "name": "SendPulse",
+  "summary": "Brings SendPulse course automation, SMTP, chatbot, CRM, and email to AI agents.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "productivity"
+  ],
+  "url": "https://github.com/sendpulse/mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.sendpulse.mcp%2Fmcp-server"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/sendpulse/mcp-server"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "holomime",
+  "summary": "Offers AI agents behavioral therapy through MCP, covering training, alignment, and self-diagnosis.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/productstein/holomime",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.productstein%2Fholomime"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/productstein/holomime/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

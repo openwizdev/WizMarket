@@ -1,0 +1,24 @@
+{
+  "name": "Halal Terminal",
+  "summary": "Screens Shariah-compliant stocks and ETFs under methodologies from DJIM, AAOIFI, MSCI, FTSE, and S&P.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/goww7/halalterminal-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=com.halalterminal%2Fmcp"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/goww7/halalterminal-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

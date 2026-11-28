@@ -1,0 +1,24 @@
+{
+  "name": "ghostimport",
+  "summary": "Refuses an agent's npm install when the package does not exist, is a typosquat, or ships a risky install script.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/FGuerreir0/ghostimport",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.FGuerreir0%2Fghostimport"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/FGuerreir0/ghostimport"
+    }
+  ],
+  "status": "listed"
+}

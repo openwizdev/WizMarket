@@ -1,0 +1,24 @@
+{
+  "name": "Godot MCP",
+  "summary": "Changes scenes, nodes, and scripts in Godot 4, then runs, tests, and debugs the game live, either inside the editor or headless.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "developer-tools"
+  ],
+  "url": "https://github.com/shin2344234/godot-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.shin2344234%2Fgodot-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/shin2344234/godot-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "billy-mcp",
+  "summary": "Covers invoices, journal entries, and trial balance for Billy accounting on billy.dk, and protects writes.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/Thourum/billy-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.Thourum%2Fbilly-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/Thourum/billy-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

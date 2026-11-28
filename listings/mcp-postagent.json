@@ -1,0 +1,25 @@
+{
+  "name": "PostAgent",
+  "summary": "PostAgent prints and mails images, DOCX, text, Markdown, HTML, and PDF files to US addresses, charging x402 USDC on Base per call.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "docs",
+    "design"
+  ],
+  "url": "https://github.com/interpretai-tech/agent-tools",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=tech.interpretai%2FPostAgent"
+    },
+    {
+      "label": "Licence: not stated",
+      "url": "https://github.com/interpretai-tech/agent-tools"
+    }
+  ],
+  "status": "listed"
+}

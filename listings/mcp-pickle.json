@@ -1,0 +1,25 @@
+{
+  "name": "Pickle",
+  "summary": "Audits ClickUp, Slack, and Teams from a free local server to find work that slipped through.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "communication",
+    "productivity"
+  ],
+  "url": "https://github.com/adityaarsharma/pickle",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.adityaarsharma%2Fpickle"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/adityaarsharma/pickle/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

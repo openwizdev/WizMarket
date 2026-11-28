@@ -1,0 +1,24 @@
+{
+  "name": "hithereiamaliff-mcp-datagovmy",
+  "summary": "Serves open data from Malaysia's government, datasets included, through this MCP server.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "data"
+  ],
+  "url": "https://github.com/hithereiamaliff/mcp-datagovmy",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.smithery%2Fhithereiamaliff-mcp-datagovmy"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/hithereiamaliff/mcp-datagovmy/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

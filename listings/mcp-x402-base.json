@@ -1,0 +1,24 @@
+{
+  "name": "TensorFeed x402 Base Reader",
+  "summary": "Reads Base mainnet without writing, and checks x402 payment settlements plus AFTA federation status.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "finance"
+  ],
+  "url": "https://github.com/RipperMercs/tensorfeed-x402-base-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.tensorfeed%2Fx402-base-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/RipperMercs/tensorfeed-x402-base-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

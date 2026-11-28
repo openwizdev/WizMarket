@@ -1,0 +1,25 @@
+{
+  "name": "nimbo: a Jupyter-style notebook for JavaScript and TypeScript",
+  "summary": "Reads, edits, runs, and debugs notebook cells, queries outputs via JSONPath, jq, or SQL, and manages packages.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "database",
+    "search"
+  ],
+  "url": "https://github.com/7sStudio/nimbo",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.7sStudio%2Fnimbo"
+    },
+    {
+      "label": "Licence: Apache-2.0",
+      "url": "https://github.com/7sStudio/nimbo/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

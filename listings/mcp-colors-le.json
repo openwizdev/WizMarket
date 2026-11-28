@@ -1,0 +1,23 @@
+{
+  "name": "Colors-LE",
+  "summary": "Pulls color values out of stylesheets and source code, reporting each notation and where it sits.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/nolindnaidoo/colors-le",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.nolindnaidoo%2Fcolors-le"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/nolindnaidoo/colors-le/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

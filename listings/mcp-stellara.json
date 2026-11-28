@@ -1,0 +1,25 @@
+{
+  "name": "stellara-mcp",
+  "summary": "stellara-mcp uses the Swiss Ephemeris so AI agents can resolve birth places and compute synastry, transits, and exact natal charts.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "design",
+    "developer-tools"
+  ],
+  "url": "https://github.com/mihnin/stellara-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=it.natlex%2Fstellara-mcp"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/mihnin/stellara-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

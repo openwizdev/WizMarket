@@ -1,0 +1,23 @@
+{
+  "name": "RentADriver",
+  "summary": "Quotes, books, and tracks real same-day deliveries of packages by vetted drivers, with proof of delivery.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/efirity/rentadriver-integrations",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=ai.rentadriver%2Frentadriver"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/efirity/rentadriver-integrations/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

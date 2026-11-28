@@ -1,0 +1,23 @@
+{
+  "name": "perplexity-polza-mcp-server",
+  "summary": "Answers through Perplexity by calling the chat completions endpoint that Polza.ai exposes.",
+  "tags": [
+    "public-source",
+    "mcp-server"
+  ],
+  "url": "https://github.com/ivanantigravity-lgtm/perplexity-polza-mcp-server",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.ivanantigravity-lgtm%2Fperplexity-polza-mcp-server"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/ivanantigravity-lgtm/perplexity-polza-mcp-server/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}

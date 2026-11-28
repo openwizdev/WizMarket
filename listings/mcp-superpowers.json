@@ -1,0 +1,24 @@
+{
+  "name": "Superpowers MCP",
+  "summary": "Sells pay-per-call search, page reading, email, company data, and media to agents after sign-in, with no key required.",
+  "tags": [
+    "public-source",
+    "mcp-server",
+    "search"
+  ],
+  "url": "https://github.com/pqgventures/superpowers-mcp",
+  "plugs_into": "The MCP servers your agents load",
+  "publisher": "openwizdev",
+  "stage": "available",
+  "links": [
+    {
+      "label": "Listed from public source, unverified: Official MCP Registry",
+      "url": "https://registry.modelcontextprotocol.io/v0/servers?search=tools.superpowers%2Fsuperpowers"
+    },
+    {
+      "label": "Licence: MIT",
+      "url": "https://github.com/pqgventures/superpowers-mcp/blob/main/LICENSE"
+    }
+  ],
+  "status": "listed"
+}
