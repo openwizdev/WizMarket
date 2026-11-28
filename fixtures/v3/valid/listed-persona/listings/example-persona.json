@@ -1,0 +1,13 @@
+{
+  "category": "persona",
+  "name": "Example persona",
+  "plugs_into": "OpenWiz",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed",
+  "summary": "A synthetic persona and its theme.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/personas/example-persona"
+}

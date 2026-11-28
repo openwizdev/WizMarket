@@ -10,7 +10,7 @@ The author writes `name`, `summary`, `tags`, `url`, `plugs_into`, `publisher`, `
 
 | Field | When present | Value and writer |
 | --- | --- | --- |
-| `category` | Always | The author chooses exactly one of `driver`, `harness`, `agent-cloud`, `compute`, `ci`, `model-provider`, `skill`, `loop`, `plugin`, `tool`, `factory`. `tags` stay free-form within the v1 tag syntax. |
+| `category` | Always | The author chooses exactly one of `driver`, `harness`, `agent-cloud`, `compute`, `ci`, `model-provider`, `skill`, `loop`, `plugin`, `tool`, `factory`, `persona`. The `persona` category covers personas and their themes, and its `url` points to a persona pack that follows the OpenWiz persona contract. `tags` stay free-form within the v1 tag syntax. |
 | `status` | Always | The author may submit `listed` or `verified` with the required evidence, or `experimental` for a skill with its gate result. Only the release bar may set `unverified`. The status rules below apply to every write. |
 | `proof` | Verified only | The author supplies exactly the proof for the listing's category. |
 | `reason` | Unverified only | The release bar supplies the failing check on one line, or the literal `no current receipt`. |
