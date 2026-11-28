@@ -1,6 +1,6 @@
 {
   "name": "Factory",
-  "summary": "Runs OpenWiz builders locally through the Factory Droid CLI.",
+  "summary": "Runs OpenWiz builders locally through the Factory Droid CLI. Merged for 0.1.1 and not in a release yet.",
   "tags": [
     "driver",
     "local"

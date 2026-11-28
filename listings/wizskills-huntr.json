@@ -6,7 +6,7 @@
     "wizskills",
     "maintenance"
   ],
-  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/huntr",
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.5.0/skills/huntr",
   "plugs_into": "The skills an OpenWiz agent runs",
   "publisher": "openwizdev",
   "stage": "available",

@@ -6,7 +6,7 @@
     "wizskills",
     "planning"
   ],
-  "url": "https://github.com/openwizdev/WizSkills/tree/v0.4.1/skills/to-tickets",
+  "url": "https://github.com/openwizdev/WizSkills/tree/v0.5.0/skills/to-tickets",
   "plugs_into": "The skills an OpenWiz agent runs",
   "publisher": "openwizdev",
   "stage": "available",
