@@ -3,9 +3,7 @@
   "summary": "Detects contract drift between TypeScript APIs and OpenAPI in code that AI generated, then checks it again in CI.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git",
-    "design"
+    "mcp-server"
   ],
   "url": "https://github.com/bm1016bm-svg/evidrift",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Looks up a checked record of a dependency bug from an error, and reviews versions before installation.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/cairncommons/cairn-commons",
   "plugs_into": "The MCP servers your agents load",

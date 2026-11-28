@@ -3,8 +3,7 @@
   "summary": "Sends commands, file transfers, and asset browsing to a v4 JumpServer bastion from an assistant.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/MiFaZhan/jms-client",
   "plugs_into": "The MCP servers your agents load",

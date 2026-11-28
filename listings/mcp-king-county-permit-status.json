@@ -3,8 +3,7 @@
   "summary": "Displays live history and status of permits in King County, WA, for any contractor, permit, parcel, or address.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/chaoz23/king-county-permit-status",
   "plugs_into": "The MCP servers your agents load",

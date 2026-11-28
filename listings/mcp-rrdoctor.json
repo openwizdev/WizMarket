@@ -3,8 +3,7 @@
   "summary": "Research Repo Doctor runs an Artifact Evaluation preflight deterministically and grades run paths of research repositories.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Tom409114/research-repo-doctor",
   "plugs_into": "The MCP servers your agents load",

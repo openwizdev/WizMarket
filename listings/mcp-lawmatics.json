@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "security"
+    "security",
+    "productivity"
   ],
   "url": "https://github.com/oktopeak/lawmatics-mcp",
   "plugs_into": "The MCP servers your agents load",

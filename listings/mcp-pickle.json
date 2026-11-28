@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "communication"
+    "communication",
+    "productivity"
   ],
   "url": "https://github.com/adityaarsharma/pickle",
   "plugs_into": "The MCP servers your agents load",

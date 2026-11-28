@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "data"
   ],
   "url": "https://github.com/SongT-50/korean-public-data-mcp",
   "plugs_into": "The MCP servers your agents load",

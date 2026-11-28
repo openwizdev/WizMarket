@@ -3,8 +3,7 @@
   "summary": "Finds genes, sequences, and papers on antimicrobial resistance in NCBI and UniProt.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pabloestepaa/amr-mcp",
   "plugs_into": "The MCP servers your agents load",

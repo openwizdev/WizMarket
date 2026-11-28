@@ -3,8 +3,7 @@
   "summary": "Returns RSS, living traditions, ISOS, and BAK cultural heritage.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/malkreide/swiss-culture-mcp",
   "plugs_into": "The MCP servers your agents load",

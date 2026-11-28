@@ -3,8 +3,7 @@
   "summary": "Searches 234 offline, dependency-free Chinese translations of official Effect docs for v3 and v4, citing the source section and commit.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/aaronlou/effect-ts.cn",
   "plugs_into": "The MCP servers your agents load",

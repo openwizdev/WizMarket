@@ -3,8 +3,7 @@
   "summary": "Enables AI agents to place GrubHub food orders and manage restaurant delivery on their own.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/markswendsen-code/mcp-grubhub",
   "plugs_into": "The MCP servers your agents load",

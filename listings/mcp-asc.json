@@ -3,8 +3,7 @@
   "summary": "Lets an AI agent ship an iOS app in App Store Connect, starting from the bundle id and continuing to review.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pofky/asc-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Statsnet runs a background check on any company worldwide, covering finances, courts, executives, and registration.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/usenetstate/statsnet-mcp",
   "plugs_into": "The MCP servers your agents load",

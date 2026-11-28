@@ -3,8 +3,7 @@
   "summary": "Operates WordPress content management through a secure MCP server.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/crunchtools/mcp-wordpress",
   "plugs_into": "The MCP servers your agents load",

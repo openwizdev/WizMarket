@@ -3,8 +3,7 @@
   "summary": "Routes manufacturing tasks that humans have reviewed through MadeForAI hosted fulfillment.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/amplichina/madeforai-supplychain-skill",
   "plugs_into": "The MCP servers your agents load",

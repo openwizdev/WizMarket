@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "finance"
+    "finance",
+    "security"
   ],
   "url": "https://github.com/stand-out-of-my-sun/diogenes-web3-security-mcp",
   "plugs_into": "The MCP servers your agents load",

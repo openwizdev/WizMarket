@@ -3,8 +3,7 @@
   "summary": "Breaks ties neutrally between AI agents and reviews an agent's output under seal, attaching signed receipts.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ccheez34/agent-referee-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Exposes PatchX Freenote summaries, memories, and model outputs, plus webhook workflows a user has approved.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ZsTs119/patchx-freenote-agent",
   "plugs_into": "The MCP servers your agents load",

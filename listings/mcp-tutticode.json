@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "design"
   ],
   "url": "https://github.com/tuttidaw/tutticode",
   "plugs_into": "The MCP servers your agents load",

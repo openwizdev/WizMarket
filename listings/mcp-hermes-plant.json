@@ -3,8 +3,7 @@
   "summary": "Preflights, approves, and proves consequential agent actions, backed by signed evidence and by x402 tools.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/JesseGdotIO/hermesplant-mcp-server",
   "plugs_into": "The MCP servers your agents load",

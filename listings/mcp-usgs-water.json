@@ -3,8 +3,7 @@
   "summary": "Reports USGS streamflow, the status of gauges, and water observations.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mrfentmen/usgs-water-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "design"
   ],
   "url": "https://github.com/gluip/chart-canvas",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Outask lists and changes JSON tasks stored in the repository.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/henryh/outask",
   "plugs_into": "The MCP servers your agents load",

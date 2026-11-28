@@ -3,8 +3,7 @@
   "summary": "TractorBeeam365 MCP reviews Microsoft 365 backups from Veeam without writing, and offers a gated, audited restore tier.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Ringosystems/TractorBeeam-MCP",
   "plugs_into": "The MCP servers your agents load",

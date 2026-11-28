@@ -3,8 +3,7 @@
   "summary": "Queries Portugal and EU registries such as NIPC, DRE, TED, FSF, and IMPIC Portal BASE tenders, using USDC or EURC.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/DataX-Oracles-MCP/datax-portugal-eu-mcp",
   "plugs_into": "The MCP servers your agents load",

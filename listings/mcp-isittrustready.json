@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "docs"
+    "docs",
+    "security"
   ],
   "url": "https://github.com/mnemom/mcp",
   "plugs_into": "The MCP servers your agents load",

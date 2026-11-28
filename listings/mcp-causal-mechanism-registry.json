@@ -1,10 +1,9 @@
 {
   "name": "Causal Mechanism Registry",
-  "summary": "Stores named causal mechanisms in a registry that tracks versions, and records a definition, a scope, a boundary, and a test for each.",
+  "summary": "Catalogs versioned causal mechanisms by name, recording definitions, scopes, boundaries, and tests for each entry.",
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
     "finance"
   ],
   "url": "https://github.com/adenkarabal/causal-mechanism-registry",

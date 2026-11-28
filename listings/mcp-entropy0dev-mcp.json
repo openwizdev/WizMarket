@@ -3,8 +3,7 @@
   "summary": "Entropy0 gives AI agents tools that judge source trust and check URL safety.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/entropy0dev/sdk",
   "plugs_into": "The MCP servers your agents load",

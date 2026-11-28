@@ -3,8 +3,7 @@
   "summary": "Opens and updates archives stored in the RAGE Package Format.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/molchalih/rpfd",
   "plugs_into": "The MCP servers your agents load",

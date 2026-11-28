@@ -3,8 +3,7 @@
   "summary": "Exposes forge, cast, and anvil-zksync from foundry-zksync for development on zkSync Era.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Jrigada/foundry-zksync-mcp",
   "plugs_into": "The MCP servers your agents load",

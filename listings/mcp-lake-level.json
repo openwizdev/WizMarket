@@ -3,8 +3,7 @@
   "summary": "Reports live water levels for US lakes and reservoirs using TWDB, USBR, CDEC, USACE, and USGS gauges.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/theluckystrike/lake-level-mcp",
   "plugs_into": "The MCP servers your agents load",

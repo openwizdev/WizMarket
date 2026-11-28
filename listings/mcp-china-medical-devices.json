@@ -3,8 +3,7 @@
   "summary": "Serves the China medical-device UDI register.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pipeworx-io/mcp-china-medical-devices",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Delivers live London transport data from the TfL Unified API on a community-built server.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/oneill9/tfl-mcp-server",
   "plugs_into": "The MCP servers your agents load",

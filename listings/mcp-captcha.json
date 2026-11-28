@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "security"
+    "security",
+    "developer-tools"
   ],
   "url": "https://github.com/zekebuilds-lab/captcha-mcp",
   "plugs_into": "The MCP servers your agents load",

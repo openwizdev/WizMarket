@@ -3,8 +3,7 @@
   "summary": "Catalogs council meetings, awards, grants, and government tenders from TED, the UK, USAspending, Grants.gov, and SAM.gov.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/GeminiGeorge22/gov-tenders-mcp",
   "plugs_into": "The MCP servers your agents load",

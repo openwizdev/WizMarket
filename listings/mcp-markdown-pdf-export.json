@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "docs"
+    "docs",
+    "design"
   ],
   "url": "https://github.com/matinfo-tech/markdown-pdf-export",
   "plugs_into": "The MCP servers your agents load",

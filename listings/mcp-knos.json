@@ -3,8 +3,7 @@
   "summary": "knos meters AI agent work neutrally so neither side holds the count.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/drexthealpha/Knos",
   "plugs_into": "The MCP servers your agents load",

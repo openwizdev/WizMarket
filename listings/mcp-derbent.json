@@ -3,8 +3,7 @@
   "summary": "Derbent checks coding-agent calls to MCP and to built-in tools, then records approvals under rules with hash-chained receipts.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/tunahanaliozturk/derbent",
   "plugs_into": "The MCP servers your agents load",

@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "developer-tools"
   ],
   "url": "https://github.com/mahdibrr/dev-error-explainers",
   "plugs_into": "The MCP servers your agents load",

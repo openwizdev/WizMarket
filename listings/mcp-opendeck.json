@@ -3,8 +3,7 @@
   "summary": "Sets up OpenDeck stream controllers, including Stream Deck and other devices, using ordinary language.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/kastro5/opendeck-mcp",
   "plugs_into": "The MCP servers your agents load",

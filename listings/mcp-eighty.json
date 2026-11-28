@@ -3,8 +3,7 @@
   "summary": "Lets Claude load and update the character sheet for a real-life RPG kept by the eighty app for self-improvement.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/metlem80/eighty-mcp-examples",
   "plugs_into": "The MCP servers your agents load",

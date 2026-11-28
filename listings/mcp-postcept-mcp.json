@@ -3,8 +3,7 @@
   "summary": "Postcept compares agent actions with the system of record, then issues signed receipts confirming completion.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Postcept/mcp",
   "plugs_into": "The MCP servers your agents load",

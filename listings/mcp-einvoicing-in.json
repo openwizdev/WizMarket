@@ -3,8 +3,7 @@
   "summary": "Processes India GST e-invoicing with schema v1.1 of FORM GST INV-01, including IRP-IRN.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/cmendezs/mcp-einvoicing-in",
   "plugs_into": "The MCP servers your agents load",

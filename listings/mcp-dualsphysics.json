@@ -3,8 +3,7 @@
   "summary": "Gives agents tools for DualSPHysics SPH work: creating cases, running them, post-processing, and validation.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/vegetableno1/DualSPHysics-mcp",
   "plugs_into": "The MCP servers your agents load",

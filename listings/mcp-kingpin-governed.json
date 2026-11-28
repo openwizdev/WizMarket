@@ -3,8 +3,7 @@
   "summary": "Demonstrates reading a local MCP fixture and issuing a synthetic refusal, as a noncommercial source-available preview.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/putmanmodel/kingpin-governed-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Sells tickets, manages guests, and runs affiliates and promo codes on the AI-native SocialLoop event platform.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/socialloopai/socialloop-mcp",
   "plugs_into": "The MCP servers your agents load",

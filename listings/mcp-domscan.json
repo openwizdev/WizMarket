@@ -3,8 +3,7 @@
   "summary": "Gathers domain intelligence: DNS, TLS, WHOIS/RDAP, valuation, reputation, and brand protection.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/estevecastells/domscan-mcp",
   "plugs_into": "The MCP servers your agents load",

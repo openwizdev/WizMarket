@@ -3,8 +3,7 @@
   "summary": "Assesses deployment readiness for extraction AI and document QA, including grounding, extraction, and a CI gate.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/nickjlamb/groundwork",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Lists all 36 Nigerian states, the FCT, and 774 local government areas fully offline and with no key, as a Wycord product.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/wycord/nigeria-mcp",
   "plugs_into": "The MCP servers your agents load",

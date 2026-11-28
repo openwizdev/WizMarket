@@ -3,8 +3,7 @@
   "summary": "Delivers viral-content intelligence to AI agents through 7 read-only tools on MCP, scored by an evidence layer.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/khan-ashifur/hooklayer",
   "plugs_into": "The MCP servers your agents load",

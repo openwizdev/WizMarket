@@ -3,8 +3,7 @@
   "summary": "Prioritizes tasks strategically and orchestrates agents for operators running multiple projects.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/bobbyrgoldsmith/quarterback",
   "plugs_into": "The MCP servers your agents load",

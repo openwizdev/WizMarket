@@ -3,8 +3,7 @@
   "summary": "Reads the RFC corpus with 40 times fewer tokens and flags specs that are obsoleted.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/shbernal/rfc-ai-tooling",
   "plugs_into": "The MCP servers your agents load",

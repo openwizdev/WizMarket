@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "finance"
+    "finance",
+    "security"
   ],
   "url": "https://github.com/parkyucheol-del/alphapipeline",
   "plugs_into": "The MCP servers your agents load",

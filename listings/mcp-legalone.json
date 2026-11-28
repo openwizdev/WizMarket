@@ -3,8 +3,7 @@
   "summary": "Wraps the official LegalOne API from Thomson Reuters and Novajus under the Premium package, including lawsuits.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/mcp-dir/legalone-mcp",
   "plugs_into": "The MCP servers your agents load",

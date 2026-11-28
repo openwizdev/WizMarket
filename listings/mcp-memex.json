@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "observability"
   ],
   "url": "https://github.com/pragneshbagary/memex",
   "plugs_into": "The MCP servers your agents load",

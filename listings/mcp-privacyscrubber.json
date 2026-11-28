@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "security"
+    "security",
+    "memory"
   ],
   "url": "https://github.com/moxno/privacyscrubber-mcp",
   "plugs_into": "The MCP servers your agents load",

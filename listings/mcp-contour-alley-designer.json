@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "observability"
+    "observability",
+    "design"
   ],
   "url": "https://github.com/viridisconservation/contour-alley-designer",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "One Person Company OS constructs and revises a visual control panel aimed at founders who run an AI-native company alone.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/living-hi/one-person-company-os",
   "plugs_into": "The MCP servers your agents load",

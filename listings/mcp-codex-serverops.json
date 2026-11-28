@@ -3,8 +3,7 @@
   "summary": "Performs stateful OpenSSH server operations on Windows for Codex and handles credentials locally.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/cyyprezz/codex-serverops-mcp",
   "plugs_into": "The MCP servers your agents load",

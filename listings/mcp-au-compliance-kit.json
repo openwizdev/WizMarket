@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "finance"
+    "finance",
+    "security"
   ],
   "url": "https://github.com/aftertaxau/au-compliance-kit",
   "plugs_into": "The MCP servers your agents load",

@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "memory"
   ],
   "url": "https://github.com/toolbeltai/toolbelt-skills",
   "plugs_into": "The MCP servers your agents load",

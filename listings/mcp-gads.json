@@ -3,8 +3,7 @@
   "summary": "Asks Google Ads about campaigns, keywords, assets, and more, using natural language.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pijusz/mcp-gads",
   "plugs_into": "The MCP servers your agents load",

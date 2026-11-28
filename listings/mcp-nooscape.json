@@ -3,8 +3,7 @@
   "summary": "Serves dated read-only facts about wallets, endpoints, and AI agents from the public record kept by Nooscape.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/RunTimeAdmin/nooscape-mcp",
   "plugs_into": "The MCP servers your agents load",

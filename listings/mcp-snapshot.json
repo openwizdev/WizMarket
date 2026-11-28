@@ -3,8 +3,7 @@
   "summary": "snapshot scores any website at no charge and without signup or an API key, covering UX and readiness for AI agents.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Verifux/verifux-mcp",
   "plugs_into": "The MCP servers your agents load",

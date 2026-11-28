@@ -3,8 +3,7 @@
   "summary": "Fetches station detections from BirdWeather, including species and stats.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pfrederiksen/birdweather-mcp",
   "plugs_into": "The MCP servers your agents load",

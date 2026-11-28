@@ -3,8 +3,7 @@
   "summary": "Solves astrodynamics tasks over MCP, including TLE/SGP4 and Lambert, with access windows, porkchop, and B-plane targeting.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/astro-tools/astrodynamics-mcp",
   "plugs_into": "The MCP servers your agents load",

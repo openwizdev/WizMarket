@@ -4,8 +4,7 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "database",
-    "git"
+    "database"
   ],
   "url": "https://github.com/ed-smartass/dbmole-mcp",
   "plugs_into": "The MCP servers your agents load",

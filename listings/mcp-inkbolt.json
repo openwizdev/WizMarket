@@ -3,8 +3,7 @@
   "summary": "Edits vectors and rasters locally in Inkbolt, with layered documents, stored sessions, and exports.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/skulitom/Inkbolt",
   "plugs_into": "The MCP servers your agents load",

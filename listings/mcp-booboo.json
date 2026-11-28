@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "design"
+    "design",
+    "memory"
   ],
   "url": "https://github.com/jessymariau/booboo",
   "plugs_into": "The MCP servers your agents load",

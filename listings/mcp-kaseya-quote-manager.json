@@ -3,8 +3,7 @@
   "summary": "Fetches quotes, orders, and purchasing from Kaseya Quote Manager, known as Datto Commerce, with no writes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/WYRE-AI/kaseya-quote-manager-mcp",
   "plugs_into": "The MCP servers your agents load",

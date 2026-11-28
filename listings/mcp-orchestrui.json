@@ -3,8 +3,7 @@
   "summary": "OrchestrUI gives coding agents deterministic policy for UI, plus discovery and audits, spanning seven ecosystems.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ECD5A/OrchestrUI",
   "plugs_into": "The MCP servers your agents load",

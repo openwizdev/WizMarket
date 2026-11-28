@@ -3,8 +3,7 @@
   "summary": "Units-LE extracts frequencies, percentages, sizes, and durations into a single base unit and rejects ambiguous values.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/nolindnaidoo/units-le",
   "plugs_into": "The MCP servers your agents load",

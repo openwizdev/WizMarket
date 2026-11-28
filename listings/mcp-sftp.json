@@ -3,8 +3,7 @@
   "summary": "Limits AI file access to SFTP so it can sync, transfer, edit, and browse files without opening a shell.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/AdversTM/sftp-mcp",
   "plugs_into": "The MCP servers your agents load",

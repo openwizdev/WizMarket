@@ -3,8 +3,7 @@
   "summary": "Opens I2IDL digital-learning concepts, plus semantic relationships and citations, as a public read-only MCP glossary.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/blakeplock/i2idl-linked-data",
   "plugs_into": "The MCP servers your agents load",

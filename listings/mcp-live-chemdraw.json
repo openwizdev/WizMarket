@@ -3,8 +3,7 @@
   "summary": "Drives an open ChemDraw window on Windows through COM automation for AI assistants.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/MALeitch/live-chemdraw-mcp",
   "plugs_into": "The MCP servers your agents load",

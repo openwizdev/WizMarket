@@ -3,8 +3,7 @@
   "summary": "Reads and edits the open Dorico 6 score in conversation, going through the application's own interfaces.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/kulbiq/doricomcp",
   "plugs_into": "The MCP servers your agents load",

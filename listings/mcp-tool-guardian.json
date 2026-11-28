@@ -3,8 +3,7 @@
   "summary": "Routes across many MCP servers and loads each tool schema only when a call needs it.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/LuminariSoftwares/tool-guardian",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Issues just-in-time virtual Visa cards to AI agents after a person approves each card, using native MCP.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/kyalabs-Io/mcp-server",
   "plugs_into": "The MCP servers your agents load",

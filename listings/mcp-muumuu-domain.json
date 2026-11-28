@@ -3,8 +3,7 @@
   "summary": "Connects Muumuu Domain with the official MCP server used as a remote bridge.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pepabo/muumuu-domain-mcp",
   "plugs_into": "The MCP servers your agents load",

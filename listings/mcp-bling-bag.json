@@ -3,8 +3,7 @@
   "summary": "Gives a bot an identity through Bling Bag.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/tjclaude88/mcp-bling",
   "plugs_into": "The MCP servers your agents load",

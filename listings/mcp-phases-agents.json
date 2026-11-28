@@ -3,8 +3,7 @@
   "summary": "Phases Agents picks skills deterministically, discovers them locally, validates them strictly, and classifies each skill.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Cherridsaid/phases-agents",
   "plugs_into": "The MCP servers your agents load",

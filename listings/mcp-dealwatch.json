@@ -3,8 +3,7 @@
   "summary": "Reports grocery price intelligence from a local-first DealWatch server that only allows reads over MCP.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/xiaojiou176-open/dealwatcher",
   "plugs_into": "The MCP servers your agents load",

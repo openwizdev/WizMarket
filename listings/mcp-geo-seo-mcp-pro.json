@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "analytics"
   ],
   "url": "https://github.com/alicexixi85/geo-seo-mcp-pro",
   "plugs_into": "The MCP servers your agents load",

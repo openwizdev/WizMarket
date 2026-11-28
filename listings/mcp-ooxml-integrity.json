@@ -3,8 +3,7 @@
   "summary": "ooxml-integrity inspects Word and PowerPoint files once machines finish edits, looking for missing comments, revisions, and notes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Dmitry-Kov/ooxml-integrity",
   "plugs_into": "The MCP servers your agents load",

@@ -1,10 +1,9 @@
 {
   "name": "stig-mcp",
-  "summary": "Maps MITRE ATT&CK through NIST 800-53r5 to DISA STIG fix and check steps, plus mitigations and detections.",
+  "summary": "Connects DISA STIG check and fix steps, mitigations, and detections across NIST 800-53r5 controls and MITRE ATT&CK techniques.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/jeneric/STIG-MCP",
   "plugs_into": "The MCP servers your agents load",

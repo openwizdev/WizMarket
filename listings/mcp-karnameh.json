@@ -3,8 +3,7 @@
   "summary": "Looks up used-car ads and new-model prices in Iran on Karnameh, plus specifications, comparisons, and blog posts, without writing.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/sepehr071/karnameh-mcp",
   "plugs_into": "The MCP servers your agents load",

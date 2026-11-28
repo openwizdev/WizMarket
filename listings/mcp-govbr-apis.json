@@ -3,8 +3,7 @@
   "summary": "Routes calls to Brazilian government APIs from a catalog and loads OpenAPI specs when requested.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/thalisantunes/govbr-apis-mcp",
   "plugs_into": "The MCP servers your agents load",

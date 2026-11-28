@@ -3,8 +3,7 @@
   "summary": "Fixzi watches AI outputs, API contracts, and MCP servers for schema drift and alerts on breaking changes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/rohitcodilya/fixzi-mcp",
   "plugs_into": "The MCP servers your agents load",

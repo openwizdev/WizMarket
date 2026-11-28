@@ -3,8 +3,7 @@
   "summary": "Handles XRPL identity by managing DIDs, credentials, and signer lists, and by running safe transaction workflows.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/jarod-vyent/xrpl-identity-mcp",
   "plugs_into": "The MCP servers your agents load",

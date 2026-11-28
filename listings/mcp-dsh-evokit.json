@@ -3,8 +3,7 @@
   "summary": "Measures self-improvement through paired experiments and noise-aware gates, then seals a confirmation.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/edsml-jz2321/dsh-evokit",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Executes Hansl and Gretl econometrics workflows, launching the GUI and returning artifacts.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/OndrejLapes/GretlMCP",
   "plugs_into": "The MCP servers your agents load",

@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "security"
   ],
   "url": "https://github.com/pipeworx-io/mcp-pubmed",
   "plugs_into": "The MCP servers your agents load",

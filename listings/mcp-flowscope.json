@@ -3,8 +3,7 @@
   "summary": "Builds structured UX flow reports from YouTube product demos and sets the demos side by side.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/DavidNgugi/flowscope",
   "plugs_into": "The MCP servers your agents load",

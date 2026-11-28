@@ -4,8 +4,8 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "git",
-    "finance"
+    "finance",
+    "communication"
   ],
   "url": "https://github.com/noblabs/lit-forge-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Creates, follows, and voids Royal Mail and Parcelforce parcels for any client that speaks MCP.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/catrinmdonnelly/royalmail-mcp",
   "plugs_into": "The MCP servers your agents load",

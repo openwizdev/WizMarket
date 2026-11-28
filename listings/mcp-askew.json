@@ -3,8 +3,7 @@
   "summary": "Runs iPhone Shortcuts across an encrypted relay, or triggers assigned auto-mode Shortcuts that reside on this Mac.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Dominic-DK/askew-mcp",
   "plugs_into": "The MCP servers your agents load",

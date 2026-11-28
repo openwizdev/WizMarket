@@ -3,8 +3,7 @@
   "summary": "Opens Roblox places, guards writes, and uploads Open Cloud assets alongside Studio's included MCP server.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/gjlmotea/studio-sidecar-mcp",
   "plugs_into": "The MCP servers your agents load",

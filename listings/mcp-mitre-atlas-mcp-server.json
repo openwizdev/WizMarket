@@ -3,8 +3,7 @@
   "summary": "Builds threat models of AI and agentic systems from MITRE ATLAS surfaces, techniques, and controls.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/imouiche/mitre-atlas-mcp-server",
   "plugs_into": "The MCP servers your agents load",

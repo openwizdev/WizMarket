@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "observability"
   ],
   "url": "https://github.com/Br0ski777/twitter-scraper-x402",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Applies structured thinking and steel-manning checks to AI agents, citing 43 or more papers.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/stabgan/steelmind-mcp",
   "plugs_into": "The MCP servers your agents load",

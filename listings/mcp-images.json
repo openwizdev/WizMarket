@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "finance"
   ],
   "url": "https://github.com/Hasilt/images-mcp",
   "plugs_into": "The MCP servers your agents load",

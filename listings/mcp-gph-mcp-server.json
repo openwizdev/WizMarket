@@ -3,8 +3,7 @@
   "summary": "Locates 76,000+ curated vendors of healthcare services in 25 categories covering all 50 US states.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Crindo2/gph-mcp-server",
   "plugs_into": "The MCP servers your agents load",

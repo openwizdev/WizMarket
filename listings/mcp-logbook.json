@@ -3,8 +3,7 @@
   "summary": "Records notes, reminders, debug sessions, decisions, standups, and TODOs in a developer logbook on MCP.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/cocaxcode/logbook-mcp",
   "plugs_into": "The MCP servers your agents load",

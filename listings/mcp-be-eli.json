@@ -3,8 +3,7 @@
   "summary": "Looks up Belgian legislation in the Moniteur Belge, returning ELI identifiers and citations.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/matematicsolutions/be-eli-mcp",
   "plugs_into": "The MCP servers your agents load",

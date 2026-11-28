@@ -3,8 +3,7 @@
   "summary": "Pans, tilts, and zooms a USB UVC camera, confirming every move from the picture.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/AbhijatSaxena/uvc-ptz-camera-mcp",
   "plugs_into": "The MCP servers your agents load",

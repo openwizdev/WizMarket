@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "search",
-    "git"
+    "docs"
   ],
   "url": "https://github.com/Rishav0123/sentimatix",
   "plugs_into": "The MCP servers your agents load",

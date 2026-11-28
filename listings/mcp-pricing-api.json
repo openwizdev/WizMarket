@@ -3,8 +3,7 @@
   "summary": "Reports verified pricing for 490+ SaaS, AI, and LLM tools, covering plans, hidden costs, and TCO, then alternatives.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/comparedge/pricing-api",
   "plugs_into": "The MCP servers your agents load",

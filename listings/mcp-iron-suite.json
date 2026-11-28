@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "database",
-    "git"
+    "search"
   ],
   "url": "https://github.com/arielonoriaga/iron-suite",
   "plugs_into": "The MCP servers your agents load",

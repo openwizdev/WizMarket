@@ -3,8 +3,7 @@
   "summary": "Computes on-device Bazi charts that include Ten Gods, corrects to true solar time, and returns structured facts plus PNG images.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/yuanzizhiyi/yuanzi-bazi-agent-kit",
   "plugs_into": "The MCP servers your agents load",

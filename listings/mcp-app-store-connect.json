@@ -3,8 +3,7 @@
   "summary": "Handles apps and TestFlight in App Store Connect, plus reviews, sales reports, and users on the team.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/chrischall/app-store-connect-mcp",
   "plugs_into": "The MCP servers your agents load",

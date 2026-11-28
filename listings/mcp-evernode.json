@@ -3,8 +3,7 @@
   "summary": "Helps with Evernode/HotPocket dApps by supplying templates, lint for non-determinism, lease math, and live host lookup.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Hugegreencandle/evernode-mcp",
   "plugs_into": "The MCP servers your agents load",

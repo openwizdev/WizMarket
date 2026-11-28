@@ -3,8 +3,7 @@
   "summary": "Deduplicates scanner output in Keel, rate-limits each host, and runs proofs that stay non-destructive.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/lutfizp/keel",
   "plugs_into": "The MCP servers your agents load",

@@ -4,8 +4,7 @@
   "tags": [
     "public-source",
     "mcp-server",
-    "search",
-    "git"
+    "search"
   ],
   "url": "https://github.com/mq1n/field-notes-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Answers through Perplexity by calling the chat completions endpoint that Polza.ai exposes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/ivanantigravity-lgtm/perplexity-polza-mcp-server",
   "plugs_into": "The MCP servers your agents load",

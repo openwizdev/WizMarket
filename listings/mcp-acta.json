@@ -3,8 +3,7 @@
   "summary": "Adds to, disputes, checks, and searches public records that remain open to contest on Veritas Acta.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/VeritasActa/acta-mcp",
   "plugs_into": "The MCP servers your agents load",

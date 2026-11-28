@@ -3,8 +3,7 @@
   "summary": "Offers Flutter tooling through a CLI framework and an MCP server on stdio, including scaffolding, hot reload, REPL, and codegen.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/anilcancakir/dowel",
   "plugs_into": "The MCP servers your agents load",

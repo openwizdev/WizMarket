@@ -3,8 +3,7 @@
   "summary": "Reports WHOOP recovery and sleep, plus strain and workouts, to any AI, with analysis tools, demo mode, and fast setup.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/rajdeepmondaldotcom/whoop-mcp-server",
   "plugs_into": "The MCP servers your agents load",

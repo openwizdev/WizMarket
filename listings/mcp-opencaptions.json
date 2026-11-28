@@ -5,7 +5,7 @@
     "public-source",
     "mcp-server",
     "cloud",
-    "git"
+    "design"
   ],
   "url": "https://github.com/leogaudin/opencaptions",
   "plugs_into": "The MCP servers your agents load",

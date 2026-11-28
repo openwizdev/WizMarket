@@ -3,8 +3,7 @@
   "summary": "Compares and ranks US counties from public data on crime, health, rent, hazards, air, and internet.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/gdtilghman/should-i-live-here-atlas",
   "plugs_into": "The MCP servers your agents load",

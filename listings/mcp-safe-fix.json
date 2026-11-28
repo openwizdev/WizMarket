@@ -3,8 +3,7 @@
   "summary": "Locates real dead code and suggests a safe branch and pull request, gated by tests, that deletes it.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/pamela-0/safe-fix-mcp",
   "plugs_into": "The MCP servers your agents load",

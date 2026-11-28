@@ -3,8 +3,7 @@
   "summary": "Reports live LLM and VLM benchmarks, prices, and recommendations from five sources covering 300-plus models.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/Daichi-Kudo/llm-advisor-mcp",
   "plugs_into": "The MCP servers your agents load",

@@ -3,8 +3,7 @@
   "summary": "Gives coding agents read-only access to Huawei GaussDB in both centralized and distributed modes.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/gxc/gaussdb-ro-mcp",
   "plugs_into": "The MCP servers your agents load",

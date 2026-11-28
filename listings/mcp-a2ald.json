@@ -3,8 +3,7 @@
   "summary": "Makes any AI agent reachable and discoverable worldwide without a cloud host, a domain, or port forwarding.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/a2al/A2AL",
   "plugs_into": "The MCP servers your agents load",

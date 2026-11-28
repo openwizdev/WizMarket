@@ -3,8 +3,7 @@
   "summary": "Protects sensitive AI workflows with Securedact, a local-first privacy server on MCP.",
   "tags": [
     "public-source",
-    "mcp-server",
-    "git"
+    "mcp-server"
   ],
   "url": "https://github.com/GigantesHJI/securedact-mcp",
   "plugs_into": "The MCP servers your agents load",
