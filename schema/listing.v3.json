@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/openwizdev/WizMarket/blob/main/schema/listing.v3.json",
+  "title": "WizMarket listing v3",
+  "description": "Validates one listings/<id>.json document. The named definitions describe the related counts, shared receipt, preset, and index documents.",
+  "$defs": {
+    "line": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)[^\\u0000-\\u001F\\u007F-\\u009F\\u2028\\u2029]+$"
+    },
+    "https": {
+      "type": "string",
+      "pattern": "^(?![\\s\\S]*\\n)https://(?=[A-Za-z0-9.-]{1,253}(?:[:/?#]|$))(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\\.)+[A-Za-z](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?::(?:6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[1-9][0-9]{0,3}))?(?:[/?#][!-~]*)?$"
+    },
+    "login": {"type": "string", "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}$"},
+    "driver": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?![\\s\\S])", "maxLength": 40},
+    "version": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)(?![\\s\\S])"
+    },
+    "commit": {"type": "string", "pattern": "^[0-9a-f]{40}(?![\\s\\S])"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}(?![\\s\\S])"},
+    "repository": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/[A-Za-z0-9_-][A-Za-z0-9_.-]*(?![\\s\\S])"
+    },
+    "listing_id": {"type": "string", "pattern": "^[a-z0-9-]{2,40}(?![\\s\\S])"},
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(?![\\s\\S])", "format": "date"},
+    "referral": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url", "vendor"],
+      "properties": {
+        "label": {"const": "referral"},
+        "url": {"$ref": "#/$defs/https"},
+        "vendor": {"$ref": "#/$defs/line"}
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["installs", "checks_passed", "checks_failed", "factories", "updated"],
+      "properties": {
+        "installs": {"type": "integer", "minimum": 0},
+        "checks_passed": {"type": "integer", "minimum": 0},
+        "checks_failed": {"type": "integer", "minimum": 0},
+        "factories": {"type": "integer", "minimum": 0},
+        "updated": {"$ref": "#/$defs/date"}
+      }
+    },
+    "shared_receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["listing_id", "version_or_commit", "checks", "date", "os_family", "factory_id"],
+      "properties": {
+        "listing_id": {"$ref": "#/$defs/listing_id"},
+        "version_or_commit": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}(?![\\s\\S])"},
+        "checks": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {"$ref": "#/$defs/line"},
+              {"type": "string", "pattern": "^(pass|fail) [a-z0-9-]+: .+"}
+            ]
+          }
+        },
+        "date": {"$ref": "#/$defs/date"},
+        "os_family": {"type": "string", "pattern": "^[a-z][a-z0-9-]{0,31}(?![\\s\\S])"},
+        "factory_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}(?![\\s\\S])"
+        }
+      }
+    },
+    "preset_path": {"type": "string", "pattern": "^presets/[a-z0-9-]{2,40}\\.json(?![\\s\\S])"},
+    "preset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {
+        "drivers": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/listing_id"}},
+        "harnesses": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/listing_id"}},
+        "skills": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/listing_id"}},
+        "loops": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/listing_id"}},
+        "settings": {"type": "object"}
+      }
+    },
+    "index_entry": {
+      "type": "object",
+      "required": ["id", "contract"],
+      "properties": {
+        "id": {"$ref": "#/$defs/listing_id"},
+        "contract": {"const": "listing.v3"},
+        "counts": {"$ref": "#/$defs/counts"},
+        "success_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "rank": {"type": "integer", "minimum": 1},
+        "proof": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["receipt"],
+              "properties": {
+                "receipt": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["path", "date", "url"],
+                  "properties": {
+                    "path": {
+                      "type": "string",
+                      "pattern": "^(?![\\s\\S]*\\n)receipts/[a-z0-9-]{2,40}/[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{12}\\.txt$"
+                    },
+                    "date": {"$ref": "#/$defs/date"},
+                    "url": {"$ref": "#/$defs/https"}
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["skill"],
+              "properties": {
+                "skill": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["source", "check", "url"],
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}@[0-9a-f]{40}$"
+                    },
+                    "check": {"$ref": "#/$defs/line"},
+                    "url": {"$ref": "#/$defs/https"}
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "dependentRequired": {"success_rate": ["counts"]},
+      "allOf": [
+        {"$ref": "#/$defs/listing_fields"},
+        {
+          "if": {"required": ["status"], "properties": {"status": {"const": "verified"}}},
+          "then": {
+            "required": ["proof"],
+            "properties": {"category": {"enum": ["driver", "harness", "skill"]}},
+            "allOf": [
+              {
+                "if": {"required": ["category"], "properties": {"category": {"const": "skill"}}},
+                "then": {"properties": {"proof": {"required": ["skill"]}}},
+                "else": {"properties": {"proof": {"required": ["receipt"]}}}
+              }
+            ]
+          },
+          "else": {"not": {"anyOf": [{"required": ["proof"]}]}}
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "index": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contract", "commit", "listings"],
+      "properties": {
+        "contract": {"const": "listing.v1"},
+        "commit": {"$ref": "#/$defs/commit"},
+        "listings": {
+          "type": "array",
+          "items": {
+            "if": {"required": ["contract"], "properties": {"contract": {"const": "listing.v3"}}},
+            "then": {"$ref": "#/$defs/index_entry"},
+            "else": {
+              "type": "object",
+              "required": ["id"],
+              "properties": {"id": {"$ref": "#/$defs/listing_id"}, "contract": {"const": "listing.v2"}}
+            }
+          }
+        }
+      }
+    },
+    "listing_fields": {
+      "type": "object",
+      "required": ["name", "summary", "tags", "url", "plugs_into", "publisher", "stage", "status", "category"],
+      "properties": {
+        "name": {"$ref": "#/$defs/line"},
+        "summary": {"$ref": "#/$defs/line", "maxLength": 140},
+        "tags": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^(?![\\s\\S]*\\n)[a-z0-9-]+$"}
+        },
+        "url": {"$ref": "#/$defs/https"},
+        "plugs_into": {"$ref": "#/$defs/line"},
+        "publisher": {"$ref": "#/$defs/login"},
+        "stage": {"enum": ["available", "being-built"]},
+        "login": {"$ref": "#/$defs/line"},
+        "links": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "url"],
+            "properties": {"label": {"$ref": "#/$defs/line"}, "url": {"$ref": "#/$defs/https"}}
+          }
+        },
+        "status": {"enum": ["listed", "verified", "unverified", "experimental"]},
+        "package": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["driver", "version", "repository", "commit", "asset_url", "sha256", "kit_commit"],
+          "properties": {
+            "driver": {"$ref": "#/$defs/driver"},
+            "version": {"$ref": "#/$defs/version"},
+            "repository": {"$ref": "#/$defs/repository"},
+            "commit": {"$ref": "#/$defs/commit"},
+            "asset_url": {
+              "type": "string",
+              "pattern": "^https://github\\.com/[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*/[A-Za-z0-9_-][A-Za-z0-9_.-]*/releases/download/v(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)\\.(?:0|[1-9][0-9]*)/driver\\.tar\\.gz(?![\\s\\S])"
+            },
+            "sha256": {"$ref": "#/$defs/sha256"},
+            "kit_commit": {"$ref": "#/$defs/commit"}
+          }
+        },
+        "key_host": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["origin", "variable", "keychain"],
+          "properties": {
+            "origin": {
+              "type": "string",
+              "pattern": "^https://(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?![\\s\\S])"
+            },
+            "variable": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]{0,63}(?![\\s\\S])"},
+            "keychain": {"type": "string", "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*(?![\\s\\S])"}
+          }
+        },
+        "category": {
+          "enum": [
+            "driver",
+            "harness",
+            "agent-cloud",
+            "compute",
+            "ci",
+            "model-provider",
+            "skill",
+            "loop",
+            "plugin",
+            "tool",
+            "factory"
+          ]
+        },
+        "reason": {"$ref": "#/$defs/line"},
+        "since": {"$ref": "#/$defs/date"},
+        "gate_result": {"$ref": "#/$defs/line"},
+        "referral": {"$ref": "#/$defs/referral"},
+        "preset": {"$ref": "#/$defs/preset_path"}
+      },
+      "dependentRequired": {"key_host": ["package"]},
+      "allOf": [
+        {
+          "if": {"required": ["stage"], "properties": {"stage": {"const": "being-built"}}},
+          "then": {"required": ["links"]}
+        },
+        {
+          "if": {"required": ["status"], "properties": {"status": {"const": "unverified"}}},
+          "then": {"required": ["reason", "since"]},
+          "else": {"not": {"anyOf": [{"required": ["reason"]}, {"required": ["since"]}]}}
+        },
+        {
+          "if": {"required": ["status"], "properties": {"status": {"const": "experimental"}}},
+          "then": {"required": ["gate_result"], "properties": {"category": {"const": "skill"}}},
+          "else": {"not": {"anyOf": [{"required": ["gate_result"]}]}}
+        },
+        {
+          "if": {"required": ["category"], "properties": {"category": {"enum": ["driver", "harness"]}}},
+          "then": {},
+          "else": {"not": {"anyOf": [{"required": ["package"]}, {"required": ["key_host"]}]}}
+        },
+        {
+          "if": {"required": ["category"], "properties": {"category": {"const": "factory"}}},
+          "then": {"required": ["preset"]},
+          "else": {"not": {"anyOf": [{"required": ["preset"]}]}}
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {"$ref": "#/$defs/listing_fields"},
+    {
+      "if": {"required": ["status"], "properties": {"status": {"const": "verified"}}},
+      "then": {
+        "required": ["proof"],
+        "properties": {"category": {"enum": ["driver", "harness", "skill"]}},
+        "allOf": [
+          {
+            "if": {"required": ["category"], "properties": {"category": {"const": "skill"}}},
+            "then": {
+              "properties": {
+                "proof": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["source", "check"],
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}@[0-9a-f]{40}$"
+                    },
+                    "check": {"$ref": "#/$defs/line"}
+                  }
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "proof": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["receipt"],
+                  "properties": {
+                    "receipt": {
+                      "type": "string",
+                      "pattern": "^(?![\\s\\S]*\\n)receipts/[a-z0-9-]{2,40}/[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{12}\\.txt$"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "else": {"not": {"anyOf": [{"required": ["proof"]}]}}
+    }
+  ],
+  "properties": {
+    "proof": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "receipt": {
+          "type": "string",
+          "pattern": "^(?![\\s\\S]*\\n)receipts/[a-z0-9-]{2,40}/[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9a-f]{12}\\.txt$"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^(?![\\s\\S]*\\n)[A-Za-z0-9](?:-?[A-Za-z0-9]){0,38}/[A-Za-z0-9._-]{1,100}@[0-9a-f]{40}$"
+        },
+        "check": {"$ref": "#/$defs/line"}
+      },
+      "dependentRequired": {"source": ["check"], "check": ["source"]}
+    }
+  },
+  "unevaluatedProperties": false
+}

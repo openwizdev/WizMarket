@@ -1,0 +1,14 @@
+{
+  "category": "factory",
+  "name": "Example factory",
+  "plugs_into": "An example OpenWiz factory",
+  "preset": "presets/example-factory.json",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/example-factory"
+}

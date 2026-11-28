@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "pass version: version available",
+    "fail wake: did not respond"
+  ],
+  "date": "2026-11-02",
+  "factory_id": "example-publisher",
+  "listing_id": "shared-driver",
+  "os_family": "linux",
+  "version_or_commit": "1.2.3"
+}

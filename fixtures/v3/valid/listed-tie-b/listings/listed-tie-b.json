@@ -1,0 +1,13 @@
+{
+  "category": "driver",
+  "name": "Listed tie b",
+  "plugs_into": "An example OpenWiz factory",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "listed",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/listed-tie-b"
+}

@@ -1,0 +1,27 @@
+{
+  "category": "driver",
+  "name": "Listed driver",
+  "package": {
+    "asset_url": "https://github.com/example-owner/pinned-driver/releases/download/v0.1.0/driver.tar.gz",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "driver": "pinned-driver",
+    "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "repository": "example-owner/pinned-driver",
+    "version": "0.1.0"
+  },
+  "plugs_into": "An example OpenWiz factory",
+  "publisher": "example-publisher",
+  "referral": {
+    "label": "referral",
+    "url": "https://example.com/refer",
+    "vendor": "Example vendor"
+  },
+  "stage": "available",
+  "status": "listed",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example",
+    "plugin"
+  ],
+  "url": "https://example.com/listed-driver"
+}

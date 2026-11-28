@@ -1,0 +1,113 @@
+{
+  "asset_binding": {
+    "valid": {
+      "repository": "example-owner/verified-pinned",
+      "version": "1.0.0",
+      "asset_url": "https://github.com/example-owner/verified-pinned/releases/download/v1.0.0/driver.tar.gz"
+    },
+    "broken": {
+      "repository": "example-owner/verified-pinned",
+      "version": "1.0.0",
+      "asset_url": "https://github.com/example-other/verified-pinned/releases/download/v1.0.0/driver.tar.gz"
+    }
+  },
+  "receipt_binding": {
+    "fixture": "valid/verified-driver",
+    "valid": {
+      "driver": "example-owner/verified-pinned@aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "kit": "openwizdev/OpenWiz@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "broken": {
+      "driver": "example-owner/verified-pinned@cccccccccccccccccccccccccccccccccccccccc",
+      "kit": "openwizdev/OpenWiz@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    }
+  },
+  "receipt_freshness": {
+    "fixture": "valid/verified-driver",
+    "valid": {"latest_scheduled_run": "2026-11-01T08:00:00Z", "receipt_run": "2026-11-01T08:00:00Z"},
+    "broken": {"latest_scheduled_run": "2026-11-01T08:00:00Z", "receipt_run": "2026-11-01T06:00:00Z"}
+  },
+  "kit_receipt_result": {
+    "fixture": "valid/verified-driver",
+    "valid": {"result_line": "Result: 5 of 5 pass"},
+    "broken": {"result_line": "Result: 4 of 5 pass"}
+  },
+  "unverified_writer": {
+    "fixture": "valid/unverified-driver",
+    "valid": {"writer": "release bar"},
+    "broken": {"writer": "listing author"}
+  },
+  "unverified_visibility": {
+    "fixture": "valid/unverified-driver",
+    "valid": {"id": "unverified-driver", "shown": true, "reason": "no current receipt", "since": "2026-11-02"},
+    "broken": {"id": "unverified-driver", "shown": false}
+  },
+  "experimental_gate": {
+    "fixture": "valid/experimental-skill",
+    "valid": {"gate_output": "Result: regression failed"},
+    "broken": {"gate_output": "Result: eval failed"}
+  },
+  "counts_writer": {
+    "fixture": "valid/listed-driver",
+    "valid": {"writer": "intake"},
+    "broken": {"writer": "listing author"}
+  },
+  "referral_writer": {
+    "fixture": "valid/listed-driver",
+    "valid": {"writer": "market maintainer"},
+    "broken": {"writer": "listing author"}
+  },
+  "referral_display": {
+    "fixture": "valid/listed-driver",
+    "valid": {"shown_label": "referral"},
+    "broken": {"shown_label": "recommended"}
+  },
+  "shared_receipt_location": {
+    "fixture": "valid/shared-receipt",
+    "valid": {"path": "receipts/shared-driver/shared/example.json"},
+    "broken": {"path": "receipts/other-driver/shared/example.json"}
+  },
+  "factory_id_origin": {
+    "fixture": "valid/shared-receipt",
+    "valid": {"factory_id_source": "random"},
+    "broken": {"factory_id_source": "derived from machine identity"}
+  },
+  "shared_receipt_privacy": {
+    "fixture": "valid/shared-receipt",
+    "valid": {"checks": ["pass version: version available"]},
+    "broken": {"checks": ["pass version: reported by editor@example.com"]}
+  },
+  "preset_binding": {
+    "fixture": "valid/factory-preset",
+    "valid": {"preset": "presets/example-factory.json"},
+    "broken": {"preset": "presets/another-factory.json"}
+  },
+  "preset_public_pieces": {
+    "fixture": "valid/factory-preset",
+    "valid": {"drivers": ["preset-driver"]},
+    "broken": {"drivers": ["unlisted-driver"]}
+  },
+  "preset_public_settings": {
+    "fixture": "valid/factory-preset",
+    "valid": {"settings": {}},
+    "broken": {"settings": {"email": "editor@example.com"}}
+  },
+  "rank": {
+    "fixture": "index.json",
+    "valid": {
+      "category": "driver",
+      "order": ["verified-pinned", "verified-sparse", "listed-driver", "listed-tie-a", "listed-tie-b",
+                "listed-no-reports", "preset-driver", "shared-driver", "unverified-driver"]
+    },
+    "broken": {
+      "category": "driver",
+      "order": ["verified-sparse", "verified-pinned", "listed-driver", "listed-tie-a", "listed-tie-b",
+                "listed-no-reports", "preset-driver", "shared-driver", "unverified-driver"]
+    }
+  },
+  "referral_rank_invariance": {
+    "fixture": "index.json",
+    "valid": {"id": "listed-driver", "with_referral": 3, "without_referral": 3},
+    "broken": {"id": "listed-driver", "with_referral": 2, "without_referral": 3}
+  }
+}

@@ -28,9 +28,11 @@ class ListingV3(unittest.TestCase):
         Draft202012Validator.check_schema(cls.schema)
 
     def validator(self, definition):
-        ref = "#" if definition == "listing" else f"#/$defs/{definition}"
-        return Draft202012Validator({"$ref": ref, "$defs": self.schema["$defs"]} if ref != "#" else self.schema,
-                                    format_checker=Draft202012Validator.FORMAT_CHECKER)
+        schema = self.schema if definition == "listing" else {
+            "$ref": f"#/$defs/{definition}",
+            "$defs": self.schema["$defs"],
+        }
+        return Draft202012Validator(schema, format_checker=Draft202012Validator.FORMAT_CHECKER)
 
     def test_fixture_documents(self):
         for expected in ("valid", "broken"):
@@ -66,7 +68,7 @@ class ListingV3(unittest.TestCase):
     def test_pinned_blocks_keep_v2_shape(self):
         v2 = read(SCHEMA.with_name("listing.v2.json"))
         for field in ("package", "key_host"):
-            self.assertEqual(self.schema["properties"][field], v2["properties"][field])
+            self.assertEqual(self.schema["$defs"]["listing_fields"]["properties"][field], v2["properties"][field])
             for prop in v2["properties"][field]["properties"].values():
                 if "$ref" in prop:
                     name = prop["$ref"].split("/")[-1]
@@ -80,23 +82,60 @@ class ListingV3(unittest.TestCase):
         self.assertEqual((unverified["status"], unverified["reason"], unverified["since"]),
                          ("unverified", "no current receipt", "2026-11-02"))
         self.assertEqual(entries["experimental-skill"]["gate_result"], "Result: regression failed")
-        expected = [
-            "verified-pinned", "verified-sparse", "listed-driver", "listed-tie-a",
-            "listed-tie-b", "listed-no-reports", "unverified-driver",
-        ]
-        drivers = sorted((row for row in entries.values() if row["category"] == "driver"),
-                         key=lambda row: row["rank"])
-        self.assertEqual([row["id"] for row in drivers], expected)
-        self.assertEqual([row["rank"] for row in drivers], list(range(1, len(expected) + 1)))
+        policy = read(FIXTURES / "policy.json")
+        expected = policy["rank"]["valid"]["order"]
+        drivers = [row for row in entries.values() if row["category"] == "driver"]
+        self.assertEqual([row["id"] for row in sorted(drivers, key=rank_key)], expected)
+        self.assertNotEqual(expected, policy["rank"]["broken"]["order"])
+        self.assertEqual(entries["listed-driver"]["referral"]["label"], "referral")
         self.assertEqual(entries["verified-pinned"]["success_rate"], 0.9)
         self.assertNotIn("success_rate", entries["listed-no-reports"])
-        self.assertEqual(entries["listed-driver"]["referral"]["label"], "referral")
-        # The same comparison without a referral must leave the expected order intact.
+        for category in {row["category"] for row in entries.values()}:
+            rows = sorted((row for row in entries.values() if row["category"] == category), key=rank_key)
+            for rank, row in enumerate(rows, 1):
+                self.assertEqual(row["rank"], rank, row["id"])
         for row in drivers:
             row.pop("referral", None)
-        ranked = sorted(drivers, key=rank_key)
-        self.assertEqual([row["id"] for row in ranked], expected)
+        self.assertEqual([row["id"] for row in sorted(drivers, key=rank_key)], expected)
+        example = policy["referral_rank_invariance"]["valid"]
+        self.assertEqual(expected.index(example["id"]) + 1, example["without_referral"])
+        self.assertEqual(entries[example["id"]]["rank"], example["with_referral"])
 
+    def test_index_projects_every_valid_listing(self):
+        index_path = FIXTURES / "index.json"
+        index = read(index_path)
+        self.assertEqual(index_path.read_text(encoding="utf-8"), json.dumps(index, indent=2, sort_keys=True) + "\n")
+        expected = {}
+        for path in sorted((FIXTURES / "valid").glob("*/listings/*.json")):
+            self.assertNotIn(path.stem, expected)
+            expected[path.stem] = read(path)
+            counts_path = path.parents[1] / "counts" / path.name
+            if counts_path.is_file():
+                expected[path.stem]["counts"] = read(counts_path)
+        projected = {}
+        for row in index["listings"]:
+            listing_id = row.pop("id")
+            self.assertNotIn(listing_id, projected)
+            self.assertEqual(row.pop("contract"), "listing.v3")
+            row.pop("rank")
+            counts = row.get("counts", {})
+            passed = counts.get("checks_passed", 0)
+            total = passed + counts.get("checks_failed", 0)
+            if total:
+                self.assertEqual(row.pop("success_rate"), passed / total)
+            else:
+                self.assertNotIn("success_rate", row)
+            if "proof" in row:
+                proof = row["proof"]
+                if "receipt" in proof:
+                    receipt = proof["receipt"]
+                    self.assertTrue(receipt["url"].endswith(f"/{index['commit']}/{receipt['path']}"))
+                    row["proof"] = {"receipt": receipt["path"]}
+                else:
+                    row["proof"] = {key: proof["skill"][key] for key in ("source", "check")}
+            projected[listing_id] = row
+        self.assertEqual(list(projected), sorted(expected))
+        self.assertEqual(projected, expected)
 
 def rank_key(row):
     status_group = ("verified", "listed", "experimental", "unverified").index(row["status"])
