@@ -1,6 +1,6 @@
 {
   "name": "Google Ads & Meta Ads MCP",
-  "summary": "MCP server connecting AI agents to Google Ads, Meta Ads, Google Analytics, and Search Console with approval-gated writes. MIT.",
+  "summary": "Hosted Ryze MCP service for Google Ads, Meta Ads, Google Analytics, and Search Console with approval-gated writes. Paid Ryze plan required.",
   "tags": [
     "mcp-server",
     "google-ads",

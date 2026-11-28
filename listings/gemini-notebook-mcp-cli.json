@@ -1,6 +1,6 @@
 {
   "name": "Gemini Notebook MCP",
-  "summary": "MCP server and CLI for programmatic access to Gemini Notebook and NotebookLM research notebooks. MIT.",
+  "summary": "MCP server and CLI for programmatic access to Gemini Notebook (formerly NotebookLM) research notebooks. MIT.",
   "tags": [
     "mcp-server",
     "notebooklm",
