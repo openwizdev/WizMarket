@@ -1,0 +1,15 @@
+{
+  "name": "Excel MCP Server",
+  "summary": "MCP server for creating and editing Excel workbooks with formulas, charts, PivotTables, and slicers without Excel installed. MIT.",
+  "tags": [
+    "mcp-server",
+    "excel",
+    "spreadsheets",
+    "productivity"
+  ],
+  "url": "https://github.com/haris-musa/excel-mcp-server",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

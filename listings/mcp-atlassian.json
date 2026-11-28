@@ -1,0 +1,15 @@
+{
+  "name": "Atlassian MCP",
+  "summary": "MCP server for Atlassian Jira and Confluence, letting agents search, read, and update issues and pages. MIT.",
+  "tags": [
+    "mcp-server",
+    "jira",
+    "confluence",
+    "atlassian"
+  ],
+  "url": "https://github.com/sooperset/mcp-atlassian",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}

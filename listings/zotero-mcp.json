@@ -1,0 +1,15 @@
+{
+  "name": "Zotero MCP",
+  "summary": "MCP server connecting AI agents to your Zotero research library to search papers, summarize notes, and inspect citations. MIT.",
+  "tags": [
+    "mcp-server",
+    "zotero",
+    "research",
+    "productivity"
+  ],
+  "url": "https://github.com/54yyyu/zotero-mcp",
+  "plugs_into": "The agent's MCP servers",
+  "publisher": "jparker2006",
+  "stage": "available",
+  "status": "listed"
+}
