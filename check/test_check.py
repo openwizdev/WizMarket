@@ -1093,6 +1093,39 @@ class JevReceipt(unittest.TestCase):
             {"receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt": done.encode()}, Unsure(), lambda text: False)
         self.assertEqual(held, ["receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt: contract pass"])
 
+    def test_receipt_note_accepts_inclusive_noul_probability_bounds(self):
+        done = (FIXTURES / "valid/verified-driver/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        failed = (FIXTURES / "broken/receipt-4-of-5/receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt").read_text()
+        path = "receipts/example-driver/2026-11-01-aaaaaaaaaaaa.txt"
+
+        def client_with(overrides, default=0.95):
+            class Stub:
+                def ask(self, state, questions):
+                    answers = {name: {"type": "noul", "noul": default} for name in questions}
+                    for key, value in overrides.items():
+                        answers[key]["noul"] = value
+                    return answers
+            return Stub()
+
+        boundary_disagree = self.review.receipt_lines(
+            {path: done.encode()}, client_with({"version_pass": 0.70, "token_pass": 0.30}), lambda text: False)
+        self.assertEqual(boundary_disagree, [f"{path}: contract pass; jev fit 0.88 disagrees"])
+
+        boundary_yes_on_fail = self.review.receipt_lines(
+            {path: failed.encode()}, client_with({"version_pass": 0.70}), lambda text: False)
+        self.assertEqual(boundary_yes_on_fail, [f"{path}: contract fail; jev fit 1.00 disagrees"])
+
+        for uncertain in ({"version_pass": 0.699, "token_pass": 0.05}, {"token_pass": 0.301}):
+            with self.subTest(uncertain=uncertain):
+                quiet = self.review.receipt_lines(
+                    {path: done.encode()}, client_with(uncertain), lambda text: False)
+                self.assertEqual(quiet, [f"{path}: contract pass"])
+
+        self.assertIs(self.review.factor_yes(0.70), True)
+        self.assertIs(self.review.factor_yes(0.30), False)
+        self.assertIsNone(self.review.factor_yes(0.699))
+        self.assertIsNone(self.review.factor_yes(0.301))
+
 
 class _Body:
     def __init__(self, payload, status=200):

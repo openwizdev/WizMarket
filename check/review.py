@@ -254,7 +254,7 @@ def noul_confidence(value):
 
 def factor_yes(value):
     """True or False when the Noul is confident, else None so the caller falls back."""
-    if value is None or noul_confidence(value) < NOUL_CONFIDENCE_MIN:
+    if value is None:
         return None
     if value >= NOUL_YES:
         return True
