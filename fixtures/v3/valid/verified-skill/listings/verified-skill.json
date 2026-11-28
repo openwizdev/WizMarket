@@ -1,0 +1,17 @@
+{
+  "category": "skill",
+  "name": "Verified skill",
+  "plugs_into": "An example OpenWiz factory",
+  "proof": {
+    "check": "python3 -m unittest",
+    "source": "example-owner/example-skill@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/verified-skill"
+}

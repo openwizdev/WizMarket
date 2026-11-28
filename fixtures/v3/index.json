@@ -1,0 +1,405 @@
+{
+  "commit": "dddddddddddddddddddddddddddddddddddddddd",
+  "contract": "listing.v1",
+  "listings": [
+    {
+      "category": "factory",
+      "contract": "listing.v3",
+      "id": "example-factory",
+      "name": "Example factory",
+      "plugs_into": "An example OpenWiz factory",
+      "preset": "presets/example-factory.json",
+      "publisher": "example-publisher",
+      "rank": 1,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/example-factory"
+    },
+    {
+      "category": "skill",
+      "contract": "listing.v3",
+      "gate_result": "Result: regression failed",
+      "id": "experimental-skill",
+      "name": "Experimental skill",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 4,
+      "stage": "available",
+      "status": "experimental",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/experimental-skill"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 4,
+        "checks_passed": 4,
+        "factories": 2,
+        "installs": 5,
+        "updated": "2026-11-02"
+      },
+      "id": "listed-driver",
+      "name": "Listed driver",
+      "package": {
+        "asset_url": "https://github.com/example-owner/pinned-driver/releases/download/v0.1.0/driver.tar.gz",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "driver": "pinned-driver",
+        "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "repository": "example-owner/pinned-driver",
+        "sha256": "abababababababababababababababababababababababababababababababab",
+        "version": "0.1.0"
+      },
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 3,
+      "referral": {
+        "label": "referral",
+        "url": "https://example.com/refer",
+        "vendor": "Example vendor"
+      },
+      "stage": "available",
+      "status": "listed",
+      "success_rate": 0.5,
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example",
+        "plugin"
+      ],
+      "url": "https://example.com/listed-driver"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 0,
+        "checks_passed": 0,
+        "factories": 0,
+        "installs": 1000,
+        "updated": "2026-11-02"
+      },
+      "id": "listed-no-reports",
+      "name": "Listed no reports",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 6,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/listed-no-reports"
+    },
+    {
+      "category": "skill",
+      "contract": "listing.v3",
+      "id": "listed-skill",
+      "name": "Listed skill",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 2,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/listed-skill"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 4,
+        "checks_passed": 4,
+        "factories": 2,
+        "installs": 4,
+        "updated": "2026-11-02"
+      },
+      "id": "listed-tie-a",
+      "name": "Listed tie a",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 4,
+      "stage": "available",
+      "status": "listed",
+      "success_rate": 0.5,
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/listed-tie-a"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 4,
+        "checks_passed": 4,
+        "factories": 2,
+        "installs": 4,
+        "updated": "2026-11-02"
+      },
+      "id": "listed-tie-b",
+      "name": "Listed tie b",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 5,
+      "stage": "available",
+      "status": "listed",
+      "success_rate": 0.5,
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/listed-tie-b"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "id": "preset-driver",
+      "name": "Preset driver",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 7,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/preset-driver"
+    },
+    {
+      "category": "harness",
+      "contract": "listing.v3",
+      "id": "preset-harness",
+      "name": "Preset harness",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 2,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/preset-harness"
+    },
+    {
+      "category": "loop",
+      "contract": "listing.v3",
+      "id": "preset-loop",
+      "name": "Preset loop",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 1,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/preset-loop"
+    },
+    {
+      "category": "skill",
+      "contract": "listing.v3",
+      "id": "preset-skill",
+      "name": "Preset skill",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 3,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/preset-skill"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "id": "shared-driver",
+      "name": "Shared driver",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 8,
+      "stage": "available",
+      "status": "listed",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/shared-driver"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 0,
+        "checks_passed": 100,
+        "factories": 8,
+        "installs": 10000,
+        "updated": "2026-11-02"
+      },
+      "id": "unverified-driver",
+      "name": "Unverified driver",
+      "plugs_into": "An example OpenWiz factory",
+      "publisher": "example-publisher",
+      "rank": 9,
+      "reason": "no current receipt",
+      "since": "2026-11-02",
+      "stage": "available",
+      "status": "unverified",
+      "success_rate": 1.0,
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/unverified-driver"
+    },
+    {
+      "category": "harness",
+      "contract": "listing.v3",
+      "id": "verified-harness",
+      "key_host": {
+        "keychain": "example.host",
+        "origin": "https://api.example.com",
+        "variable": "EXAMPLE_API_KEY"
+      },
+      "login": "Your own example-harness login on your computer",
+      "name": "Verified pinned harness",
+      "package": {
+        "asset_url": "https://github.com/example-owner/verified-harness/releases/download/v1.2.0/driver.tar.gz",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "driver": "verified-harness",
+        "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "repository": "example-owner/verified-harness",
+        "sha256": "cdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+        "version": "1.2.0"
+      },
+      "plugs_into": "The local driver",
+      "proof": {
+        "receipt": {
+          "date": "2026-11-01",
+          "path": "receipts/verified-harness/2026-11-01-aaaaaaaaaaaa.txt",
+          "url": "https://github.com/openwizdev/WizMarket/blob/dddddddddddddddddddddddddddddddddddddddd/receipts/verified-harness/2026-11-01-aaaaaaaaaaaa.txt"
+        }
+      },
+      "publisher": "example-publisher",
+      "rank": 1,
+      "stage": "available",
+      "status": "verified",
+      "summary": "A synthetic verified harness pinned to a driver release, with a key host.",
+      "tags": [
+        "harness"
+      ],
+      "url": "https://example.com/verified-pinned-harness"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 10,
+        "checks_passed": 90,
+        "factories": 4,
+        "installs": 3,
+        "updated": "2026-11-02"
+      },
+      "id": "verified-pinned",
+      "login": "Your own login on the example host",
+      "name": "Verified pinned driver",
+      "package": {
+        "asset_url": "https://github.com/example-owner/verified-pinned/releases/download/v1.0.0/driver.tar.gz",
+        "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "driver": "verified-pinned",
+        "kit_commit": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "repository": "example-owner/verified-pinned",
+        "sha256": "abababababababababababababababababababababababababababababababab",
+        "version": "1.0.0"
+      },
+      "plugs_into": "The OpenWiz driver interface",
+      "proof": {
+        "receipt": {
+          "date": "2026-11-01",
+          "path": "receipts/verified-pinned/2026-11-01-aaaaaaaaaaaa.txt",
+          "url": "https://github.com/openwizdev/WizMarket/blob/dddddddddddddddddddddddddddddddddddddddd/receipts/verified-pinned/2026-11-01-aaaaaaaaaaaa.txt"
+        }
+      },
+      "publisher": "example-publisher",
+      "rank": 1,
+      "stage": "available",
+      "status": "verified",
+      "success_rate": 0.9,
+      "summary": "A synthetic verified driver pinned to the commit its receipt names.",
+      "tags": [
+        "driver"
+      ],
+      "url": "https://example.com/verified-pinned-driver"
+    },
+    {
+      "category": "skill",
+      "contract": "listing.v3",
+      "id": "verified-skill",
+      "name": "Verified skill",
+      "plugs_into": "An example OpenWiz factory",
+      "proof": {
+        "skill": {
+          "check": "python3 -m unittest",
+          "source": "example-owner/example-skill@bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "url": "https://github.com/example-owner/example-skill/tree/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      },
+      "publisher": "example-publisher",
+      "rank": 1,
+      "stage": "available",
+      "status": "verified",
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/verified-skill"
+    },
+    {
+      "category": "driver",
+      "contract": "listing.v3",
+      "counts": {
+        "checks_failed": 0,
+        "checks_passed": 1,
+        "factories": 1,
+        "installs": 900,
+        "updated": "2026-11-02"
+      },
+      "id": "verified-sparse",
+      "name": "Verified sparse",
+      "plugs_into": "An example OpenWiz factory",
+      "proof": {
+        "receipt": {
+          "date": "2026-11-01",
+          "path": "receipts/verified-sparse/2026-11-01-aaaaaaaaaaaa.txt",
+          "url": "https://github.com/openwizdev/WizMarket/blob/dddddddddddddddddddddddddddddddddddddddd/receipts/verified-sparse/2026-11-01-aaaaaaaaaaaa.txt"
+        }
+      },
+      "publisher": "example-publisher",
+      "rank": 2,
+      "stage": "available",
+      "status": "verified",
+      "success_rate": 1.0,
+      "summary": "A synthetic WizMarket listing.",
+      "tags": [
+        "example"
+      ],
+      "url": "https://example.com/verified-sparse"
+    }
+  ]
+}

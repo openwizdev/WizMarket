@@ -1,0 +1,14 @@
+{
+  "category": "skill",
+  "gate_result": "Result: regression failed",
+  "name": "Experimental skill",
+  "plugs_into": "An example OpenWiz factory",
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "experimental",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/experimental-skill"
+}

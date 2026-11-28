@@ -1,0 +1,16 @@
+{
+  "category": "skill",
+  "name": "Verified skill",
+  "plugs_into": "An example OpenWiz factory",
+  "proof": {
+    "receipt": "receipts/verified-pinned/2026-11-01-aaaaaaaaaaaa.txt"
+  },
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/verified-skill"
+}

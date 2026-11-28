@@ -1,0 +1,16 @@
+{
+  "category": "driver",
+  "name": "Verified sparse",
+  "plugs_into": "An example OpenWiz factory",
+  "proof": {
+    "receipt": "receipts/verified-sparse/2026-11-01-aaaaaaaaaaaa.txt"
+  },
+  "publisher": "example-publisher",
+  "stage": "available",
+  "status": "verified",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/verified-sparse"
+}

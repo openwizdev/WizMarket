@@ -1,0 +1,15 @@
+{
+  "category": "driver",
+  "name": "Unverified driver",
+  "plugs_into": "An example OpenWiz factory",
+  "publisher": "example-publisher",
+  "reason": "no current receipt",
+  "since": "2026-11-02",
+  "stage": "available",
+  "status": "unverified",
+  "summary": "A synthetic WizMarket listing.",
+  "tags": [
+    "example"
+  ],
+  "url": "https://example.com/unverified-driver"
+}
